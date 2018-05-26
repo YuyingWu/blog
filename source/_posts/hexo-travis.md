@@ -48,7 +48,78 @@ HEXO的详细科普和指令在这里就不写了哈，官方文档里都有 [>>
 
 当我们在github里把github-pages服务打开，并渲染`gh-pages`分支，我们就能访问自己的博客了。
 
+!["看看我的博客"](https://github.com/YuyingWu/blog/blob/dev/source/_images/hexo-travis-screenshot.png)
+
 ## Travis CLI
+
+在大致了解HEXO的开发流程之后，我们可以开始考虑，引入持续集成，是要做什么？  
+`User Story`：**希望可以在github上写一篇文章，提交之后，可以直接在我的线上博客看到**。
+
+在这里我们用到的持续集成（CI, Continuous Integration）服务是[Travis CI](https://travis-ci.org/)，据[github 2017年CI市场份额统计](https://blog.github.com/2017-11-07-github-welcomes-all-ci-tools/)，Travis CI是市场份额最大的CI工具。
+
+噢，还有些事前准备：
+
+* 先在`dev`分支里，创建`.travis.yml`
+* 在[Travis CLI](https://travis-ci.org/)平台上打开这个分支的CI开关
+
+那直接上我的CI配置代码吧。
+
+```yml
+language: node_js
+node_js: stable
+
+addons: # Travis CI建议加的，自动更新api
+  apt:
+    update: true
+
+cache:
+  directories: 
+  - node_modules # 缓存 node_modules
+
+install:
+- npm install # 初次安装，在CI环境中，执行安装npm依赖
+
+# before_script: 
+
+script:
+- hexo g # 执行 hexo generate，把文章编译到public中
+
+after_success: # 执行script成功后，进入到public，把里面的代码提交到博客的gh-pages分支
+- cd ./public
+- git init
+- git config user.name "Yuying Wu"
+- git config user.email "wuyuying1128@gmail.com"
+- git add .
+- git commit -m "Update site"
+- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+
+branches:
+  only:
+  - dev # CI 只针对分支 dev
+
+env:
+  global: # 全局变量，上面的提交到github的命令有用到
+  - GH_REF: github.com/YuyingWu/blog.git
+  - secure: 
+# secure是自动生成的，执行`travis encrypt 'GH_TOKEN=${your_github_personal_access_token}' --add`
+```
+
+相信代码和注释写得很清楚了，有个地方需要进一步解释的，github提交那part，涉及github access token的生成和加密。
+
+1. 生成github的[Personal Access Tokens](https://github.com/settings/tokens)（打开分支提交的权限）
+2. 安装Travis CLI `gem install travis`（如果登录遇到环境问题，可以看看下面参考文章里面的解决方案）
+3. 进入到本地`dev`目录下（带有`.travis.yml`），执行`travis login`登录，再执行`travis encrypt 'GH_TOKEN=${your_github_personal_access_token}' --add`加密你的personal access token（也就是后来`.travis.yml`的`env.global.secure`的值）
+
+把`.travis.yml`提交之后，看看Travis CLI上，开始持续集成了哈。
+
+!["开始准备"](https://github.com/YuyingWu/blog/blob/dev/source/_images/hexo-travis-1.png)
+!["after_success把代码部署到gh-pages"](https://github.com/YuyingWu/blog/blob/dev/source/_images/hexo-travis-2.png)
+
+大功告成，集成之后，在github pages的页面上也能看到文章的更新。
+
+## to-do：
+
+到现在，还有一part没有做 —— 怎么把代码部署到自己的服务器上？ To be continued :)
 
 ## 参考文章：
 
