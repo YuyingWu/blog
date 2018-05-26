@@ -3,34 +3,33 @@ title: 基于HEXO的博客的持续集成
 date: 2018-05-26 14:35:18
 ---
 
-用了一段时间HEXO搭建个人的博客，但每次发布文章，都需要打开电脑`hexo g`编译之后，再提交到服务器上，确实挺麻烦的，和小伙伴聊完他的日志发布方式之后，痛定思痛，**快捷发布日志**这个问题需要解决一下了！CI搞起来！
+用了一段时间HEXO搭建个人的博客，但每次发布文章，都需要打开电脑`hexo g`编译之后，再提交到服务器上，确实挺麻烦的，和小伙伴聊完他的日志发布方式之后，痛定思痛，**快捷发布日志**这个问题需要解决一下了！Travis CLI搞起来！
 
 <!-- more -->
 
 前几天，跟小伙伴Pipe一起参加个分享会，看到他做了笔记，结束后我说你发给我呀，他说直接看我博客（[《工作思维方式简记》](https://zhoukekestar.github.io/notes/2018/05/25/better-me.html)）呀！我的天，写完瞬间就发到站点去了！Pipe非常高产，去看看他的博客，用“高产似母猪”来描述都不足为过，5月份还没有过完，发布了7篇日志。
 
-我问他，怎么做到那么高产？  
-Pipe说，第一点是他的日志是碎片化的偏记录的，不一定要憋出大文章才发，然后就是博客系统要方便，随写随发。
+我问他，怎么做到那么高产？Pipe说，第一点是他的日志是碎片化的偏记录的，不一定要憋出大文章才发，然后就是博客系统要方便，随写随发。
 
 By the way，Pipe用的是`jekyll`，跟github的持续集成是天生的，而HEXO没有这样的优势。
 
 反观我的博客，更新频率真的很低，一方面是喜欢憋专题文章（拖着拖着，文章就没有了），另一方面也是发布确实麻烦，电脑编辑好markdown，还要执行各种命令，最后push到github和自己的服务器，文章才能被大家看到，一开始觉得还好蛮geek的，但后来确实由于这些门槛，有打击到那些随时来的写作思绪。
 
-## HEXO的开发分支（dev）与生产分支（gh-pages）
+## HEXO的开发分支与生产分支
 
 讲到HEXO，先安利一下。
 
 反观我的博客，更新频率真的很低，一方面是喜欢憋专题文章（拖着拖着，文章就没有了），另一方面也是发布确实麻烦，电脑编辑好markdown，还要执行各种命令，最后push到github和自己的服务器，文章才能被大家看到，一开始觉得还好蛮geek的，但后来确实由于这些门槛，有打击到那些随时来的写作思绪。
 
-博客分支：[github blog](https://github.com/YuyingWu/blog)
+[github blog](https://github.com/YuyingWu/blog)：我的博客分支
 
 [hexo-generator-index-plus](https://github.com/YuyingWu/hexo-generator-index-plus/blob/master/README.md)：hexo小插件，首页排序生成器，和原生的index-generator比较显著的区别是加了置顶功能，可以在front-matter添加`top`属性即可。
 
 [hexo-theme-fresh](https://github.com/YuyingWu/hexo-theme-fresh)：hexo博客主题，绿色小清新，Medium风格。
 
-!["hexo-theme-fresh效果截屏"](https://github.com/YuyingWu/blog/blob/dev/source/_images/screenshot.gif)
+!["hexo-theme-fresh效果截屏"](//lc-wpyqjumv.cn-n1.lcfile.com/3061dbf0241049f3b646.gif)
 
-### 开发分支
+### 开发分支 dev
 
 在我的博客里，开发分支是`dev`，目录结构就是一开始`hexo init`后的结构。
 
@@ -58,13 +57,13 @@ hexo d
 
 HEXO的详细科普和指令在这里就不写了哈，官方文档里都有 [>> 传送门](https://hexo.io/docs/)。
 
-### 生产分支（自动生成）
+### 生产分支 gh-pages
 
 在`dev`分支里，执行了`hexo g`编译之后，编译后的静态文件会存在`public`文件夹里，而我们就把里面的内容挪到最终的生产环境分支`gh-pages`里，也就是最终我们看到的静态博客。
 
 当我们在github里把github-pages服务打开，并渲染`gh-pages`分支，我们就能访问自己的博客了（[https://yuyingwu.github.io/blog/](https://yuyingwu.github.io/blog/)）。
 
-!["看看我的博客"](https://github.com/YuyingWu/blog/blob/dev/source/_images/hexo-travis-screenshot.png)
+!["看看我的博客"](//lc-wpyqjumv.cn-n1.lcfile.com/d3ebf243ea2b0dfd9dd1.png)
 
 ## Travis CLI
 
@@ -130,18 +129,19 @@ env:
 
 把`.travis.yml`提交之后，看看Travis CLI上，开始持续集成了哈。
 
-!["开始准备"](https://github.com/YuyingWu/blog/blob/dev/source/_images/hexo-travis-1.png)
-!["after_success把代码部署到gh-pages"](https://github.com/YuyingWu/blog/blob/dev/source/_images/hexo-travis-2.png)
+!["开始准备"](//lc-wpyqjumv.cn-n1.lcfile.com/cbf00765c8f94a151965.png)
+!["after_success把代码部署到gh-pages"](//lc-wpyqjumv.cn-n1.lcfile.com/b82303e0f85deb2088ce.png)
 
 大功告成，集成之后，在github pages的页面上也能看到文章的更新。
 
-## to-do：
+## to-do
 
 到现在，还有一part没有做 —— 怎么把代码部署到自己的服务器上？ To be continued :)
 
-## 参考文章：
+## 参考文章
 
 * [如何快速搭建一个有域名且持续集成的hexo博客(2.0版)](https://juejin.im/post/596e39916fb9a06baf2ed273) - runner_yue
 * [Hexo 自动部署到 Github](http://lotabout.me/2016/Hexo-Auto-Deploy-to-Github/) - [三点水](http://lotabout.me/)
+* [持续集成服务 Travis CI 教程](http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html) - 阮一峰
 * ["no implicit conversion of nil into String" when logging in](https://github.com/travis-ci/travis.rb/issues/190) - 在执行`travis login`遇到的问题的解决方案
 * [Deploy to GitHub pages from Travis CI](https://iamstarkov.com/deploy-gh-pages-from-travis/)
