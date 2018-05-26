@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>博客优化之路：从WordPress到Hexo | 伍酱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="经历了WordPress、jekyll、Hexo、WordPress，前几天我还是把博客迁回到Hexo，因为WordPress太庞大了，想修改主题优化下页面性能或者加些个性化的小组件吧，也没折腾出一个前端构建的流程，开发起来很麻烦，放弃治疗啦，于是又回归到静态博客的怀抱。 最近在公司做一些性能优化的工作，重构历史代码和优化打包策略啥的，每次看到优化效果都会觉得很爽，那些数字太漂亮，弄上瘾了，于是拿">
+<meta name="keywords" content="tech,blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客优化之路：从WordPress到Hexo">
+<meta property="og:url" content="http://wuyuying.com/archives/blog-opt-wp-hexo/index.html">
+<meta property="og:site_name" content="伍酱">
+<meta property="og:description" content="经历了WordPress、jekyll、Hexo、WordPress，前几天我还是把博客迁回到Hexo，因为WordPress太庞大了，想修改主题优化下页面性能或者加些个性化的小组件吧，也没折腾出一个前端构建的流程，开发起来很麻烦，放弃治疗啦，于是又回归到静态博客的怀抱。 最近在公司做一些性能优化的工作，重构历史代码和优化打包策略啥的，每次看到优化效果都会觉得很爽，那些数字太漂亮，弄上瘾了，于是拿">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://cdn.sinacloud.net/woodysblog/blog-opt/hexo-request.png">
+<meta property="og:image" content="http://cdn.sinacloud.net/woodysblog/blog-opt/wp-request.png">
+<meta property="og:image" content="http://cdn.sinacloud.net/woodysblog/blog-opt/wp-export.png">
+<meta property="og:updated_time" content="2018-05-25T10:34:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客优化之路：从WordPress到Hexo">
+<meta name="twitter:description" content="经历了WordPress、jekyll、Hexo、WordPress，前几天我还是把博客迁回到Hexo，因为WordPress太庞大了，想修改主题优化下页面性能或者加些个性化的小组件吧，也没折腾出一个前端构建的流程，开发起来很麻烦，放弃治疗啦，于是又回归到静态博客的怀抱。 最近在公司做一些性能优化的工作，重构历史代码和优化打包策略啥的，每次看到优化效果都会觉得很爽，那些数字太漂亮，弄上瘾了，于是拿">
+<meta name="twitter:image" content="http://cdn.sinacloud.net/woodysblog/blog-opt/hexo-request.png">
+  
+    <link rel="alternate" href="/test/atom.xml" title="伍酱" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/test/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/test/" id="logo">伍酱</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/test/" id="subtitle">吾悠杂货铺</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/test/">Home</a>
+        
+          <a class="main-nav-link" href="/test/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/test/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://wuyuying.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-blog-opt-wp-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/test/archives/blog-opt-wp-hexo/" class="article-date">
+  <time datetime="2016-04-06T09:43:19.000Z" itemprop="datePublished">2016-04-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      博客优化之路：从WordPress到Hexo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>经历了WordPress、jekyll、Hexo、WordPress，前几天我还是把博客迁回到Hexo，因为WordPress太庞大了，想修改主题优化下页面性能或者加些个性化的小组件吧，也没折腾出一个前端构建的流程，开发起来很麻烦，放弃治疗啦，于是又回归到<strong>静态博客</strong>的怀抱。</p>
+<p>最近在公司做一些性能优化的工作，重构历史代码和优化打包策略啥的，每次看到优化效果都会觉得很爽，那些数字太漂亮，弄上瘾了，于是拿自己的博客接着改！</p>
+<p>虽然从WordPress到Hexo，我啥也没做，只是做了个“系统选型”的抉择，从重量级到轻量级选手，但是从数据看来，我觉得改得还是非常对的，以后站点会有更多的可玩性 :)</p>
+<a id="more"></a>
+<h2 id="改造后的性能优化："><a href="#改造后的性能优化：" class="headerlink" title="改造后的性能优化："></a>改造后的性能优化：</h2><ul>
+<li>请求数，22 -&gt; 7，减少了<strong>68%</strong></li>
+<li>传输容量，1.3M -&gt; 745K，减少了<strong>44%</strong></li>
+<li>Load时间，2.64s -&gt; 1.10s，减少了<strong>58%</strong></li>
+</ul>
+<h3 id="Hexo（官方主题Landscape"><a href="#Hexo（官方主题Landscape" class="headerlink" title="Hexo（官方主题Landscape)"></a>Hexo（官方主题<a href="https://github.com/hexojs/hexo-theme-landscape" target="_blank" rel="noopener">Landscape</a>)</h3><p><img src="http://cdn.sinacloud.net/woodysblog/blog-opt/hexo-request.png" alt="Hexo首页加载情况"></p>
+<h3 id="WordPress（2016年官方主题twenty-sixteen）"><a href="#WordPress（2016年官方主题twenty-sixteen）" class="headerlink" title="WordPress（2016年官方主题twenty-sixteen）"></a>WordPress（2016年官方主题twenty-sixteen）</h3><p><img src="http://cdn.sinacloud.net/woodysblog/blog-opt/wp-request.png" alt="WordPress首页加载情况"></p>
+<hr>
+<p>从WordPress迁到Hexo，其实很简单。</p>
+<h2 id="1-导出WordPress数据"><a href="#1-导出WordPress数据" class="headerlink" title="1. 导出WordPress数据"></a>1. 导出WordPress数据</h2><p>仪表盘（wp-admin） -&gt; 工具 -&gt; 导出</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/blog-opt/wp-export.png" alt="&quot;WordPress数据导出&quot;"></p>
+<h2 id="2-搭建Hexo"><a href="#2-搭建Hexo" class="headerlink" title="2. 搭建Hexo"></a>2. 搭建Hexo</h2><p>i.安装Node.js、npm<br>ii.安装Hexo</p>
+<pre><code>npm install -g hexo-cli 
+</code></pre><p>iii. Hexo初始化</p>
+<pre><code>hexo init &lt;folder&gt; // 初始化某个目录  
+cd &lt;folder&gt; // 进入该目录    
+npm install // 安装所需npm依赖文件
+</code></pre><h2 id="3-WordPress到Hexo的迁移"><a href="#3-WordPress到Hexo的迁移" class="headerlink" title="3.WordPress到Hexo的迁移"></a>3.WordPress到Hexo的迁移</h2><p>i.安装迁移插件</p>
+<pre><code>npm install hexo-migrator-WordPress --save
+</code></pre><p>ii.把WordPress数据导出文件放进Hexo的安装目录<br>iii.执行命令迁移文章：source是数据导出文件</p>
+<pre><code>hexo migrate wordpress &lt;source&gt;
+</code></pre><h2 id="4-媒体文件存在哪？"><a href="#4-媒体文件存在哪？" class="headerlink" title="4. 媒体文件存在哪？"></a>4. 媒体文件存在哪？</h2><p>虽然很方便的迁移了所有WP文章，但是我们可以发现，文章中有些格式可能会包括很多div等多余的html标签，需要人肉调整。</p>
+<p>然后文中引用的媒体文件尤其是图片，还在使用WP数据库中的文件，假如我想彻底脱离WP，我需要把这些媒体资源整理出来，那么问题来了，存在哪？</p>
+<p>目前我在用新浪云的<a href="http://open.sinastorage.com" target="_blank" rel="noopener">云存储SCS</a>服务，访问速度很快，按访问量计费，不过目前像我的博客访问量不大，基本免费。</p>
+<p>新浪云存储SCS服务的价格详情<a href="http://www.sinacloud.com/index/price.html" target="_blank" rel="noopener">传送门 &gt;&gt;</a></p>
+<p>另外也可以考虑：</p>
+<p><a href="https://bce.baidu.com/product/bos.html" target="_blank" rel="noopener">百度云BOS</a>，度厂很多内部产品线都在使用，按需计费，不过我没使用过，不清楚具体收费情况怎样，感兴趣的朋友可以来<a href="https://bce.baidu.com/doc/Pricing/BOS.html" target="_blank" rel="noopener">价格表这儿</a>看看。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://hexo.io/zh-cn/docs/migration.html" target="_blank" rel="noopener">Hexo官网</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/migration.html" target="_blank" rel="noopener">Hexo迁移文档</a>：RSS/Jekyll/Octopress/WordPress/Joomla</li>
+<li><a href="https://bce.baidu.com/index.html" target="_blank" rel="noopener">百度开放云</a></li>
+<li><a href="http://www.sinacloud.com" target="_blank" rel="noopener">新浪云</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wuyuying.com/archives/blog-opt-wp-hexo/" data-id="cjhm5re4i000drkr3y0r39qb6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/tech/">tech</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/test/archives/uc-web-debug/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          UC浏览器调试无线页面
+        
+      </div>
+    </a>
+  
+  
+    <a href="/test/archives/full-stack/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">书单：给想成为全栈工程师的你</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/test/categories/finance/">finance</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/finance/reading/">reading</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/life/">life</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/life/reading/">reading</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/photography/">photography</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/">reading</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/tech/">tech</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/work/">work</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/study/">study</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/tech/">tech</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/tech/work/">work</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/work/">work</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/未分类/">未分类</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/CSS-Variables/">CSS Variables</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/Google-Map/">Google Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/New-Zealand/">New Zealand</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/Responsive-Web-Design/">Responsive Web Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/animate/">animate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/back-end/">back-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/baidu/">baidu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/coder/">coder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/devops/">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/efficiency/">efficiency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/finance/">finance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/front-end/">front-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/gpx/">gpx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/happiness/">happiness</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/hexo-generator-index-plus/">hexo-generator-index-plus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/hexo-plugin/">hexo-plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/javascript-animation/">javascript animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/job/">job</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mactalk/">mactalk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mobile-deug/">mobile deug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/performance/">performance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/photography/">photography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/reactjs/">reactjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/resume/">resume</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/roadmap/">roadmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/rwd/">rwd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/study/">study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/tech/">tech</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/theme/">theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/time-management/">time management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/translation/">translation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/travel/">travel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/velocity-js/">velocity.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/web/">web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/weixin/">weixin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/whv/">whv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/working-holiday/">working holiday</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/总结/">总结</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/test/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/test/tags/CSS-Variables/" style="font-size: 10px;">CSS Variables</a> <a href="/test/tags/Google-Map/" style="font-size: 10px;">Google Map</a> <a href="/test/tags/New-Zealand/" style="font-size: 11.67px;">New Zealand</a> <a href="/test/tags/Responsive-Web-Design/" style="font-size: 10px;">Responsive Web Design</a> <a href="/test/tags/animate/" style="font-size: 10px;">animate</a> <a href="/test/tags/back-end/" style="font-size: 10px;">back-end</a> <a href="/test/tags/baidu/" style="font-size: 10px;">baidu</a> <a href="/test/tags/blog/" style="font-size: 16.67px;">blog</a> <a href="/test/tags/coder/" style="font-size: 10px;">coder</a> <a href="/test/tags/css/" style="font-size: 10px;">css</a> <a href="/test/tags/devops/" style="font-size: 10px;">devops</a> <a href="/test/tags/efficiency/" style="font-size: 11.67px;">efficiency</a> <a href="/test/tags/finance/" style="font-size: 10px;">finance</a> <a href="/test/tags/front-end/" style="font-size: 13.33px;">front-end</a> <a href="/test/tags/git/" style="font-size: 10px;">git</a> <a href="/test/tags/gpx/" style="font-size: 10px;">gpx</a> <a href="/test/tags/happiness/" style="font-size: 10px;">happiness</a> <a href="/test/tags/hexo-generator-index-plus/" style="font-size: 10px;">hexo-generator-index-plus</a> <a href="/test/tags/hexo-plugin/" style="font-size: 10px;">hexo-plugin</a> <a href="/test/tags/javascript-animation/" style="font-size: 10px;">javascript animation</a> <a href="/test/tags/job/" style="font-size: 11.67px;">job</a> <a href="/test/tags/life/" style="font-size: 18.33px;">life</a> <a href="/test/tags/mac/" style="font-size: 10px;">mac</a> <a href="/test/tags/mactalk/" style="font-size: 10px;">mactalk</a> <a href="/test/tags/mobile-deug/" style="font-size: 11.67px;">mobile deug</a> <a href="/test/tags/npm/" style="font-size: 10px;">npm</a> <a href="/test/tags/performance/" style="font-size: 10px;">performance</a> <a href="/test/tags/photography/" style="font-size: 10px;">photography</a> <a href="/test/tags/reactjs/" style="font-size: 10px;">reactjs</a> <a href="/test/tags/reading/" style="font-size: 20px;">reading</a> <a href="/test/tags/resume/" style="font-size: 10px;">resume</a> <a href="/test/tags/roadmap/" style="font-size: 10px;">roadmap</a> <a href="/test/tags/rwd/" style="font-size: 10px;">rwd</a> <a href="/test/tags/study/" style="font-size: 11.67px;">study</a> <a href="/test/tags/tech/" style="font-size: 20px;">tech</a> <a href="/test/tags/theme/" style="font-size: 10px;">theme</a> <a href="/test/tags/time-management/" style="font-size: 10px;">time management</a> <a href="/test/tags/translation/" style="font-size: 10px;">translation</a> <a href="/test/tags/travel/" style="font-size: 10px;">travel</a> <a href="/test/tags/velocity-js/" style="font-size: 10px;">velocity.js</a> <a href="/test/tags/web/" style="font-size: 11.67px;">web</a> <a href="/test/tags/weixin/" style="font-size: 10px;">weixin</a> <a href="/test/tags/whv/" style="font-size: 13.33px;">whv</a> <a href="/test/tags/work/" style="font-size: 15px;">work</a> <a href="/test/tags/working-holiday/" style="font-size: 11.67px;">working holiday</a> <a href="/test/tags/总结/" style="font-size: 15px;">总结</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/11/">十一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/02/">二月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/01/">一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/12/">十二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/08/">八月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/07/">七月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/04/">四月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/02/">二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/01/">一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/12/">十二月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/11/">十一月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/10/">十月 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/test/archives/optimizing-react-virtual-dom-explained/">[译] React性能优化-虚拟Dom原理浅析</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/slash/">关于「自由态职业」</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/css-var/">CSS Variables学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/year-2017/">我的2017</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/eu-gallery/">当我在欧洲艺术馆遇到馆长</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 伍酱<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/test/" class="mobile-nav-link">Home</a>
+  
+    <a href="/test/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/test/fancybox/jquery.fancybox.css">
+  <script src="/test/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/test/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>读书笔记 - CSS网站布局实录 | 伍酱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="有些书籍，就算内容赶不上潮流，经典始终是经典，无论什么时候看，总会觉得有些新的感受新的收获。 《CSS网站布局实录》，这本书不厚，关于布局、文件流、盒模型等等的基础知识，却讲得非常清晰明白。">
+<meta name="keywords" content="reading,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="读书笔记 - CSS网站布局实录">
+<meta property="og:url" content="http://wuyuying.com/archives/css-layout/index.html">
+<meta property="og:site_name" content="伍酱">
+<meta property="og:description" content="有些书籍，就算内容赶不上潮流，经典始终是经典，无论什么时候看，总会觉得有些新的感受新的收获。 《CSS网站布局实录》，这本书不厚，关于布局、文件流、盒模型等等的基础知识，却讲得非常清晰明白。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-25T10:34:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="读书笔记 - CSS网站布局实录">
+<meta name="twitter:description" content="有些书籍，就算内容赶不上潮流，经典始终是经典，无论什么时候看，总会觉得有些新的感受新的收获。 《CSS网站布局实录》，这本书不厚，关于布局、文件流、盒模型等等的基础知识，却讲得非常清晰明白。">
+  
+    <link rel="alternate" href="/test/atom.xml" title="伍酱" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/test/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/test/" id="logo">伍酱</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/test/" id="subtitle">吾悠杂货铺</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/test/">Home</a>
+        
+          <a class="main-nav-link" href="/test/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/test/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://wuyuying.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css-layout" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/test/archives/css-layout/" class="article-date">
+  <time datetime="2017-02-07T04:42:07.000Z" itemprop="datePublished">2017-02-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      读书笔记 - CSS网站布局实录
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有些书籍，就算内容赶不上潮流，经典始终是经典，无论什么时候看，总会觉得有些新的感受新的收获。</p>
+<p><a href="https://book.douban.com/subject/2175995/" target="_blank" rel="noopener">《CSS网站布局实录》</a>，这本书不厚，关于布局、文件流、盒模型等等的基础知识，却讲得非常清晰明白。<br><a id="more"></a></p>
+<h2 id="一、那些CSS布局的事儿"><a href="#一、那些CSS布局的事儿" class="headerlink" title="一、那些CSS布局的事儿"></a>一、那些CSS布局的事儿</h2><h3 id="一列固定宽度"><a href="#一列固定宽度" class="headerlink" title="一列固定宽度"></a>一列固定宽度</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box-1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="一列宽度自适应"><a href="#一列宽度自适应" class="headerlink" title="一列宽度自适应"></a>一列宽度自适应</h3><p>宽度随着视窗宽度而改变</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box-1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="一列固定宽度居中"><a href="#一列固定宽度居中" class="headerlink" title="一列固定宽度居中"></a>一列固定宽度居中</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box-1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="两列固定宽度"><a href="#两列固定宽度" class="headerlink" title="两列固定宽度"></a>两列固定宽度</h3><p>使用浮动，使文件流下两个块级元素流到同一行</p>
+<blockquote>
+<p>文件流：body下的任意元素，根据其前后顺序和元素类型（块级、行内），组成一个个上下关系</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box-1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box-2</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="两列宽度自适应"><a href="#两列宽度自适应" class="headerlink" title="两列宽度自适应"></a>两列宽度自适应</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box-1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">30%</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box-2</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">60%</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意不要打满100%，会有两列之间的margin、padding、border等宽度影响</p>
+<h3 id="两列右列宽度自适应"><a href="#两列右列宽度自适应" class="headerlink" title="两列右列宽度自适应"></a>两列右列宽度自适应</h3><p>左列宽度自适应同理。</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.<span class="built_in">box</span><span class="number">-1</span>&#123;</span><br><span class="line">    <span class="built_in">width</span>: <span class="number">100</span>px;</span><br><span class="line">    <span class="built_in">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line">.<span class="built_in">box</span><span class="number">-2</span>&#123;</span><br><span class="line">    <span class="comment">// 自适应：不设宽度，不设定浮动属性</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="两列固定宽度居中"><a href="#两列固定宽度居中" class="headerlink" title="两列固定宽度居中"></a>两列固定宽度居中</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"layout"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box-2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.layout</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: width1 + width2 (+ margin/borderWidth)</span><br><span class="line">    margin: <span class="number">0</span> auto;</span><br><span class="line">    &amp;:after&#123;</span><br><span class="line">        <span class="attribute">clear</span>: both; <span class="comment">// 清除浮动，不影响后面的文件流</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box-1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: width1;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box-2</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: width2;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="三列中间列宽度自适应"><a href="#三列中间列宽度自适应" class="headerlink" title="三列中间列宽度自适应"></a>三列中间列宽度自适应</h3><p><strong>左右列</strong>使用绝对定位，脱离文件流；<br><strong>中间列</strong>默认宽度100%，使用左右的margin来缩进左列和右列的宽度，达到自适应的效果。</p>
+<p>如果定位不是针对整个视窗，父容器也用绝对定位，保证左右列绝对定位的参照元素是父元素。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box-left</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>; <span class="comment">// 左对齐</span></span><br><span class="line">    <span class="attribute">width</span>: width1;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box-right</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>; <span class="comment">// 右对齐</span></span><br><span class="line">    <span class="attribute">width</span>: width2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box-middle</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> width2 <span class="number">0</span> width1; <span class="comment">// margin: 上 右 下 左</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="高度自适应"><a href="#高度自适应" class="headerlink" title="高度自适应"></a>高度自适应</h3><p>单独设置某个元素的<code>height: 100%;</code>有时候会无效。原来，根据浏览器解析规则，<strong>子元素的高度是否能按百分比显示，取决于父元素的高度</strong>。</p>
+<p>假设我们要实现一个自适应视窗高度的效果：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// IE下，html元素默认高100%，但body不是</span></span><br><span class="line"><span class="comment">// Firefox下，html没有默认高100%</span></span><br><span class="line"><span class="selector-tag">html</span>, <span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.target</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="二、一些经典问题"><a href="#二、一些经典问题" class="headerlink" title="二、一些经典问题"></a>二、一些经典问题</h2><h3 id="1-上下margin叠加问题"><a href="#1-上下margin叠加问题" class="headerlink" title="1. 上下margin叠加问题"></a>1. 上下margin叠加问题</h3><p><strong>表现</strong><br>当上下对象均有<code>margin</code>属性时，外边距会出现叠加问题，取较大值。</p>
+<p><strong>原因</strong><br>CSS原始设计问题。作者考虑到段落的样式控制，假如多个<code>p</code>之间形成段落，每个p都具有margin属性，为解决排版距离不一致问题，设计出外边距叠加规则。</p>
+<p>例外情况，margin叠加只针对<strong>块级元素</strong>，对<code>inline</code>、<code>浮动</code>、<code>绝对定位</code>的元素无效。</p>
+<h3 id="2-IE6下，float元素margin加倍"><a href="#2-IE6下，float元素margin加倍" class="headerlink" title="2. IE6下，float元素margin加倍"></a>2. IE6下，float元素margin加倍</h3><p>可通过设定目标元素的<code>display: inline;</code>解决。</p>
+<h3 id="3-CSS效果：首字下沉"><a href="#3-CSS效果：首字下沉" class="headerlink" title="3. CSS效果：首字下沉"></a>3. CSS效果：首字下沉</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.first-character</span>&#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1.5</span>;</span><br><span class="line">    <span class="attribute">vertical-align</span>: top;</span><br><span class="line">    &amp;:first-letter&#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">        <span class="attribute">float</span>: left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-图像裁剪问题"><a href="#4-图像裁剪问题" class="headerlink" title="4. 图像裁剪问题"></a>4. 图像裁剪问题</h3><ol>
+<li>CSS的clip属性（对象需使用绝对定位）</li>
+<li>父元素定宽高，使用<code>overflow:hidden</code>，局部展示子元素的图片内容</li>
+<li>computed，通过计算，使图片自动水平、垂直居中</li>
+<li>flex布局</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wuyuying.com/archives/css-layout/" data-id="cjhm5re4o000jrkr3752ierd5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/reading/">reading</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/test/archives/debug-talk/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          谈谈怎么在不熟悉上下文的情况下debug
+        
+      </div>
+    </a>
+  
+  
+    <a href="/test/archives/hexo-top/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo主题的置顶功能</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/test/categories/finance/">finance</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/finance/reading/">reading</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/life/">life</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/life/reading/">reading</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/photography/">photography</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/">reading</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/tech/">tech</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/work/">work</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/study/">study</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/tech/">tech</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/tech/work/">work</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/work/">work</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/未分类/">未分类</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/CSS-Variables/">CSS Variables</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/Google-Map/">Google Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/New-Zealand/">New Zealand</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/Responsive-Web-Design/">Responsive Web Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/animate/">animate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/back-end/">back-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/baidu/">baidu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/coder/">coder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/devops/">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/efficiency/">efficiency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/finance/">finance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/front-end/">front-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/gpx/">gpx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/happiness/">happiness</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/hexo-generator-index-plus/">hexo-generator-index-plus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/hexo-plugin/">hexo-plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/javascript-animation/">javascript animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/job/">job</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mactalk/">mactalk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mobile-deug/">mobile deug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/performance/">performance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/photography/">photography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/reactjs/">reactjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/resume/">resume</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/roadmap/">roadmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/rwd/">rwd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/study/">study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/tech/">tech</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/theme/">theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/time-management/">time management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/translation/">translation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/travel/">travel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/velocity-js/">velocity.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/web/">web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/weixin/">weixin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/whv/">whv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/working-holiday/">working holiday</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/总结/">总结</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/test/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/test/tags/CSS-Variables/" style="font-size: 10px;">CSS Variables</a> <a href="/test/tags/Google-Map/" style="font-size: 10px;">Google Map</a> <a href="/test/tags/New-Zealand/" style="font-size: 11.67px;">New Zealand</a> <a href="/test/tags/Responsive-Web-Design/" style="font-size: 10px;">Responsive Web Design</a> <a href="/test/tags/animate/" style="font-size: 10px;">animate</a> <a href="/test/tags/back-end/" style="font-size: 10px;">back-end</a> <a href="/test/tags/baidu/" style="font-size: 10px;">baidu</a> <a href="/test/tags/blog/" style="font-size: 16.67px;">blog</a> <a href="/test/tags/coder/" style="font-size: 10px;">coder</a> <a href="/test/tags/css/" style="font-size: 10px;">css</a> <a href="/test/tags/devops/" style="font-size: 10px;">devops</a> <a href="/test/tags/efficiency/" style="font-size: 11.67px;">efficiency</a> <a href="/test/tags/finance/" style="font-size: 10px;">finance</a> <a href="/test/tags/front-end/" style="font-size: 13.33px;">front-end</a> <a href="/test/tags/git/" style="font-size: 10px;">git</a> <a href="/test/tags/gpx/" style="font-size: 10px;">gpx</a> <a href="/test/tags/happiness/" style="font-size: 10px;">happiness</a> <a href="/test/tags/hexo-generator-index-plus/" style="font-size: 10px;">hexo-generator-index-plus</a> <a href="/test/tags/hexo-plugin/" style="font-size: 10px;">hexo-plugin</a> <a href="/test/tags/javascript-animation/" style="font-size: 10px;">javascript animation</a> <a href="/test/tags/job/" style="font-size: 11.67px;">job</a> <a href="/test/tags/life/" style="font-size: 18.33px;">life</a> <a href="/test/tags/mac/" style="font-size: 10px;">mac</a> <a href="/test/tags/mactalk/" style="font-size: 10px;">mactalk</a> <a href="/test/tags/mobile-deug/" style="font-size: 11.67px;">mobile deug</a> <a href="/test/tags/npm/" style="font-size: 10px;">npm</a> <a href="/test/tags/performance/" style="font-size: 10px;">performance</a> <a href="/test/tags/photography/" style="font-size: 10px;">photography</a> <a href="/test/tags/reactjs/" style="font-size: 10px;">reactjs</a> <a href="/test/tags/reading/" style="font-size: 20px;">reading</a> <a href="/test/tags/resume/" style="font-size: 10px;">resume</a> <a href="/test/tags/roadmap/" style="font-size: 10px;">roadmap</a> <a href="/test/tags/rwd/" style="font-size: 10px;">rwd</a> <a href="/test/tags/study/" style="font-size: 11.67px;">study</a> <a href="/test/tags/tech/" style="font-size: 20px;">tech</a> <a href="/test/tags/theme/" style="font-size: 10px;">theme</a> <a href="/test/tags/time-management/" style="font-size: 10px;">time management</a> <a href="/test/tags/translation/" style="font-size: 10px;">translation</a> <a href="/test/tags/travel/" style="font-size: 10px;">travel</a> <a href="/test/tags/velocity-js/" style="font-size: 10px;">velocity.js</a> <a href="/test/tags/web/" style="font-size: 11.67px;">web</a> <a href="/test/tags/weixin/" style="font-size: 10px;">weixin</a> <a href="/test/tags/whv/" style="font-size: 13.33px;">whv</a> <a href="/test/tags/work/" style="font-size: 15px;">work</a> <a href="/test/tags/working-holiday/" style="font-size: 11.67px;">working holiday</a> <a href="/test/tags/总结/" style="font-size: 15px;">总结</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/11/">十一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/02/">二月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/01/">一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/12/">十二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/08/">八月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/07/">七月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/04/">四月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/02/">二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/01/">一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/12/">十二月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/11/">十一月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/10/">十月 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/test/archives/optimizing-react-virtual-dom-explained/">[译] React性能优化-虚拟Dom原理浅析</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/slash/">关于「自由态职业」</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/css-var/">CSS Variables学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/year-2017/">我的2017</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/eu-gallery/">当我在欧洲艺术馆遇到馆长</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 伍酱<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/test/" class="mobile-nav-link">Home</a>
+  
+    <a href="/test/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/test/fancybox/jquery.fancybox.css">
+  <script src="/test/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/test/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

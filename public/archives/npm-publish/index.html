@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>悄悄发布一个hexo的npm模块 | 伍酱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="hexo-generator-index-plus，这是什么东东？其实就是hexo博客生成器的一个文章排序插件，基于默认插件fork的，添加按文章置顶和二次编辑的更新时间排序的功能。 沙发留给github和npmjs~ Github: YuyingWu/hexo-generator-index-plusnpm: hexo-generator-index-plus 最简单粗暴的Installatio">
+<meta name="keywords" content="blog,hexo-generator-index-plus,hexo-plugin,npm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="悄悄发布一个hexo的npm模块">
+<meta property="og:url" content="http://wuyuying.com/archives/npm-publish/index.html">
+<meta property="og:site_name" content="伍酱">
+<meta property="og:description" content="hexo-generator-index-plus，这是什么东东？其实就是hexo博客生成器的一个文章排序插件，基于默认插件fork的，添加按文章置顶和二次编辑的更新时间排序的功能。 沙发留给github和npmjs~ Github: YuyingWu/hexo-generator-index-plusnpm: hexo-generator-index-plus 最简单粗暴的Installatio">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-25T10:34:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="悄悄发布一个hexo的npm模块">
+<meta name="twitter:description" content="hexo-generator-index-plus，这是什么东东？其实就是hexo博客生成器的一个文章排序插件，基于默认插件fork的，添加按文章置顶和二次编辑的更新时间排序的功能。 沙发留给github和npmjs~ Github: YuyingWu/hexo-generator-index-plusnpm: hexo-generator-index-plus 最简单粗暴的Installatio">
+  
+    <link rel="alternate" href="/test/atom.xml" title="伍酱" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/test/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/test/" id="logo">伍酱</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/test/" id="subtitle">吾悠杂货铺</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/test/">Home</a>
+        
+          <a class="main-nav-link" href="/test/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/test/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://wuyuying.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-npm-publish" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/test/archives/npm-publish/" class="article-date">
+  <time datetime="2017-04-03T03:52:02.000Z" itemprop="datePublished">2017-04-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      悄悄发布一个hexo的npm模块
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>hexo-generator-index-plus</strong>，这是什么东东？其实就是hexo博客生成器的一个文章排序插件，基于默认插件fork的，添加按文章<strong>置顶</strong>和<strong>二次编辑的更新时间</strong>排序的功能。</p>
+<p>沙发留给github和npmjs~</p>
+<p>Github: <a href="https://github.com/YuyingWu/hexo-generator-index-plus" target="_blank" rel="noopener">YuyingWu/hexo-generator-index-plus</a><br>npm: <a href="https://www.npmjs.com/package/hexo-generator-index-plus" target="_blank" rel="noopener">hexo-generator-index-plus</a></p>
+<p>最简单粗暴的Installation：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-generator-<span class="keyword">index</span>-plus <span class="comment">--save</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>当然要完全替换掉默认的index生成器还不止这一步啦，还要干掉默认的npm模块和更新hexo-cli里面assets的引用~具体还是看看<a href="https://www.npmjs.com/package/hexo-generator-index-plus#installation" target="_blank" rel="noopener">readMe</a>啰。</p>
+<h2 id="怎么实现？"><a href="#怎么实现？" class="headerlink" title="怎么实现？"></a>怎么实现？</h2><p>基于默认的hexo-generator-index的fork~所以大致跟原生的一致，config不一样，内部实现不一样。</p>
+<p>实现代码还是不聊了，原理是利用数组处理的sort函数来做升降序排列而已啦，献丑献丑。</p>
+<p>而关键字的优先级是这么排的，让文章按照<code>top</code>（置顶） -&gt; <code>updateDate</code>（二次更新时间） -&gt; <code>date</code>的降序排列~ 为什么我们需要<code>top</code>或者<code>updateDate</code>呢？</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">title:</span> Blog Log</span><br><span class="line"><span class="symbol">date:</span> <span class="number">2015</span><span class="number">-04</span><span class="number">-23</span> <span class="number">00</span>:<span class="number">35</span>:<span class="number">45</span></span><br><span class="line"><span class="symbol">updateDate:</span> <span class="number">2017</span><span class="number">-04</span><span class="number">-02</span> <span class="number">15</span>:<span class="number">13</span>:<span class="number">00</span></span><br><span class="line"><span class="symbol">top:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h3 id="top【No-1-Priority】"><a href="#top【No-1-Priority】" class="headerlink" title="top【No.1 Priority】"></a>top【No.1 Priority】</h3><p>所谓的“置顶”，越大的数值排得越前，写了一篇棒棒的文章当然想让它永远在前排 ^0^</p>
+<h3 id="updateDate【No-2-Priority】"><a href="#updateDate【No-2-Priority】" class="headerlink" title="updateDate【No.2 Priority】"></a>updateDate【No.2 Priority】</h3><p>默认按创建时间<code>date</code>排序，但达不到针对偶尔编辑的某篇文章，希望把它顶上来的需求（但不是置顶，还是按修改时间排序就好了）。</p>
+<p>所以我添加了针对<strong>二次编辑更新时间</strong>的排序，添加了一个<code>updateDate</code>，跟原生的<code>updated</code>区分开。我看默认有个<code>updated</code>属性，但是貌似是系统记录文章编辑保存的时间，人肉编辑也没有效，所以还是自己加一个吧。</p>
+<h3 id="date【Default】"><a href="#date【Default】" class="headerlink" title="date【Default】"></a>date【Default】</h3><p>原生generator支持的创建日期排序。</p>
+<h3 id="more-to-do"><a href="#more-to-do" class="headerlink" title="more to do"></a>more to do</h3><ul>
+<li>目前只按照各个关键属性的默认降序，后续会加一个order_by支持自定义升降序的配置。</li>
+<li>完成代码测试</li>
+</ul>
+<h2 id="发布npm模块"><a href="#发布npm模块" class="headerlink" title="发布npm模块"></a>发布npm模块</h2><p>好惭愧，第一次在社区发布module，把这些步骤记录下来，方便以后给自己备忘，嘻嘻。</p>
+<h3 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h3><ol>
+<li>去<a href="https://www.npmjs.com" target="_blank" rel="noopener">npm社区</a>注册一个账号</li>
+<li>github创建repository</li>
+<li>初始化模块，执行<code>npm init</code>，系统会有很多提示的，不想输入一直按回车就可以，初始化成功后，会生成<code>package.json</code></li>
+</ol>
+<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><p>i. 设置npm用户</p>
+<p>这个账号会被添加到npm本地的配置中，用来发布module用，成功后用户信息会被存到<code>~/.npmrc</code>。</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ npm adduser</span><br><span class="line"></span><br><span class="line"><span class="symbol">Username:</span> your name</span><br><span class="line"><span class="symbol">Password:</span> your password</span><br><span class="line"><span class="symbol">Email:</span> your email address</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行下面命令可以查看当前用户</span></span><br><span class="line">$ npm whoami</span><br></pre></td></tr></table></figure>
+<p>ii. 设定版本号</p>
+<p><code>package.json</code>里有个字段<code>version</code>，设定模块版本号</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm publish</span></span><br></pre></td></tr></table></figure>
+<p>那么版本号规则一般是怎样的呢？npm社区有语义化版本的规则的~</p>
+<p>版本格式：<strong>主版号.次版号.修订号</strong>，递增规则如下：</p>
+<blockquote>
+<p>主版号：当你做了不相容的 API 修改，<br>次版号：当你做了向下相容的功能性新增，<br>修订号：当你做了向下相容的问题修正。</p>
+</blockquote>
+<p>由于时间关系，在<code>npm publish</code>后，我们的模块就发布成功了，快到没朋友，到<a href="https://www.npmjs.com" target="_blank" rel="noopener">npm社区</a>自己的主页上就能看到啦~ </p>
+<p>还蛮好玩的有木有，大家积极分享自己的模块吧 ：）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://wuyuying.com/archives/npm-publish/" data-id="cjhm5re5l002erkr318sfkfv7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/hexo-generator-index-plus/">hexo-generator-index-plus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/hexo-plugin/">hexo-plugin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/npm/">npm</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/test/archives/2017-roadmap/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2017年Web开发者的技能蓝图
+        
+      </div>
+    </a>
+  
+  
+    <a href="/test/archives/debug-talk/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">谈谈怎么在不熟悉上下文的情况下debug</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/test/categories/finance/">finance</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/finance/reading/">reading</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/life/">life</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/life/reading/">reading</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/photography/">photography</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/">reading</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/tech/">tech</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/work/">work</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/study/">study</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/tech/">tech</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/tech/work/">work</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/work/">work</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/未分类/">未分类</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/CSS-Variables/">CSS Variables</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/Google-Map/">Google Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/New-Zealand/">New Zealand</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/Responsive-Web-Design/">Responsive Web Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/animate/">animate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/back-end/">back-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/baidu/">baidu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/coder/">coder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/devops/">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/efficiency/">efficiency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/finance/">finance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/front-end/">front-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/gpx/">gpx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/happiness/">happiness</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/hexo-generator-index-plus/">hexo-generator-index-plus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/hexo-plugin/">hexo-plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/javascript-animation/">javascript animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/job/">job</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mactalk/">mactalk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mobile-deug/">mobile deug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/performance/">performance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/photography/">photography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/reactjs/">reactjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/resume/">resume</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/roadmap/">roadmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/rwd/">rwd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/study/">study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/tech/">tech</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/theme/">theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/time-management/">time management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/translation/">translation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/travel/">travel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/velocity-js/">velocity.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/web/">web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/weixin/">weixin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/whv/">whv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/working-holiday/">working holiday</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/总结/">总结</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/test/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/test/tags/CSS-Variables/" style="font-size: 10px;">CSS Variables</a> <a href="/test/tags/Google-Map/" style="font-size: 10px;">Google Map</a> <a href="/test/tags/New-Zealand/" style="font-size: 11.67px;">New Zealand</a> <a href="/test/tags/Responsive-Web-Design/" style="font-size: 10px;">Responsive Web Design</a> <a href="/test/tags/animate/" style="font-size: 10px;">animate</a> <a href="/test/tags/back-end/" style="font-size: 10px;">back-end</a> <a href="/test/tags/baidu/" style="font-size: 10px;">baidu</a> <a href="/test/tags/blog/" style="font-size: 16.67px;">blog</a> <a href="/test/tags/coder/" style="font-size: 10px;">coder</a> <a href="/test/tags/css/" style="font-size: 10px;">css</a> <a href="/test/tags/devops/" style="font-size: 10px;">devops</a> <a href="/test/tags/efficiency/" style="font-size: 11.67px;">efficiency</a> <a href="/test/tags/finance/" style="font-size: 10px;">finance</a> <a href="/test/tags/front-end/" style="font-size: 13.33px;">front-end</a> <a href="/test/tags/git/" style="font-size: 10px;">git</a> <a href="/test/tags/gpx/" style="font-size: 10px;">gpx</a> <a href="/test/tags/happiness/" style="font-size: 10px;">happiness</a> <a href="/test/tags/hexo-generator-index-plus/" style="font-size: 10px;">hexo-generator-index-plus</a> <a href="/test/tags/hexo-plugin/" style="font-size: 10px;">hexo-plugin</a> <a href="/test/tags/javascript-animation/" style="font-size: 10px;">javascript animation</a> <a href="/test/tags/job/" style="font-size: 11.67px;">job</a> <a href="/test/tags/life/" style="font-size: 18.33px;">life</a> <a href="/test/tags/mac/" style="font-size: 10px;">mac</a> <a href="/test/tags/mactalk/" style="font-size: 10px;">mactalk</a> <a href="/test/tags/mobile-deug/" style="font-size: 11.67px;">mobile deug</a> <a href="/test/tags/npm/" style="font-size: 10px;">npm</a> <a href="/test/tags/performance/" style="font-size: 10px;">performance</a> <a href="/test/tags/photography/" style="font-size: 10px;">photography</a> <a href="/test/tags/reactjs/" style="font-size: 10px;">reactjs</a> <a href="/test/tags/reading/" style="font-size: 20px;">reading</a> <a href="/test/tags/resume/" style="font-size: 10px;">resume</a> <a href="/test/tags/roadmap/" style="font-size: 10px;">roadmap</a> <a href="/test/tags/rwd/" style="font-size: 10px;">rwd</a> <a href="/test/tags/study/" style="font-size: 11.67px;">study</a> <a href="/test/tags/tech/" style="font-size: 20px;">tech</a> <a href="/test/tags/theme/" style="font-size: 10px;">theme</a> <a href="/test/tags/time-management/" style="font-size: 10px;">time management</a> <a href="/test/tags/translation/" style="font-size: 10px;">translation</a> <a href="/test/tags/travel/" style="font-size: 10px;">travel</a> <a href="/test/tags/velocity-js/" style="font-size: 10px;">velocity.js</a> <a href="/test/tags/web/" style="font-size: 11.67px;">web</a> <a href="/test/tags/weixin/" style="font-size: 10px;">weixin</a> <a href="/test/tags/whv/" style="font-size: 13.33px;">whv</a> <a href="/test/tags/work/" style="font-size: 15px;">work</a> <a href="/test/tags/working-holiday/" style="font-size: 11.67px;">working holiday</a> <a href="/test/tags/总结/" style="font-size: 15px;">总结</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/11/">十一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/02/">二月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/01/">一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/12/">十二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/08/">八月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/07/">七月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/04/">四月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/02/">二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/01/">一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/12/">十二月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/11/">十一月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/10/">十月 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/test/archives/optimizing-react-virtual-dom-explained/">[译] React性能优化-虚拟Dom原理浅析</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/slash/">关于「自由态职业」</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/css-var/">CSS Variables学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/year-2017/">我的2017</a>
+          </li>
+        
+          <li>
+            <a href="/test/archives/eu-gallery/">当我在欧洲艺术馆遇到馆长</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 伍酱<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/test/" class="mobile-nav-link">Home</a>
+  
+    <a href="/test/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/test/fancybox/jquery.fancybox.css">
+  <script src="/test/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/test/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
