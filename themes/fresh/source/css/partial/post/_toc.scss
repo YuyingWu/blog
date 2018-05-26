@@ -1,0 +1,47 @@
+@import "../../base/variable";
+.wgt-toc{
+  --toc-display: block;
+  position: absolute;
+  left: 740px + $gutter;
+  background: #efefef;
+  width: 250px;
+  header{
+    font-size: $font-size-meta;
+    text-align: center;
+    cursor: pointer;
+    p{
+      margin: 0;
+      padding: $gutter / 2;
+    }
+  }
+  .toc{
+    margin: 0;
+    padding: $gutter;
+    font-size: $font-size-meta;
+    border-top: 1px solid $color-box-shadow;
+    display: var(--toc-display);
+    .toc-link{
+      text-decoration: none!important;
+      &:hover{
+        color: $color-nav;
+      }
+    }
+    li,
+    .toc-child li{
+      list-style: none;
+      .toc-number{
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: $width-wide) {
+  .wgt-toc{
+    --toc-display: none;
+    position: static!important;
+    width: 100%;
+    header{
+      margin-top: $gutter / 2;
+    }
+  }
+}

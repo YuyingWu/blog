@@ -1,0 +1,21 @@
+menu:
+  Blog: /blog/
+  Archive: /blog/archives/
+  About: /blog/about.html
+
+widgets:
+- category
+- tag
+- search
+
+copyright_start: 2014
+
+excerpt_link: Read More
+
+skip_render: 
+- node_modules/*
+
+# GOOGLE ANALYTICS
+ga: UA-74424222-1
+
+footer_info: 京ICP备16019960号

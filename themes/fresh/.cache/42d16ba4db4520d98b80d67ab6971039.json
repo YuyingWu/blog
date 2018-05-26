@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"\"use strict\";\n\nif (document.querySelector('.toc').length) {\n  console.log('hi');\n}"},"hash":"a984502d99359c308dbd0cc9a9a71958"}

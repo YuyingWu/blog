@@ -1,0 +1,142 @@
+html {
+    font:  {
+        family: $font-default;
+    }
+    background: $color-background;
+}
+body{
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+a{
+    text-decoration: none;
+    color: $color-link;
+    outline: 0;
+    /* &:hover{
+        text-shadow: 0 0 2px $color-box-shadow;
+    } */
+}
+
+p,
+li{
+    line-height: 2;
+    font-size: 1em;
+}
+.wide-center{
+    max-width: $width-wide;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center {
+    min-width: 300px;
+    max-width: $width-normal;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#postPrev,
+#postNext {
+    line-height: 40px;
+    position: fixed;
+    z-index: 9;
+    bottom: 100px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: $color-meta;
+    border-radius: 3px;
+    background: #8F8F8F;
+    &:hover {
+        color: #fff;
+        background: #292929;
+    }
+}
+#postPrev {
+  left: 0;
+}
+#postNext {
+  right: 0;
+}
+
+// @media screen and (max-width: $width-wide + 60) {
+//     .center {
+//         margin: 0 30px;
+//     }
+// }
+
+@media screen and (max-width: $width-phone) {
+    .center {
+        margin: 0 $mobile-gutter;
+    }
+}
+
+.grid{
+    float: left;
+}
+.grid-r{
+    float: right;
+}
+.u-clearfix {
+    &:after {
+        display: block;
+        clear: both;
+        overflow: hidden;
+        height: 0;
+        content: '';
+    }
+}
+.u-maxWidth1000{
+    max-width: 1000px;
+}
+.u-maxWidth640{
+    max-width: 640px;
+}
+.u-marginAuto{
+    margin-right: auto;
+    margin-left: auto;
+}
+.u-size8of12,
+.u-size4of12{
+    float: left;
+}
+.u-size8of12{
+    width: 66.66666667%;
+}
+.u-size4of12{
+    width: 33.33333333%;
+}
+.u-xs-size12of12{
+    @media screen and (max-width: $width-phone) {
+        width: 100%;
+    } 
+}
+
+h1{
+    font-size: 1.6em;
+}
+h2{
+    font-size: 1.4em;
+}
+h3{
+    font-size: 1.2em;
+}
+h4,
+h5,
+h6{
+    font-size: 1em;
+}
+
+code{
+    border: 1px solid $color-border;
+    border-radius: $border-radius;
+    padding: 0 4px;
+    margin: 0 4px;
+    word-break: break-word;
+}
+
+.p--highlight{
+    background-color: $color-highlight;
+    font-style: normal;
+}

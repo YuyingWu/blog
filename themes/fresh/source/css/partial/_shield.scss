@@ -1,0 +1,21 @@
+.wgt-shield{
+  color: #fff!important;
+  display: inline-block;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-right: 5px;
+  .title,
+  .desc{
+    padding: 1px 5px;
+    float: left;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+  }
+  .title{
+    background: #555;
+  }
+  .desc{
+    background: #4c1;
+  }
+}

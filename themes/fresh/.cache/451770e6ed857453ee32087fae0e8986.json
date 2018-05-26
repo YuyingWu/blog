@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"../css/index.scss"}],"generated":{"js":"\"use strict\";\n\nrequire(\"../css/index.scss\");\n\nvar a = [{\n  a: 1,\n  b: 2\n}, {\n  a: 2,\n  c: 3\n}];\n\nvar demo = {\n  a: 1,\n  b: 2,\n  c: 3\n};\n\nvar value = demo.a;\n\n\ndocument.querySelector('#content').innerHTML = value;"},"hash":"266289d431d1f50ab5a113603796f2c3"}

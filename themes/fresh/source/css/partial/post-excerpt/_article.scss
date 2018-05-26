@@ -1,0 +1,11 @@
+.article-excerpt{
+	max-width: 660px;
+    margin: 0 auto 10px;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0 1px 7px #F3F3F3;
+    border-radius: $border-radius;
+    .post-content{
+        padding: 20px;
+    }
+}
+@import 'photo';

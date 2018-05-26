@@ -1,16 +1,18 @@
 language: node_js
 node_js: stable
 
+addons:
+  apt:
+    update: true
+
 # Travis-CI Caching
 cache:
   directories:
     - node_modules
-    - themes/fresh
 
 # S: Build Lifecycle
 install:
   - npm install
-  - git clone https://github.com/YuyingWu/hexo-theme-fresh.git themes/fresh
 
 before_script:
  # - npm install -g gulp
