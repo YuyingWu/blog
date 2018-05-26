@@ -14,7 +14,7 @@ tags:
 
 ## 闲聊日志的快捷发布
 
-前几天，跟小伙伴Pipe一起参加个分享会，看到他做了笔记，结束后我说你发给我呀，他说直接看我博客（[《工作思维方式简记》](https://zhoukekestar.github.io/notes/2018/05/25/better-me.html)）呀！我的天，写完瞬间就发到站点去了！Pipe非常高产，去看看他的博客，用“高产似母猪”来描述都不足为过，5月份还没有过完，发布了7篇日志。
+前几天，跟小伙伴Pipe一起参加个分享会，看到他做了笔记，结束后我说你发给我呀，他说直接看我博客（[《工作思维方式简记》](https://zhoukekestar.github.io/notes/2018/05/25/better-me.html)）呀！我的天，写完瞬间就发到站点去了！Pipe非常高产，去看看他的[博客](https://zhoukekestar.github.io/notes)，用“高产似母猪”来描述都不足为过，5月份还没有过完，发布了7篇日志。
 
 我问他，怎么做到那么高产？Pipe说，第一点是他的日志是碎片化的偏记录的，不一定要憋出大文章才发，然后就是博客系统要方便，随写随发。
 
@@ -31,7 +31,7 @@ By the way，Pipe用的是`jekyll`，跟github的持续集成是天生的，而H
 ## HEXO的开发分支与生产分支
 
 仓库分成2个分支，主开发开支dev，以及生产环境的gh-pages分支。
-查看博客可以通过访问github pages，又或者直接访问我的域名 wuyuying.com/blog。
+查看博客可以通过访问[github pages](https://yuyingwu.github.io/blog/)，又或者直接访问我的域名 [wuyuying.com/blog](http://www.wuyuying.com/blog/archives/hexo-travis/)。
 
 ### 开发分支 dev
 
