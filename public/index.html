@@ -1,1083 +1,433 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="">
 
-  
-  <title>伍酱</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="伍酱">
-<meta property="og:url" content="http://wuyuying.com/index.html">
-<meta property="og:site_name" content="伍酱">
-<meta property="og:locale" content="zh-CN">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="伍酱">
-  
-    <link rel="alternate" href="/test/atom.xml" title="伍酱" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/test/css/style.css">
+	
+<link rel="stylesheet" href="/blog//css/index.css">
+
+
+	<title>伍酱 - 吾悠杂货铺</title>
+
+	<!--[if lte IE 8]>
+        <script>
+            (function(){
+                var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+                i=e.length;
+                while(i--){document.createElement(e[i])}
+             })();
+        </script>
+    <![endif]-->
 </head>
+<body class="page-index">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/test/" id="logo">伍酱</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/test/" id="subtitle">吾悠杂货铺</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/test/">Home</a>
-        
-          <a class="main-nav-link" href="/test/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/test/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://wuyuying.com"></form>
-      </div>
-    </div>
-  </div>
+<script async>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-74424222-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<!--[if lte IE 8]>
+    <p class="browserupgrade">貌似你还在用<strong>低版本IE</strong>浏览器喔~ 为了更好的体验，去下载一个<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=chrome&rsv_pq=c275ed8c0000204b&rsv_t=b404%2BiFxvZfvn%2FqqBMyJKwHyShj%2FipQgL7TfJsGKrHxZhoWCUisbVukJsNw&rqlang=cn&rsv_enter=1&rsv_sug3=6&rsv_sug1=5&rsv_sug7=100&rsv_sug2=0&inputT=891&rsv_sug4=891" target="_blank">最新版Chrome</a>吧 ：）</p>
+<![endif]-->
+
+
+	<header>
+	<section class="u-clearfix header__container">
+		<nav class="grid-r header__nav--list">
+			
+				<a href="/blog/">Blog</a>
+			
+				<a href="/blog/archives/">Archive</a>
+			
+				<a href="/blog/about.html">About</a>
+			
+		</nav>
+
+		<h1 class="grid">
+			<a href="/">伍酱</a>
+		</h1>
+	</section>
+</header><!-- /header -->
+
+
+<div id="content">
+	<div class="center">
+		<div class="main-col">
+			
+	<section class="u-maxWidth640 u-marginAuto">
+		
+			
+
+			
+	
+
+
+<article class="article article-excerpt article-type-photo post post-index">
+	<div class="post-content">
+		
+			
+<a href="/blog/archives/optimizing-react-virtual-dom-explained/" class="articlePhoto__cover">
+	<img src="http://sinacloud.net/woodysblog/img/bkg.jpg" alt="" class="articlePhoto__cover" />
+	<div class="articlePhoto__modal"></div>
+	<div class="articlePhoto__content">
+		
+	
+		
+			<h3 class="title" data-role="articleTitle">[译] React性能优化-虚拟Dom原理浅析</h3>
+		
+	
+
+
+		<div class="articlePhoto__excerpt"></div>
+
+		<div class="post__meta">
+	<time datetime="2018-05-13T11:15:19.000Z">2018-05-13</time>
+
+	
+</div>
+	</div>
+</a>
+		
+	</div>
+</article>
+		
+			
+
+			
+
+<article class="article article-excerpt  post post-index">
+	<div class="post-content">
+		
+			
+<header>
+	
+	
+		
+			<h3 class="title" data-role="articleTitle"><a href="/blog/archives/slash/">关于「自由态职业」</a></h3>
+		
+	
+
+	<div class="post__meta">
+	<time datetime="2018-04-30T15:37:19.000Z">2018-04-30</time>
+
+	
+</div>
 </header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-optimizing-react-virtual-dom-explained" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/optimizing-react-virtual-dom-explained/" class="article-date">
-  <time datetime="2018-05-13T11:15:19.000Z" itemprop="datePublished">2018-05-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/optimizing-react-virtual-dom-explained/">[译] React性能优化-虚拟Dom原理浅析</a>
-    </h1>
-  
+<div class="entry">
+	<p>最近读了萧秋水和剽悍一只猫的<a href="https://book.douban.com/subject/27177491/" target="_blank" rel="noopener">《知识变现》</a>，准确的来说，这本书不全是讲如何变现你的知识，而是从多方面去解释什么是“斜杠青年”和“自由职业”，而“自由态职业”又是什么，个人觉得此书应该改名为《国内斜杠青年/自由工作者的生活/工作现状》。</p>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文译自<a href="https://evilmartians.com/chronicles/optimizing-react-virtual-dom-explained" target="_blank" rel="noopener">《Optimizing React: Virtual DOM explained》</a>，作者是<a href="https://github.com/iAdramelk" target="_blank" rel="noopener">Alexey Ivanov</a>和<a href="https://github.com/progapandist" target="_blank" rel="noopener">Andy Barnov</a>，来自<a href="https://evilmartians.com/chronicles" target="_blank" rel="noopener">Evil Martians’ team</a>团队。</p>
-<p>译者说：通过一些实际场景和demo，给大家描述React的Virtual Dom Diff一些核心的原理和规则，以及基于这些我们可以做些什么提高应用的性能，很棒的文章。</p>
-<hr>
-<p><strong>通过学习React的Virtual DOM的知识，去加速你们的应用吧。对框架内部实现的介绍，比较全面且适合初学者，我们会让JSX更加简单易懂，给你展示React是如何判断要不要重新render，解释如何找到应用的性能瓶颈，以及给大家一些小贴士，如何避免常见错误。</strong></p>
-<p>React在前端圈内保持领先的原因之一，因为它的学习曲线非常平易近人：把你的模板包在<code>JSX</code>，了解一下<code>props</code>和<code>state</code>的概念之后，你就可以轻松写出React代码了。</p>
-<p>如果你已经熟悉React的工作方式，可以直接跳至“优化我的代码”篇。</p>
-<p>但要真正掌握React，你需要像React一样思考（think in React）。本文也会试图在这个方面帮助你。</p>
-<p>下面看看我们其中一个项目中的React table：</p>
-<p><img src="http://sinacloud.net/woodysblog/img/ebay_table.png" alt="&quot;eBay上的一个巨大的React表格  用于业务。&quot;"></p>
-<p>这个表里有数百个动态（表格内容变化）和可过滤的选项，理解这个框架更精细的点，对于保证顺畅的用户体验至关重要。</p>
-<hr>
-<p><strong>当事情出错时，你一定能感觉到。输入字段变得迟缓，复选框需要检查一秒钟，弹窗一个世纪后才出现，等等。</strong></p>
-<hr>
-<p>为了能够解决这些问题，我们需要完成一个React组件的整个生命旅程，从一开始的声明定义到在页面上渲染（再然后可能会更新）。系好安全带，我们要发车了！</p>
-<h2 id="JSX的背后"><a href="#JSX的背后" class="headerlink" title="JSX的背后"></a>JSX的背后</h2><p>这个过程一般在前端会称为“转译”，但其实“汇编”将是一个更精确的术语。</p>
-<p>React开发人员敦促你在编写组件时使用一种称为JSX的语法，混合了HTML和JavaScript。但浏览器对JSX及其语法毫无头绪，浏览器只能理解纯碎的JavaScript，所以JSX必须转换成JavaScript。这里是一个div的JSX代码，它有一个class name和一些内容：</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div className=<span class="string">'cn'</span>&gt;</span><br><span class="line">  Content!</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
-<p>以上的代码，被转换成“正经”的JavaScript代码，其实是一个带有一些参数的函数调用：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">React.createElement(</span><br><span class="line">  <span class="string">'div'</span>,</span><br><span class="line">  &#123; <span class="attr">className</span>: <span class="string">'cn'</span> &#125;,</span><br><span class="line">  <span class="string">'Content!'</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>让我们仔细看看这些参数。</p>
-<ul>
-<li>第一个是元素的<code>type</code>。对于HTML标签，它将是一个带有<code>标签名称</code>的字符串。</li>
-<li>第二个参数是一个包含所有元素属性（<code>attributes</code>）的对象。如果没有，它也可以是空的对象。</li>
-<li>剩下的参数都可以认为是元素的子元素（<code>children</code>）。元素中的文本也算作一个child，是个字符串’Content！’ 作为函数调用的第三个参数放置。</li>
-</ul>
-<p>你应该可以想象，当我们有更多的children时会发生什么：</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div className=<span class="string">'cn'</span>&gt;</span><br><span class="line">  Content <span class="number">1</span>!</span><br><span class="line">  &lt;br /&gt;</span><br><span class="line">  Content <span class="number">2</span>!</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">React.createElement(</span><br><span class="line">  <span class="string">'div'</span>,</span><br><span class="line">  &#123; <span class="attr">className</span>: <span class="string">'cn'</span> &#125;,</span><br><span class="line">  <span class="string">'Content 1!'</span>,              <span class="comment">// 1st child</span></span><br><span class="line">  React.createElement(<span class="string">'br'</span>), <span class="comment">// 2nd child</span></span><br><span class="line">  <span class="string">'Content 2!'</span>               <span class="comment">// 3rd child</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<p>我们的函数现在有五个参数：</p>
-<ul>
-<li>一个元素的类型</li>
-<li>一个属性对象</li>
-<li>三个子元素。</li>
-</ul>
-<p>因为其中一个child是一个React已知的HTML标签（<code>&lt;br/&gt;</code>），所以它也会被描述为一个函数调用（<code>React.createElement(&#39;br&#39;)</code>）。</p>
-<p>到目前为止，我们已经涵盖了两种类型的children：</p>
-<ul>
-<li>简单的<code>String</code></li>
-<li>另一种会调用<code>React.createElement</code>。</li>
-</ul>
-<p>然而，还有其他值可以作为参数：</p>
-<ul>
-<li>基本类型 <code>false, null, undefined, true</code></li>
-<li>数组</li>
-<li>React Components</li>
-</ul>
-<p>可以使用数组是因为可以将children分组并作为一个参数传递：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">React.createElement(</span><br><span class="line">  <span class="string">'div'</span>,</span><br><span class="line">  &#123; <span class="attr">className</span>: <span class="string">'cn'</span> &#125;,</span><br><span class="line">  [<span class="string">'Content 1!'</span>, React.createElement(<span class="string">'br'</span>), <span class="string">'Content 2!'</span>]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<p>当然了，React的厉害之处，不仅仅因为我们可以把HTML标签直接放在JSX中使用，而是我们可以自定义自己的组件，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Table</span>(<span class="params">&#123; rows &#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;table&gt;</span><br><span class="line">      &#123;rows.map(<span class="function"><span class="params">row</span> =&gt;</span> (</span><br><span class="line">        &lt;tr key=&#123;row.id&#125;&gt;</span><br><span class="line">          &lt;td&gt;&#123;row.title&#125;&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>tr&gt;</span><br><span class="line">      ))&#125;</span><br><span class="line">    &lt;<span class="regexp">/table&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>组件可以让我们把模板分解为多个可重用的块。在上面的“函数式”（functional）组件的例子里，我们接收一个包含表格行数据的对象数组，最后返回一个调用<code>React.createElement</code>方法的<code>&lt;table&gt;</code>元素，<code>rows</code>则作为children传进table。</p>
-<p>无论什么时候，我们这样去声明一个组件时：</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Table rows=&#123;rows&#125; /&gt;</span><br></pre></td></tr></table></figure>
-<p>从浏览器的角度来看，我们是这么写的：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">React.createElement(Table, &#123; <span class="attr">rows</span>: rows &#125;);</span><br></pre></td></tr></table></figure>
-<p>注意，这次我们的第一个参数不是<code>String</code>描述的<code>HTML标签</code>，而是一个引用，指向我们编写组件时编写的函数。组件的<code>attributes</code>现在是接收的<code>props</code>参数了。</p>
-<h2 id="把组件（components）组合成页面（a-page）"><a href="#把组件（components）组合成页面（a-page）" class="headerlink" title="把组件（components）组合成页面（a page）"></a>把组件（components）组合成页面（a page）</h2><p>所以，我们已经将所有JSX组件转换为纯JavaScript，现在我们有一大堆函数调用，它的参数会被其他函数调用的，或者还有更多的其他函数调用这些参数……这些带参数的函数调用，是怎么转化成组成这个页面的实体DOM的呢？</p>
-<p>为此，我们有一个<code>ReactDOM</code>库及其它的<code>render</code>方法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Table</span>(<span class="params">&#123; rows &#125;</span>) </span>&#123; <span class="comment">/* ... */</span> &#125; <span class="comment">// defining a component</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// rendering a component</span></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  React.createElement(Table, &#123; <span class="attr">rows</span>: rows &#125;), <span class="comment">// "creating" a component</span></span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'#root'</span>) <span class="comment">// inserting it on a page</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>当<code>ReactDOM.render</code>被调用时，<code>React.createElement</code>最终也会被调用，返回以下对象：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// There are more fields, but these are most important to us</span></span><br><span class="line">&#123;</span><br><span class="line">  type: Table,</span><br><span class="line">  props: &#123;</span><br><span class="line">    rows: rows</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p><strong>这些对象，在React的角度上，构成了虚拟DOM。</strong></p>
-<hr>
-<p>他们将在所有进一步的渲染中相互比较，并最终转化为  真正的<code>DOM</code>（virtual VS real, 虚拟DOM VS 真实DOM）。</p>
-<p>下面是另一个例子：这次div有一个class属性和几个children：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">React.createElement(</span><br><span class="line">  <span class="string">'div'</span>,</span><br><span class="line">  &#123; <span class="attr">className</span>: <span class="string">'cn'</span> &#125;,</span><br><span class="line">  <span class="string">'Content 1!'</span>,</span><br><span class="line">  <span class="string">'Content 2!'</span>,</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>变成：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  type: <span class="string">'div'</span>,</span><br><span class="line">  props: &#123;</span><br><span class="line">    className: <span class="string">'cn'</span>,</span><br><span class="line">    children: [</span><br><span class="line">      <span class="string">'Content 1!'</span>,</span><br><span class="line">      <span class="string">'Content 2!'</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>需要注意的是，那些除了<code>type</code>和<code>attribute</code>以外的属性，原本是单独传进来的，转换之后，会作为在<code>props.children</code>以一个数组的形式打包存在。也就是说，无论children是作为数组还是参数列表传递都没关系 —— 在生成的虚拟DOM对象的时候，它们最后都会被打包在一起的。</p>
-<p>进一步说，我们可以直接在组件中把children作为一项属性传进去，结果还是一样的：</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div className=<span class="string">'cn'</span> children=&#123;[<span class="string">'Content 1!'</span>, <span class="string">'Content 2!'</span>]&#125; /&gt;</span><br></pre></td></tr></table></figure>
-<p>在构建虚拟DOM对象完成之后，<code>ReactDOM.render</code>将会按下面的原则，尝试将其转换为浏览器可以识别和展示的DOM节点：</p>
-<ul>
-<li><p>如果<code>type</code>包含一个带有<code>String</code>类型的标签名称（<code>tag name</code>）—— 创建一个标签，附带上<code>props</code>下所有<code>attributes</code>。</p>
-</li>
-<li><p>如果<code>type</code>是一个函数（<code>function</code>）或者类（<code>class</code>），调用它，并对结果递归地重复这个过程。</p>
-</li>
-<li><p>如果<code>props</code>下有<code>children</code>属性 —— 在父节点下，针对每个child重复以上过程。</p>
-</li>
-</ul>
-<p>最后，得到以下HTML（对于我们的表格示例）：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="重新构建DOM（Rebuilding-the-DOM）"><a href="#重新构建DOM（Rebuilding-the-DOM）" class="headerlink" title="重新构建DOM（Rebuilding the DOM）"></a>重新构建DOM（Rebuilding the DOM）</h2><p>在实际应用场景，<code>render</code>通常在根节点调用一次，后续的更新会有<code>state</code>来控制和触发调用。</p>
-<p>请注意，标题中的“重新”！当我们想更新一个页面而不是全部替换时，React中的魔法就开始了。我们有一些实现它的方式。我们先从最简单的开始 —— 在同一个node节点再次执行<code>ReactDOM.render</code>。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Second call</span></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  React.createElement(Table, &#123; <span class="attr">rows</span>: rows &#125;),</span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'#root'</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>这一次，上面的代码的表现，跟我们已经看到的有所不同。React将从头开始创建所有DOM节点并将其放在页面上，而不是从头开始创建所有DOM节点，React将启动其<code>diff</code>算法，来确定节点树的哪些部分必须更新，哪些可以保持不变。</p>
-<p>那么，它是怎样工作的呢？其实只有少数几个简单的场景，理解它们将对我们的优化帮助很大。请记住，现在我们在看的，是在<code>React Virtual DOM</code>里面用来代表节点的<code>对象</code>。</p>
-<h3 id="场景1：type是一个字符串，type在通话中保持不变，props也没有改变。"><a href="#场景1：type是一个字符串，type在通话中保持不变，props也没有改变。" class="headerlink" title="场景1：type是一个字符串，type在通话中保持不变，props也没有改变。"></a>场景1：<code>type</code>是一个字符串，<code>type</code>在通话中保持不变，<code>props</code>也没有改变。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// before update</span></span><br><span class="line">&#123; <span class="attr">type</span>: <span class="string">'div'</span>, <span class="attr">props</span>: &#123; <span class="attr">className</span>: <span class="string">'cn'</span> &#125; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// after update</span></span><br><span class="line">&#123; <span class="attr">type</span>: <span class="string">'div'</span>, <span class="attr">props</span>: &#123; <span class="attr">className</span>: <span class="string">'cn'</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
-<p>这是最简单的情况：DOM保持不变。</p>
-<h3 id="场景2：type仍然是相同的字符串，props是不同的。"><a href="#场景2：type仍然是相同的字符串，props是不同的。" class="headerlink" title="场景2：type仍然是相同的字符串，props是不同的。"></a>场景2：<code>type</code>仍然是相同的字符串，<code>props</code>是不同的。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// before update:</span></span><br><span class="line">&#123; <span class="attr">type</span>: <span class="string">'div'</span>, <span class="attr">props</span>: &#123; <span class="attr">className</span>: <span class="string">'cn'</span> &#125; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// after update:</span></span><br><span class="line">&#123; <span class="attr">type</span>: <span class="string">'div'</span>, <span class="attr">props</span>: &#123; <span class="attr">className</span>: <span class="string">'cnn'</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
-<p><code>type</code>仍然代表HTML元素，React知道如何通过标准DOM API调用来更改元素的属性，而无需从DOM树中删除一个节点。</p>
-<h3 id="场景3：type已更改为不同的String或从String组件。"><a href="#场景3：type已更改为不同的String或从String组件。" class="headerlink" title="场景3：type已更改为不同的String或从String组件。"></a>场景3：<code>type</code>已更改为不同的<code>String</code>或从<code>String</code>组件。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// before update:</span></span><br><span class="line">&#123; <span class="attr">type</span>: <span class="string">'div'</span>, <span class="attr">props</span>: &#123; <span class="attr">className</span>: <span class="string">'cn'</span> &#125; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// after update:</span></span><br><span class="line">&#123; <span class="attr">type</span>: <span class="string">'span'</span>, <span class="attr">props</span>: &#123; <span class="attr">className</span>: <span class="string">'cn'</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
-<p>React看到的<code>type</code>是不同的，它甚至不会尝试更新我们的节点：old元素将和它的所有子节点一起被删除（unmounted卸载）。因此，将元素替换为完全不同于DOM树的东西代价会非常昂贵。幸运的是，这在现实世界中很少发生。</p>
-<p>划重点，记住React使用<code>===</code>（triple equals）来比较<code>type</code>的值，所以这两个值需要是相同类或相同函数的相同实例。</p>
-<p>下一个场景更加有趣，通常我们会这么使用React。</p>
-<h3 id="场景4：type是一个component。"><a href="#场景4：type是一个component。" class="headerlink" title="场景4：type是一个component。"></a>场景4：<code>type</code>是一个<code>component</code>。</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// before <span class="keyword">update</span>:</span><br><span class="line">&#123; <span class="keyword">type</span>: <span class="keyword">Table</span>, props: &#123; <span class="keyword">rows</span>: <span class="keyword">rows</span> &#125; &#125;</span><br><span class="line"></span><br><span class="line">// <span class="keyword">after</span> <span class="keyword">update</span>:</span><br><span class="line">&#123; <span class="keyword">type</span>: <span class="keyword">Table</span>, props: &#123; <span class="keyword">rows</span>: <span class="keyword">rows</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p><strong>你可能会说，“咦，但没有任何变化啊！”，但是你错了。</strong></p>
-<hr>
-<p>如果<code>type</code>是对函数或类的引用（即常规的React组件），并且我们启动了tree diff的过程，则React会持续地去检查组件的内部逻辑，以确保<code>render</code>返回的值不会改变（类似对副作用的预防措施）。对树中的每个组件进行遍历和扫描 —— 是的，在复杂的渲染场景下，成本可能会非常昂贵！</p>
-<p>值得注意的是，一个<code>component</code>的<code>render</code>（只有类组件在声明时有这个函数）跟<code>ReactDom.render</code>不是同一个函数。</p>
-<h2 id="关注子组件（children）的情况"><a href="#关注子组件（children）的情况" class="headerlink" title="关注子组件（children）的情况"></a>关注子组件（children）的情况</h2><p>除了上述四种常见场景之外，当一个元素有多个子元素时，我们还需要考虑React的行为。现在假设我们有这么一个元素：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">props: &#123;</span><br><span class="line">  children: [</span><br><span class="line">      &#123; <span class="attr">type</span>: <span class="string">'div'</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">type</span>: <span class="string">'span'</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">type</span>: <span class="string">'br'</span> &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
-<p>我们想要交换一下这些children的顺序：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">props: &#123;</span><br><span class="line">  children: [</span><br><span class="line">    &#123; <span class="attr">type</span>: <span class="string">'span'</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">type</span>: <span class="string">'div'</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">type</span>: <span class="string">'br'</span> &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
-<p>之后会发生什么呢？</p>
-<p>当<code>diffing</code>的时候，如果React在检查<code>props.children</code>下的数组时，按顺序去对比数组内元素的话：index 0将与index 0进行比较，index 1和index 1，等等。对于每一次对比，React会使用之前提过的diff规则。在我们的例子里，它认为<code>div</code>成为一个<code>span</code>，那么就会运用到情景3。这样不是很有效率的：想象一下，我们已经从1000行中删除了第一行。React将不得不“更新”剩余的999个子项，因为按index去对比的话，内容从第一条开始就不相同了。</p>
-<p>幸运的是，React有一个<code>内置的方法（built-in）</code>来解决这个问题。如果一个元素有一个<code>key</code>属性，那么元素将按<code>key</code>而不是<code>index</code>来比较。只要<code>key</code>是唯一的，React就会移动元素，而不是将它们从DOM树中移除然后再将它们放回（这个过程在React里叫mounting和unmounting）。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">props: &#123;</span><br><span class="line">  children: [ <span class="comment">// Now React will look on key, not index</span></span><br><span class="line">    &#123; <span class="attr">type</span>: <span class="string">'div'</span>, <span class="attr">key</span>: <span class="string">'div'</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">type</span>: <span class="string">'span'</span>, <span class="attr">key</span>: <span class="string">'span'</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">type</span>: <span class="string">'br'</span>, <span class="attr">key</span>: <span class="string">'bt'</span> &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
-<h2 id="当state发生了改变"><a href="#当state发生了改变" class="headerlink" title="当state发生了改变"></a>当state发生了改变</h2><p>到目前为止，我们只聊了下React哲学里面的<code>props</code>部分，却忽视了另外很重要的一部分<code>state</code>。下面是一个简单的<code>stateful</code>组件：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  state = &#123; <span class="attr">counter</span>: <span class="number">0</span> &#125;</span><br><span class="line"></span><br><span class="line">  increment = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    counter: <span class="keyword">this</span>.state.counter + <span class="number">1</span>,</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  render = <span class="function"><span class="params">()</span> =&gt;</span> (<span class="xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;this.increment&#125;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    &#123;'Counter: ' + this.state.counter&#125;</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在<code>state</code>对象里，我们有一个key<code>counter</code>。点击按钮时，这个值会增加，然后按钮的文本也会发生相应的改变。但是，当我们这样做时，DOM中发生了什么？哪部分将被重新计算和更新？</p>
-<p>调用<code>this.setState</code>会导致<code>re-render</code>（重新渲染），但不会影响到整个页面，而只会影响组件本身及其children组件。父母和兄弟姐妹都不会受到影响。当我们有一个层级很深的组件链时，这会让状态更新变得非常方便，因为我们只需要重绘(<code>redraw</code>)它的一部分。</p>
-<h2 id="把问题说清楚"><a href="#把问题说清楚" class="headerlink" title="把问题说清楚"></a>把问题说清楚</h2><p>我们准备了一个<a href="https://iadramelk.github.io/optimizing-react-demo/dist/before.html" target="_blank" rel="noopener">小demo</a>，以便你可以在看到在“野蛮生长”的React编码方式下最常见的问题，后续我也告诉大家怎么去解决这些问题。你可以在<a href="https://github.com/iAdramelk/optimizing-react-demo" target="_blank" rel="noopener">这里看看它的源代码</a>。你还需要<a href="https://github.com/facebook/react-devtools" target="_blank" rel="noopener">React Developer Tools</a>，请确保浏览器安装了它们。</p>
-<p>我们首先要看看的是，哪些元素以及什么时候导致Virtual DOM的更新。在浏览器的开发工具中，打开React面板并选择“Highlight Updates”复选框：</p>
-<p><img src="http://sinacloud.net/woodysblog/img/react_dev_tools.png" alt="&quot;在Chrome中使用“突出显示更新”复选框选中DevTools&quot;"></p>
-<p>现在尝试在表格中添加一行。如你所见，页面上的每个元素周围都会显示一个边框。这意味着每次添加一行时，React都在计算和比较整个虚拟DOM树。现在尝试点击一行内的counter按钮。你将看到<code>state</code>更新后虚拟DOM如何更新 —— 只有引用了<code>state key</code>的元素及其children受到影响。</p>
-<p>React DevTools会提示问题出在哪里，但不会告诉我们有关细节的信息：特别是所涉及的更新，是由<code>diffing</code>元素引起的？还是被挂载（<code>mounting</code>）或者被卸载（<code>unmounting</code>）了？要了解更多信息，我们需要使用React的内置<a href="https://reactjs.org/docs/optimizing-performance.html#profiling-components-with-the-chrome-performance-tab" target="_blank" rel="noopener">分析器</a>（注意它不适用于生产模式）。</p>
-<p>添加<code>?react_perf</code>到应用的URL，然后转到Chrome DevTools中的“Performance”标签。点击“录制”（Record）并在表格上点击。添加一些row，更改一下counter，然后点击“停止”（Stop）。</p>
-<p><img src="http://sinacloud.net/woodysblog/img/react_perf_tools.png" alt="&quot;React DevTools的“Performance”选项卡&quot;"></p>
-<p>在输出的结果中，我们关注“User timing”这项指标。放大时间轴直到看到“React Tree Reconciliation”这个组及其子项。这些就是我们组件的名称，它们旁边都写着[update]或[mount]。</p>
-<hr>
-<p><strong>我们的大部分性能问题都属于这两类问题之一。</strong></p>
-<hr>
-<p>无论是组件（还是从它分支的其他组件）出于某种原因都会在每次更新时re-mounted（慢），又或者我们在大型应用上执行对每个分支做diff，尽管这些组件并没有发生改变，我们不希望这些情况的发生。</p>
-<h2 id="优化我们的代码：Mounting-Unmounting"><a href="#优化我们的代码：Mounting-Unmounting" class="headerlink" title="优化我们的代码：Mounting / Unmounting"></a>优化我们的代码：Mounting / Unmounting</h2><p>现在，我们已经了解到当需要update Virtual Dom时，React是依据哪些规则去判断要不要更新，以及也知道了我们可以通过什么方式去追踪这些diff场景的背后发生了什么，我们终于准备好优化我们的代码了！首先，我们来看看mounts/unmounts。</p>
-<p>如果你能够注意到当一个元素包含的多个children，他们是由array组成的话，你可以实现十分显著的速度优化。</p>
-<p>我们来看看这个case：</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;Message /&gt;</span><br><span class="line">  &lt;Table /&gt;</span><br><span class="line">  &lt;Footer /&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在我们的Virtual DOM里这么表示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">props: &#123;</span><br><span class="line">  children: [</span><br><span class="line">    &#123; <span class="attr">type</span>: Message &#125;,</span><br><span class="line">    &#123; <span class="attr">type</span>: Table &#125;,</span><br><span class="line">    &#123; <span class="attr">type</span>: Footer &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
-<p>这里有一个简单的<code>Message</code>例子，就是一个<code>div</code>写着一些简单的文本，和以及一个巨大的<code>Table</code>，比方说，超过1000行。它们（<code>Message</code>和<code>Table</code>）都是顶级<code>div</code>的子组件，所以它们被放置在父节点的<code>props.children</code>下，并且它们<code>key</code>都不会有。React甚至不会通过控制台警告我们要给每个<code>child</code>分配<code>key</code>，因为children正在<code>React.createElement</code>作为参数列表传递给父元素，而不是直接遍历一个数组。</p>
-<p>现在我们的用户已读了一个通知，<code>Message</code>（譬如新通知按钮）从DOM上移除。<code>Table</code>和<code>Footer</code>是剩下的全部。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">props: &#123;</span><br><span class="line">  children: [</span><br><span class="line">    &#123; <span class="attr">type</span>: Table &#125;,</span><br><span class="line">    &#123; <span class="attr">type</span>: Footer &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
-<p>React会怎么处理呢？它会看作是一个array类型的children，现在少了第一项，从前第一项是<code>Message</code>现在是<code>Table</code>了，也没有<code>key</code>作为索引，比较<code>type</code>的时候又发现它们俩不是同一个function或者class的同一个实例，于是会把整个<code>Table</code>unmount，然后在mount回去，渲染它的1000+行子数据。</p>
-<p>因此，你可以给每个component添加唯一的<code>key</code>（但在目特殊的case下，使用key并不是最佳选择），或者采用更聪明的小技巧：使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators" target="_blank" rel="noopener">短路求值</a>（又名“最小化求值”），这是JavaScript和许多其他现代语言的特性。看：</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Using a boolean trick</span></span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &#123;isShown &amp;&amp; <span class="xml"><span class="tag">&lt;<span class="name">Message</span> /&gt;</span>&#125;</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Table</span> /&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Footer</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>虽然<code>Message</code>会离开屏幕，父元素<code>div</code>的<code>props.children</code>仍然会拥有三个元素，<code>children[0]</code>具有一个值<code>false</code>（一个布尔值）。请记住<code>true, false, null, undefined</code>是虚拟DOM对象<code>type</code>属性的允许值，我们最终得到了类似的结果：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">props: &#123;</span><br><span class="line">  children: [</span><br><span class="line">    <span class="literal">false</span>, <span class="comment">//  isShown &amp;&amp; &lt;Message /&gt; evaluates to false</span></span><br><span class="line">    &#123; <span class="attr">type</span>: Table &#125;,</span><br><span class="line">    &#123; <span class="attr">type</span>: Footer &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
-<p>因此，有没有<code>Message</code>组件，我们的索引值都不会改变，<code>Table</code>当然仍然会跟<code>Table</code>比较（当<code>type</code>是一个函数或类的引用时，diff比较的成本还是会有的），但仅仅比较虚拟DOM的成本，通常比“删除DOM节点”并“从0开始创建”它们要来得快。</p>
-<p>现在我们来看看更多的东西。大家都挺喜欢用HOC的，高阶组件是一个将组件作为参数，执行某些操作，最后返回另外一个不同功能的组件：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">withName</span>(<span class="params">SomeComponent</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// Computing name, possibly expensive...</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">SomeComponent</span> &#123;<span class="attr">...props</span>&#125; <span class="attr">name</span>=<span class="string">&#123;name&#125;</span> /&gt;</span>;</span></span><br><span class="line"><span class="xml">  &#125;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>这是一种常见的模式，但你需要小心。如果我们这么写：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>() </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="comment">// Creates a new instance on each render</span></span><br><span class="line">    <span class="keyword">const</span> ComponentWithName = withName(SomeComponent);</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">SomeComponentWithName</span> /&gt;</span>;</span></span><br><span class="line"><span class="xml">  &#125;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>我们在父节点的<code>render</code>方法内部创建一个HOC。当我们重新渲染（<code>re-render</code>）树时，虚拟DOM是这样子的：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// On first render:</span></span><br><span class="line">&#123;</span><br><span class="line">  type: ComponentWithName,</span><br><span class="line">  props: &#123;&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// On second render:</span></span><br><span class="line">&#123;</span><br><span class="line">  type: ComponentWithName, <span class="comment">// Same name, but different instance</span></span><br><span class="line">  props: &#123;&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>现在，React会对<code>ComponentWithName</code>这个实例做diff，但由于此时同名引用了不同的实例，因此全等比较（triple equal）失败，一个完整的re-mount会发生（整个节点换掉），而不是调整属性值或顺序。注意它也会导致状态丢失，<a href="https://github.com/facebook/react/blob/044015760883d03f060301a15beef17909abbf71/docs/docs/higher-order-components.md#dont-use-hocs-inside-the-render-method" target="_blank" rel="noopener">如此处所述</a>。幸运的是，这很容易解决，你需要始终在<code>render</code>外面创建一个HOC：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Creates a new instance just once</span></span><br><span class="line"><span class="keyword">const</span> ComponentWithName = withName(Component);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>() </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">ComponentWithName</span> /&gt;</span>;</span></span><br><span class="line"><span class="xml">  &#125;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br></pre></td></tr></table></figure>
-<h2 id="优化我的代码：Updating"><a href="#优化我的代码：Updating" class="headerlink" title="优化我的代码：Updating"></a>优化我的代码：Updating</h2><p>现在我们可以确保在非必要的时候，不做re-mount的事情了。然而，对位于DOM树根部附近（层级越上面的元素）的组件所做的任何更改都会导致其所有children的diffing和调整（<code>reconciliation</code>）。在层级很多、结构复杂的应用里，这些成本很昂贵，但经常是可以避免的。</p>
-<hr>
-<p><strong>如果有一种方法可以告诉React你不用来检查这个分支了，因为我们可以肯定那个分支不会有更新，那就太棒了！</strong></p>
-<hr>
-<p>这种方式是真的有的哈，它涉及一个built-in方法叫<code>shouldComponentUpdate</code>，它也是<a href="https://reactjs.org/docs/react-component.html#the-component-lifecycle" target="_blank" rel="noopener">组件生命周期</a>的一部分。这个方法的调用时机：组件的<code>render</code>和组件接收到state或props的值的更新时。然后我们可以自由地将它们与我们当前的值进行比较，并决定是否更新我们的组件（返回<code>true</code>或<code>false</code>）。如果我们返回<code>false</code>，React将不会重新渲染组件，也不会检查它的所有子组件。</p>
-<p>通常来说，比较两个集合（set）<code>props</code>和<code>state</code>一个简单的浅层比较（shallow comparison）就足够了：如果顶层的值不同，我们不必接着比较了。浅比较不是JavaScript的一个特性，但有很多<a href="https://github.com/dashed/shallowequal" target="_blank" rel="noopener">小而美的库</a>（<code>utilities</code>）可以让我们用上那么棒的功能。</p>
-<p>现在可以像这样编写我们的代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TableRow</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// will return true if new props/state are different from old ones</span></span><br><span class="line">  shouldComponentUpdate(nextProps, nextState) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; props, state &#125; = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">return</span> !shallowequal(props, nextProps)</span><br><span class="line">           &amp;&amp; !shallowequal(state, nextState);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>但是你甚至都不需要自己写代码，因为React把这个特性内置在一个类<code>React.PureComponent</code>里面。它类似于  <code>React.Component</code>，只是<code>shouldComponentUpdate</code>已经为你实施了一个浅的<code>props</code>/<code>state</code>比较。</p>
-<p>这听起来很“不动脑”，在声明class继承（<code>extends</code>）的时候，把<code>Component</code>换成<code>PureComponent</code>就可以享受高效率。事实上，并不是这么“傻瓜”，看看这些例子：</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;Table</span><br><span class="line">    <span class="comment">// map returns a new instance of array so shallow comparison will fail</span></span><br><span class="line">    rows=&#123;rows.map(<span class="comment">/* ... */</span>)&#125;</span><br><span class="line">    <span class="comment">// object literal is always "different" from predecessor</span></span><br><span class="line">    style=&#123; &#123; <span class="attr">color</span>: <span class="string">'red'</span> &#125; &#125;</span><br><span class="line">    <span class="comment">// arrow function is a new unnamed thing in the scope, so there will always be a full diffing</span></span><br><span class="line">    onUpdate=&#123;() =&gt; &#123; <span class="comment">/* ... */</span> &#125;&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
-<p>上面的代码片段演示了三种最常见的反模式。尽量避免它们！</p>
-<hr>
-<p><strong>如果你能注意点，在render定义之外创建所有对象、数组和函数，并确保它们在各种调用间，不发生更改 —— 你是安全的。</strong></p>
-<hr>
-<p>你在<a href="https://iadramelk.github.io/optimizing-react-demo/dist/after.html" target="_blank" rel="noopener">updated demo</a>，所有table的rows都被“净化”（<code>purified</code>）过，你可以看到<code>PureComponent</code>的表现了。如果你在React DevTools中打开“Highlight Updates”，你会注意到只有表格本身和新行在插入时会触发<code>render</code>，其他的行保持不变。</p>
-<p>[译者说：为了便于大家理解<code>purified</code>，译者在下面插入了原文demo的一段代码]</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TableRow</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">PureComponent</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> React.createElement(<span class="string">'tr'</span>, &#123; <span class="attr">className</span>: <span class="string">'row'</span> &#125;,</span><br><span class="line">      React.createElement(<span class="string">'td'</span>, &#123; <span class="attr">className</span>: <span class="string">'cell'</span> &#125;, <span class="keyword">this</span>.props.title),</span><br><span class="line">      React.createElement(<span class="string">'td'</span>, &#123; <span class="attr">className</span>: <span class="string">'cell'</span> &#125;, React.createElement(Button)),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>不过，如果你迫不及待地all in PureComponent，在应用里到处都用的话 —— 控制住你自己！</p>
-<p>shallow比较两组<code>props</code>和<code>state</code>不是免费的，对于大多数基本组件来说，甚至都不值得：<code>shallowCompare</code>比<code>diffing</code>算法需要耗费更多的时间。</p>
-<p>使用这个经验法则：pure component适用于复杂的表单和表格，但它们通常会减慢简单元素（按钮、图标）的效率。</p>
-<hr>
-<p>感谢你的阅读！现在你已准备好将这些见解应用到你的应用程序中。可以使用我们的小demo（<a href="https://iadramelk.github.io/optimizing-react-demo/dist/after.html" target="_blank" rel="noopener">用了</a>或<a href="https://iadramelk.github.io/optimizing-react-demo/dist/before.html" target="_blank" rel="noopener">没有用</a>PureComponent）的<a href="https://github.com/iAdramelk/optimizing-react-demo" target="_blank" rel="noopener">仓库</a>作为你的实验的起点。此外，请继续关注本系列的下一部分，我们计划涵盖Redux并优化你的数据，目标是提高整个应用的总体性能。</p>
-<h2 id="译者说"><a href="#译者说" class="headerlink" title="译者说"></a>译者说</h2><p>正如原文末所说，Alex和Andy后续会继续写一个关于整体性能的系列，包括核心React和Redux等，我也会继续跟踪这个系列的文章，到时po到我的<a href="http://wuyuying.com/blog/">个人博客</a>和知乎专栏<a href="https://zhuanlan.zhihu.com/front-end-thinking" target="_blank" rel="noopener">《集异璧》</a>，感兴趣的同学们可以关注一下哈 ：）</p>
-<p>欢迎对本文的翻译质量、内容的各种讨论。若有表述不当，欢迎斧正。</p>
-<p>2018.05.13，晴，杭州滨江<br>Yuying Wu</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/optimizing-react-virtual-dom-explained/" data-id="cjhm5re5n002jrkr3kkubcqlu" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/front-end/">front-end</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/performance/">performance</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/reactjs/">reactjs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/translation/">translation</a></li></ul>
-
-    </footer>
-  </div>
-  
+	<footer class="u-clearfix">
+		<a href="/blog/archives/slash/#more" class="excerpt--more">Read More</a>
+	</footer>
+</div>
+		
+	</div>
 </article>
+		
+			
+
+			
+	
 
 
-  
-    <article id="post-slash" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/slash/" class="article-date">
-  <time datetime="2018-04-30T15:37:19.000Z" itemprop="datePublished">2018-04-30</time>
+<article class="article article-excerpt article-type-photo post post-index">
+	<div class="post-content">
+		
+			
+<a href="/blog/archives/css-var/" class="articlePhoto__cover">
+	<img src="http://sinacloud.net/woodysblog/img/css-var-case-sensitive.png" alt="" class="articlePhoto__cover" />
+	<div class="articlePhoto__modal"></div>
+	<div class="articlePhoto__content">
+		
+	
+		
+			<h3 class="title" data-role="articleTitle">CSS Variables学习笔记</h3>
+		
+	
+
+
+		<div class="articlePhoto__excerpt"></div>
+
+		<div class="post__meta">
+	<time datetime="2018-01-11T09:32:16.000Z">2018-01-11</time>
+
+	
+</div>
+	</div>
 </a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/test/categories/reading/">reading</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/slash/">关于「自由态职业」</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近读了萧秋水和剽悍一只猫的<a href="https://book.douban.com/subject/27177491/" target="_blank" rel="noopener">《知识变现》</a>，准确的来说，这本书不全是讲如何变现你的知识，而是从多方面去解释什么是“斜杠青年”和“自由职业”，而“自由态职业”又是什么，个人觉得此书应该改名为《国内斜杠青年/自由工作者的生活/工作现状》。</p>
-        
-          <p class="article-more-link">
-            <a href="/test/archives/slash/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/slash/" data-id="cjhm5re63003hrkr34a0plwwh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
+		
+	</div>
 </article>
+		
+			
+
+			
+	
 
 
-  
-    <article id="post-css-var" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/css-var/" class="article-date">
-  <time datetime="2018-01-11T09:32:16.000Z" itemprop="datePublished">2018-01-11</time>
+<article class="article article-excerpt article-type-photo post post-index">
+	<div class="post-content">
+		
+			
+<a href="/blog/archives/year-2017/" class="articlePhoto__cover">
+	<img src="http://sinacloud.net/woodysblog/year-2017/team1.jpg" alt="" class="articlePhoto__cover" />
+	<div class="articlePhoto__modal"></div>
+	<div class="articlePhoto__content">
+		
+	
+		
+			<h3 class="title" data-role="articleTitle">我的2017</h3>
+		
+	
+
+
+		<div class="articlePhoto__excerpt"></div>
+
+		<div class="post__meta">
+	<time datetime="2018-01-01T10:23:28.000Z">2018-01-01</time>
+
+	
+</div>
+	</div>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/css-var/">CSS Variables学习笔记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近看了下CSS Variables（CSS变量，又名CSS自定义属性），跟大家分享一下我的学习笔记。</p>
-<h2 id="一、什么是CSS-Variables"><a href="#一、什么是CSS-Variables" class="headerlink" title="一、什么是CSS Variables"></a>一、什么是CSS Variables</h2><p>来，直接看<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_variables" target="_blank" rel="noopener">MDN</a>上的描述：</p>
-<blockquote>
-<p>CSS 变量是由CSS作者定义的实体，其中包含要在整个文档中重复使用的特定值。使用自定义属性来设置变量名，并使用特定的 var() 来访问。</p>
-</blockquote>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">color</span>: <span class="built_in">var</span>(--main-<span class="built_in">color</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="二、学习笔记"><a href="#二、学习笔记" class="headerlink" title="二、学习笔记"></a>二、学习笔记</h2><h3 id="1-声明-amp-调用"><a href="#1-声明-amp-调用" class="headerlink" title="1. 声明 &amp; 调用"></a>1. 声明 &amp; 调用</h3><h4 id="i-声明方式"><a href="#i-声明方式" class="headerlink" title="i. 声明方式"></a>i. 声明方式</h4><p>CSS变量声明的方式非常简单，如下，声明了一个名叫<code>color</code>的CSS变量。</p>
-<ul>
-<li>在css文件中写</li>
-<li>写在html标签的inline-style里</li>
-<li>用JS给某个元素声明，方法<code>.style.setProperty</code></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">"--color: red;"</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>].style.setProperty(<span class="string">'--color'</span>, <span class="string">'red'</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="ii-调用方式"><a href="#ii-调用方式" class="headerlink" title="ii. 调用方式"></a>ii. 调用方式</h4><p>通过<code>var()</code>函数调用，如：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="iii-变量的命名"><a href="#iii-变量的命名" class="headerlink" title="iii. 变量的命名"></a>iii. 变量的命名</h4><p>说完声明和调用，还有个小问题。那么，CSS变量的命名，有什么限制么？下面我们来测试一下。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.foo-test</span>&#123;</span><br><span class="line">  <span class="attribute">--foo</span>:;</span><br><span class="line">  <span class="attribute">--ffoo</span>:;</span><br><span class="line">  <span class="attribute">--Foo</span>: red;</span><br><span class="line">  <span class="attribute">--FOo</span>: blue;</span><br><span class="line">  <span class="attribute">--FOO</span>: green;</span><br><span class="line">  <span class="comment">/* 以下省略测试className的代码 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://sinacloud.net/woodysblog/img/css-var-case-sensitive.png" alt=""></p>
-<p>从以上测试代码可以看出：</p>
-<ul>
-<li>CSS变量的命名是大小写敏感的</li>
-<li>不赋值或者赋值空格，都是无效的</li>
-</ul>
-<h3 id="2-作用域-amp-继承"><a href="#2-作用域-amp-继承" class="headerlink" title="2. 作用域 &amp; 继承"></a>2. 作用域 &amp; 继承</h3><p>CSS变量也有作用域一说，而最顶层的作用域就是<code>:root</code>，下面的所有的元素都可以共享相关CSS变量。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>刚才我们在<code>body</code>上，定义了<code>--color</code>，在<code>body</code>下的子元素，都会默认继承这个属性，随意使用。当然也可以重载，把<code>--color</code>定义为别的值。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>inherit color<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"css-var-text"</span>&gt;</span>overwrite color - hello world<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.block</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--color);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.css-var-text</span>&#123;</span><br><span class="line">  <span class="attribute">--color</span>: red;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>.block</code>，作为<code>body</code>的子元素，继承了<code>--color</code>属性，所以边框出来就是<code>green</code>。</p>
-<p>而<code>.css-var-text</code>在自己的作用域中，重写了<code>--color</code>，出来的字体颜色是overwrite后的<code>blue</code>。</p>
-<p><img src="http://sinacloud.net/woodysblog/img/css-var-inherit.png" alt=""></p>
-<h3 id="3-浏览器支持"><a href="#3-浏览器支持" class="headerlink" title="3. 浏览器支持"></a>3. 浏览器支持</h3><h4 id="i-浏览器支持现状"><a href="#i-浏览器支持现状" class="headerlink" title="i. 浏览器支持现状"></a>i. 浏览器支持现状</h4><p>来看看<a href="https://caniuse.com/#search=css%20variables" target="_blank" rel="noopener">caniuse</a>上CSS Variables (Custom Properties)的支持度：</p>
-<p>PC的话，IE 11和Edge的支持度都很差，而Chrome（2016.3）、Firefox（2017.11）和Safari(2017.3)的一些新版本都是支持的，相信很快就能普及。</p>
-<p>Mobile的话，Safari在2016年的版本已经支持CSS变量了，但Opera、Chrome、UC等的支持还不太好。</p>
-<p><img src="http://sinacloud.net/woodysblog/img/css-var-browser-support.png" alt=""></p>
-<h4 id="ii-fallbacks"><a href="#ii-fallbacks" class="headerlink" title="ii. fallbacks"></a>ii. fallbacks</h4><p>浏览器的支持度不太好，我们又想玩新东西的话，就需要考虑如果浏览器不支持CSS变量，怎么优雅降级。（嗷，两套代码是有点……）</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 当浏览器不支持CSS变量 */</span></span><br><span class="line"><span class="selector-class">.browser-support</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: red;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 当浏览器支持CSS变量 */</span></span><br><span class="line">@<span class="keyword">supports</span> (--css: variables) &#123;</span><br><span class="line">  <span class="selector-class">.browser-support</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">var</span>(--color);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="三、代码习作"><a href="#三、代码习作" class="headerlink" title="三、代码习作"></a>三、代码习作</h2><h3 id="1-codepen"><a href="#1-codepen" class="headerlink" title="1. codepen"></a>1. codepen</h3><p>在学习CSS Variables的时候，有边写一些教程的demo，除了以上，还包括一些实际场景的应用，如像box-shadow复合属性的拆解，以及JS操作CSS变量等。</p>
-<p></p><p data-height="500" data-theme-id="0" data-slug-hash="dZrYJg" data-default-tab="css,result" data-user="wuyuying" data-embed-version="2" data-pen-title="CSS Varibles Study Notes" class="codepen">See the Pen <a href="https://codepen.io/wuyuying/pen/dZrYJg/" target="_blank" rel="noopener">CSS Varibles Study Notes</a> by Y (<a href="https://codepen.io/wuyuying" target="_blank" rel="noopener">@wuyuying</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</p><p></p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-<h3 id="2-flexbox属性的DEMO"><a href="#2-flexbox属性的DEMO" class="headerlink" title="2. flexbox属性的DEMO"></a>2. flexbox属性的DEMO</h3><p><img src="http://sinacloud.net/woodysblog/img/css-var-flexbox.png" alt=""></p>
-<p>之前在团队也做过一下下flexbox的分享，大家也知道，flex属性和对应的值特别多，当时就很想做个可以随时变属性值看效果的playground。</p>
-<p>但想了下传统的实现方式，貌似没有优雅的方法。</p>
-<ul>
-<li>CSS+JS实现：写一批classname，option切换时，通过JS修改classname改变样式；</li>
-<li>纯JS实现，根据option的value用JS改写元素的inline style（一直修改dom）</li>
-</ul>
-<p>哎哟，换CSS Variables之后，一切就不一样了，可继承、可复用、易维护，目前实现比较简单，可能跟以上的传统方式差别不太大，不过后续要修改或者做更多优化，我相信优势就会凸显出来了。</p>
-<p>demo传送门：<a href="http://wuyuying.com/flexbox-css-var/">wuyuying.com/flexbox-css-var</a><br><a href="https://github.com/YuyingWu/blog-modern/blob/master/pages/flexbox-css-var.js" target="_blank" rel="noopener">github传送门</a></p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>哈哈，没想到小结写什么，如果大家有好玩的CSS Variables的应用，欢迎分享给我 ：）</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/css-var/" data-id="cjhm5re4l000frkr37ov0tvpv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/CSS-Variables/">CSS Variables</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/front-end/">front-end</a></li></ul>
-
-    </footer>
-  </div>
-  
+		
+	</div>
 </article>
+		
+			
+
+			
+	
 
 
-  
-    <article id="post-year-2017" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/year-2017/" class="article-date">
-  <time datetime="2018-01-01T10:23:28.000Z" itemprop="datePublished">2018-01-01</time>
+<article class="article article-excerpt article-type-photo post post-index">
+	<div class="post-content">
+		
+			
+<a href="/blog/archives/eu-gallery/" class="articlePhoto__cover">
+	<img src="http://sinacloud.net/woodysblog/eu-gallery/gallery-3.jpg" alt="" class="articlePhoto__cover" />
+	<div class="articlePhoto__modal"></div>
+	<div class="articlePhoto__content">
+		
+	
+		
+			<h3 class="title" data-role="articleTitle">当我在欧洲艺术馆遇到馆长</h3>
+		
+	
+
+
+		<div class="articlePhoto__excerpt"></div>
+
+		<div class="post__meta">
+	<time datetime="2017-10-05T12:15:45.000Z">2017-10-05</time>
+
+	
+</div>
+	</div>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/year-2017/">我的2017</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://sinacloud.net/woodysblog/year-2017/DSC05035.jpg" alt="&quot;龙井路秋色&quot;"><br>（龙井路秋色 —— 摄于杭州龙井路 2017.12.03）</p>
-<h2 id="Personal-Targets-for-2017"><a href="#Personal-Targets-for-2017" class="headerlink" title="Personal Targets for 2017"></a>Personal Targets for 2017</h2><ul>
-<li>√ 找一份好工作</li>
-<li>√ 运动</li>
-<li>√ 理财（跑赢大盘）</li>
-<li>× 读书（40本）</li>
-</ul>
-<p>在2017年的尾巴，汇总了下今年都做了什么，KPI达标了没？讲真，在我工作的这几年间，今年的达标程度算非常的高，还蛮开心的。</p>
-<h3 id="找一份好工作"><a href="#找一份好工作" class="headerlink" title="找一份好工作"></a>找一份好工作</h3><p>找工作的故事，之前写过一篇<a href="/blog/archives/begin-again-2017/">《Begin again, 2017》</a>，在此就不再叙述了。</p>
-<p>相信很多小伙伴们都知道的，今年5月份，我来了杭州，来到职业生涯中的第二家公司 —— 阿里巴巴，供职于国内第一大B2B平台<a href="https://www.1688.com" target="_blank" rel="noopener">1688</a>。简而言之，我现在做批发的，要是有想跟1688合作的朋友们，尤其是大新塘做牛仔的土豪们，欢迎联系我 :)</p>
-<p>想入职阿里的靠谱前端朋友们，也欢迎把简历发给我：  </p>
-<p><a href="mailto:`jiwu.wyy@alibaba-inc.com" target="_blank" rel="noopener">`jiwu.wyy@alibaba-inc.com</a>`</p>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/1688.jpg" alt=""></p>
-<p>好啦，广告打完，说回这项KPI吧，个人认为，确实是找到一份<strong>好工作</strong>的。</p>
-<p>我遇到了一个技术出身且很能talk、格局很高、EQ也非常高的老大 —— 重鱼，在融入新工作环境过程中，他给予我很多的帮助和建议。不过融入只是第一步，相信后续的发展，我能从他身上学到更多的东西。</p>
-<p>我遇到了一群很nice很有能力的小伙伴们，在这就不一一点名，你们懂的，从大家身上我也get到很多新技能，不仅仅有技术或者业务能力的提高，还看到程序猿的另一面，不仅会敲代码，还玩得了狼人杀、可以一起去泡吧。</p>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/team1.jpg" alt=""></p>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/team2.jpg" alt=""></p>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/team3.jpg" alt=""></p>
-<p>我看到了我想看到的阿里。我一直很想来阿里看看，想看看在马老师带领下的阿里巴巴是怎样的。我来的时间不长，且只在一个业务线，了解尚浅。</p>
-<p>在新人培训（百年阿里）中，我认识了一些来自不同部门、各种岗位的同学们，有刚刚从学校步入职场的“小学鸡”，有在职场打滚多年、拥有若干创业经验的“老司机”。我从他们身上，一样的是，能看到大家对于新环境的憧憬和激情，这就是我想看到的阿里。</p>
-<p>当然他们很多跟我一样，是马老师的粉丝，想来一睹马老师真容。在今年阿里巴巴B2B年会，还真看到马老师了，不过我是山顶的朋友，只能透过大屏幕远远的看他。</p>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/b2b-jack.jpg" alt=""></p>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/b2b.jpg" alt=""></p>
-<h3 id="运动"><a href="#运动" class="headerlink" title="运动"></a>运动</h3><p>运动这一项，一直没有确定的kpi，一切随风，这几年，基本没有达标过（捂脸）</p>
-<p>今年在运动这一栏，万万没想到，居然有东西可以写：</p>
-<blockquote>
-<p>慢跑训练<br>从9.18开始，一周3次，持续了6周<br>最长时间 42 Mins，最远距离 4.82 KM，最快配速 8:02 min/KM</p>
-</blockquote>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/running.jpg" alt=""></p>
-<p>对于跑步，一开始我是拒绝的，哪有人喜欢这样的运动，累cry，又容易跑着跑着就肚子疼，简直懒得动，有木有！</p>
-<p>第1周，在公司的健身房，跑1分钟，走2分钟，8个回合，共24分钟2.6公里；<br>第6周，在江边，跑5分钟，走1分钟，7个回合，共42分钟4.82公里。</p>
-<p>在这几个礼拜训练之后，感觉还是很不一样的。从一开始的拒绝，在健身房磨蹭，到后来每周在江边定期打卡，除了更加健康和学会了“呼呼呼、吸吸吸”的呼吸小窍门以外，还多了一些跟自己相处的时间。</p>
-<p>在跑步之后，和自己对话的场景加了一项：</p>
-<ul>
-<li>安静地看书</li>
-<li>在上班路上听电台/音乐</li>
-<li><strong>跑步</strong></li>
-</ul>
-<p>在日常生活/工作中，我的大部分时间在写代码/学习写代码、玩手机、看电视剧，做这些事情也许我是一个人在做，但手上、脑子里都被各式各样的东东侵占着，没时间去想。</p>
-<p>还记得有一次跟同事们饭后遛弯，聊起“如何放松”。我们甚至聊到冥想，我就把慢跑介绍给他们，紧张的都市人尤其值得拥有。</p>
-<p>确实是这样的，有时候越睡越困，身体在休息，但思绪并没有释放，精神压力没有得到释放，还是一样的累。记得有一天心情不太舒畅，去江边跑步，刚开始我还是一样的没心情，但跑着跑着，当我把所有注意力放在呼吸和沿途的人和景上面，整个人放空地前进前进前进，跑完之后，我有种满血复活的感觉。</p>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/running2.jpg" alt=""></p>
-<p>最近杭州有点冷，最冷的时候零下了，实在没勇气出门，暖和点要继续跑起来，不要浪费杭州那么棒的江边跑道。</p>
-<h3 id="理财"><a href="#理财" class="headerlink" title="理财"></a>理财</h3><p>理财这块，也是每年比较羞于启齿的，哈哈，因为这几年几乎每年都是跑输大盘的，没赢过。</p>
-<p>每年的理财KPI也只有一个 —— 能够跑赢大盘。</p>
-<p>感觉得跑赢大盘越来越难了，2017年大盘大概涨了6.56%（2016.12.25-2017.12.25），真是Holy Shxx!!!</p>
-<p>说回我自己的篮子吧，货基、股基、A股、美股、p2p啥都有点，就不细说了，12月份上车数字货币世界，Cardano给我打了个神助攻，一年下来终于没白玩了，哈哈。</p>
-<blockquote>
-<p>整个篮子浮盈10.24%</p>
-</blockquote>
-<p>2018年开始，放弃A股啦，每年都要用小基金赚得那点钱来补贴，左手倒右手，被割韭菜，年年白玩，今年做了一个艰难的决定，把深套的全都割了，不玩了！</p>
-<p>嘿嘿，不过我可以和新欢一起玩，指数基金和Bitcoin的一众后宫。</p>
-<h3 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h3><p>每年的目标是40本。</p>
-<p>整理了一下，截至12.31，总共读了25本，其中跟工作/技术相关的有9本，经济/理财相关的4本。</p>
-<p>今年技术书比较多，毕竟今年最大的目标是找工作，在投简历前几个月，为了让自己不要太out，只能多读书了，哈哈。</p>
-<p>不过我的年度之书是这本，技术会过时，但经济概念不会，风趣易懂的经济故事书（其实后面概念理解起来也挺难的，哈哈，我打算二刷~）</p>
-<blockquote>
-<p><a href="https://book.douban.com/subject/26985299/" target="_blank" rel="noopener">《小岛经济学：鱼、美元和经济的故事》</a></p>
-</blockquote>
-<h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><p>今年2月份开始，写的一个专栏，记录我的新西兰生活 —— <a href="https://read.douban.com/column/6032026/" target="_blank" rel="noopener">《中土世界漂流记》</a>。讲真，更新频率不是很稳定，今年就写了7篇，这么更新到2019年肯定还在连载。那在2018年，还是希望隔周更新的，哈哈，我努力。</p>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/column.png" alt=""></p>
-<h3 id="2017小结"><a href="#2017小结" class="headerlink" title="2017小结"></a>2017小结</h3><p>以上都是常规的计划内的目标，今年也有一些“小意外”。</p>
-<p>譬如遇见我家大王 —— 胖达。</p>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/pangda.jpg" alt="&quot;小时候&quot;"></p>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/pangda-july.jpg" alt="&quot;小学鸡&quot;"></p>
-<p><img src="http://sinacloud.net/woodysblog/year-2017/pangda-sep.jpg" alt="&quot;一秒变大叔&quot;"></p>
-<p>没错，他就是一只丑萌的田园猫。</p>
-<h2 id="Personal-Targets-for-2018"><a href="#Personal-Targets-for-2018" class="headerlink" title="Personal Targets for 2018"></a>Personal Targets for 2018</h2><blockquote>
-<p>Hi, 2018</p>
-</blockquote>
-<p>新的一年，个人目标的划分，还是类似的，不再这里铺开了，实现情况看明年show time ：）</p>
-<ul>
-<li>个人修养类</li>
-<li>运动</li>
-<li>理财（跑赢大盘）</li>
-<li>读书（40本）</li>
-<li>写作（专栏隔周更新）</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/year-2017/" data-id="cjhm5re6l004grkr3lbwtyqoh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/总结/">总结</a></li></ul>
-
-    </footer>
-  </div>
-  
+		
+	</div>
 </article>
+		
+			
+
+			
+	
 
 
-  
-    <article id="post-eu-gallery" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/eu-gallery/" class="article-date">
-  <time datetime="2017-10-05T12:15:45.000Z" itemprop="datePublished">2017-10-05</time>
+<article class="article article-excerpt article-type-photo post post-index">
+	<div class="post-content">
+		
+			
+<a href="/blog/archives/taobao-maker-festival-2017/" class="articlePhoto__cover">
+	<img src="http://sinacloud.net/woodysblog/taobao-maker-festival/entry-2.jpg" alt="" class="articlePhoto__cover" />
+	<div class="articlePhoto__modal"></div>
+	<div class="articlePhoto__content">
+		
+	
+		
+			<h3 class="title" data-role="articleTitle">年轻就要造起来</h3>
+		
+	
+
+
+		<div class="articlePhoto__excerpt"></div>
+
+		<div class="post__meta">
+	<time datetime="2017-07-11T14:48:07.000Z">2017-07-11</time>
+
+	
+</div>
+	</div>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/eu-gallery/">当我在欧洲艺术馆遇到馆长</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure><br><img alt="poster" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/eu-gallery/gallery-4.jpg"><br><figcaption>poster</figcaption><br></figure>
-
-<p>原定今天的计划是去杭州图书馆借几本书，顺便去看个展，就是这个号称“不出杭州看遍欧洲艺术品”的展览哈，我之前也不太了解欧洲历史文化，纯粹去凑个热闹。</p>
-<p>先来看镇店之宝之一 —— 《戴面纱的女人》by Giuseppe Croff，面纱做得特别薄特别真，女人闭眼的神情也刻画得惟妙惟肖。</p>
-<figure><br><img alt="戴面纱的女人" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/eu-gallery/gallery-6.jpg"><br><figcaption>戴面纱的女人</figcaption><br></figure>
-
-<p>看这个汉白玉《爷爷的喜悦》by DonatoBarcaglia，近距离看像真的一样，身上的细节特别清晰，爷爷老去的皮肤和身上的青筋，以及孙子的baby fat，栩栩如生。</p>
-<figure><br><img alt="爷爷的喜悦" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/eu-gallery/gallery-2.jpg"><br><figcaption>爷爷的喜悦</figcaption><br></figure>
-
-<p>这幅《哥伦布向天主教君主们敬献新大陆的宝藏》by Emanuel Gottlieb Leutze，超大一幅油画，配上一个无敌浮夸的画框，据闻每一角代表的是一块大陆，最后连在一起，象征和平。馆长说这幅画华盛顿美术馆馆长问她要了很久，希望结束这场展览之后，能转让给他，因为哥伦布是美洲大陆的英雄，这幅画在DC最合适了。</p>
-<figure><br><img alt="哥伦布向天主教君主们敬献新大陆的宝藏" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/eu-gallery/gallery-3.jpg"><br><figcaption>哥伦布向天主教君主们敬献新大陆的宝藏</figcaption><br></figure>
-
-<p>这位小姐姐太美了有木有，不仅仅是身上的衣服，如丝般顺滑还加透视，看她的眼睛，画的特别有神，无论走到哪，都感觉她在看着你~</p>
-<figure><br><img alt="漂亮的小姐姐" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/eu-gallery/gallery-5.jpg"><br><figcaption>漂亮的小姐姐</figcaption><br></figure>
-
-<p>万万没想到，非常有收获，不仅仅是了解了这些艺术品背后千回百转的故事，更多的是折服于馆长的个人魅力和情怀。</p>
-<p>馆长的名字叫<strong>吴静</strong>，法籍华裔，是一个古董钟表鉴定师，也是一个收藏家。欧洲艺术馆从想法到落地实施，选场地、挑藏品、布展，她只用了一年左右的时间。非常了不起有木有，今天很幸运，刚好碰到她在现场解说，艺术品背后的故事很精彩，人特别亲切和有感染力，更重要的是，她在以自己的方式去做公益，给这个世界给将来留下些什么，就是这个艺术馆及其背后的精神。</p>
-<p>下面是我在现场听到的忍不住鼓掌几个观点，分享给大家：</p>
-<blockquote>
-<p>我每天只睡4个小时，没有电话和微信的消息打扰，安静地鉴定古董钟表。很多朋友问我，为什么还要那么努力地工作，我已经不需要了。上天让我来到这个世界，是有任务的，我希望看到自己更多的可能性。</p>
-</blockquote>
-<p>想象一下，一个以个人名义开了个艺术馆的馆长，每一件艺术品都价值不菲，肯定是生活无忧。而每天只睡4个小时，她认为，睡眠不是算时间的，更重要的是大脑的休息，只要你觉得精神饱满，睡够了，就起来，不要在乎睡了多少个小时。也听得出来她对自己在做的事情（古董钟表鉴定师和收藏）的热爱，她微信封面和头像就特别帅气~</p>
-<figure><br><img alt="古董钟表鉴定师" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/eu-gallery/IMG_7470.jpg"><br><figcaption>古董钟表鉴定师</figcaption><br></figure>
-
-<blockquote>
-<p>生前，为死后做事</p>
-</blockquote>
-<p>解说时呀，有不少市民问起，为什么要搞这个展览？</p>
-<p>吴静馆长说，生前，为死后做事。她的回答，真心让我觉得敬佩，特别圈粉。</p>
-<p>做公益，直接捐钱是最简单的方式，钱捐了然后被花光了，对个人的生活、发展或者对家庭、抑或对这个社会，可能就没有然后了。</p>
-<p>而这个公益欧洲艺术馆，正是她对公益的理解和所付诸的行动，从idea到action，花了一年的时间，收集的这些展品、展品从法国到中国的运输（在海上漂了三个多月）、场馆的装修（罗浮宫的设计团队），到志愿者的招募（自己也会下场做解说员），再到将来的一些跟国外合作的艺术program/课程。</p>
-<p>可以看得出来，是个大工程，工作量也非常庞大，令我们最惊讶的是，这个项目落地中国会遇到很多的难处，目前是没有得到政府的补贴和支持的，馆长自费开的一个艺术馆（也有越来越多受馆长的感染参与进来的民间朋友），进场免费，只是为了控制人数，需要提前预约。</p>
-<p>馆长的想法简单而美好，希望这个公益艺术馆能把欧洲文化带到中国来，让市民们不用出国，就能看到这些艺术品的真品和感受到西方艺术文化。希望美院的学生，不再需要对着那些千篇一律从模子出来的、没有细节的雕塑写生，而是可以来杭州的欧洲艺术馆，坐在这些有几百年历史的汉白玉雕塑下，随便画。（馆里的艺术品会有绳子起简单的隔离作用，但大多都没有玻璃柜子，展品跟你只有一步之遥）</p>
-<p>以上，就是我所看到的，一个充满正能量的女子，用自己的方式做公益，希望自己百年之后，在做的这件事情对这个世界带来一些不一样和价值。希望在国内推动欧洲艺术的发展，也是对祖国、对中法文化交流的回馈。真的让我觉得非常鼓舞和感动。</p>
-<p>在过程中，有幸跟馆长有对话，关于数字化图书馆的。</p>
-<p><code>小伍</code> 吴静女士，您刚提到希望更多人知道这里，以及想在国内普及欧洲艺术，但目前这个馆只在杭州有，您有考虑过把艺术馆线上化吗？譬如百度百科的数字博物馆。<br><code>馆长</code> 嗯，当然是有的，知道的人肯定越多越好。可惜我从小在法国长大，这个项目在中国落地很难，虽然我带来了很多的收藏品，这些收藏品都很有价值，可惜我太不认识这方面的朋友。<br><code>小伍</code> 刚好，我认识了解这个百科数字图书馆的同学，我可以介绍你们认识，看能不能达成合作，把这个公益艺术馆搬到线上，让更多的国民知道，传播效果也许会更好。<br><code>馆长</code> 太好了，我们很需要，先谢谢你，回头我让助理跟你留下联系信息。</p>
-<p>万万没想到，解说结束之后，我加了吴静女士的微信，感觉超亲切，刷了一遍她的朋友圈，再次被圈粉，超正能量，很多事情亲力亲为，感觉看到了另一个世界，真是应验了那句话 —— </p>
-<blockquote>
-<p>比你有才华、比你有钱、比你美的人，还比你拼，你还有什么理由不努力！</p>
-</blockquote>
-<p>真心希望有一天能看到欧洲艺术馆在百科的数字图书馆出现，推广给更多人民群众，独乐乐不如众乐乐嘛，那我这个撮合的媒人也会觉得功德无量啦，哈哈，也感谢我女神<strong>阮瑜</strong>把一个这么棒的产品带到这个世上，和百科美女<strong>小文子</strong>给我提供的帮助。</p>
-<p>互联网产品推动传统行业的进步~ 我在工作过程中，无论是百度还是阿里，遇到过很多这样有情怀对社会有贡献的产品，不管我有没有参与其中，这样的好东西，我会不遗余力的在合适的场景推荐给合适的人。</p>
-<p>最后，据我所知，欧洲艺术馆<strong>紧缺志愿者</strong>，在杭州的同学们可以联系一下，艺术馆会开3年，一直都会招募志愿者的，在这也帮忙打个广告，希望如果周边有朋友有意愿的话，赶紧联系一下~ </p>
-<p>其实尤其对于美院的学生，这样的机会非常难得和珍贵，如果你是美院学生，又或者是辅导员，可以合作个项目啥的，一方面解决馆里缺志愿者的问题，另一方面可以近距离的接触著名收藏家以及她的珍藏艺术品，双赢~</p>
-<p><strong>那么好的欧洲艺术馆，在杭的朋友，怎么能不去捧场呢！？</strong></p>
-<p>此处应该有艺术馆的相关信息：</p>
-<p>电话：15988484200<br>邮箱：<a href="mailto:eupart@163.com" target="_blank" rel="noopener">eupart@163.com</a><br>地址：浙江省杭州市江干区　解放东路58号　杭州图书馆地下负一层</p>
-<p>欧洲艺术馆的公众号（可以在上面预约参观）</p>
-<figure><br><img alt="欧洲艺术馆公众号" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/eu-gallery/qrcode.jpg"><br><figcaption>欧洲艺术馆公众号</figcaption><br></figure>
-
-<p>最后的最后，楼主丧心病狂的想发一则招聘广告：</p>
-<p>上面有提到互联网推动传统行业的进步，其实阿里对社会也有非常多的贡献，其中我所在的团队CBU，就是这么个有情怀有理想有贡献的团队，我们的目标是 ——  让世界没有难做的生意。</p>
-<p>总而言之，有理想有情怀有钱有面儿有我这么赞的同事，<strong>招2年或以上经验的靠谱前端</strong>，欢迎自荐或推荐朋友，很急，在线等！！！暂时没想法也欢迎来撩~</p>
-<p>花名：姬无<br>EMAIL：<a href="mailto:jiwu.wyy@alibaba-inc.com" target="_blank" rel="noopener">jiwu.wyy@alibaba-inc.com</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/eu-gallery/" data-id="cjhm5re4u000trkr36vmsl2ri" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/life/">life</a></li></ul>
-
-    </footer>
-  </div>
-  
+		
+	</div>
 </article>
+		
+			
+
+			
+	
 
 
-  
-    <article id="post-taobao-maker-festival-2017" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/taobao-maker-festival-2017/" class="article-date">
-  <time datetime="2017-07-11T14:48:07.000Z" itemprop="datePublished">2017-07-11</time>
+<article class="article article-excerpt article-type-photo post post-index">
+	<div class="post-content">
+		
+			
+<a href="/blog/archives/begin-again-2017/" class="articlePhoto__cover">
+	<img src="http://sinacloud.net/woodysblog/blog/begin-again-ali-night.jpg" alt="" class="articlePhoto__cover" />
+	<div class="articlePhoto__modal"></div>
+	<div class="articlePhoto__content">
+		
+	
+		
+			<h3 class="title" data-role="articleTitle">Begin Again, 2017</h3>
+		
+	
+
+
+		<div class="articlePhoto__excerpt"></div>
+
+		<div class="post__meta">
+	<time datetime="2017-06-01T12:40:30.000Z">2017-06-01</time>
+
+	
+</div>
+	</div>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/taobao-maker-festival-2017/">年轻就要造起来</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure><br><img alt="大门口" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/entry-1.jpg"><br><figcaption>大门口</figcaption><br></figure>
-
-<p>2017淘宝造物节 —— 年轻就要造起来！</p>
-<p>我之前不知道有造物节，可能是因为我不在杭州，又或者媒体报道得也不多。今年的邀请函太吸引了，还有阿里内网、朋友圈、淘宝多个渠道以及各种公号的报道，尤其是黑科技浓浓的Tao Cafe无人便利店（我老爸都来问我知不知道这个店，宣传得太到位了），想不感兴趣都不行，拿到今天的票，就请假跑来“造”一下。</p>
-<p>一进来有种夜店feel有木有，恰逢汪涵过来主持，中间舞台被包围了，人超多，远远的拍照好了。</p>
-<figure><br><img alt="舞台" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/entry-2.jpg"><br><figcaption>舞台</figcaption><br></figure>
-
-<figure><br><img alt="地上投射的造物节logo" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/entry-3.jpg"><br><figcaption>地上投射的造物节logo</figcaption><br></figure>
-
-<p>进来以后，走了半圈，找不到我最想去的无人店呀……路盲找小二问，才发现Tao Cafe在刚才检票入口的旁边，白排队进来了，还绕了大半圈，简直惊呆了，你们感受一下这条长龙，我在队尾。以前我看到排队买喜茶的人很傻，没有好喝到让我等N个小时，现在发现如果有我很想要的东西的时候，虽然不太乐意，但还是等一下吧，Tao Cafe，我来了。</p>
-<figure><br><img alt="无人便利店的排队长龙" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/store-waiting.jpg"><br><figcaption>无人便利店的排队长龙</figcaption><br></figure>
-
-<p>半小时后，我在这~ 请看大屏幕，这个妹子在出门结账的时候，就是那么自信，自带光芒的，笑死 &gt;3&lt;</p>
-<figure><br><img alt="无人便利店的排队长龙（半小时后）" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/store-waiting-2.jpg"><br><figcaption>无人便利店的排队长龙（半小时后）</figcaption><br></figure>
-
-<p>足足一小时，我终于要刷脸进来无人便利店，这个门禁，很犀利，除了刷淘宝二维码之外，可能还需要刷脸，我看有的妹子进来之前，要把头发扎起来，不然过不了。</p>
-<figure><br><img alt="无人便利店的门禁" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/store-entry.jpg"><br><figcaption>无人便利店的门禁</figcaption><br></figure>
-
-<p>进来后，直奔小卖部，这里招牌是”招牌淘咖啡“，呃，不推荐啦，我没有喝过混一点果酱（貌似是黄桃味）的咖啡，虽然味道还可以，但是总有种”黑暗料理“的感觉，还是点普通咖啡吧。</p>
-<figure><br><img alt="搬砖的排队去买咖啡" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/store-wu.jpg"><br><figcaption>搬砖的排队去买咖啡</figcaption><br></figure>
-
-<figure><br><img alt="淘公仔" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/store-figure.jpg"><br><figcaption>淘公仔</figcaption><br></figure>
-
-<p>无人便利店的概念很好，门禁、进门后的用户信息都可以捕抓到，真的非常有科技感、未来感。不过貌似暂未满足商用需求，我去买咖啡时，虽然有刷脸有AR，但是最后我是用支付宝码付款的；小伙伴买了个环保袋，走了两次付款通道，第一次说订单没下，第二次还是没有订单，最后在出口人工结账。两个情况的理由都是人太多，网络响应比较慢。[ 以上谨属本次体验的个人观点。我相信不久的未来，阿里的无人店会推广落地，再一次改变我们的生活 ]</p>
-<p>呼呼，等了半天，进去逛了十分钟就出来了，满足好奇心。出来之后，找到一只大型淘公仔，还是要求合照啦~</p>
-<figure><br><img alt="淘公仔合照" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/tao-smile.jpg"><br><figcaption>淘公仔合照</figcaption><br></figure>
-
-<p>再次进场，逛各种店噜。各种名店、潮店都装修得很有心思，比较有特色。</p>
-<p>我来之前，以为只是个小集市（一个淘宝店铺的展览会），逛逛就完事了。事实上不是这样的，人手一本小册子，上面有各种任务，大家除了逛逛逛、买买买、拍拍怕，还可以到各个店做任务、集印章、拿奖品。个人感觉很好，明年还想再来。</p>
-<p>废话不多说，上图。</p>
-<p>天猫精灵，智能音箱，小二给我们演示，大致还是灵敏的，哈哈，感兴趣的大家可以上天猫看看。</p>
-<figure><br><img alt="天猫精灵的平板支撑" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/tmall-plank.jpg"><br><figcaption>天猫精灵的平板支撑</figcaption><br></figure>
-
-<figure><br><img alt="环保的快递盒" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/green-action.jpg"><br><figcaption>环保的快递盒</figcaption><br></figure>
-
-<p>One的展台……木有发现这个展馆跟”一个“有啥关系。</p>
-<figure><br><img alt="红" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/wu-hong.jpg"><br><figcaption>红</figcaption><br></figure>
-
-<figure><br><img alt="卖包的小店" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/bag-store.jpg"><br><figcaption>卖包的小店</figcaption><br></figure>
-
-<figure><br><img alt="卖书的小罐头" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/bookshop.jpg"><br><figcaption>卖书的小罐头</figcaption><br></figure>
-
-<p>这位苏州的老奶奶说，黑布上的每一个图案，她都要绣一天，店里都是各种各样的刺绣品，真是不容易啊~</p>
-<figure><br><img alt="刺绣的老奶奶" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/grandma.jpg"><br><figcaption>刺绣的老奶奶</figcaption><br></figure>
-
-<figure><br><img alt="另外一个手工的小锦囊" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/little-bag.jpg"><br><figcaption>另外一个手工的小锦囊</figcaption><br></figure>
-
-<figure><br><img alt="小灯" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/light.jpg"><br><figcaption>小灯</figcaption><br></figure>
-
-<p>逛完西市，我们来到了北街，这边的店有比较科技感的也有比较怀旧的。</p>
-<figure><br><img alt="北街" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/north-area.jpg"><br><figcaption>北街</figcaption><br></figure>
-
-<figure><br><img alt="杂货铺" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/store-else.jpg"><br><figcaption>杂货铺</figcaption><br></figure>
-
-<figure><br><img alt="匠心" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/workshop.jpg"><br><figcaption>匠心</figcaption><br></figure>
-
-<figure><br><img alt="电影院" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/cinema.jpg"><br><figcaption>电影院</figcaption><br></figure>
-
-<figure><br><img alt="猫大王" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/cat.jpg"><br><figcaption>猫大王</figcaption><br></figure>
-
-<p>哎，由于时间关系，我们只逛了舞台左边的西市和北街，左边的东市和南街根本没逛……好可惜，最后被广播赶走了，才5点半，说好的开到6点呢~</p>
-<p>最后，po两张我比较喜欢的比较有感觉的，再一次读一下今年造物节的slogan，这也应该是我们生活的态度：</p>
-<blockquote>
-<p>年轻就要造！！！</p>
-</blockquote>
-<figure><br><img alt="毒鸡汤" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/black-white.jpg"><br><figcaption>毒鸡汤</figcaption><br></figure>
-
-<figure><br><img alt="造" src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/zao.jpg"><br><figcaption>造</figcaption><br></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/taobao-maker-festival-2017/" data-id="cjhm5re67003prkr3hx04ow9p" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/life/">life</a></li></ul>
-
-    </footer>
-  </div>
-  
+		
+	</div>
 </article>
+		
+			
+
+			
+	
 
 
-  
-    <article id="post-begin-again-2017" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/begin-again-2017/" class="article-date">
-  <time datetime="2017-06-01T12:40:30.000Z" itemprop="datePublished">2017-06-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/begin-again-2017/">Begin Again, 2017</a>
-    </h1>
-  
+<article class="article article-excerpt article-type-title post post-index">
+	<div class="post-content">
+		
+			
+<header>
+	
+	
+		
+			<h3 class="title" data-role="articleTitle"><a href="/blog/archives/2017-roadmap/">2017年Web开发者的技能蓝图</a></h3>
+		
+	
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/blog/begin-again-ali-day.jpg"></p>
-<p>想跟大家分享我找工作的故事。</p>
-<p>今天是2017年5月份的最后一个工作日，去年的这个时候，我在办理离职手续。从离职到重新回到工作中，真是整整一年呀，原来所谓的间隔年是这么回事。</p>
-<p>去年5月底，我在杭州，玩了半个月，出国前来杭州，并不是偶然，当时我在想，一年后我会再回来的，来阿里巴巴，我想先来看看这个未来工作的城市。</p>
-<p>去年6月中旬，坐上飞机去了南半球的新西兰，体验和收获了各种，今年1月中旬回来了，从开始到结束，跨度了大概8个月。这大半年里面，大部分时间都在玩，间断的有1个多月时间有做临时工，做kiwi fruit包装，上班不用带脑子，下班后也不需要把工作带回家，感觉非常神奇和放松，收入水平跟大家聊过了，最低工资大概2w RMB，会有种智商不用在线、站着就赚钱的感觉，是一种从来没有体验过的工作方式。</p>
-<p>很多小伙伴问我，你过去是做专业对口的工作么？在这里再解释一下，打工度假签证有规定不能为一个老板工作超过3个月，这项就限制了一般只能打季节工。何况做临时工的好处是想干就干，想不干就不干，上半个月班，赚够钱了，接着玩3个月，完全ok，这样比较灵活，始终我是去玩的，不是为了用劳动力换钱的，对吧？</p>
-<p>回来以后的生活，各种约约约，持续到过年。</p>
-<p>好像也不能一直这么hea（不羁放纵）下去，那就找工作吧。我去翻查了下印象笔记的工作日志，原来从2017.1.31（年初四）我就开始准备了，直到5.2我才收到阿里的正式的offer邮件，找工作花4个月？这几个月我都在干嘛呀，哈哈，找工作需要那么长的时间么？当然并不需要，以下分享一下我的时间表。</p>
-<h2 id="找回感觉的2月"><a href="#找回感觉的2月" class="headerlink" title="找回感觉的2月"></a>找回感觉的2月</h2><p>2月份，我给自己列了一个书单和学习计划，一个月的准备时间。这段时间是我感到心理压力最大的时候，真的好难好累，看吧，出来混，还是要还的。</p>
-<p>作为一枚工作了近3年并断产了大半年的页面仔，我没有去看面经和一些剑指offer的书哈，说出来也不怕大家笑，我看了一大堆前端基础教科书，如《JavaScript高级程序设计》、《无懈可击的WEB设计》和《图解HTTP》等等，大概11本。<del>还有看了廖雪峰、阮一峰和Youtube上的Max、Wes、The Net Ninja等老师的视频教程，包括Vue.js 2、ReactJS、Webpack、ES6、CSS Flex、NodeJS/Express等等。</del>以上看的这些啊，都是浅尝即止，不精通，只追求“看过”。算是温故知新吧，这段时间也整理了以前的项目笔记。</p>
-<p>开始调整生物钟嘛，每天生活规律，从9点开始，晚上11点左右结束，没有周末。看书，看累了写会代码，写累了看会儿教程，接着再写会儿代码……晚餐后出门散步1小时，日间不定期被我爸妈骚扰，陪聊和看电视剧，这样都能完成我的计划，需要很强的定力，有木有。</p>
-<p>前端圈真是个坑，瞬息万变，我真是out太多了，永远有学不完的东西，知道得越多，发现自己知道的越少。不过声明一下哈，我并不觉得新技术不断出现，我们就得见一个爱一个，学到新东西后恨不得武装到自己写的每一行代码里。不是这样的，保持热情拥抱新技术，工作中只用合适的，不盲目追求最新的，始终技术转化成什么才是我们最关心的。</p>
-<p>现在我回想，这个2月的学习计划对面试有帮助么？有一点帮助，但不大，看的都没有被问到好吗？因为面试问题太随机了，每个面试官关注点都不一样，抓着简历和项目问，我懂的就懂，不懂的还是不懂，所以2月份对于我来说，不能说是面试准备，应该算是个仪式，生活要有仪式感嘛，是一个重新开始的仪式，仅此而已。</p>
-<h2 id="开始面试的3月"><a href="#开始面试的3月" class="headerlink" title="开始面试的3月"></a>开始面试的3月</h2><p>下面不写面经哈，只谈感受。</p>
-<p>一般来说，老板要什么样的人啊？技术靠谱、有团队精神、能扛事有责任感的……</p>
-<p>不管条件是什么，嘘~ 我就是。况且我还是个相貌气质佳、有故事的女同学，简直了，哪个boss看到我的简历，打电话来聊几句人生，就应该直接发offer了。要不是裸辞去了gap year，我肯定早就被某家棒棒的公司收了，好不好？磨叽什么呢~ 赶紧把我收了才对嘛！</p>
-<p>以上是我的幻想，现实却是很骨感。</p>
-<p>想起来也是搞笑，@唐工（曾任职百度、现任职腾讯的测试大神）在职想跳槽的时候，一天安排几家公司，密密麻麻地面试，我现在是全职求职的，但是投出去的简历少之又少，一周或者两周只面一个团队，低频到没朋友，所以求职时间拖得很长。</p>
-<p>我的想法是这样的。投简历之前，我想先了解对方是做什么的，自己感不感兴趣，顺便控制台调试一下对方的页面，代码咋样，用得是什么技术栈、构建工具，基本上能摸个差不多，喜欢了才给简历。</p>
-<p>整个求职过程，我给3家公司投过简历（捂脸），A创业公司、杭州猪厂和阿里。</p>
-<p>A创业公司，有一个我喜欢的百度大神，做直播的，一面谈了15分钟，聊新老技术升级的坑。</p>
-<p>猪厂，喜欢他家用心做的产品（情怀），一面谈了40分钟，第一次遇到纯跟我聊基础知识的，HTML/CSS/JS一题一题问的女面试官。</p>
-<p>两家公司的一面我都过了，但对方邀请我去上海、杭州进行二面的时候，我怂了，我发现当下最爱的始终是阿里，你们可以得到了我的简历，但得不到我的心。害怕对方真的发offer（我应该是自作多情了，哈哈，人家没说会发offer）。我想对这两家公司的面试官说声抱歉，浪费了他们的时间，因此后来我再也没有给其他团队投过简历。</p>
-<p>这段时间，我大概跟10位阿里前辈聊过，每一次的感觉不太一样，但能感受到阿里面试官的平均水平相当高。</p>
-<p>遇到过，第一轮就对我压力面，面了一个多小时，花式吊打我的简历，问到我说不知道为止，但我非常佩服这位面试官，他在那么短的时间内问的问题的覆盖面能够那么深那么广；</p>
-<p>遇到过，上来就吐槽我的自我介绍毫无信息量的主管，我说了答不出的问题，对方还是一再追问并质疑我的专业背景和技术能力，这也是唯一一次我不知道怎么接话，因为我feel到对方在发脾气，没法继续聊；[其实觉得我不合适，默默打个叉，尽快结束面试就可以了]</p>
-<p>遇到过，四轮技术面，其中一轮我还开视频直播写了一小时代码；[其实每轮内容都差不多，感觉没必要四面技术]</p>
-<p>遇到过，我花了很长时间回答一道题目，面试官说答得很全面，你是不是专门准备过的；[我确实准备过，不是因为这是常见面试题，而是我觉得里面涵盖自己应该了解的知识点]</p>
-<p>遇到过，一面技术摸底，二三面看人品、聊人生的。[这是最符合我想象的面试场景]</p>
-<p>万万没想到，差不多每次都聊得那么开心，前3个部门还是拒了我，拿到offer的是我面的第4个部门。</p>
-<p>凭着迷之自信，我几乎不会怀疑自己行不行，何况面试那么多轮，没有挂在压力技术面，说明并不是技术问题。但是换谁被拒3次也会不开心的，当我有点心灰意冷的时候，@猩爷给我发了这么一段话，摘自《巨婴国》：</p>
-<blockquote>
-<p>成熟的心智，需要基本的信心——我相信持续的投入会转化出我想要的东西，虽然这事不一定会发生，但我越投入，可能性就越大，并且在投入过程中，我的心得到了淬炼。</p>
-</blockquote>
-<p>3月份大概收到过二十多个阿里团队的邀约，我在面第4个部门时，还有另外3个阿里的团队在内推系统等我的简历释放。是啊，屡战屡败，屡败屡战，但我没想放弃治疗，打算一直面阿里，直到加入合适的团队为止。</p>
-<p>说起这事，@唐工说看到我这样，她问过自己，有没有一家公司能让她屡败屡战，被拒3遍还要接着面？并没有。</p>
-<p>我呢，为什么我要那么执着？为了“梦想本人”马老师，为了盛名在外的阿里前端大神，为了圆大学没有完成的淘宝梦，还是仅仅为了兑现一年前自己的承诺？为什么要来，我也分不清了，我只知道我要来阿里，做我觉得对的事情 —— 做出更好的东西帮助/影响到更多的人。</p>
-<h2 id="等待的4、5月"><a href="#等待的4、5月" class="headerlink" title="等待的4、5月"></a>等待的4、5月</h2><p>gap year后的求职季，止于我现在的团队 —— CBU，让大家见笑了，我的title是<code>新零售技术事业群-此处省略一万字-前端开发工程师</code>。</p>
-<p>有个非常有趣的插曲，口头offer我足足等了两周，由于部门架构调整，原本的HR去了别的地方，我的offer被遗忘了，后来接到新HR姐姐的电话，我的团队、title都变了，所以入职之前，我对新工作一无所知，只知道自己要去阿里B站（1688.com），用@清姐的话说，我现在是搞批发的，哈哈，以后我会告诉你们我在做的是什么。</p>
-<p>说实话，我从来没想过自己会加入大市场前端，真是缘分，我遇到了一个很特别的老大和一群很nice的小伙伴们，挺好的。我相信，一切便是最好的安排，这里会因我而不同，我也会在这里变成一个更好的自己。</p>
-<p>辛苦您终于看完了，谨以此图聊表谢意，晚安 ：）</p>
-<p><img src="http://sinacloud.net/woodysblog/blog/begin-again-ali-night.jpg" alt=""></p>
-<p>2017.05.31<br>写于杭州滨江区江南大道魔方公寓</p>
+	<div class="post__meta">
+	<time datetime="2017-04-22T13:54:29.000Z">2017-04-22</time>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/begin-again-2017/" data-id="cjhm5re4f0008rkr3km50889y" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/life/">life</a></li></ul>
-
-    </footer>
-  </div>
-  
+	
+</div>
+</header>
+		
+	</div>
 </article>
+		
+			
+
+			
+	
 
 
-  
-    <article id="post-2017-roadmap" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/2017-roadmap/" class="article-date">
-  <time datetime="2017-04-22T13:54:29.000Z" itemprop="datePublished">2017-04-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/2017-roadmap/">2017年Web开发者的技能蓝图</a>
-    </h1>
-  
+<article class="article article-excerpt article-type-title post post-index">
+	<div class="post-content">
+		
+			
+<header>
+	
+	
+		
+			<h3 class="title" data-role="articleTitle"><a href="/blog/archives/mac-notes/">Mac使用记录</a></h3>
+		
+	
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在Medium看到一篇文章，分享了github网友<a href="https://github.com/kamranahmedse" target="_blank">@kamranahmedse</a>发布的<a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank">developer-roadmap</a>。</p>
-<p>非常有意思，自己记录一下，也顺便跟大家分享~</p>
-<p>大致分为3个发展方向，前端、后端和运维。<br>2017年，作为一枚web开发人员，roadmap提到的技术，你都了解么 ：）</p>
-<p><img src="http://sinacloud.net/woodysblog/2017-web-dev-roadmap/web-developer.png" alt="&quot;web developer&quot;"></p>
-<hr>
-<h2 id="front-end"><a href="#front-end" class="headerlink" title="front-end"></a>front-end</h2><p><img src="http://sinacloud.net/woodysblog/2017-web-dev-roadmap/front-end.png" alt="&quot;front-end developer roadmap in 2017&quot;"></p>
-<hr>
-<h2 id="back-end"><a href="#back-end" class="headerlink" title="back-end"></a>back-end</h2><p><img src="http://sinacloud.net/woodysblog/2017-web-dev-roadmap/back-end.png" alt="&quot;back-end developer roadmap in 2017&quot;"></p>
-<hr>
-<h2 id="devOps"><a href="#devOps" class="headerlink" title="devOps"></a>devOps</h2><p><img src="http://sinacloud.net/woodysblog/2017-web-dev-roadmap/devOps.png" alt="&quot;dev-ops developer roadmap in 2017&quot;"></p>
+	<div class="post__meta">
+	<time datetime="2014-10-26T15:24:50.000Z">2014-10-26</time>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/2017-roadmap/" data-id="cjhm5re4e0007rkr3djxqbvh3" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/back-end/">back-end</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/devops/">devops</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/front-end/">front-end</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/roadmap/">roadmap</a></li></ul>
-
-    </footer>
-  </div>
-  
+	
+</div>
+</header>
+		
+	</div>
 </article>
+		
+			
 
+			
 
-  
-    <article id="post-mac-notes" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/mac-notes/" class="article-date">
-  <time datetime="2014-10-26T15:24:50.000Z" itemprop="datePublished">2014-10-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/test/categories/study/">study</a>
-  </div>
+<article class="article article-excerpt  post post-index">
+	<div class="post-content">
+		
+			
+<header>
+	
+	
+		
+			<h3 class="title" data-role="articleTitle"><a href="/blog/archives/npm-publish/">悄悄发布一个hexo的npm模块</a></h3>
+		
+	
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/mac-notes/">Mac使用记录</a>
-    </h1>
-  
+	<div class="post__meta">
+	<time datetime="2017-04-03T03:52:02.000Z">2017-04-03</time>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>慢慢记录Mac OS那些好用的东东~</p>
-<h2 id="程序员的那些软件-使用技巧"><a href="#程序员的那些软件-使用技巧" class="headerlink" title="程序员的那些软件/使用技巧"></a>程序员的那些软件/使用技巧</h2><h3 id="iTerm-——-oh-my-zsh"><a href="#iTerm-——-oh-my-zsh" class="headerlink" title="iTerm —— oh-my-zsh"></a>iTerm —— oh-my-zsh</h3><blockquote>
-<p>Oh My Zsh will not make you a 10x developer…but you might feel like one.</p>
-</blockquote>
-<p>又一个程序员的装B神器~ 目前对我最有用的是可以直接看到git branch的信息，更重要的是很好看，哈哈 ：）</p>
-<p><img src="http://sinacloud.net/woodysblog/articles/oh-my-zsh.png" alt=""></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</span><br><span class="line">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</span><br><span class="line">chsh -s /bin/zsh</span><br><span class="line"></span><br><span class="line">// 重启iTerm</span><br></pre></td></tr></table></figure>
-<p>更多详见<a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener">github</a>。</p>
-<h3 id="Sip"><a href="#Sip" class="headerlink" title="Sip"></a>Sip</h3><p>超好用的取色小软件，在切图时尤其好用。附上<a href="http://sipapp.io" target="_blank" rel="noopener">官网地址</a>。</p>
-<h3 id="MWeb-Lite"><a href="#MWeb-Lite" class="headerlink" title="MWeb Lite"></a>MWeb Lite</h3><p>也就是本文编辑的markdown IDE，UI挺漂亮的，有免费版和<a href="http://zh.mweb.im/index.html" target="_blank" rel="noopener">付费版</a>，嘿嘿，我在用免费版，使用外部模式，md文档同步百度云，也可以达到同步文档效果啦~</p>
-<h2 id="实用小软件"><a href="#实用小软件" class="headerlink" title="实用小软件"></a>实用小软件</h2><h3 id="Caffeine"><a href="#Caffeine" class="headerlink" title="Caffeine"></a>Caffeine</h3><p>这杯小咖啡可以让你的Mac不会自动锁屏，有时候在写东西，走神一段时间，回神一看，屏幕锁了，多不开心呀，可以要把屏幕hold住~ 附上<a href="http://lightheadsw.com/caffeine/" target="_blank" rel="noopener">官网</a>。</p>
-<h2 id="OS使用技巧："><a href="#OS使用技巧：" class="headerlink" title="OS使用技巧："></a>OS使用技巧：</h2><p>写于2014年。</p>
-<p>入了mac pro，摸索了接近2个月，平时工作、生活上的使用基本ok；</p>
-<p>对于习惯使用windows的同学们，学习OS还是有点成本的，导致有的朋友把mac刷成windows了；</p>
-<p>在猩爷的带领下，学习<a href="http://www.weibo.com/laotech?from=feed&amp;loc=nickname" target="_blank" rel="noopener">唠科</a>大神的mac入门视频，有条理，入门很快，推荐一下<a href="http://v.youku.com/v_show/id_XNDk1NTA0OTU2.html?from=y1.2-1-105.3.10-2.1-1-1-9" target="_blank" rel="noopener">《深入浅出OS X》</a></p>
-<p>期间也看过两本关于OS的书：</p>
-<ol>
-<li><a href="http://book.douban.com/subject/25826578/" target="_blank" rel="noopener">《MacTalk 人生元编程》</a><br>不是一本纯粹讲os技巧的书，更像文集，推荐的app和使用技巧挺有用的；</li>
-<li><a href="http://book.douban.com/subject/20256399/" target="_blank" rel="noopener">《Mac功夫》</a><br>300+条使用技巧，个人觉得太细了，很多功能其实用不上，在读书过程中整理出来的技巧，在唠科的视频教程中也有覆盖到~</li>
-</ol>
-<ul>
-<li>右键<ul>
-<li>选中目标，两根手指同时点到触摸板，唤出菜单栏</li>
-</ul>
-</li>
-<li>移动<ul>
-<li>选中目标，三根手指点到触摸板，移动</li>
-</ul>
-</li>
-<li>文件重命名<ul>
-<li>选中文件，按回车（return键），就可以rename</li>
-</ul>
-</li>
-<li>显示桌面<ul>
-<li>cmd + F3</li>
-</ul>
-</li>
-<li>锁屏<ul>
-<li>系统偏好设置 - 安全性 - 通用，进入睡眠或者屏保，要求密码</li>
-<li>键盘控制：control + shift + 开关键</li>
-<li>触摸角<ul>
-<li>屏保设置：偏好设置 - mission control - 触发角 - 左下角（自定义） - 启动屏幕保护</li>
-<li>触发：触摸板滑到自定义的触摸角锁屏</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>剪切文件<ul>
-<li>复制 cmd + c</li>
-<li>粘贴 cmd + v</li>
-<li>剪切 cmd + option + v</li>
-</ul>
-</li>
-<li>切换  <ul>
-<li>应用程序切换 cmd + tab</li>
-<li>标签切换 control + shift + tab</li>
-</ul>
-</li>
-<li>查看多个文件的信息（容量等）<ul>
-<li>选中多个文件</li>
-<li>option + cmd + i</li>
-</ul>
-</li>
-<li>查看磁盘容量<ul>
-<li>finder - 显示 - 显示状态栏</li>
-</ul>
-</li>
-<li>缩放dock<ul>
-<li>上下拉动dock上的”斑马线”</li>
-</ul>
-</li>
-<li>强行退出程序<ul>
-<li>命令：cmd + shift + esc</li>
-<li>活动监视器：应用程序 - 实用工具 - 活动监视器，把没有响应的程序关闭</li>
-</ul>
-</li>
-<li>保持mac的活动状态<ul>
-<li>pmset noidle</li>
-</ul>
-</li>
-<li>截屏<ul>
-<li>截图复制到粘贴板 cmd + shift + control + 4</li>
-<li>截图并保存到桌面 cmd + shift + 4</li>
-<li>截屏，到粘贴板或者保存到桌面，以上命令改为3</li>
-</ul>
-</li>
-<li>滚动到顶/底部<ul>
-<li>按住option，点击滚动条的顶/底部</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/mac-notes/" data-id="cjhm5re5d001wrkr3lzflj80o" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/life/">life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/study/">study</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-npm-publish" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/npm-publish/" class="article-date">
-  <time datetime="2017-04-03T03:52:02.000Z" itemprop="datePublished">2017-04-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/npm-publish/">悄悄发布一个hexo的npm模块</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>hexo-generator-index-plus</strong>，这是什么东东？其实就是hexo博客生成器的一个文章排序插件，基于默认插件fork的，添加按文章<strong>置顶</strong>和<strong>二次编辑的更新时间</strong>排序的功能。</p>
+	
+</div>
+</header>
+<div class="entry">
+	<p><strong>hexo-generator-index-plus</strong>，这是什么东东？其实就是hexo博客生成器的一个文章排序插件，基于默认插件fork的，添加按文章<strong>置顶</strong>和<strong>二次编辑的更新时间</strong>排序的功能。</p>
 <p>沙发留给github和npmjs~</p>
 <p>Github: <a href="https://github.com/YuyingWu/hexo-generator-index-plus" target="_blank" rel="noopener">YuyingWu/hexo-generator-index-plus</a><br>npm: <a href="https://www.npmjs.com/package/hexo-generator-index-plus" target="_blank" rel="noopener">hexo-generator-index-plus</a></p>
 <p>最简单粗暴的Installation：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-generator-<span class="keyword">index</span>-plus <span class="comment">--save</span></span><br></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/test/archives/npm-publish/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/npm-publish/" data-id="cjhm5re5l002erkr318sfkfv7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/hexo-generator-index-plus/">hexo-generator-index-plus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/hexo-plugin/">hexo-plugin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/npm/">npm</a></li></ul>
 
-    </footer>
-  </div>
-  
+	<footer class="u-clearfix">
+		<a href="/blog/archives/npm-publish/#more" class="excerpt--more">Read More</a>
+	</footer>
+</div>
+		
+	</div>
 </article>
+		
+			
 
+			
 
-  
-    <article id="post-blog-log" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/blog-log/" class="article-date">
-  <time datetime="2015-04-22T16:35:45.000Z" itemprop="datePublished">2015-04-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/test/categories/tech/">tech</a>
-  </div>
+<article class="article article-excerpt  post post-index">
+	<div class="post-content">
+		
+			
+<header>
+	
+	
+		
+			<h3 class="title" data-role="articleTitle"><a href="/blog/archives/blog-log/">Blog Log</a></h3>
+		
+	
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/blog-log/">Blog Log</a>
-    </h1>
-  
+	<div class="post__meta">
+	<time datetime="2015-04-22T16:35:45.000Z">2015-04-23</time>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>2017.04.02</strong></p>
+	
+</div>
+</header>
+<div class="entry">
+	<p><strong>2017.04.02</strong></p>
 <ol>
 <li>jQuery -&gt; Zepto</li>
 <li>fancybox -&gt; magnific popup</li>
@@ -1085,315 +435,201 @@
 <p>以下是相同网络环境下，disable Cache，线上首页用Chrome Network的测试数据：</p>
 <p>上线前：<br>JS，<strong>三个</strong>请求，<code>jquery.min.js</code>, <code>aio.js</code>, <code>fancybox.js</code>，总计<strong>39.8KB</strong><br>CSS，<strong>两个</strong>请求，<code>style.css</code>, <code>fancybox.css</code>，总计<strong>7KB</strong></p>
 <p>上线后：<br>JS，<strong>两个</strong>请求，<code>zepto.min.js</code>, <code>aio.js</code>，总计<strong>17.9KB</strong><br>CSS，<strong>一个</strong>请求，<code>style.css</code>，总计<strong>6.5KB</strong><br>
-        
-          <p class="article-more-link">
-            <a href="/test/archives/blog-log/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/blog-log/" data-id="cjhm5re4h0009rkr3m1262qkw" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/blog/">blog</a></li></ul>
 
-    </footer>
-  </div>
-  
+	<footer class="u-clearfix">
+		<a href="/blog/archives/blog-log/#more" class="excerpt--more">Read More</a>
+	</footer>
+</div>
+		
+	</div>
 </article>
+		
+			
 
+			
 
-  
-    <article id="post-debug-talk" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/debug-talk/" class="article-date">
-  <time datetime="2017-02-27T13:56:02.000Z" itemprop="datePublished">2017-02-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/debug-talk/">谈谈怎么在不熟悉上下文的情况下debug</a>
-    </h1>
-  
+<article class="article article-excerpt  post post-index">
+	<div class="post-content">
+		
+			
+<header>
+	
+	
+		
+			<h3 class="title" data-role="articleTitle"><a href="/blog/archives/debug-talk/">谈谈怎么在不熟悉上下文的情况下debug</a></h3>
+		
+	
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>跟大家分享一个最近调bug的故事，在不熟悉架构、业务上下文、编程语言、调试环境等等的情况下，遇到问题时，我们可以怎么解决。简单的来说，路过一个你喜欢的站点，发现页面有bug，想帮忙修，怎么办？<br>
-        
-          <p class="article-more-link">
-            <a href="/test/archives/debug-talk/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/debug-talk/" data-id="cjhm5re4p000krkr3vip1la2z" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/tech/">tech</a></li></ul>
+	<div class="post__meta">
+	<time datetime="2017-02-27T13:56:02.000Z">2017-02-27</time>
 
-    </footer>
-  </div>
-  
+	
+</div>
+</header>
+<div class="entry">
+	<p>跟大家分享一个最近调bug的故事，在不熟悉架构、业务上下文、编程语言、调试环境等等的情况下，遇到问题时，我们可以怎么解决。简单的来说，路过一个你喜欢的站点，发现页面有bug，想帮忙修，怎么办？<br>
+
+	<footer class="u-clearfix">
+		<a href="/blog/archives/debug-talk/#more" class="excerpt--more">Read More</a>
+	</footer>
+</div>
+		
+	</div>
 </article>
+		
+			
 
+			
 
-  
-    <article id="post-css-layout" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/css-layout/" class="article-date">
-  <time datetime="2017-02-07T04:42:07.000Z" itemprop="datePublished">2017-02-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/css-layout/">读书笔记 - CSS网站布局实录</a>
-    </h1>
-  
+<article class="article article-excerpt  post post-index">
+	<div class="post-content">
+		
+			
+<header>
+	
+	
+		
+			<h3 class="title" data-role="articleTitle"><a href="/blog/archives/css-layout/">读书笔记 - CSS网站布局实录</a></h3>
+		
+	
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>有些书籍，就算内容赶不上潮流，经典始终是经典，无论什么时候看，总会觉得有些新的感受新的收获。</p>
+	<div class="post__meta">
+	<time datetime="2017-02-07T04:42:07.000Z">2017-02-07</time>
+
+	
+</div>
+</header>
+<div class="entry">
+	<p>有些书籍，就算内容赶不上潮流，经典始终是经典，无论什么时候看，总会觉得有些新的感受新的收获。</p>
 <p><a href="https://book.douban.com/subject/2175995/" target="_blank" rel="noopener">《CSS网站布局实录》</a>，这本书不厚，关于布局、文件流、盒模型等等的基础知识，却讲得非常清晰明白。<br>
-        
-          <p class="article-more-link">
-            <a href="/test/archives/css-layout/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/css-layout/" data-id="cjhm5re4o000jrkr3752ierd5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/reading/">reading</a></li></ul>
 
-    </footer>
-  </div>
-  
+	<footer class="u-clearfix">
+		<a href="/blog/archives/css-layout/#more" class="excerpt--more">Read More</a>
+	</footer>
+</div>
+		
+	</div>
 </article>
+		
+			
 
+			
 
-  
-    <article id="post-hexo-top" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/hexo-top/" class="article-date">
-  <time datetime="2017-02-02T05:23:18.000Z" itemprop="datePublished">2017-02-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/hexo-top/">Hexo主题的置顶功能</a>
-    </h1>
-  
+<article class="article article-excerpt  post post-index">
+	<div class="post-content">
+		
+			
+<header>
+	
+	
+		
+			<h3 class="title" data-role="articleTitle"><a href="/blog/archives/hexo-top/">Hexo主题的置顶功能</a></h3>
+		
+	
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>忽然想要一个置顶功能，可惜原生的<code>hexo-generator-index</code>没有提供这样的方法，那只能自己搞一个了~</p>
-        
-          <p class="article-more-link">
-            <a href="/test/archives/hexo-top/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/hexo-top/" data-id="cjhm5re52001brkr3udyqi45l" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/theme/">theme</a></li></ul>
+	<div class="post__meta">
+	<time datetime="2017-02-02T05:23:18.000Z">2017-02-02</time>
 
-    </footer>
-  </div>
-  
+	
+</div>
+</header>
+<div class="entry">
+	<p>忽然想要一个置顶功能，可惜原生的<code>hexo-generator-index</code>没有提供这样的方法，那只能自己搞一个了~</p>
+
+	<footer class="u-clearfix">
+		<a href="/blog/archives/hexo-top/#more" class="excerpt--more">Read More</a>
+	</footer>
+</div>
+		
+	</div>
 </article>
+		
+			
 
+			
 
-  
-    <article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/archives/git/" class="article-date">
-  <time datetime="2017-01-23T10:35:51.000Z" itemprop="datePublished">2017-01-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/archives/git/">git学习笔记</a>
-    </h1>
-  
+<article class="article article-excerpt  post post-index">
+	<div class="post-content">
+		
+			
+<header>
+	
+	
+		
+			<h3 class="title" data-role="articleTitle"><a href="/blog/archives/git/">git学习笔记</a></h3>
+		
+	
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近想要做博客的云端编码，在哪都能发日志，于是入了coding.net的坑，从svn转到git下~</p>
+	<div class="post__meta">
+	<time datetime="2017-01-23T10:35:51.000Z">2017-01-23</time>
+
+	
+</div>
+</header>
+<div class="entry">
+	<p>最近想要做博客的云端编码，在哪都能发日志，于是入了coding.net的坑，从svn转到git下~</p>
 <p>以前工作中，因为没有什么使用git的需要，说要学吧，总有各种理由没时间。为了小博客真是操碎了心，看了廖老师的教程，发现其实git跟svn cli还是有很多的相同之处，也没有特别陌生，相信不用多久就能上手了 :)</p>
 <p>本文是自己学习和记录用的，如果大家想看教程，还是推荐廖雪峰老师的<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">《Git教程》</a><br>
-        
-          <p class="article-more-link">
-            <a href="/test/archives/git/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wuyuying.com/archives/git/" data-id="cjhm5re4w000yrkr31dz649bz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/tech/">tech</a></li></ul>
 
-    </footer>
-  </div>
-  
+	<footer class="u-clearfix">
+		<a href="/blog/archives/git/#more" class="excerpt--more">Read More</a>
+	</footer>
+</div>
+		
+	</div>
 </article>
+		
 
-
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/test/page/2/">2</a><a class="page-number" href="/test/page/3/">3</a><a class="page-number" href="/test/page/4/">4</a><a class="extend next" rel="next" href="/test/page/2/">下一页 &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/test/categories/finance/">finance</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/finance/reading/">reading</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/life/">life</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/life/reading/">reading</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/photography/">photography</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/">reading</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/tech/">tech</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/reading/work/">work</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/study/">study</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/tech/">tech</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/test/categories/tech/work/">work</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/work/">work</a></li><li class="category-list-item"><a class="category-list-link" href="/test/categories/未分类/">未分类</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/CSS-Variables/">CSS Variables</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/Google-Map/">Google Map</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/New-Zealand/">New Zealand</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/Responsive-Web-Design/">Responsive Web Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/animate/">animate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/back-end/">back-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/baidu/">baidu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/coder/">coder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/devops/">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/efficiency/">efficiency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/finance/">finance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/front-end/">front-end</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/gpx/">gpx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/happiness/">happiness</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/hexo-generator-index-plus/">hexo-generator-index-plus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/hexo-plugin/">hexo-plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/javascript-animation/">javascript animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/job/">job</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/life/">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mactalk/">mactalk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/mobile-deug/">mobile deug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/performance/">performance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/photography/">photography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/reactjs/">reactjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/resume/">resume</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/roadmap/">roadmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/rwd/">rwd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/study/">study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/tech/">tech</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/theme/">theme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/time-management/">time management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/translation/">translation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/travel/">travel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/velocity-js/">velocity.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/web/">web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/weixin/">weixin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/whv/">whv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/working-holiday/">working holiday</a></li><li class="tag-list-item"><a class="tag-list-link" href="/test/tags/总结/">总结</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/test/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/test/tags/CSS-Variables/" style="font-size: 10px;">CSS Variables</a> <a href="/test/tags/Google-Map/" style="font-size: 10px;">Google Map</a> <a href="/test/tags/New-Zealand/" style="font-size: 11.67px;">New Zealand</a> <a href="/test/tags/Responsive-Web-Design/" style="font-size: 10px;">Responsive Web Design</a> <a href="/test/tags/animate/" style="font-size: 10px;">animate</a> <a href="/test/tags/back-end/" style="font-size: 10px;">back-end</a> <a href="/test/tags/baidu/" style="font-size: 10px;">baidu</a> <a href="/test/tags/blog/" style="font-size: 16.67px;">blog</a> <a href="/test/tags/coder/" style="font-size: 10px;">coder</a> <a href="/test/tags/css/" style="font-size: 10px;">css</a> <a href="/test/tags/devops/" style="font-size: 10px;">devops</a> <a href="/test/tags/efficiency/" style="font-size: 11.67px;">efficiency</a> <a href="/test/tags/finance/" style="font-size: 10px;">finance</a> <a href="/test/tags/front-end/" style="font-size: 13.33px;">front-end</a> <a href="/test/tags/git/" style="font-size: 10px;">git</a> <a href="/test/tags/gpx/" style="font-size: 10px;">gpx</a> <a href="/test/tags/happiness/" style="font-size: 10px;">happiness</a> <a href="/test/tags/hexo-generator-index-plus/" style="font-size: 10px;">hexo-generator-index-plus</a> <a href="/test/tags/hexo-plugin/" style="font-size: 10px;">hexo-plugin</a> <a href="/test/tags/javascript-animation/" style="font-size: 10px;">javascript animation</a> <a href="/test/tags/job/" style="font-size: 11.67px;">job</a> <a href="/test/tags/life/" style="font-size: 18.33px;">life</a> <a href="/test/tags/mac/" style="font-size: 10px;">mac</a> <a href="/test/tags/mactalk/" style="font-size: 10px;">mactalk</a> <a href="/test/tags/mobile-deug/" style="font-size: 11.67px;">mobile deug</a> <a href="/test/tags/npm/" style="font-size: 10px;">npm</a> <a href="/test/tags/performance/" style="font-size: 10px;">performance</a> <a href="/test/tags/photography/" style="font-size: 10px;">photography</a> <a href="/test/tags/reactjs/" style="font-size: 10px;">reactjs</a> <a href="/test/tags/reading/" style="font-size: 20px;">reading</a> <a href="/test/tags/resume/" style="font-size: 10px;">resume</a> <a href="/test/tags/roadmap/" style="font-size: 10px;">roadmap</a> <a href="/test/tags/rwd/" style="font-size: 10px;">rwd</a> <a href="/test/tags/study/" style="font-size: 11.67px;">study</a> <a href="/test/tags/tech/" style="font-size: 20px;">tech</a> <a href="/test/tags/theme/" style="font-size: 10px;">theme</a> <a href="/test/tags/time-management/" style="font-size: 10px;">time management</a> <a href="/test/tags/translation/" style="font-size: 10px;">translation</a> <a href="/test/tags/travel/" style="font-size: 10px;">travel</a> <a href="/test/tags/velocity-js/" style="font-size: 10px;">velocity.js</a> <a href="/test/tags/web/" style="font-size: 11.67px;">web</a> <a href="/test/tags/weixin/" style="font-size: 10px;">weixin</a> <a href="/test/tags/whv/" style="font-size: 13.33px;">whv</a> <a href="/test/tags/work/" style="font-size: 15px;">work</a> <a href="/test/tags/working-holiday/" style="font-size: 11.67px;">working holiday</a> <a href="/test/tags/总结/" style="font-size: 15px;">总结</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/11/">十一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/10/">十月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/02/">二月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2016/01/">一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/12/">十二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/08/">八月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/07/">七月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/04/">四月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/02/">二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2015/01/">一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/12/">十二月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/11/">十一月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/test/archives/2014/10/">十月 2014</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/test/archives/optimizing-react-virtual-dom-explained/">[译] React性能优化-虚拟Dom原理浅析</a>
-          </li>
-        
-          <li>
-            <a href="/test/archives/slash/">关于「自由态职业」</a>
-          </li>
-        
-          <li>
-            <a href="/test/archives/css-var/">CSS Variables学习笔记</a>
-          </li>
-        
-          <li>
-            <a href="/test/archives/year-2017/">我的2017</a>
-          </li>
-        
-          <li>
-            <a href="/test/archives/eu-gallery/">当我在欧洲艺术馆遇到馆长</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 伍酱<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/test/" class="mobile-nav-link">Home</a>
-  
-    <a href="/test/archives" class="mobile-nav-link">Archives</a>
-  
+		<nav class="pagination">
+	
+	
+		<a href="/blog/page/2/" class="next">下一页 <i class="iconfont icon-right"></i></a>
+	
 </nav>
-    
+	</section>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		</div>
+		
+	</div>
+</div>
 
-
-  <link rel="stylesheet" href="/test/fancybox/jquery.fancybox.css">
-  <script src="/test/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/test/js/script.js"></script>
+<link rel="stylesheet" href="/blog//build/css/iconfont_201704181501.css">
 
 
+	<footer class="wgt-footer" id="footer">
+	<div class="center">
+		<p>
+		&copy; 
+		2014-2018
 
-  </div>
+		
+			<a href="/blog/">伍酱</a>
+		
+
+		&nbsp;|&nbsp;
+		<a href="https://github.com/YuyingWu"><i class="iconfont icon-github"></i> Github</a>&nbsp;|&nbsp;
+<a href="http://www.weibo.com/wuyuying1128"><i class="iconfont icon-weibo"></i> 微博</a>&nbsp;|&nbsp;
+<a href="http://www.douban.com/people/wuyuying1128/"><i class="iconfont icon-douban"></i>豆瓣</a>
+		</p>
+		<p>
+			京ICP备16019960号&nbsp;
+			Powered by 
+			<a href="https://hexo.io" target="_blank">Hexo</a>, using theme 
+			<a href="https://github.com/YuyingWu/hexo-theme-fresh" 
+				target="_blank">Fresh</a>
+		.</p>
+	</div>
+</footer>
+
+
+
+
+<script src="//sinacloud.net/woodysblog/statics/lazyload.js"></script>
+<script>
+	new LazyLoad({
+		threshold: 600
+	});
+</script>
+<script src="/blog//dist/base.js"></script>
 </body>
 </html>

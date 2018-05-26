@@ -4,7 +4,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/slash/</loc>
+    <loc>http://wuyuying.com/blog/archives/slash/</loc>
     <lastmod>2018-05-25T15:20:49.000Z</lastmod>
     <data>
         <display>
@@ -14,7 +14,7 @@
          
            
              
-              <breadCrumb title="reading" url="http://wuyuying.com/test/categories/reading/"/>
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/reading/"/>
           
         </display>
     </data>
@@ -22,47 +22,52 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/kindle-duokan/</loc>
+    <loc>http://wuyuying.com/blog/archives/markdown/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
-        <title>Kindle从5.6.1到5.4.4的降级+ 刷多看（Paperwhite 1代）</title>
-        <pubTime>2017-01-15T07:00:20.000Z</pubTime>
+        <title>markdown学习笔记</title>
+        <pubTime>2014-10-20T10:32:27.000Z</pubTime>
+        
+        <tag>study</tag>
+         
+         
+           
+             
+              <breadCrumb title="study" url="http://wuyuying.com/blog/categories/study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/7cake/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>7cake的那些事儿</title>
+        <pubTime>2015-12-04T15:48:19.000Z</pubTime>
         
         <tag>tech</tag>
          
+        <tag>work</tag>
+         
          
            
+             
+              <breadCrumb title="tech" url="http://wuyuying.com/blog/categories/tech/"/>
+          
+             
+              <breadCrumb title="work" url="http://wuyuying.com/blog/categories/tech/work/"/>
+          
         </display>
     </data>
     </url>
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/2017-roadmap/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>2017年Web开发者的技能蓝图</title>
-        <pubTime>2017-04-22T13:54:29.000Z</pubTime>
-        
-        <tag>front-end</tag>
-         
-        <tag>back-end</tag>
-         
-        <tag>devops</tag>
-         
-        <tag>roadmap</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/test/archives/begin-again-2017/</loc>
+    <loc>http://wuyuying.com/blog/archives/begin-again-2017/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -79,7 +84,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/blog-log/</loc>
+    <loc>http://wuyuying.com/blog/archives/blog-log/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -91,7 +96,7 @@
          
            
              
-              <breadCrumb title="tech" url="http://wuyuying.com/test/categories/tech/"/>
+              <breadCrumb title="tech" url="http://wuyuying.com/blog/categories/tech/"/>
           
         </display>
     </data>
@@ -99,7 +104,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/blog-opt-wp-hexo/</loc>
+    <loc>http://wuyuying.com/blog/archives/blog-opt-wp-hexo/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -118,7 +123,26 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/css-var/</loc>
+    <loc>http://wuyuying.com/blog/archives/css-layout/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>读书笔记 - CSS网站布局实录</title>
+        <pubTime>2017-02-07T04:42:07.000Z</pubTime>
+        
+        <tag>reading</tag>
+         
+        <tag>css</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/css-var/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -139,26 +163,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/css-layout/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>读书笔记 - CSS网站布局实录</title>
-        <pubTime>2017-02-07T04:42:07.000Z</pubTime>
-        
-        <tag>reading</tag>
-         
-        <tag>css</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/test/archives/debug-talk/</loc>
+    <loc>http://wuyuying.com/blog/archives/debug-talk/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -175,44 +180,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/fontmin/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hi,fontmin</title>
-        <pubTime>2015-05-27T15:38:54.000Z</pubTime>
-        
-        <tag>tech</tag>
-         
-         
-           
-             
-              <breadCrumb title="tech" url="http://wuyuying.com/test/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/test/archives/fis3-node/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>fis3安装时遇到的node版本问题</title>
-        <pubTime>2017-01-17T16:18:45.000Z</pubTime>
-        
-        <tag>tech</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/test/archives/eu-gallery/</loc>
+    <loc>http://wuyuying.com/blog/archives/eu-gallery/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -229,7 +197,44 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/full-stack/</loc>
+    <loc>http://wuyuying.com/blog/archives/fis3-node/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>fis3安装时遇到的node版本问题</title>
+        <pubTime>2017-01-17T16:18:45.000Z</pubTime>
+        
+        <tag>tech</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/fontmin/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hi,fontmin</title>
+        <pubTime>2015-05-27T15:38:54.000Z</pubTime>
+        
+        <tag>tech</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="http://wuyuying.com/blog/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/full-stack/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -248,7 +253,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/git/</loc>
+    <loc>http://wuyuying.com/blog/archives/git/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -267,7 +272,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/google-organization/</loc>
+    <loc>http://wuyuying.com/blog/archives/google-organization/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -281,7 +286,7 @@
          
            
              
-              <breadCrumb title="未分类" url="http://wuyuying.com/test/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+              <breadCrumb title="未分类" url="http://wuyuying.com/blog/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
           
         </display>
     </data>
@@ -289,7 +294,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/gpx/</loc>
+    <loc>http://wuyuying.com/blog/archives/gpx/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -308,29 +313,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/http/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>图解HTTP</title>
-        <pubTime>2015-02-26T10:33:38.000Z</pubTime>
-        
-        <tag>tech</tag>
-         
-        <tag>reading</tag>
-         
-         
-           
-             
-              <breadCrumb title="未分类" url="http://wuyuying.com/test/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/test/archives/hello-blog/</loc>
+    <loc>http://wuyuying.com/blog/archives/hello-blog/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -342,7 +325,7 @@
          
            
              
-              <breadCrumb title="life" url="http://wuyuying.com/test/categories/life/"/>
+              <breadCrumb title="life" url="http://wuyuying.com/blog/categories/life/"/>
           
         </display>
     </data>
@@ -350,7 +333,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/hexo-top/</loc>
+    <loc>http://wuyuying.com/blog/archives/hexo-top/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -369,7 +352,29 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/independent-coder/</loc>
+    <loc>http://wuyuying.com/blog/archives/http/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>图解HTTP</title>
+        <pubTime>2015-02-26T10:33:38.000Z</pubTime>
+        
+        <tag>tech</tag>
+         
+        <tag>reading</tag>
+         
+         
+           
+             
+              <breadCrumb title="未分类" url="http://wuyuying.com/blog/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/independent-coder/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -383,10 +388,10 @@
          
            
              
-              <breadCrumb title="life" url="http://wuyuying.com/test/categories/life/"/>
+              <breadCrumb title="life" url="http://wuyuying.com/blog/categories/life/"/>
           
              
-              <breadCrumb title="reading" url="http://wuyuying.com/test/categories/life/reading/"/>
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/life/reading/"/>
           
         </display>
     </data>
@@ -394,7 +399,32 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/inky/</loc>
+    <loc>http://wuyuying.com/blog/archives/information-organize/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>信息爆炸时代，今天你整理了吗？</title>
+        <pubTime>2016-02-27T09:33:08.000Z</pubTime>
+        
+        <tag>work</tag>
+         
+        <tag>reading</tag>
+         
+         
+           
+             
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/reading/"/>
+          
+             
+              <breadCrumb title="work" url="http://wuyuying.com/blog/categories/reading/work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/inky/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -411,32 +441,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/information-organize/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>信息爆炸时代，今天你整理了吗？</title>
-        <pubTime>2016-02-27T09:33:08.000Z</pubTime>
-        
-        <tag>work</tag>
-         
-        <tag>reading</tag>
-         
-         
-           
-             
-              <breadCrumb title="reading" url="http://wuyuying.com/test/categories/reading/"/>
-          
-             
-              <breadCrumb title="work" url="http://wuyuying.com/test/categories/reading/work/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/test/archives/javascript-animation/</loc>
+    <loc>http://wuyuying.com/blog/archives/javascript-animation/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -461,7 +466,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/job-hunting-whv/</loc>
+    <loc>http://wuyuying.com/blog/archives/job-hunting-whv/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -482,7 +487,24 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/mac-notes/</loc>
+    <loc>http://wuyuying.com/blog/archives/kindle-duokan/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>Kindle从5.6.1到5.4.4的降级+ 刷多看（Paperwhite 1代）</title>
+        <pubTime>2017-01-15T07:00:20.000Z</pubTime>
+        
+        <tag>tech</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/mac-notes/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -498,7 +520,7 @@
          
            
              
-              <breadCrumb title="study" url="http://wuyuying.com/test/categories/study/"/>
+              <breadCrumb title="study" url="http://wuyuying.com/blog/categories/study/"/>
           
         </display>
     </data>
@@ -506,7 +528,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/mactalk/</loc>
+    <loc>http://wuyuying.com/blog/archives/mactalk/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -522,7 +544,7 @@
          
            
              
-              <breadCrumb title="未分类" url="http://wuyuying.com/test/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+              <breadCrumb title="未分类" url="http://wuyuying.com/blog/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
           
         </display>
     </data>
@@ -530,72 +552,30 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/markdown/</loc>
+    <loc>http://wuyuying.com/blog/archives/2017-roadmap/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
-        <title>markdown学习笔记</title>
-        <pubTime>2014-10-20T10:32:27.000Z</pubTime>
+        <title>2017年Web开发者的技能蓝图</title>
+        <pubTime>2017-04-22T13:54:29.000Z</pubTime>
         
-        <tag>study</tag>
+        <tag>front-end</tag>
+         
+        <tag>back-end</tag>
+         
+        <tag>devops</tag>
+         
+        <tag>roadmap</tag>
          
          
            
-             
-              <breadCrumb title="study" url="http://wuyuying.com/test/categories/study/"/>
-          
         </display>
     </data>
     </url>
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/7cake/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>7cake的那些事儿</title>
-        <pubTime>2015-12-04T15:48:19.000Z</pubTime>
-        
-        <tag>tech</tag>
-         
-        <tag>work</tag>
-         
-         
-           
-             
-              <breadCrumb title="tech" url="http://wuyuying.com/test/categories/tech/"/>
-          
-             
-              <breadCrumb title="work" url="http://wuyuying.com/test/categories/tech/work/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/test/archives/mike-cafe/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>老麦咖啡馆</title>
-        <pubTime>2015-02-15T12:12:20.000Z</pubTime>
-        
-        <tag>reading</tag>
-         
-         
-           
-             
-              <breadCrumb title="reading" url="http://wuyuying.com/test/categories/reading/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/test/archives/method-of-happiness/</loc>
+    <loc>http://wuyuying.com/blog/archives/method-of-happiness/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -609,7 +589,7 @@
          
            
              
-              <breadCrumb title="reading" url="http://wuyuying.com/test/categories/reading/"/>
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/reading/"/>
           
         </display>
     </data>
@@ -617,7 +597,27 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/npm-publish/</loc>
+    <loc>http://wuyuying.com/blog/archives/mike-cafe/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>老麦咖啡馆</title>
+        <pubTime>2015-02-15T12:12:20.000Z</pubTime>
+        
+        <tag>reading</tag>
+         
+         
+           
+             
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/reading/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/npm-publish/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -640,7 +640,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/optimizing-react-virtual-dom-explained/</loc>
+    <loc>http://wuyuying.com/blog/archives/optimizing-react-virtual-dom-explained/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -663,7 +663,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/photography-note/</loc>
+    <loc>http://wuyuying.com/blog/archives/photography-note/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -675,7 +675,7 @@
          
            
              
-              <breadCrumb title="photography" url="http://wuyuying.com/test/categories/photography/"/>
+              <breadCrumb title="photography" url="http://wuyuying.com/blog/categories/photography/"/>
           
         </display>
     </data>
@@ -683,7 +683,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/qrcode/</loc>
+    <loc>http://wuyuying.com/blog/archives/qrcode/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -697,7 +697,7 @@
          
            
              
-              <breadCrumb title="tech" url="http://wuyuying.com/test/categories/tech/"/>
+              <breadCrumb title="tech" url="http://wuyuying.com/blog/categories/tech/"/>
           
         </display>
     </data>
@@ -705,7 +705,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/resign-from-baidu/</loc>
+    <loc>http://wuyuying.com/blog/archives/resign-from-baidu/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -728,7 +728,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/resume-tips/</loc>
+    <loc>http://wuyuying.com/blog/archives/resume-tips/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -744,7 +744,7 @@
          
            
              
-              <breadCrumb title="reading" url="http://wuyuying.com/test/categories/reading/"/>
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/reading/"/>
           
         </display>
     </data>
@@ -752,7 +752,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/rwd-first/</loc>
+    <loc>http://wuyuying.com/blog/archives/rwd-first/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -766,10 +766,10 @@
          
            
              
-              <breadCrumb title="reading" url="http://wuyuying.com/test/categories/reading/"/>
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/reading/"/>
           
              
-              <breadCrumb title="tech" url="http://wuyuying.com/test/categories/reading/tech/"/>
+              <breadCrumb title="tech" url="http://wuyuying.com/blog/categories/reading/tech/"/>
           
         </display>
     </data>
@@ -777,7 +777,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/ryfeng-blog/</loc>
+    <loc>http://wuyuying.com/blog/archives/ryfeng-blog/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -789,7 +789,7 @@
          
            
              
-              <breadCrumb title="reading" url="http://wuyuying.com/test/categories/reading/"/>
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/reading/"/>
           
         </display>
     </data>
@@ -797,7 +797,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/safari-web-debug/</loc>
+    <loc>http://wuyuying.com/blog/archives/safari-web-debug/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -813,7 +813,7 @@
          
            
              
-              <breadCrumb title="tech" url="http://wuyuying.com/test/categories/tech/"/>
+              <breadCrumb title="tech" url="http://wuyuying.com/blog/categories/tech/"/>
           
         </display>
     </data>
@@ -821,7 +821,27 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/simplify-work/</loc>
+    <loc>http://wuyuying.com/blog/archives/shifu/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>来谈谈最近上线的项目「百度师傅」</title>
+        <pubTime>2015-08-09T11:15:19.000Z</pubTime>
+        
+        <tag>work</tag>
+         
+         
+           
+             
+              <breadCrumb title="work" url="http://wuyuying.com/blog/categories/work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/simplify-work/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -839,7 +859,7 @@
          
            
              
-              <breadCrumb title="reading" url="http://wuyuying.com/test/categories/reading/"/>
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/reading/"/>
           
         </display>
     </data>
@@ -847,27 +867,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/shifu/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>来谈谈最近上线的项目「百度师傅」</title>
-        <pubTime>2015-08-09T11:15:19.000Z</pubTime>
-        
-        <tag>work</tag>
-         
-         
-           
-             
-              <breadCrumb title="work" url="http://wuyuying.com/test/categories/work/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/test/archives/2014-exp-xmas/</loc>
+    <loc>http://wuyuying.com/blog/archives/2014-exp-xmas/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -879,7 +879,7 @@
          
            
              
-              <breadCrumb title="life" url="http://wuyuying.com/test/categories/life/"/>
+              <breadCrumb title="life" url="http://wuyuying.com/blog/categories/life/"/>
           
         </display>
     </data>
@@ -887,7 +887,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/summary-2014/</loc>
+    <loc>http://wuyuying.com/blog/archives/summary-2014/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -901,7 +901,7 @@
          
            
              
-              <breadCrumb title="life" url="http://wuyuying.com/test/categories/life/"/>
+              <breadCrumb title="life" url="http://wuyuying.com/blog/categories/life/"/>
           
         </display>
     </data>
@@ -909,7 +909,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/taobao-maker-festival-2017/</loc>
+    <loc>http://wuyuying.com/blog/archives/taobao-maker-festival-2017/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -926,7 +926,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/travel-with-love/</loc>
+    <loc>http://wuyuying.com/blog/archives/travel-with-love/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -940,7 +940,7 @@
          
            
              
-              <breadCrumb title="reading" url="http://wuyuying.com/test/categories/reading/"/>
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/reading/"/>
           
         </display>
     </data>
@@ -948,7 +948,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/uc-web-debug/</loc>
+    <loc>http://wuyuying.com/blog/archives/uc-web-debug/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -969,32 +969,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/value-investing/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>什么是价值投资</title>
-        <pubTime>2015-02-18T12:14:40.000Z</pubTime>
-        
-        <tag>reading</tag>
-         
-        <tag>finance</tag>
-         
-         
-           
-             
-              <breadCrumb title="finance" url="http://wuyuying.com/test/categories/finance/"/>
-          
-             
-              <breadCrumb title="reading" url="http://wuyuying.com/test/categories/finance/reading/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/test/archives/work-whv/</loc>
+    <loc>http://wuyuying.com/blog/archives/work-whv/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -1015,24 +990,32 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/year-2015/</loc>
+    <loc>http://wuyuying.com/blog/archives/value-investing/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
-        <title>我的2015</title>
-        <pubTime>2016-01-01T14:38:44.000Z</pubTime>
+        <title>什么是价值投资</title>
+        <pubTime>2015-02-18T12:14:40.000Z</pubTime>
         
-        <tag>总结</tag>
+        <tag>reading</tag>
+         
+        <tag>finance</tag>
          
          
            
+             
+              <breadCrumb title="finance" url="http://wuyuying.com/blog/categories/finance/"/>
+          
+             
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/finance/reading/"/>
+          
         </display>
     </data>
     </url>
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/wx-developer/</loc>
+    <loc>http://wuyuying.com/blog/archives/wx-developer/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -1051,7 +1034,24 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/year-2016/</loc>
+    <loc>http://wuyuying.com/blog/archives/year-2015/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的2015</title>
+        <pubTime>2016-01-01T14:38:44.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/year-2016/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
@@ -1068,7 +1068,7 @@
 
     
   <url>
-    <loc>http://wuyuying.com/test/archives/year-2017/</loc>
+    <loc>http://wuyuying.com/blog/archives/year-2017/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>

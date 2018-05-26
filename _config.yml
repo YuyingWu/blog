@@ -14,7 +14,7 @@ timezone:
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://wuyuying.com
-root: /test/
+root: /blog/
 permalink: archives/:title/
 permalink_defaults:
 
@@ -69,14 +69,14 @@ index_generator_plus:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: fresh
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git  
-  repo: git@github.com:YuyingWu/test.git
-  branch: master
+  repo: git@github.com:YuyingWu/blog.git
+  branch: gh-pages
 
 # site map
 sitemap:
