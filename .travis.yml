@@ -1,28 +1,25 @@
 language: node_js
 node_js: stable
-
 addons:
   apt:
     update: true
-
-# Travis-CI Caching
 cache:
   directories:
-    - node_modules
-
-# S: Build Lifecycle
+  - node_modules
 install:
-  - npm install
-
+- npm install
 before_script:
- # - npm install -g gulp
-
 script:
-  - hexo g -d
-
-after_script:
-  # - hexo d
-
+- hexo g
+after_success:
+- git config --global user.name "Yuying Wu"
+- git config --global user.email "wuyuying1128@gmail.com"
+- sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
+- hexo deploy
 branches:
   only:
-    - dev
+  - dev
+env:
+  global:
+  # - GH_REF: https://github.com/YuyingWu/blog.git
+  - secure: Ca/saR3pJ8elngR9JlUNXJE4LY+JwuPyWEZ17TcdQHbH6+GJBEyjIUsXLwfi9/lUvcmnaAn0r4n736b77ketXIkZScciFJEefhvbrJC77+mLwpRinzV4l7iUf4S2NpNOoHSip1TkdnodjrBm2hS/tmvhlV1OmSSXAh4TQcGn9i9RT1R+P2+EjwWOMbu8r89Sc7fHG9JdbBBoL4Xijf1He+Ag4iVfP+qlq08mql6HmvUPrOeF3WB+SN2Pbr/RAulEW0yDVW4JNsjrbiR5/qw52wyYb8z/BzzLcSolac5YW++XtllsrfZmm4ZPUpdQO0ya4FNu/nHzIopYo9DBqsRf94YnlrAVLF6UU7HKVQmu93nBzPTGJnZIRxnTqAp51VWHEweebT3YAlIvYjoTA5NLBeaOFD+O8x8TisG6cJt7pjhZwnhRaMq91HL8g59Ux38+07FJLxhCLJzvsWRbXVW3J/J84OgQnzVcJHjwMHOIM/ElryMyeNM25OZDDwL1NJaczE6QhgJbqolAGcy/5cPz8EY7A73fB8xa84G/fw5+tkFOodbBYS6ETvtlvP21mbxI3Ot2H7LPnpgpGcdCtfHgj5eNphBjQVdjbRNUG8niwbUpO1yb3YUJua7Yhq90dRnONZwRU+u5xbM6e0+bikV0B33WS5fVdcUfUvxLW6vCgSk=
