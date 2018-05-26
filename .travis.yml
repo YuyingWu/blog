@@ -16,7 +16,7 @@ script:
 # - git config --global user.email "wuyuying1128@gmail.com"
 # - sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
 # - hexo deploy
-after_script:
+after_success:
   - cd ./public
   - git init
   - git config user.name "Yuying Wu"
