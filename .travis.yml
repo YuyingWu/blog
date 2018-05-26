@@ -5,10 +5,12 @@ node_js: stable
 cache:
   directories:
     - node_modules
+    - themes/fresh
 
 # S: Build Lifecycle
 install:
   - npm install
+  - git clone https://github.com/YuyingWu/hexo-theme-fresh.git themes/fresh
 
 before_script:
  # - npm install -g gulp
@@ -17,7 +19,7 @@ script:
   - hexo g
 
 after_script:
-  - hexo d
+  # - hexo d
 
 branches:
   only:
