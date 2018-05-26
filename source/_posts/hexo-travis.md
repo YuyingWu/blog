@@ -1,5 +1,5 @@
 ---
-title: 基于HEXO的博客的持续集成
+title: 开箱即用，Hexo博客的github+server自动部署
 date: 2018-05-26 14:35:18
 ---
 
@@ -79,6 +79,8 @@ HEXO的详细科普和指令在这里就不写了哈，官方文档里都有 [>>
 * 先在`dev`分支里，创建`.travis.yml`
 * 在[Travis CLI](https://travis-ci.org/)平台上打开这个分支的CI开关
 
+### 1. 编译并同步到gh-pages
+
 那直接上我的CI配置代码吧。
 
 ```yml
@@ -134,14 +136,46 @@ env:
 
 大功告成，集成之后，在github pages的页面上也能看到文章的更新。
 
-## to-do
+### 2. CI到我的服务器
 
-到现在，还有一part没有做 —— 怎么把代码部署到自己的服务器上？ To be continued :)
+我的服务器是DO家（Digital Ocean）的，那一开始服务器初始化的过程，大家可以参考各个server商提供的setup文档哈，总的来说，在本地有个服务器信任的`id_rsa`的ssh文件，我们是可以通过`ssh user@ip_address`登录到服务器的。
+
+```
+# 这个命令会自动把 id_rsa 加密传送到 .git 指定的仓库对应的 travis 中去（在我本地这个文件叫qq_rsa，不是默认的id_rsa）
+travis encrypt-file ~/.ssh/id_rsa --add
+```
+
+执行这个命令后，`.travis.yml`多了一行代码：（注意把其中的转义符`\`干掉哈），也会在分支目录下生成一个`id_rsa.enc`的加密文件，记得把这个文件也提交上去哟。
+
+```
+before_install:
+- openssl aes-256-cbc -K $encrypted_3cf6c1fd150f_key -iv $encrypted_3cf6c1fd150f_iv
+  -in qq_rsa.enc -out ~/.ssh/id_rsa -d
+```
+
+然后为了保证在Travis里面能正常执行，我们处理下运行环境的rsa文件权限和输出提示信息，before_install如下。
+
+```
+before_install:
+- openssl aes-256-cbc -K $encrypted_3cf6c1fd150f_key -iv $encrypted_3cf6c1fd150f_iv
+  -in qq_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- echo -e "Host 主机IP地址\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+```
+
+最后，在`after_success`里添加**拷贝目标文件到服务器目标目录**的操作，就大功告成了！
+
+```
+after_success
+# other actions
+- scp -o stricthostkeychecking=no -r ./* root@138.68.161.48:/home/wyyNode/public/blog/
+```
 
 ## 参考文章
 
-* [如何快速搭建一个有域名且持续集成的hexo博客(2.0版)](https://juejin.im/post/596e39916fb9a06baf2ed273) - runner_yue
+* [如何快速搭建一个有域名且持续集成的hexo博客(2.0版)](https://juejin.im/post/596e39916fb9a06baf2ed273) - [Eva-Yue](https://github.com/zytx121)
 * [Hexo 自动部署到 Github](http://lotabout.me/2016/Hexo-Auto-Deploy-to-Github/) - [三点水](http://lotabout.me/)
 * [持续集成服务 Travis CI 教程](http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html) - 阮一峰
 * ["no implicit conversion of nil into String" when logging in](https://github.com/travis-ci/travis.rb/issues/190) - 在执行`travis login`遇到的问题的解决方案
 * [Deploy to GitHub pages from Travis CI](https://iamstarkov.com/deploy-gh-pages-from-travis/)
+* [使用 Travis 将 GitHub 文件上传传至服务器](https://segmentfault.com/a/1190000009093621) - [Godi13](https://github.com/Godi13)
