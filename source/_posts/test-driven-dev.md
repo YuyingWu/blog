@@ -1,0 +1,287 @@
+---
+title: Behavior Driven Development in ReactJS
+tags:
+  - testing
+  - front-end
+date: 2018-06-02 20:13:25
+---
+
+> 如果想跳过前文，可以直接定位到[实战篇](/blog/archives/test-driven-dev/#我的实战)
+
+## What is Test Driven Development?
+
+Coding of features and tests go hand in hand.
+
+1. Write a unit test.
+2. Run the test. See it fail.
+3. Write the feature code to pass the test.
+4. Refactor the code.
+
+## Why TDD?
+
+* It reduces errors and defects in the long run.
+* It leads to higher quality code.
+
+## What is Behavior Driven Development?
+
+* A variation of TDD that tests for user scenarios.
+* Given, when, then... [ pattern ]
+* Given notes, when deleting, then remove a note.
+* BDD consists of scenarios/specifications.
+
+<!-- more -->
+
+## Test Tools
+
+* Jest
+* Enzyme
+
+> 如果想看create-react-app或jest/enzyme环境的配置，可以[定位到setup内容](#Setup)。
+
+## 我的实战
+
+项目中Jest and Enzyme的实战。
+
+### 1. 第一个Unit Test: `toMatchSnapshot`
+
+快照是Jest把调用时的component的结构记录下来，下次可以用来对比结构有没有差异。
+
+如果不一样，Jest会报错，如果是预期内的展示，可以按`u`把当前快照更新为最新的snapshot。
+
+```
+it('render correctly', () => {
+  expect(app).toMatchSnapshot();
+});
+```
+
+### 2. 测试component的state
+
+state的初始化检测 —— 状态`gifts`的值为空数组。
+
+```
+it('init `state` for gifts as an empty list', () => {
+  expect(app.state().gifts).toEqual([]);
+});
+```
+
+注意：在jest中获得state是一个`state()`函数。
+
+### 3. 点击交互的测试
+
+通过className去查找交互元素，模拟用户行为，其中`simulate`是Enzyme提供的模拟函数。
+
+```
+it('add a gift to `state` when click the `add` button', () => {
+  app.find('.btn-add').simulate('click');
+
+  expect(app.state().gifts.length).not.toBe(0);
+});
+
+// 检验某个component（Gift）是否存在
+it('create a Gift component', () => {
+  expect(app.find(Gift).exists()).toBe(true);
+});
+```
+
+### 4. 利用describe划分测试代码块
+
+用`describe`把测试分组。也可以使用`describe`定义一个场景，把相似的操作合并。
+
+以下的两个测试都需要先触发一次`add-gift`按钮的点击，再验证相应的测试逻辑。
+
+下面有两个hook，`beforeEach`和`afterEach`，可以用来执行**前置共同的action**和**结束之后的reset逻辑**。
+
+```
+describe('when clicking the `add-gift` button', () => {
+    beforeEach(() => {
+      app.find('.btn-add').simulate('click');
+    });
+
+    afterEach(() => {
+      // reset state `gifts` to []
+      app.setState({
+        gifts: []
+      });
+    });
+
+    it('add a gift to `state`', () => {
+      // app.find('.btn-add').simulate('click');
+      expect(app.state().gifts.length).not.toBe(0);
+    });
+  
+    it('display gifts on the rendered list', () => {
+      // app.find('.btn-add').simulate('click');
+
+      const stateListLength = app.state().gifts.length;
+      const listItemLength = app.find('.list-item').length;
+  
+      expect(stateListLength).toEqual(listItemLength);
+    });
+  });
+```
+
+### 5. 父子组件交互测试
+
+#### 1）背景
+
+在GiftGiver内，父组件`<App />`根据`state`中的`gifts`数组渲染子组件`<Gift />`，而子组件有一个删除按钮，点击后可以从父组件`state`中`gifts`去掉命中当前GiftID的数据项。
+
+```
+// App.js
+
+// state
+this.state.gifts = [{
+  id: xxx
+}]
+
+removeGift(id) {
+  // this.state.gifts.filter(gift => gift.id !== id)
+}
+
+// render
+{ this.state.gifts.map(gift => (
+  <Gift gift={gift} removeGift={removeGift} />
+))}
+
+// Gift.js
+
+// render
+// const { gift, removeGift } = this.props;
+<div>
+  <Button onClick={ gift => removeGift(gift.id) }>remove</Button>
+</div>
+```
+
+#### 2）设计思路
+
+1. 把`removeGift`挂在父组件（`<App />`）上，入参giftID
+2. 把`gift`的数据和`removeGift`作为props传给子组件（`<Gift />`）
+3. 在子组件（`<Gift />`），有一个删除按钮，点击后调用父组件的callback函数，入参giftID
+
+#### 3）写test case的思路
+
+##### I. 父组件的测试用例 App.test.js
+
+**涉及的核心逻辑或交互**：负责从数据源`this.state.gifts`中干掉对应数据的函数`removeGift`。
+
+**测试思路**：`removeGift`入参giftID后，检查会不会正确地从`state`中去掉该项数组（giftID === item.id）。
+
+**实现详情：**
+
+a）前置操作：模拟调用行为。
+
+```
+beforeEach(() => {
+  // call the `removeGift` function in App.js
+  app.instance().removeGift(firstGiftID);
+});
+```
+
+b）断言逻辑：确定`this.state.gifts`中没有包含对应项
+
+```
+it('gift with ID ${firstGiftID} is not in the state `gift`', () => {
+  const { gifts } = app.state();
+  const targetGiftList = gifts.find(gift => gift.id === firstGiftID) || [];
+
+  expect(targetGiftList.length).toBe(0);
+});
+```
+
+##### II. 子组件的测试用例 Gift.test.js
+
+**涉及的核心逻辑或交互**：
+
+* 点击一个删除按钮
+* 调用父组件传过来的callback函数，并传入id
+
+**测试思路**：
+
+* 在shallow时，模拟父元素传入对应的props
+* 模拟用户行为，点击删除按钮
+* 检查回调函数有没有被调用，以及传入的参数对不对
+
+**实现详情**：
+
+1）在shallow时，模拟父元素传入对应的props。
+
+```
+const mockRemove = jest.fn(); // 在第3点说明
+const giftID = 1;
+const props = {
+  gift: {
+    id: giftID
+  },
+  removeGift: mockRemove
+};
+const gift = shallow(<Gift { ...props } />);
+```
+
+2）`beforeEach`里模拟删除按钮的点击
+
+```
+beforeEach(() => {
+  gift.find('.btn-delete').simulate('click');
+});
+```
+
+3）检查回调函数有没有被调用，以及传入的参数对不对
+
+从第1点可以看到，shallow渲染传入props时，回调函数把原本的removeGift函数替换成jest的mock。(`const mockRemove = jest.fn();`)
+
+因为该方法提供了一个断言检测方法，我们可以通过这个方式，检查回调函数有没有被调用以及传入的参数是否符合预期，实际的测试语句如下。
+
+```
+it('calls the removeGift callback', () => {
+  expect(mockRemove).toHaveBeenCalledWith(giftID);
+});
+```
+
+## Setup
+
+### Preparation
+
+1. node, v8.x
+2. npm, v5.x
+3. create-react-app
+
+### Steps
+
+I. `create-react-app yourProjectName`
+
+II. install dependencies
+
+* dependencies: react-dom & react 
+* devDependencies: enzyme & jest-cli
+
+III. enzyme-adapter-react-16
+
+In order to use the most current version of React > 16, we now need to install "enzyme adapters" to provide full compatibility with React.
+
+```
+npm i enzyme-adapter-react-16 --save-dev  
+```
+
+Next, add a src/tempPolyfills.js file to create the global request animation frame function that React now depends on.
+
+src/tempPolyfills.js should contain the following contents:
+
+```
+const requestAnimationFrame = global.requestAnimationFrame = callback => {
+  setTimeout(callback, 0);
+}
+```
+
+export default requestAnimationFrame;
+Finally, add a src/setupTests.js file to configure the enzmye adapter for our tests. The disableLifecyleMethods portion is needed to allow us to modify props through different tests.
+
+src/setupTests.js should contain the following contents:
+
+```
+import requestAnimationFrame from './tempPolyfills';
+
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter(), disableLifecycleMethods: true });
+```
