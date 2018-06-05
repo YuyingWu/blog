@@ -48,7 +48,7 @@ Coding of features and tests go hand in hand.
 
 如果不一样，Jest会报错，如果是预期内的展示，可以按`u`把当前快照更新为最新的snapshot。
 
-```
+```js
 it('render correctly', () => {
   expect(app).toMatchSnapshot();
 });
@@ -58,7 +58,7 @@ it('render correctly', () => {
 
 state的初始化检测 —— 状态`gifts`的值为空数组。
 
-```
+```js
 it('init `state` for gifts as an empty list', () => {
   expect(app.state().gifts).toEqual([]);
 });
@@ -70,7 +70,7 @@ it('init `state` for gifts as an empty list', () => {
 
 通过className去查找交互元素，模拟用户行为，其中`simulate`是Enzyme提供的模拟函数。
 
-```
+```js
 it('add a gift to `state` when click the `add` button', () => {
   app.find('.btn-add').simulate('click');
 
@@ -91,7 +91,7 @@ it('create a Gift component', () => {
 
 下面有两个hook，`beforeEach`和`afterEach`，可以用来执行**前置共同的action**和**结束之后的reset逻辑**。
 
-```
+```js
 describe('when clicking the `add-gift` button', () => {
     beforeEach(() => {
       app.find('.btn-add').simulate('click');
@@ -126,7 +126,7 @@ describe('when clicking the `add-gift` button', () => {
 
 在GiftGiver内，父组件`<App />`根据`state`中的`gifts`数组渲染子组件`<Gift />`，而子组件有一个删除按钮，点击后可以从父组件`state`中`gifts`去掉命中当前GiftID的数据项。
 
-```
+```js
 // App.js
 
 // state
@@ -170,7 +170,7 @@ removeGift(id) {
 
 a）前置操作：模拟调用行为。
 
-```
+```js
 beforeEach(() => {
   // call the `removeGift` function in App.js
   app.instance().removeGift(firstGiftID);
@@ -179,7 +179,7 @@ beforeEach(() => {
 
 b）断言逻辑：确定`this.state.gifts`中没有包含对应项
 
-```
+```js
 it('gift with ID ${firstGiftID} is not in the state `gift`', () => {
   const { gifts } = app.state();
   const targetGiftList = gifts.find(gift => gift.id === firstGiftID) || [];
@@ -205,7 +205,7 @@ it('gift with ID ${firstGiftID} is not in the state `gift`', () => {
 
 1）在shallow时，模拟父元素传入对应的props。
 
-```
+```js
 const mockRemove = jest.fn(); // 在第3点说明
 const giftID = 1;
 const props = {
@@ -219,7 +219,7 @@ const gift = shallow(<Gift { ...props } />);
 
 2）`beforeEach`里模拟删除按钮的点击
 
-```
+```js
 beforeEach(() => {
   gift.find('.btn-delete').simulate('click');
 });
@@ -231,11 +231,36 @@ beforeEach(() => {
 
 因为该方法提供了一个断言检测方法，我们可以通过这个方式，检查回调函数有没有被调用以及传入的参数是否符合预期，实际的测试语句如下。
 
-```
+```js
 it('calls the removeGift callback', () => {
   expect(mockRemove).toHaveBeenCalledWith(giftID);
 });
 ```
+
+### 6. coverage testing
+
+检测实际被调用代码的覆盖程度。（冗余代码检测）
+
+```js
+npm run test -- --coverage
+```
+
+![](http://lc-wpyqjumv.cn-n1.lcfile.com/b79550c417506fb9c9c5.png)
+
+指定`--coverage`目标文件：，在`package.json`下，添加以下语句：
+
+```json
+"jest": {
+  "collectCoverageFrom": [
+    "src/**.js",
+    "!src/index.js"
+  ]
+}
+```
+
+#### Tips
+
+如果存在某些函数/逻辑没有覆盖到，可以考虑新增一个和`component`同级的`helpers`文件夹，在里面单独写那些跟组件基本功能无关的逻辑，如用于生成ID的ID生成函数，可以单拎出来放进`helpers`及进行相应的单元测试。
 
 ## Setup
 
