@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="">
+
+	
+<link rel="stylesheet" href="/blog//css/post.css">
+
+
+	<title>Behavior Driven Development in ReactJS - 伍酱</title>
+
+	<!--[if lte IE 8]>
+        <script>
+            (function(){
+                var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+                i=e.length;
+                while(i--){document.createElement(e[i])}
+             })();
+        </script>
+    <![endif]-->
+</head>
+<body class="page-post">
+
+<script async>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-74424222-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<!--[if lte IE 8]>
+    <p class="browserupgrade">貌似你还在用<strong>低版本IE</strong>浏览器喔~ 为了更好的体验，去下载一个<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=chrome&rsv_pq=c275ed8c0000204b&rsv_t=b404%2BiFxvZfvn%2FqqBMyJKwHyShj%2FipQgL7TfJsGKrHxZhoWCUisbVukJsNw&rqlang=cn&rsv_enter=1&rsv_sug3=6&rsv_sug1=5&rsv_sug7=100&rsv_sug2=0&inputT=891&rsv_sug4=891" target="_blank">最新版Chrome</a>吧 ：）</p>
+<![endif]-->
+
+
+	<header>
+	<section class="u-clearfix header__container">
+		<nav class="grid-r header__nav--list">
+			
+				<a href="/blog/">Blog</a>
+			
+				<a href="/blog/archives/">Archive</a>
+			
+				<a href="/blog/about.html">About</a>
+			
+		</nav>
+
+		<h1 class="grid">
+			<a href="/">伍酱</a>
+		</h1>
+	</section>
+</header><!-- /header -->
+
+
+<div id="content">
+	<div class="center">
+		<div class="main-col">
+			
+	
+	<article class="article article-detail post article-post">
+	<div class="post-content">
+		<header>
+			
+	
+		
+			<h1 class="title" data-role="articleTitle">Behavior Driven Development in ReactJS</h1>
+		
+	
+
+			<div class="post__meta">
+	<time datetime="2018-06-02T12:13:25.000Z">2018-06-02</time>
+
+	
+</div>
+			
+		</header>
+
+		<div class="entry">
+			<aside class="wgt-toc">
+				<header>
+					<p><i class="iconfont icon-folder"></i>&nbsp;文章大纲</p>
+				</header>
+				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-Test-Driven-Development"><span class="toc-number">1.</span> <span class="toc-text">What is Test Driven Development?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-TDD"><span class="toc-number">2.</span> <span class="toc-text">Why TDD?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-Behavior-Driven-Development"><span class="toc-number">3.</span> <span class="toc-text">What is Behavior Driven Development?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Test-Tools"><span class="toc-number">4.</span> <span class="toc-text">Test Tools</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的实战"><span class="toc-number">5.</span> <span class="toc-text">我的实战</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-第一个Unit-Test-toMatchSnapshot"><span class="toc-number">5.1.</span> <span class="toc-text">1. 第一个Unit Test: toMatchSnapshot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-测试component的state"><span class="toc-number">5.2.</span> <span class="toc-text">2. 测试component的state</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-点击交互的测试"><span class="toc-number">5.3.</span> <span class="toc-text">3. 点击交互的测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-利用describe划分测试代码块"><span class="toc-number">5.4.</span> <span class="toc-text">4. 利用describe划分测试代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-父子组件交互测试"><span class="toc-number">5.5.</span> <span class="toc-text">5. 父子组件交互测试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）背景"><span class="toc-number">5.5.1.</span> <span class="toc-text">1）背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）设计思路"><span class="toc-number">5.5.2.</span> <span class="toc-text">2）设计思路</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）写test-case的思路"><span class="toc-number">5.5.3.</span> <span class="toc-text">3）写test case的思路</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#I-父组件的测试用例-App-test-js"><span class="toc-number">5.5.3.1.</span> <span class="toc-text">I. 父组件的测试用例 App.test.js</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#II-子组件的测试用例-Gift-test-js"><span class="toc-number">5.5.3.2.</span> <span class="toc-text">II. 子组件的测试用例 Gift.test.js</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-coverage-testing"><span class="toc-number">5.6.</span> <span class="toc-text">6. coverage testing</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Tips"><span class="toc-number">5.6.1.</span> <span class="toc-text">Tips</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup"><span class="toc-number">6.</span> <span class="toc-text">Setup</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparation"><span class="toc-number">6.1.</span> <span class="toc-text">Preparation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Steps"><span class="toc-number">6.2.</span> <span class="toc-text">Steps</span></a></li></ol></li></ol>
+			</aside>
+			<blockquote>
+<p>如果想跳过前文，可以直接定位到<a href="/blog/archives/test-driven-dev/#我的实战">实战篇</a></p>
+</blockquote>
+<h2 id="What-is-Test-Driven-Development"><a href="#What-is-Test-Driven-Development" class="headerlink" title="What is Test Driven Development?"></a>What is Test Driven Development?</h2><p>Coding of features and tests go hand in hand.</p>
+<ol>
+<li>Write a unit test.</li>
+<li>Run the test. See it fail.</li>
+<li>Write the feature code to pass the test.</li>
+<li>Refactor the code.</li>
+</ol>
+<h2 id="Why-TDD"><a href="#Why-TDD" class="headerlink" title="Why TDD?"></a>Why TDD?</h2><ul>
+<li>It reduces errors and defects in the long run.</li>
+<li>It leads to higher quality code.</li>
+</ul>
+<h2 id="What-is-Behavior-Driven-Development"><a href="#What-is-Behavior-Driven-Development" class="headerlink" title="What is Behavior Driven Development?"></a>What is Behavior Driven Development?</h2><ul>
+<li>A variation of TDD that tests for user scenarios.</li>
+<li>Given, when, then… [ pattern ]</li>
+<li>Given notes, when deleting, then remove a note.</li>
+<li>BDD consists of scenarios/specifications.</li>
+</ul>
+<a id="more"></a>
+<h2 id="Test-Tools"><a href="#Test-Tools" class="headerlink" title="Test Tools"></a>Test Tools</h2><ul>
+<li>Jest</li>
+<li>Enzyme</li>
+</ul>
+<blockquote>
+<p>如果想看create-react-app或jest/enzyme环境的配置，可以<a href="#Setup">定位到setup内容</a>。</p>
+</blockquote>
+<h2 id="我的实战"><a href="#我的实战" class="headerlink" title="我的实战"></a>我的实战</h2><p>项目中Jest and Enzyme的实战。</p>
+<h3 id="1-第一个Unit-Test-toMatchSnapshot"><a href="#1-第一个Unit-Test-toMatchSnapshot" class="headerlink" title="1. 第一个Unit Test: toMatchSnapshot"></a>1. 第一个Unit Test: <code>toMatchSnapshot</code></h3><p>快照是Jest把调用时的component的结构记录下来，下次可以用来对比结构有没有差异。</p>
+<p>如果不一样，Jest会报错，如果是预期内的展示，可以按<code>u</code>把当前快照更新为最新的snapshot。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'render correctly'</span>, () =&gt; &#123;</span><br><span class="line">  expect(app).toMatchSnapshot();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="2-测试component的state"><a href="#2-测试component的state" class="headerlink" title="2. 测试component的state"></a>2. 测试component的state</h3><p>state的初始化检测 —— 状态<code>gifts</code>的值为空数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'init `state` for gifts as an empty list'</span>, () =&gt; &#123;</span><br><span class="line">  expect(app.state().gifts).toEqual([]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>注意：在jest中获得state是一个<code>state()</code>函数。</p>
+<h3 id="3-点击交互的测试"><a href="#3-点击交互的测试" class="headerlink" title="3. 点击交互的测试"></a>3. 点击交互的测试</h3><p>通过className去查找交互元素，模拟用户行为，其中<code>simulate</code>是Enzyme提供的模拟函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'add a gift to `state` when click the `add` button'</span>, () =&gt; &#123;</span><br><span class="line">  app.find(<span class="string">'.btn-add'</span>).simulate(<span class="string">'click'</span>);</span><br><span class="line"></span><br><span class="line">  expect(app.state().gifts.length).not.toBe(<span class="number">0</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 检验某个component（Gift）是否存在</span></span><br><span class="line">it(<span class="string">'create a Gift component'</span>, () =&gt; &#123;</span><br><span class="line">  expect(app.find(Gift).exists()).toBe(<span class="literal">true</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="4-利用describe划分测试代码块"><a href="#4-利用describe划分测试代码块" class="headerlink" title="4. 利用describe划分测试代码块"></a>4. 利用describe划分测试代码块</h3><p>用<code>describe</code>把测试分组。也可以使用<code>describe</code>定义一个场景，把相似的操作合并。</p>
+<p>以下的两个测试都需要先触发一次<code>add-gift</code>按钮的点击，再验证相应的测试逻辑。</p>
+<p>下面有两个hook，<code>beforeEach</code>和<code>afterEach</code>，可以用来执行<strong>前置共同的action</strong>和<strong>结束之后的reset逻辑</strong>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="string">'when clicking the `add-gift` button'</span>, () =&gt; &#123;</span><br><span class="line">    beforeEach(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      app.find(<span class="string">'.btn-add'</span>).simulate(<span class="string">'click'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    afterEach(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// reset state `gifts` to []</span></span><br><span class="line">      app.setState(&#123;</span><br><span class="line">        gifts: []</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    it(<span class="string">'add a gift to `state`'</span>, () =&gt; &#123;</span><br><span class="line">      <span class="comment">// app.find('.btn-add').simulate('click');</span></span><br><span class="line">      expect(app.state().gifts.length).not.toBe(<span class="number">0</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  </span><br><span class="line">    it(<span class="string">'display gifts on the rendered list'</span>, () =&gt; &#123;</span><br><span class="line">      <span class="comment">// app.find('.btn-add').simulate('click');</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">const</span> stateListLength = app.state().gifts.length;</span><br><span class="line">      <span class="keyword">const</span> listItemLength = app.find(<span class="string">'.list-item'</span>).length;</span><br><span class="line">  </span><br><span class="line">      expect(stateListLength).toEqual(listItemLength);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="5-父子组件交互测试"><a href="#5-父子组件交互测试" class="headerlink" title="5. 父子组件交互测试"></a>5. 父子组件交互测试</h3><h4 id="1）背景"><a href="#1）背景" class="headerlink" title="1）背景"></a>1）背景</h4><p>在GiftGiver内，父组件<code>&lt;App /&gt;</code>根据<code>state</code>中的<code>gifts</code>数组渲染子组件<code>&lt;Gift /&gt;</code>，而子组件有一个删除按钮，点击后可以从父组件<code>state</code>中<code>gifts</code>去掉命中当前GiftID的数据项。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// App.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// state</span></span><br><span class="line"><span class="keyword">this</span>.state.gifts = [&#123;</span><br><span class="line">  id: xxx</span><br><span class="line">&#125;]</span><br><span class="line"></span><br><span class="line">removeGift(id) &#123;</span><br><span class="line">  <span class="comment">// this.state.gifts.filter(gift =&gt; gift.id !== id)</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// render</span></span><br><span class="line">&#123; <span class="keyword">this</span>.state.gifts.map(<span class="function"><span class="params">gift</span> =&gt;</span> (</span><br><span class="line">  &lt;Gift gift=&#123;gift&#125; removeGift=&#123;removeGift&#125; /&gt;</span><br><span class="line">))&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Gift.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// render</span></span><br><span class="line"><span class="comment">// const &#123; gift, removeGift &#125; = this.props;</span></span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;Button onClick=&#123; gift =&gt; removeGift(gift.id) &#125;&gt;remove&lt;<span class="regexp">/Button&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="2）设计思路"><a href="#2）设计思路" class="headerlink" title="2）设计思路"></a>2）设计思路</h4><ol>
+<li>把<code>removeGift</code>挂在父组件（<code>&lt;App /&gt;</code>）上，入参giftID</li>
+<li>把<code>gift</code>的数据和<code>removeGift</code>作为props传给子组件（<code>&lt;Gift /&gt;</code>）</li>
+<li>在子组件（<code>&lt;Gift /&gt;</code>），有一个删除按钮，点击后调用父组件的callback函数，入参giftID</li>
+</ol>
+<h4 id="3）写test-case的思路"><a href="#3）写test-case的思路" class="headerlink" title="3）写test case的思路"></a>3）写test case的思路</h4><h5 id="I-父组件的测试用例-App-test-js"><a href="#I-父组件的测试用例-App-test-js" class="headerlink" title="I. 父组件的测试用例 App.test.js"></a>I. 父组件的测试用例 App.test.js</h5><p><strong>涉及的核心逻辑或交互</strong>：负责从数据源<code>this.state.gifts</code>中干掉对应数据的函数<code>removeGift</code>。</p>
+<p><strong>测试思路</strong>：<code>removeGift</code>入参giftID后，检查会不会正确地从<code>state</code>中去掉该项数组（giftID === item.id）。</p>
+<p><strong>实现详情：</strong></p>
+<p>a）前置操作：模拟调用行为。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">beforeEach(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// call the `removeGift` function in App.js</span></span><br><span class="line">  app.instance().removeGift(firstGiftID);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>b）断言逻辑：确定<code>this.state.gifts</code>中没有包含对应项</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'gift with ID $&#123;firstGiftID&#125; is not in the state `gift`'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; gifts &#125; = app.state();</span><br><span class="line">  <span class="keyword">const</span> targetGiftList = gifts.find(<span class="function"><span class="params">gift</span> =&gt;</span> gift.id === firstGiftID) || [];</span><br><span class="line"></span><br><span class="line">  expect(targetGiftList.length).toBe(<span class="number">0</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h5 id="II-子组件的测试用例-Gift-test-js"><a href="#II-子组件的测试用例-Gift-test-js" class="headerlink" title="II. 子组件的测试用例 Gift.test.js"></a>II. 子组件的测试用例 Gift.test.js</h5><p><strong>涉及的核心逻辑或交互</strong>：</p>
+<ul>
+<li>点击一个删除按钮</li>
+<li>调用父组件传过来的callback函数，并传入id</li>
+</ul>
+<p><strong>测试思路</strong>：</p>
+<ul>
+<li>在shallow时，模拟父元素传入对应的props</li>
+<li>模拟用户行为，点击删除按钮</li>
+<li>检查回调函数有没有被调用，以及传入的参数对不对</li>
+</ul>
+<p><strong>实现详情</strong>：</p>
+<p>1）在shallow时，模拟父元素传入对应的props。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mockRemove = jest.fn(); <span class="comment">// 在第3点说明</span></span><br><span class="line"><span class="keyword">const</span> giftID = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> props = &#123;</span><br><span class="line">  gift: &#123;</span><br><span class="line">    id: giftID</span><br><span class="line">  &#125;,</span><br><span class="line">  removeGift: mockRemove</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> gift = shallow(&lt;Gift &#123; ...props &#125; /&gt;);</span><br></pre></td></tr></table></figure>
+<p>2）<code>beforeEach</code>里模拟删除按钮的点击</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">beforeEach(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  gift.find(<span class="string">'.btn-delete'</span>).simulate(<span class="string">'click'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>3）检查回调函数有没有被调用，以及传入的参数对不对</p>
+<p>从第1点可以看到，shallow渲染传入props时，回调函数把原本的removeGift函数替换成jest的mock。(<code>const mockRemove = jest.fn();</code>)</p>
+<p>因为该方法提供了一个断言检测方法，我们可以通过这个方式，检查回调函数有没有被调用以及传入的参数是否符合预期，实际的测试语句如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">it(<span class="string">'calls the removeGift callback'</span>, () =&gt; &#123;</span><br><span class="line">  expect(mockRemove).toHaveBeenCalledWith(giftID);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="6-coverage-testing"><a href="#6-coverage-testing" class="headerlink" title="6. coverage testing"></a>6. coverage testing</h3><p>检测实际被调用代码的覆盖程度。（冗余代码检测）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run test -- --coverage</span><br></pre></td></tr></table></figure>
+<p><img src="http://lc-wpyqjumv.cn-n1.lcfile.com/b79550c417506fb9c9c5.png" alt=""></p>
+<p>指定<code>--coverage</code>目标文件：，在<code>package.json</code>下，添加以下语句：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"jest"</span>: &#123;</span><br><span class="line">  <span class="string">"collectCoverageFrom"</span>: [</span><br><span class="line">    <span class="string">"src/**.js"</span>,</span><br><span class="line">    <span class="string">"!src/index.js"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h4><p>如果存在某些函数/逻辑没有覆盖到，可以考虑新增一个和<code>component</code>同级的<code>helpers</code>文件夹，在里面单独写那些跟组件基本功能无关的逻辑，如用于生成ID的ID生成函数，可以单拎出来放进<code>helpers</code>及进行相应的单元测试。</p>
+<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><h3 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h3><ol>
+<li>node, v8.x</li>
+<li>npm, v5.x</li>
+<li>create-react-app</li>
+</ol>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><p>I. <code>create-react-app yourProjectName</code></p>
+<p>II. install dependencies</p>
+<ul>
+<li>dependencies: react-dom &amp; react </li>
+<li>devDependencies: enzyme &amp; jest-cli</li>
+</ul>
+<p>III. enzyme-adapter-react-16</p>
+<p>In order to use the most current version of React &gt; 16, we now need to install “enzyme adapters” to provide full compatibility with React.</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i enzyme-adapter-react<span class="number">-16</span> --<span class="built_in">save</span>-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
+<p>Next, add a src/tempPolyfills.js file to create the global request animation frame function that React now depends on.</p>
+<p>src/tempPolyfills.js should contain the following contents:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> requestAnimationFrame = global.requestAnimationFrame = <span class="function"><span class="params">callback</span> =&gt;</span> &#123;</span><br><span class="line">  setTimeout(callback, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>export default requestAnimationFrame;<br>Finally, add a src/setupTests.js file to configure the enzmye adapter for our tests. The disableLifecyleMethods portion is needed to allow us to modify props through different tests.</p>
+<p>src/setupTests.js should contain the following contents:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requestAnimationFrame <span class="keyword">from</span> <span class="string">'./tempPolyfills'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; configure &#125; <span class="keyword">from</span> <span class="string">'enzyme'</span>;</span><br><span class="line"><span class="keyword">import</span> Adapter <span class="keyword">from</span> <span class="string">'enzyme-adapter-react-16'</span>;</span><br><span class="line"></span><br><span class="line">configure(&#123; <span class="attr">adapter</span>: <span class="keyword">new</span> Adapter(), <span class="attr">disableLifecycleMethods</span>: <span class="literal">true</span> &#125;);</span><br></pre></td></tr></table></figure>
+		</div>
+
+		<footer>
+			
+	<section class="post__meta post__tag">
+		
+			<a href="/blog/tags/front-end/">front-end</a>
+		
+			<a href="/blog/tags/testing/">testing</a>
+		
+	</section>
+
+			<section class="post__meta">
+	<a href="/blog/donate.html" title="码字辛苦求打赏" class="u-clearfix wgt-shield">
+		<span class="title">Donate</span>
+		<span class="desc">￥￥￥</span>
+	</a>
+
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" 
+		title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议" class="u-clearfix wgt-shield">
+		<span class="title">License</span>
+		<span class="desc">CC BY-NC-SA</span>
+	</a>
+</section>
+		</footer>
+
+		
+			<section id="wgt-comment" class="wgt-comment" data-permalink="/archives/bdd-in-reactjs/">
+	<div id="comment-list">
+		<article>暂无数据</article>
+	</div>
+
+	<form id="comment-form" class="comment__form">
+		<input type="text" 
+			name="author" 
+			class="comment--mb10 comment__contentAuthor" 
+			required 
+			max-length="15"
+			placeholder="这里输入你的名字" />
+		<input type="text" 
+			name="content" 
+			class="comment--mb10 comment__contentInput" 
+			required
+			max-length="150"
+			placeholder="这里输入评论内容" />
+		<input type="hidden" name="parentId" id="comment-reply-id" />
+		<!-- <label>
+			<span>Email: </span>
+			<input type="email" name="email">
+		</label>
+		<label>
+			<span>website: </span>
+			<input type="url" name="website">
+		</label> -->
+
+		<footer class="comment--clearfix comment--tRight" id="comment-form-footer">
+			<a id="comment-box-submit" class="comment--fontsizeMeta comment--colorAccent comment__submitReply">加上去</a>
+		</footer>
+	</form>
+</section>
+		
+	</div>
+</article>
+
+		</div>
+		
+	</div>
+</div>
+
+<link rel="stylesheet" href="/blog//build/css/iconfont_201704181501.css">
+
+
+	<footer class="wgt-footer" id="footer">
+	<div class="center">
+		<p>
+		&copy; 
+		2014-2018
+
+		
+			<a href="/blog/">Yuying Wu</a>
+		
+
+		&nbsp;|&nbsp;
+		<a href="https://github.com/YuyingWu"><i class="iconfont icon-github"></i> Github</a>&nbsp;|&nbsp;
+<a href="http://www.weibo.com/wuyuying1128"><i class="iconfont icon-weibo"></i> 微博</a>&nbsp;|&nbsp;
+<a href="http://www.douban.com/people/wuyuying1128/"><i class="iconfont icon-douban"></i>豆瓣</a>
+		</p>
+		<p>
+			京ICP备16019960号&nbsp;
+			Powered by 
+			<a href="https://hexo.io" target="_blank">Hexo</a>, using theme 
+			<a href="https://github.com/YuyingWu/hexo-theme-fresh" 
+				target="_blank">Fresh</a>
+		.</p>
+	</div>
+</footer>
+
+
+
+<script src="http://cdn1.lncld.net/static/js/2.1.4/av-min.js"></script>
+<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+<script src="http://cdn.bootcss.com/moment.js/2.18.1/moment.min.js"></script>
+<script src="/blog//build/js/comment.js"></script>
+
+
+<script src="//sinacloud.net/woodysblog/statics/lazyload.js"></script>
+<script>
+	new LazyLoad({
+		threshold: 600
+	});
+</script>
+<script src="/blog//dist/base.js"></script>
+</body>
+</html>

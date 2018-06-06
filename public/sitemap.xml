@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wuyuying.com/archives/bdd-in-reactjs/</loc>
+    
+    <lastmod>2018-06-06T02:31:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/hexo-travis/</loc>
+    
+    <lastmod>2018-06-02T12:20:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wuyuying.com/archives/slash/</loc>
     
     <lastmod>2018-05-25T15:20:49.000Z</lastmod>
@@ -9,42 +23,7 @@
   </url>
   
   <url>
-    <loc>http://wuyuying.com/archives/markdown/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/7cake/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/begin-again-2017/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/blog-log/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/blog-opt-wp-hexo/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/css-layout/</loc>
+    <loc>http://wuyuying.com/whv.html</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     
@@ -58,7 +37,7 @@
   </url>
   
   <url>
-    <loc>http://wuyuying.com/archives/debug-talk/</loc>
+    <loc>http://wuyuying.com/archives/year-2017/</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     
@@ -72,119 +51,14 @@
   </url>
   
   <url>
-    <loc>http://wuyuying.com/archives/fis3-node/</loc>
+    <loc>http://wuyuying.com/archives/taobao-maker-festival-2017/</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wuyuying.com/archives/fontmin/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/full-stack/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/git/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/google-organization/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/gpx/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/hello-blog/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/hexo-top/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/http/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/independent-coder/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/information-organize/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/inky/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/javascript-animation/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/job-hunting-whv/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/kindle-duokan/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/mac-notes/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/mactalk/</loc>
+    <loc>http://wuyuying.com/archives/begin-again-2017/</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     
@@ -198,14 +72,7 @@
   </url>
   
   <url>
-    <loc>http://wuyuying.com/archives/method-of-happiness/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/mike-cafe/</loc>
+    <loc>http://wuyuying.com/archives/mac-notes/</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     
@@ -219,133 +86,35 @@
   </url>
   
   <url>
-    <loc>http://wuyuying.com/archives/optimizing-react-virtual-dom-explained/</loc>
+    <loc>http://wuyuying.com/archives/blog-log/</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wuyuying.com/archives/photography-note/</loc>
+    <loc>http://wuyuying.com/archives/debug-talk/</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wuyuying.com/archives/qrcode/</loc>
+    <loc>http://wuyuying.com/archives/css-layout/</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wuyuying.com/archives/resign-from-baidu/</loc>
+    <loc>http://wuyuying.com/archives/hexo-top/</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wuyuying.com/archives/resume-tips/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/rwd-first/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/ryfeng-blog/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/safari-web-debug/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/shifu/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/simplify-work/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/2014-exp-xmas/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/summary-2014/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/taobao-maker-festival-2017/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/travel-with-love/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/uc-web-debug/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/work-whv/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/value-investing/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/wx-developer/</loc>
-    
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wuyuying.com/archives/year-2015/</loc>
+    <loc>http://wuyuying.com/archives/git/</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     
@@ -359,7 +128,252 @@
   </url>
   
   <url>
-    <loc>http://wuyuying.com/archives/year-2017/</loc>
+    <loc>http://wuyuying.com/archives/fis3-node/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/kindle-duokan/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/gpx/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/job-hunting-whv/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/work-whv/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/resign-from-baidu/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/inky/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/wx-developer/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/javascript-animation/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/uc-web-debug/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/optimizing-react-virtual-dom-explained/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/full-stack/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/mactalk/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/google-organization/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/information-organize/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/safari-web-debug/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/year-2015/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/7cake/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/shifu/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/photography-note/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/fontmin/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/rwd-first/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/independent-coder/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/qrcode/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/hello-blog/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/http/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/travel-with-love/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/value-investing/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/mike-cafe/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/ryfeng-blog/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/summary-2014/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/2014-exp-xmas/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/resume-tips/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/simplify-work/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/method-of-happiness/</loc>
+    
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wuyuying.com/archives/markdown/</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     
@@ -380,7 +394,7 @@
   </url>
   
   <url>
-    <loc>http://wuyuying.com/whv.html</loc>
+    <loc>http://wuyuying.com/archives/blog-opt-wp-hexo/</loc>
     
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     

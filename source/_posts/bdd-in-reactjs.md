@@ -249,7 +249,7 @@ npm run test -- --coverage
 
 指定`--coverage`目标文件：，在`package.json`下，添加以下语句：
 
-```json
+```js
 "jest": {
   "collectCoverageFrom": [
     "src/**.js",

@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://wuyuying.com/blog/archives/bdd-in-reactjs/</loc>
+    <lastmod>2018-06-06T02:31:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>Behavior Driven Development in ReactJS</title>
+        <pubTime>2018-06-02T12:13:25.000Z</pubTime>
+        
+        <tag>front-end</tag>
+         
+        <tag>testing</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/hexo-travis/</loc>
+    <lastmod>2018-06-02T12:20:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>开箱即用，Hexo博客的github+server自动部署</title>
+        <pubTime>2018-05-26T06:35:18.000Z</pubTime>
+        
+        <tag>blog</tag>
+         
+        <tag>travisCI</tag>
+         
+        <tag>CI</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://wuyuying.com/blog/archives/slash/</loc>
     <lastmod>2018-05-25T15:20:49.000Z</lastmod>
     <data>
@@ -22,62 +64,22 @@
 
     
   <url>
-    <loc>http://wuyuying.com/blog/archives/markdown/</loc>
+    <loc>http://wuyuying.com/blog/archives/method-of-happiness/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
         <display>
-        <title>markdown学习笔记</title>
-        <pubTime>2014-10-20T10:32:27.000Z</pubTime>
+        <title>幸福的方法 —— 泰勒•本•沙哈尔</title>
+        <pubTime>2014-11-10T15:31:28.000Z</pubTime>
         
-        <tag>study</tag>
+        <tag>reading</tag>
+         
+        <tag>happiness</tag>
          
          
            
              
-              <breadCrumb title="study" url="http://wuyuying.com/blog/categories/study/"/>
+              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/reading/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/blog/archives/7cake/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>7cake的那些事儿</title>
-        <pubTime>2015-12-04T15:48:19.000Z</pubTime>
-        
-        <tag>tech</tag>
-         
-        <tag>work</tag>
-         
-         
-           
-             
-              <breadCrumb title="tech" url="http://wuyuying.com/blog/categories/tech/"/>
-          
-             
-              <breadCrumb title="work" url="http://wuyuying.com/blog/categories/tech/work/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/blog/archives/begin-again-2017/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>Begin Again, 2017</title>
-        <pubTime>2017-06-01T12:40:30.000Z</pubTime>
-        
-        <tag>life</tag>
-         
-         
-           
         </display>
     </data>
     </url>
@@ -552,6 +554,26 @@
 
     
   <url>
+    <loc>http://wuyuying.com/blog/archives/markdown/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>markdown学习笔记</title>
+        <pubTime>2014-10-20T10:32:27.000Z</pubTime>
+        
+        <tag>study</tag>
+         
+         
+           
+             
+              <breadCrumb title="study" url="http://wuyuying.com/blog/categories/study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://wuyuying.com/blog/archives/2017-roadmap/</loc>
     <lastmod>2018-05-25T10:34:15.000Z</lastmod>
     <data>
@@ -569,28 +591,6 @@
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://wuyuying.com/blog/archives/method-of-happiness/</loc>
-    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>幸福的方法 —— 泰勒•本•沙哈尔</title>
-        <pubTime>2014-11-10T15:31:28.000Z</pubTime>
-        
-        <tag>reading</tag>
-         
-        <tag>happiness</tag>
-         
-         
-           
-             
-              <breadCrumb title="reading" url="http://wuyuying.com/blog/categories/reading/"/>
-          
         </display>
     </data>
     </url>
@@ -1076,6 +1076,48 @@
         <pubTime>2018-01-01T10:23:28.000Z</pubTime>
         
         <tag>总结</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/7cake/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>7cake的那些事儿</title>
+        <pubTime>2015-12-04T15:48:19.000Z</pubTime>
+        
+        <tag>tech</tag>
+         
+        <tag>work</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="http://wuyuying.com/blog/categories/tech/"/>
+          
+             
+              <breadCrumb title="work" url="http://wuyuying.com/blog/categories/tech/work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://wuyuying.com/blog/archives/begin-again-2017/</loc>
+    <lastmod>2018-05-25T10:34:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>Begin Again, 2017</title>
+        <pubTime>2017-06-01T12:40:30.000Z</pubTime>
+        
+        <tag>life</tag>
          
          
            
