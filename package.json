@@ -20,5 +20,9 @@
     "hexo-renderer-sass": "^0.3.2",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.2.0"
+  },
+  "scripts": {
+    "start": "hexo s",
+    "draft": "hexo s --draft"
   }
 }
