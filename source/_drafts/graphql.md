@@ -94,3 +94,61 @@ app.listen(5000, () => {
 
 GraphQLID，接受query中的字符串或数字类型的参数，转成JavaScript的string类型。
 GraphQLInt，number类型。
+
+关联类型（relative type）
+
+把AuthorType作为BookType的关联类型（实现功能，每本书有个作者）
+
+* 声明一个字段`author`，类型为`AuthorType`
+* 在`resolve`中，参数`parent`带有当前query的返回结果，从数据库中查询`id`等于当前book的`authorId`的作者信息，作为`author`的返回值
+
+```
+const BookType = new GraphQLObjectType({
+  name: 'Book',
+  fields: () => ({
+    id: { type: GraphQLID },
+    genre: { type: GraphQLString },
+    name: { type: GraphQLString },
+    author: {
+      type: AuthorType,
+      resolve(parent, args) {
+        // code to get data from db / other source
+        // args.id
+        return _.find(authors, {
+          id: parent.authorId
+        });
+      }
+    }
+  })
+});
+```
+
+当关联类型需要返回一个数组
+
+字段`books`返回`BookType`的数组，借助`GraphQLList`。
+
+```
+const AuthorType = new GraphQLObjectType({
+  name: 'Author',
+  fields: () => ({
+    id: { type: GraphQLID },
+    name: { type: GraphQLString },
+    age: { type: GraphQLInt },
+    books: {
+      type: new GraphQLList(BookType),
+      resolve(parent, args) {
+        // code to get data from db / other source
+        // args.id
+        return _.filter(books, {
+          authorId: parent.id
+        });
+      }
+    }
+  })
+});
+```
+
+Tips
+
+`问` 为什么fields不直接使用对象，而使用了函数？
+`答` 因为js的执行时机，直接使用对象的话，代码从上往下执行，fields中引用别的类型，如BookType和AuthorType有互相引用，会报错BookType或者AuthorType undefined。而使用函数的话，执行到函数内部逻辑时，外部的声明已经完成了。
