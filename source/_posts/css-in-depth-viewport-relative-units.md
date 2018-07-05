@@ -62,7 +62,7 @@ tags:
 
 > ### 笔记  
 > 
-> 视口相关单位对于大多数浏览器还是一项比较新的特性，所以当你试图把这个特性和其他样式混搭时，有可能会有一些很奇怪的bug。详情参考http://caniuse.com/#feat=viewport-units列表中的“已知问题（Known Issues）”
+> 视口相关单位对于大多数浏览器还是一项比较新的特性，所以当你试图把这个特性和其他样式混搭时，有可能会有一些很奇怪的bug。详情参考[http://caniuse.com/#feat=viewport-units](http://caniuse.com/#feat=viewport-units)列表中的“已知问题（Known Issues）”
 
 > ### CSS3
 > 
@@ -104,11 +104,11 @@ tags:
 
 ## 2.5 不带单位的数字（unitless number）和行高（line-height）
 
-有一些属性可以接收不带单位的数值（意思就是一个不带长度单位的数字），如`line-height`、`z-index`和`font-weight`（700等于bold，400等于normal，如此类推）。你也可以在需要长度单位的地方（如px、em、rem）使用一个不带单位的`0`，因为长度已经是0了，带不带单位也无所谓了 —— 0px 等于 0% 等于 0em。
+有一些属性可以接收不带单位的数值（意思就是一个不带长度单位的数字），如`line-height`、`z-index`和`font-weight`（700等于bold，400等于normal，如此类推）。你也可以在需要长度单位的地方（如px、em、rem）使用一个不带单位的`0`，因为长度已经是0了，带不带单位也无所谓了 —— `0px` 等于 `0%` 等于 `0em`。
 
 > 警告
 > 
-> 不带单位的0只可以表示长度单位和百分比的值，譬如padding、border和width。而对于一些特殊的情况，如度数（degrees）或者像秒这样基于时间的值（time-based values），是不可以使用不带单位的0的。
+> 不带单位的0只可以表示长度单位和百分比的值，譬如`padding`、`border`和`width`。而对于一些特殊的情况，如度数（degrees）或者像秒这样基于时间的值（time-based values），是不可以使用不带单位的0的。
 
 `line-height`属性最特别的地方，在于同时支持带单位和不带单位的值。你应该保持使用不带单位的数值，因为这样就可以从父元素继承。我们在页面上写点文字，看看它是怎么表现的吧。把下面代码添加到你的样式表。
 
