@@ -97,7 +97,7 @@ em是最常见的相对长度单位，这是排版中使用的一种度量方式
 
 [ 图 2.2：有相对大小的padding和border-radius的元素 ]
 
-!["图 2.2"](http://sinacloud.net/woodysblog/css-in-depth/02fig02.jpg?KID=sina,sy81111wENh9pWSnk4Ev&Expires=1530699214&ssig=A5BuadHq6E)
+!["图 2.2"](http://sinacloud.net/woodysblog/css-in-depth/02fig02.jpg)
 
 你可以通过用em声明padding和border-radius来给这些盒子声明样式规则。首先给每个元素设定padding和border-radius为1em，然后给每个盒子指定不同的字号，那么其他属性会跟着字号缩放。
 

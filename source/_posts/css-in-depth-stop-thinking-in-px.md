@@ -129,7 +129,7 @@ html {
 
 [ 图 2.8 在不同屏幕大小的响应式面板：300px（左上角），800px（右上角），1440px（下面） ]
 
-!["图 2.8"](http://sinacloud.net/woodysblog/css-in-depth/02fig08_alt.jpg?KID=sina,sy81111wENh9pWSnk4Ev&Expires=1530701353&ssig=Sh6qYei7bh)
+!["图 2.8"](http://sinacloud.net/woodysblog/css-in-depth/02fig08_alt.jpg)
 
 > 媒体查询（media query） —— 通过`@media`规则来声明样式，在不同的屏幕尺寸或者媒体类型（如打印机或显示器）下，触发对应的样式控制。这是响应式设计的关键要素。详情看代码片段2.15的这个例子，我在第8章会更深入的讨论媒体查询这个话题。
 
