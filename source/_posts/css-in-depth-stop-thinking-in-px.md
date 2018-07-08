@@ -1,29 +1,75 @@
 ---
-title: 停止使用像素思维去思考 —— 别说你懂CSS相对单位
+title: 如何更愉快地使用rem —— 别说你懂CSS相对单位
 date: 2018-07-05 13:28:01
 tags:
 - front-end
 - css
 ---
 
-前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章《Working with relative units》，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 [Github PR](https://github.com/YuyingWu/blog/tree/dev/source/_posts) ^_^）
+前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章[《Working with relative units》](https://livebook.manning.com/#!/book/css-in-depth/chapter-2)，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 [Github PR](https://github.com/YuyingWu/blog/tree/dev/source/_posts) ^_^）
 
 《别说你懂CSS相对单位》系列译文：
 
-* [如何更愉快地使用em和rem](/blog/archives/css-in-depth-relative-units/)
-* [停止使用像素思维去思考](/blog/archives/css-in-depth-stop-thinking-in-px/) [本文]
+* [如何更愉快地使用em](/blog/archives/css-in-depth-relative-units/)
+* [如何更愉快地使用rem](/blog/archives/css-in-depth-stop-thinking-in-px/) [本文]
 * [视口相关单位的应用](/blog/archives/css-in-depth-viewport-relative-units/)
 * [无单位数字和行高](/blog/archives/css-in-depth-unitless-number/)
 * [CSS自定义属性](/blog/archives/css-in-depth-css-variables/)
 
 本文对应的章节目录：
 
+* 2.2 em和rem
+  * 2.2.2 对font-size使用rem
+    * 可用性：对font-size使用相对长度单位
 * 2.3 停止使用像素思维去思考
   * 2.3.1 设置一个合理的字号默认值
   * 2.3.3 让这个面板变得“响应式”
   * 2.3.3 调整单个组件的大小
 
 ***
+
+## 2.2 em和rem
+
+### 2.2.2 对font-size使用rem
+
+当浏览器解析HTML文档时，创建了一个用来代表页面元素的集合，叫做DOM（文档对象模型，Document Object Model）。树状结构，每一个节点代表一个元素。`<html>`就是顶层节点（根节点），在下面的是它的子节点`<head>`和`<body>`，再往下就是它们的子节点，还有后代节点，如此类推。
+
+根节点是文档里所有其他元素的祖先。它有一个特别的伪类（pseudo-class）选择器（:root），在样式表里可以用这个选择器表示。使用带类名的类型选择器html，或者直接用标签选择器，效果是一样的。
+
+rem是根em（root em）的缩写。rem是和根元素关联的，不依赖当前元素。不管你在文档中的什么地方使用这个单位，1.2rem的计算值是相等的，等于1.2倍的根元素的字号大小。下面的示例代码中，声明了根元素的字号大小，并在嵌套的无序列表中使用rem声明字号大小。
+
+[ 代码片段 2.10 使用rem声明字号大小 ]
+
+```
+:root {                    1
+  font-size: 1em;          2
+}
+
+ul {
+  font-size: .8rem;
+}
+```
+
+* 1 伪类 :root 等价于 html 选择器
+* 2 使用浏览器的默认字号大小（16px）
+
+在这个示例里，根字号大小是浏览器的默认大小16px（根元素的1em等于浏览器的默认字号大小）。无序列表的字号大小为0.8rem，计算结果是12.8px。因为这只跟根元素相关，尽管你在列表里嵌套了列表，嵌套子列表的字号仍然保持不变。
+
+> #### 可用性：对font-size使用相对长度单位  
+> 
+> 一些浏览器会提供给用户2种方式定制文字的大小：缩放和设置一个默认的字号大小。通过按Ctrl+或者Ctrl-，用户可以对页面进行缩放。这在视觉上会把整个页面的文字或图片（其实是所有元素）都放大或缩小了。在一些浏览器，这个改变只针对当前的标签页且是临时的，不会影响到新开的标签页。 
+>  
+> 设置默认字号大小，会有点不一样。不仅仅是设置的入口比较难找（一般在浏览器的设置页），而且这个设置是永久的，直到用户把默认值还原。值得注意的是，这个设置对使用px或其他绝对单位定义的字号大小无效。因为默认字号大小对一些用户是必要的，尤其是弱视的群体，你应该用相对单位或百分比来定义字号的大小。
+
+rem简化了很多em带来的复杂度。事实上，rem提供了一个在px和em间的相对单位折中解决方案，而且更易于使用。那么，是不是意味着你应该在对所有元素都使用rem，去掉其他长度单位呢？当然不是。
+
+在CSS的世界里，这个答案通常是，看情况。rem只是你的工具箱中的其中一个。掌握CSS很重要的一点，就是学会分辨在什么场景下该使用什么工具。我的选择是，对`font-size`使用rem，对border使用px，对其他的度量方式如`padding`、`margin`、`border-radius`等使用em。然而在必要时，需要声明容器的宽度的话，我更喜欢使用百分比。
+
+这样，字号大小就变得可预测，而当其他因素影响到元素的字号大小时，你也可以借助em去缩放元素的padding和margin。在border上使用像素是很合适的，尤其当你想要一根漂亮的线的时候。以上就是我对不同属性使用不同单位的理想方案，不过我要再次声明，这些都是工具，在某些特定场景下，利用不同的工具可能取到更好的效果。
+
+> 提示  
+> 
+> 当你不确定的时候，对`font-size`使用rem，对`border`使用px，以及对其他大多数属性使用em。
 
 ## 2.3 停止使用像素思维去思考
 
@@ -220,8 +266,8 @@ html {
 
 《别说你懂CSS相对单位》系列译文：
 
-* [如何更愉快地使用em和rem](/blog/archives/css-in-depth-relative-units/)
-* [停止使用像素思维去思考](/blog/archives/css-in-depth-stop-thinking-in-px/) [本文]
+* [如何更愉快地使用em](/blog/archives/css-in-depth-relative-units/)
+* [如何更愉快地使用rem](/blog/archives/css-in-depth-stop-thinking-in-px/) [本文]
 * [视口相关单位的应用](/blog/archives/css-in-depth-viewport-relative-units/)
 * [无单位数字和行高](/blog/archives/css-in-depth-unitless-number/)
 * [CSS自定义属性](/blog/archives/css-in-depth-css-variables/)
@@ -253,13 +299,11 @@ html {
   * 2.6.3 初探自定义属性
 * 总结
 
-***
-
-原著版权信息：
-
-作者：Keith J.Grant  
-书籍：CSS in Depth  
-章节：[Working with relative units](https://livebook.manning.com/#!/book/css-in-depth/chapter-2)  
+> 原著版权信息：
+> 
+> 作者：Keith J.Grant  
+> 书籍：CSS in Depth  
+> 章节：[Working with relative units](https://livebook.manning.com/#!/book/css-in-depth/chapter-2)   
 
 *** 
 

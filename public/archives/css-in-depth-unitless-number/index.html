@@ -93,11 +93,11 @@
 				</header>
 				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-无单位数字（unitless-number）和行高（line-height）"><span class="toc-number">1.</span> <span class="toc-text">2.5 无单位数字（unitless number）和行高（line-height）</span></a></li></ol>
 			</aside>
-			<p>前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章《Working with relative units》，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 <a href="https://github.com/YuyingWu/blog/tree/dev/source/_posts" target="_blank" rel="noopener">Github PR</a> ^_^）</p>
+			<p>前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章<a href="https://livebook.manning.com/#!/book/css-in-depth/chapter-2" target="_blank" rel="noopener">《Working with relative units》</a>，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 <a href="https://github.com/YuyingWu/blog/tree/dev/source/_posts" target="_blank" rel="noopener">Github PR</a> ^_^）</p>
 <p>《别说你懂CSS相对单位》系列译文：</p>
 <ul>
-<li><a href="/blog/archives/css-in-depth-relative-units/">如何更愉快地使用em和rem</a></li>
-<li><a href="/blog/archives/css-in-depth-stop-thinking-in-px/">停止使用像素思维去思考</a></li>
+<li><a href="/blog/archives/css-in-depth-relative-units/">如何更愉快地使用em</a></li>
+<li><a href="/blog/archives/css-in-depth-stop-thinking-in-px/">如何更愉快地使用rem</a></li>
 <li><a href="/blog/archives/css-in-depth-viewport-relative-units/">视口相关单位的应用</a></li>
 <li><a href="/blog/archives/css-in-depth-unitless-number/">无单位数字和行高</a> [本文]</li>
 <li><a href="/blog/archives/css-in-depth-css-variables/">CSS自定义属性</a></li>
@@ -115,17 +115,17 @@
 <p><code>line-height</code>属性最特别的地方，在于同时支持带单位和不带单位的值。你应该保持使用不带单位的数值，因为这样就可以从父元素继承。我们在页面上写点文字，看看它是怎么表现的吧。把下面代码添加到你的样式表。</p>
 <p>[ 代码片段 2.20 继承<code>line-height</code>的模板 ]</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;p <span class="built_in">class</span>=<span class="string">"about-us"</span>&gt;</span><br><span class="line">    We have built partnerships <span class="keyword">with</span> small farms <span class="keyword">around</span> <span class="keyword">the</span> world <span class="keyword">to</span></span><br><span class="line">    hand-select beans <span class="keyword">at</span> <span class="keyword">the</span> peak <span class="keyword">of</span> season. We <span class="keyword">then</span> carefully roast <span class="keyword">in</span></span><br><span class="line">    small batches <span class="keyword">to</span> maximize their potential.</span><br><span class="line">  &lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-<p>给body声明一个line-height，然后文档的其他元素会从这里继承。页面的展示符合预期，不管你对页面的其他元素的字号大小做了什么改变。</p>
+<p>给<code>body</code>声明一个<code>line-height</code>，然后文档的其他元素会从这里继承。页面的展示符合预期，不管你对页面的其他元素的字号大小做了什么改变。</p>
 <p>[ 图 2.11 不带单位的行高，会在每个后代元素下重新计算出实际值 ]</p>
-<p><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig11.jpg?KID=sina,sy81111wENh9pWSnk4Ev&amp;Expires=1530702088&amp;ssig=2WgcfHJiZT" alt="&quot;图 2.11&quot;"></p>
-<p>把代码片段2.21的内容添加到你的样式表。段落（<code>&lt;p&gt;</code>）继承了1.2的行高。因为字号是32px（2em <em> 16px，浏览器默认字号大小），所以本地的行高计算值是38.4px（32px </em> 1.2）。这会给段落的行间距留下比较合适的空间。</p>
+<p><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig11.jpg" alt="&quot;图 2.11&quot;"></p>
+<p>把代码片段2.21的内容添加到你的样式表。段落（<code>&lt;p&gt;</code>）继承了1.2的行高。因为字号是32px（<code>2em</code> <em> 16px，浏览器默认字号大小），所以本地的行高计算值是38.4px（32px </em> 1.2）。这会给段落的行间距留下比较合适的空间。</p>
 <p>[ 代码片段 2.21 对line-height使用不带单位的值 ]</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.2</span>;               <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.about-us</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>1 后代元素继承不带单位的值</li>
 </ul>
 <p>如果你给行高设定了一个带单位的值，你可能会得到意想不到的结果，如图2.12那样，行间文字互相重叠了，代码片段2.22则是造成这个结果的CSS代码。</p>
-<p>[ 图 2.12 继承行高造成的行间互叠 ]<br><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig12.jpg?KID=sina,sy81111wENh9pWSnk4Ev&amp;Expires=1530702131&amp;ssig=vjrNtToK7C" alt="&quot;图 2.12&quot;"></p>
+<p>[ 图 2.12 继承行高造成的行间互叠 ]<br><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig12.jpg" alt="&quot;图 2.12&quot;"></p>
 <p>[ 代码片段 2.22 带单位的行高值造成意外的结果 ]</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.2em</span>;             <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.about-us</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2em</span>;                 <span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
@@ -140,8 +140,8 @@
 <hr>
 <p>《别说你懂CSS相对单位》系列译文：</p>
 <ul>
-<li><a href="/blog/archives/css-in-depth-relative-units/">如何更愉快地使用em和rem</a></li>
-<li><a href="/blog/archives/css-in-depth-stop-thinking-in-px/">停止使用像素思维去思考</a></li>
+<li><a href="/blog/archives/css-in-depth-relative-units/">如何更愉快地使用em</a></li>
+<li><a href="/blog/archives/css-in-depth-stop-thinking-in-px/">如何更愉快地使用rem</a></li>
 <li><a href="/blog/archives/css-in-depth-viewport-relative-units/">视口相关单位的应用</a></li>
 <li><a href="/blog/archives/css-in-depth-unitless-number/">无单位数字和行高</a> [本文]</li>
 <li><a href="/blog/archives/css-in-depth-css-variables/">CSS自定义属性</a></li>
@@ -187,9 +187,10 @@
 </li>
 <li>总结</li>
 </ul>
-<hr>
+<blockquote>
 <p>原著版权信息：</p>
-<p>作者：Keith J.Grant<br>书籍：CSS in Depth<br>章节：<a href="https://livebook.manning.com/#!/book/css-in-depth/chapter-2" target="_blank" rel="noopener">Working with relative units</a>  </p>
+<p>作者：Keith J.Grant<br>书籍：CSS in Depth<br>章节：<a href="https://livebook.manning.com/#!/book/css-in-depth/chapter-2" target="_blank" rel="noopener">Working with relative units</a>   </p>
+</blockquote>
 <hr>
 <p>笔者 @Yuying Wu，前端爱好者 / 鼓励师 / 新西兰打工度假 / 铲屎官。目前就职于某大型电商的B2B前端团队。</p>
 <p>感谢你读到这里，对上文若有任何疑问或建议，欢迎留言。</p>

@@ -6,12 +6,12 @@ tags:
 - css
 ---
 
-前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章《Working with relative units》，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 [Github PR](https://github.com/YuyingWu/blog/tree/dev/source/_posts) ^_^）
+前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章[《Working with relative units》](https://livebook.manning.com/#!/book/css-in-depth/chapter-2)，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 [Github PR](https://github.com/YuyingWu/blog/tree/dev/source/_posts) ^_^）
 
 《别说你懂CSS相对单位》系列译文：
 
-* [如何更愉快地使用em和rem](/blog/archives/css-in-depth-relative-units/)
-* [停止使用像素思维去思考](/blog/archives/css-in-depth-stop-thinking-in-px/)
+* [如何更愉快地使用em](/blog/archives/css-in-depth-relative-units/)
+* [如何更愉快地使用rem](/blog/archives/css-in-depth-stop-thinking-in-px/)
 * [视口相关单位的应用](/blog/archives/css-in-depth-viewport-relative-units/)
 * [无单位数字和行高](/blog/archives/css-in-depth-unitless-number/) [本文]
 * [CSS自定义属性](/blog/archives/css-in-depth-css-variables/)
@@ -50,7 +50,7 @@ tags:
 
 !["图 2.11"](http://sinacloud.net/woodysblog/css-in-depth/02fig11.jpg)
 
-把代码片段2.21的内容添加到你的样式表。段落（`<p>`）继承了1.2的行高。因为字号是32px（2em * 16px，浏览器默认字号大小），所以本地的行高计算值是38.4px（32px * 1.2）。这会给段落的行间距留下比较合适的空间。
+把代码片段2.21的内容添加到你的样式表。段落（`<p>`）继承了1.2的行高。因为字号是32px（`2em` * 16px，浏览器默认字号大小），所以本地的行高计算值是38.4px（32px * 1.2）。这会给段落的行间距留下比较合适的空间。
 
 [ 代码片段 2.21 对line-height使用不带单位的值 ]
 
@@ -96,8 +96,8 @@ body {
 
 《别说你懂CSS相对单位》系列译文：
 
-* [如何更愉快地使用em和rem](/blog/archives/css-in-depth-relative-units/)
-* [停止使用像素思维去思考](/blog/archives/css-in-depth-stop-thinking-in-px/)
+* [如何更愉快地使用em](/blog/archives/css-in-depth-relative-units/)
+* [如何更愉快地使用rem](/blog/archives/css-in-depth-stop-thinking-in-px/)
 * [视口相关单位的应用](/blog/archives/css-in-depth-viewport-relative-units/)
 * [无单位数字和行高](/blog/archives/css-in-depth-unitless-number/) [本文]
 * [CSS自定义属性](/blog/archives/css-in-depth-css-variables/)
@@ -129,13 +129,11 @@ body {
   * 2.6.3 初探自定义属性
 * 总结
 
-***
-
-原著版权信息：
-
-作者：Keith J.Grant  
-书籍：CSS in Depth  
-章节：[Working with relative units](https://livebook.manning.com/#!/book/css-in-depth/chapter-2)  
+> 原著版权信息：
+> 
+> 作者：Keith J.Grant  
+> 书籍：CSS in Depth  
+> 章节：[Working with relative units](https://livebook.manning.com/#!/book/css-in-depth/chapter-2)   
 
 *** 
 

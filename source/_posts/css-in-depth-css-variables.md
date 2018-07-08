@@ -6,12 +6,12 @@ tags:
 - css
 ---
 
-前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章《Working with relative units》，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 [Github PR](https://github.com/YuyingWu/blog/tree/dev/source/_posts) ^_^）
+前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章[《Working with relative units》](https://livebook.manning.com/#!/book/css-in-depth/chapter-2)，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 [Github PR](https://github.com/YuyingWu/blog/tree/dev/source/_posts) ^_^）
 
 《别说你懂CSS相对单位》系列译文：
 
-* [如何更愉快地使用em和rem](/blog/archives/css-in-depth-relative-units/)
-* [停止使用像素思维去思考](/blog/archives/css-in-depth-stop-thinking-in-px/)
+* [如何更愉快地使用em](/blog/archives/css-in-depth-relative-units/)
+* [如何更愉快地使用rem](/blog/archives/css-in-depth-stop-thinking-in-px/)
 * [视口相关单位的应用](/blog/archives/css-in-depth-viewport-relative-units/)
 * [无单位数字和行高](/blog/archives/css-in-depth-unitless-number/)
 * [CSS自定义属性](/blog/archives/css-in-depth-css-variables/) [本文]
@@ -23,6 +23,8 @@ tags:
   * 2.6.2 通过JavaScript改变自定义属性的值
   * 2.6.3 初探自定义属性
 * 总结
+
+> 在今年年初，译者也写过一篇[《CSS Variables学习笔记》](http://www.wuyuying.com/blog/archives/css-var/)，里面有更多的CSS Variables的语法解释和实例demo，感兴趣的朋友可以看看 ：）
 
 ***
 
@@ -278,8 +280,8 @@ color: var(--main-color);
 
 《别说你懂CSS相对单位》系列译文：
 
-* [如何更愉快地使用em和rem](/blog/archives/css-in-depth-relative-units/)
-* [停止使用像素思维去思考](/blog/archives/css-in-depth-stop-thinking-in-px/)
+* [如何更愉快地使用em](/blog/archives/css-in-depth-relative-units/)
+* [如何更愉快地使用rem](/blog/archives/css-in-depth-stop-thinking-in-px/)
 * [视口相关单位的应用](/blog/archives/css-in-depth-viewport-relative-units/)
 * [无单位数字和行高](/blog/archives/css-in-depth-unitless-number/)
 * [CSS自定义属性](/blog/archives/css-in-depth-css-variables/) [本文]
@@ -311,13 +313,11 @@ color: var(--main-color);
   * 2.6.3 初探自定义属性
 * 总结
 
-***
-
-原著版权信息：
-
-作者：Keith J.Grant  
-书籍：CSS in Depth  
-章节：[Working with relative units](https://livebook.manning.com/#!/book/css-in-depth/chapter-2)  
+> 原著版权信息：
+> 
+> 作者：Keith J.Grant  
+> 书籍：CSS in Depth  
+> 章节：[Working with relative units](https://livebook.manning.com/#!/book/css-in-depth/chapter-2)  
 
 *** 
 

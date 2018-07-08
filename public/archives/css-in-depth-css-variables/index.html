@@ -93,11 +93,11 @@
 				</header>
 				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-自定义属性（也叫“CSS变量”）"><span class="toc-number">1.</span> <span class="toc-text">2.6 自定义属性（也叫“CSS变量”）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#笔记"><span class="toc-number">1.1.</span> <span class="toc-text">笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-1-动态改变自定义属性的值"><span class="toc-number">1.2.</span> <span class="toc-text">2.6.1 动态改变自定义属性的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-2-通过JavaScript改变自定义属性的值"><span class="toc-number">1.3.</span> <span class="toc-text">2.6.2 通过JavaScript改变自定义属性的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-3-初探自定义属性"><span class="toc-number">1.4.</span> <span class="toc-text">2.6.3 初探自定义属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li></ol>
 			</aside>
-			<p>前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章《Working with relative units》，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 <a href="https://github.com/YuyingWu/blog/tree/dev/source/_posts" target="_blank" rel="noopener">Github PR</a> ^_^）</p>
+			<p>前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章<a href="https://livebook.manning.com/#!/book/css-in-depth/chapter-2" target="_blank" rel="noopener">《Working with relative units》</a>，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 <a href="https://github.com/YuyingWu/blog/tree/dev/source/_posts" target="_blank" rel="noopener">Github PR</a> ^_^）</p>
 <p>《别说你懂CSS相对单位》系列译文：</p>
 <ul>
-<li><a href="/blog/archives/css-in-depth-relative-units/">如何更愉快地使用em和rem</a></li>
-<li><a href="/blog/archives/css-in-depth-stop-thinking-in-px/">停止使用像素思维去思考</a></li>
+<li><a href="/blog/archives/css-in-depth-relative-units/">如何更愉快地使用em</a></li>
+<li><a href="/blog/archives/css-in-depth-stop-thinking-in-px/">如何更愉快地使用rem</a></li>
 <li><a href="/blog/archives/css-in-depth-viewport-relative-units/">视口相关单位的应用</a></li>
 <li><a href="/blog/archives/css-in-depth-unitless-number/">无单位数字和行高</a></li>
 <li><a href="/blog/archives/css-in-depth-css-variables/">CSS自定义属性</a> [本文]</li>
@@ -112,6 +112,9 @@
 </li>
 <li>总结</li>
 </ul>
+<blockquote>
+<p>在今年年初，译者也写过一篇<a href="http://www.wuyuying.com/blog/archives/css-var/" target="_blank" rel="noopener">《CSS Variables学习笔记》</a>，里面有更多的CSS Variables的语法解释和实例demo，感兴趣的朋友可以看看 ：）</p>
+</blockquote>
 <hr>
 <h2 id="2-6-自定义属性（也叫“CSS变量”）"><a href="#2-6-自定义属性（也叫“CSS变量”）" class="headerlink" title="2.6 自定义属性（也叫“CSS变量”）"></a>2.6 自定义属性（也叫“CSS变量”）</h2><p>在2015年，一个大家期待已久的名为“用作层叠式变量的自定义属性”（Custom Properties for Cascading Variables）的CSS规范终于发布为“候选推荐标准”（Candidate Recommendation）。这套规范引入了CSS中“变量”的概念，支持一种新的基于上下文的动态样式定义方式。你可以声明一个变量，再给它赋值，然后就可以在样式表的任何地方引用它。你可以通过这样的方式，减少样式表中的重复代码，以及后续你会看到的一些有用的应用场景。</p>
 <p>在写这本书的时候，自定义属性已经被大多数主流浏览器支持了，除了IE。查看最新的浏览器支持情况，可以查看Can I Use的<a href="http://caniuse.com/#feat=css-variables" target="_blank" rel="noopener">http://caniuse.com/#feat=css-variables</a>。</p>
@@ -125,7 +128,7 @@
 <p>变量一定要声明在一个声明区块内。在这里，我使用了<code>:root</code>选择器，那么这个变量就可以在整个页面的样式里使用 —— 后面我会简单解释这个问题。</p>
 <p>变量的声明，就它本身而言，不会做任何事情，直到我们在代码里引用它。我们在一个段落中使用它吧，做成像图2.13那样的效果。</p>
 <p>[ 图 2.13 对一个简单段落使用用变量声明的字体sans-serif ]</p>
-<p><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig13_alt.jpg?KID=sina,sy81111wENh9pWSnk4Ev&amp;Expires=1530702338&amp;ssig=vODl2nMC4F" alt="&quot;图 2.13&quot;"></p>
+<p><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig13_alt.jpg" alt="&quot;图 2.13&quot;"></p>
 <p>我们可以用一个叫作<code>var()</code>的函数去引用自定义属性的值。现在，你可以利用这个函数去引用我们刚才声明的变量<code>--main-font</code>。把下面展示的代码片段添加到你的样式表中吧，把变量用起来。</p>
 <p>[ 代码片段 2.24 使用一个自定义属性 ]</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:root &#123;</span><br><span class="line">  --main-<span class="attribute">font</span>: Helvetica, Arial, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;                                    1</span><br><span class="line">  <span class="attribute">font-family</span>: var(--main-font);       1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -152,7 +155,7 @@
 <h3 id="2-6-1-动态改变自定义属性的值"><a href="#2-6-1-动态改变自定义属性的值" class="headerlink" title="2.6.1 动态改变自定义属性的值"></a>2.6.1 动态改变自定义属性的值</h3><p>从这些例子可以看到，自定义属性只是更方便了一点，也可以帮助你减少很多的重复代码。但让自定义属性更有意思的是，自定义属性的声明是可以层叠和继承的。你可以在多个选择器中声明同一个变量，这些变量在页面的不同部分可以有着不一样的值。</p>
 <p>你可以声明一个变量是黑色的，举个例子，然后在一个特定的容器里把它重新定义为白色的。于是，在这个容器以外的所有依赖这个变量的颜色是黑色，而在容器内的就是白色。通过这样的方式，我们来实现一个像图2.14这样的效果。</p>
 <p>[ 图 2.14 自定义属性基于不同域下的值，生成两个颜色不一样的面板 ]</p>
-<p><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig14_alt.jpg?KID=sina,sy81111wENh9pWSnk4Ev&amp;Expires=1530702410&amp;ssig=dvHaP8yL6X" alt="&quot;图 2.14&quot;"></p>
+<p><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig14_alt.jpg" alt="&quot;图 2.14&quot;"></p>
 <p>这个面板类似你之前看到的那个（图2.7），HTML在代码片段2.27。这个面板有两个实例，一个在body下，另一个在一个深色的区块。来，更新下你的代码。</p>
 <p>[ 代码片段 2.27 页面上不同上下文的两个面板 ]</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"panel"</span>&gt;                               <span class="number">1</span></span><br><span class="line">    &lt;h2&gt;Single-origin&lt;/h2&gt;</span><br><span class="line">    &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"body"</span>&gt;</span><br><span class="line">      We have built partnerships <span class="keyword">with</span> small farms</span><br><span class="line">      <span class="keyword">around</span> <span class="keyword">the</span> world <span class="keyword">to</span> hand-select beans <span class="keyword">at</span> <span class="keyword">the</span></span><br><span class="line">      peak <span class="keyword">of</span> season. We <span class="keyword">then</span> careful roast <span class="keyword">in</span></span><br><span class="line">      small batches <span class="keyword">to</span> maximize their potential.</span><br><span class="line">    &lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">  &lt;/<span class="keyword">div</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;aside <span class="built_in">class</span>=<span class="string">"dark"</span>&gt;                              <span class="number">2</span></span><br><span class="line">    &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"panel"</span>&gt;                             <span class="number">2</span></span><br><span class="line">      &lt;h2&gt;Single-origin&lt;/h2&gt;</span><br><span class="line">      &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"body"</span>&gt;</span><br><span class="line">        We have built partnerships <span class="keyword">with</span> small farms</span><br><span class="line">        <span class="keyword">around</span> <span class="keyword">the</span> world <span class="keyword">to</span> hand-select beans <span class="keyword">at</span> <span class="keyword">the</span></span><br><span class="line">        peak <span class="keyword">of</span> season. We <span class="keyword">then</span> careful roast <span class="keyword">in</span></span><br><span class="line">        small batches <span class="keyword">to</span> maximize their potential.</span><br><span class="line">      &lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">    &lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">  &lt;/aside&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
@@ -188,10 +191,10 @@
 </ul>
 <p>因为你可以随手修改自定义属性的值，你可以用JavaScript给<code>--main-bg</code>动态地定义一个新的值。如果你把它定义为浅蓝色，它就是展示成这样（图2.15）。</p>
 <p>[ 图 2.15 JavaScript可以通过改变变量–main-bg的值改变面板的背景色 ]</p>
-<p><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig15_alt.jpg?KID=sina,sy81111wENh9pWSnk4Ev&amp;Expires=1530702490&amp;ssig=8YBzWhhoQ6" alt="&quot;图 2.15&quot;"></p>
+<p><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig15_alt.jpg" alt="&quot;图 2.15&quot;"></p>
 <p>下面的代码片段，会在根元素下给<code>--main-bg</code>定义一个新的值，在<code>&lt;script&gt;</code>标签的最下面，加上这些的代码。</p>
 <p>[ 代码片段 2.31 在JavaScript定义一个自定义变量的值 ]</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rootElement = <span class="built_in">document</span>.documentElement;</span><br><span class="line">rootElement.style.setProperty(<span class="string">'--main-bg'</span>, <span class="string">'#cdf'</span>);            <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rootElement = <span class="built_in">document</span>.documentElement;</span><br><span class="line">rootElement.style.setProperty(<span class="string">'--main-bg'</span>, <span class="string">'#cdf'</span>);            <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>1 把根元素下的 –main-bg 定义为浅蓝色</li>
 </ul>
@@ -212,8 +215,8 @@
 <hr>
 <p>《别说你懂CSS相对单位》系列译文：</p>
 <ul>
-<li><a href="/blog/archives/css-in-depth-relative-units/">如何更愉快地使用em和rem</a></li>
-<li><a href="/blog/archives/css-in-depth-stop-thinking-in-px/">停止使用像素思维去思考</a></li>
+<li><a href="/blog/archives/css-in-depth-relative-units/">如何更愉快地使用em</a></li>
+<li><a href="/blog/archives/css-in-depth-stop-thinking-in-px/">如何更愉快地使用rem</a></li>
 <li><a href="/blog/archives/css-in-depth-viewport-relative-units/">视口相关单位的应用</a></li>
 <li><a href="/blog/archives/css-in-depth-unitless-number/">无单位数字和行高</a></li>
 <li><a href="/blog/archives/css-in-depth-css-variables/">CSS自定义属性</a> [本文]</li>
@@ -259,9 +262,10 @@
 </li>
 <li>总结</li>
 </ul>
-<hr>
+<blockquote>
 <p>原著版权信息：</p>
 <p>作者：Keith J.Grant<br>书籍：CSS in Depth<br>章节：<a href="https://livebook.manning.com/#!/book/css-in-depth/chapter-2" target="_blank" rel="noopener">Working with relative units</a>  </p>
+</blockquote>
 <hr>
 <p>笔者 @Yuying Wu，前端爱好者 / 鼓励师 / 新西兰打工度假 / 铲屎官。目前就职于某大型电商的B2B前端团队。</p>
 <p>感谢你读到这里，对上文若有任何疑问或建议，欢迎留言。</p>
