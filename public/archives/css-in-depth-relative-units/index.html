@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/blog//css/post.css">
 
 
-	<title>如何更愉快地使用em和rem —— 别说你懂CSS相对单位 - 伍酱</title>
+	<title>如何更愉快地使用em —— 别说你懂CSS相对单位 - 伍酱</title>
 
 	<!--[if lte IE 8]>
         <script>
@@ -74,7 +74,7 @@
 			
 	
 		
-			<h1 class="title" data-role="articleTitle">如何更愉快地使用em和rem —— 别说你懂CSS相对单位</h1>
+			<h1 class="title" data-role="articleTitle">如何更愉快地使用em —— 别说你懂CSS相对单位</h1>
 		
 	
 
@@ -122,7 +122,7 @@
 <hr>
 <p>CSS提供了很多种方式去定义一个值。大家最熟悉的可能也是最容易使用的就是像素（pixel），这被称做“绝对单位”。也就是说，5px在不同的场景下是一样的值。而其他的单位，如em和rem，不是绝对的而是相对的。相对单位的值会根据外部影响因素的变化而变化。例如，2em的值取决于你在哪个元素使用它（有时甚至是哪个属性）。很自然，相对单位使用起来会比较困难。</p>
 <p>开发人员，甚至有经验的CSS开发人员，往往不喜欢跟相对单位打交道，其中包括臭名昭著的em。em的值可以被改变的方式似乎难以预测，没有px那么清晰。在本章中，我将揭开相对单位的神秘面纱。首先，我会解释它们为CSS带来的独特价值，然后我会帮助你更好地理解它们。我会解释它们的工作原理，也会告诉你怎么征服它们那看似不可预测的特性。你可以让相对单位为你所用，正确地运行，它们将让你的代码变得更加简单、灵活和容易使用。</p>
-<h2 id="2-1-相对单位值的魔力"><a href="#2-1-相对单位值的魔力" class="headerlink" title="2.1 相对单位值的魔力"></a>2.1 相对单位值的魔力</h2><p>CSS是通过迟邦定（late-binding）的方式把样式渲染到web页面上的：内容和它的样式会在各自的渲染完成之后再合并到一起。比起其他类型的图形设计，这给设计过程添加了它们没有的复杂程度，同时也赋予CSS更强大的能力 —— 一个样式表可供成百上千个页面使用。此外，用户可以直接改变页面的最终呈现方式。举个例子，用户可以更改默认字号大小或者调整浏览器窗口的大小。</p>
+<h2 id="2-1-相对单位值的魔力"><a href="#2-1-相对单位值的魔力" class="headerlink" title="2.1 相对单位值的魔力"></a>2.1 相对单位值的魔力</h2><p>CSS是通过迟绑定（late-binding）的方式把样式渲染到web页面上的：内容和它的样式会在各自的渲染完成之后再合并到一起。比起其他类型的图形设计，这给设计过程添加了它们没有的复杂程度，同时也赋予CSS更强大的能力 —— 一个样式表可供成百上千个页面使用。此外，用户可以直接改变页面的最终呈现方式。举个例子，用户可以更改默认字号大小或者调整浏览器窗口的大小。</p>
 <p>在早期的计算机应用程序开发以及传统出版行业中，开发人员或出版商清楚知道所在的媒介存在哪些限制。对于一个特定的应用程序，窗口可能是400px宽，300px高，或者一个版面可能是4英寸宽，6½英寸高。因此，当开发人员布局应用程序的按钮和文本时，他们很清楚这些元素可以做成什么尺寸，以及在屏幕上还有多少空间可以留给他们用来处理其他元素。然而在网页上，情况却不是这样的。</p>
 <h3 id="2-1-1-完美像素设计（pixel-perfect-design）的挣扎"><a href="#2-1-1-完美像素设计（pixel-perfect-design）的挣扎" class="headerlink" title="2.1.1 完美像素设计（pixel-perfect design）的挣扎"></a>2.1.1 完美像素设计（pixel-perfect design）的挣扎</h3><p>在web环境下，用户可以将浏览器窗口设置为任意大小，且CSS需要去适应它。另外，用户可以在一个页面打开后，再调整它的大小，CSS也需要去适应这些新的约束条件。这说明了在你创建页面时样式还没有被调用，而是当页面在屏幕上渲染时，浏览器才会去计算样式的规则。</p>
 <p>这给CSS增加了一层抽象的概念。我们不应该根据理想的情境来设计元素，而是应该声明一些样式规则，可以让该元素在任何场景下都能跑通。对于现在的互联网，你的页面可能要在一个4英寸的手机屏幕上展示，也可能在一个30英寸的大屏幕上。</p>
@@ -216,7 +216,7 @@
 <p>[ 图 2.6 字号正常的多层嵌套列表 ]</p>
 <p><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig06.jpg" alt="&quot;图 2.6&quot;"></p>
 <p>其中一种实现的方式可以看看代码片段2.9。第一个列表的字号大小还是0.8 em（见示例2.7），第二个选择器对嵌套在无序列表的无序列表有效 —— 也就是除了第一个无序列表以外的所有无序列表。现在嵌套的列表设定了跟父元素一致的字号大小，正如图2.6一样。</p>
-<p>代码片段 2.9 字号收缩现象的纠正</p>
+<p>[ 代码片段 2.9 字号收缩现象的纠正 ]</p>
 <figure class="highlight roboconf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ul &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: .8em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ul ul &#123;                1</span><br><span class="line">  <span class="attribute">font-size</span>: 1em;      1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>1 嵌套在列表里面的列表，应该把字号大小设定为跟父元素一样</li>
@@ -254,7 +254,7 @@
 </li>
 <li>2.3 停止使用像素思维去思考<ul>
 <li>2.3.1 设置一个合理的字号默认值</li>
-<li>2.3.3 让这个面板变得“响应式”</li>
+<li>2.3.2 让这个面板变得“响应式”</li>
 <li>2.3.3 调整单个组件的大小</li>
 </ul>
 </li>

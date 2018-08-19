@@ -1,0 +1,228 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="">
+
+	
+<link rel="stylesheet" href="/blog//css/post.css">
+
+
+	<title>puppeteer调研 - 伍酱</title>
+
+	<!--[if lte IE 8]>
+        <script>
+            (function(){
+                var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+                i=e.length;
+                while(i--){document.createElement(e[i])}
+             })();
+        </script>
+    <![endif]-->
+</head>
+<body class="page-post">
+
+<script async>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-74424222-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+<!--[if lte IE 8]>
+    <p class="browserupgrade">貌似你还在用<strong>低版本IE</strong>浏览器喔~ 为了更好的体验，去下载一个<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=chrome&rsv_pq=c275ed8c0000204b&rsv_t=b404%2BiFxvZfvn%2FqqBMyJKwHyShj%2FipQgL7TfJsGKrHxZhoWCUisbVukJsNw&rqlang=cn&rsv_enter=1&rsv_sug3=6&rsv_sug1=5&rsv_sug7=100&rsv_sug2=0&inputT=891&rsv_sug4=891" target="_blank">最新版Chrome</a>吧 ：）</p>
+<![endif]-->
+
+
+	<header>
+	<section class="u-clearfix header__container">
+		<nav class="grid-r header__nav--list">
+			
+				<a href="/blog/">Blog</a>
+			
+				<a href="/blog/archives/">Archive</a>
+			
+				<a href="/blog/about.html">About</a>
+			
+		</nav>
+
+		<h1 class="grid">
+			<a href="/">伍酱</a>
+		</h1>
+	</section>
+</header><!-- /header -->
+
+
+<div id="content">
+	<div class="center">
+		<div class="main-col">
+			
+	
+	<article class="article article-detail post article-post">
+	<div class="post-content">
+		<header>
+			
+	
+		
+			<h1 class="title" data-role="articleTitle">puppeteer调研</h1>
+		
+	
+
+			<div class="post__meta">
+	<time datetime="2018-07-10T14:37:18.000Z">2018-07-10</time>
+
+	
+</div>
+			
+		</header>
+
+		<div class="entry">
+			<aside class="wgt-toc">
+				<header>
+					<p><i class="iconfont icon-folder"></i>&nbsp;文章大纲</p>
+				</header>
+				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Puppeteer-Intro"><span class="toc-number">1.</span> <span class="toc-text">Puppeteer Intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo-screenshot"><span class="toc-number">2.</span> <span class="toc-text">Demo - screenshot</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#setup"><span class="toc-number">2.1.</span> <span class="toc-text">setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#demo"><span class="toc-number">2.2.</span> <span class="toc-text">demo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Links"><span class="toc-number">3.</span> <span class="toc-text">Links</span></a></li></ol>
+			</aside>
+			<h2 id="Puppeteer-Intro"><a href="#Puppeteer-Intro" class="headerlink" title="Puppeteer Intro"></a>Puppeteer Intro</h2><p>Puppeteer金字塔</p>
+<p><img src="http://sinacloud.net/woodysblog/img/puppeteer-pyramid.png" alt="&quot;Puppeteer Pyramid&quot;"></p>
+<p>无需再通过Chrome的开发协议，写冗长复杂的代码，轻松调用Chrome API。</p>
+<p><img src="http://sinacloud.net/woodysblog/img/puppeteer-devtools-protocol.png" alt="&quot;puppeteer-devtools-protocol&quot;"></p>
+<p>Puppeteer的使用场景。</p>
+<p><img src="http://sinacloud.net/woodysblog/img/puppeteer-use-cases.png" alt="&quot;Puppeteer use case&quot;"></p>
+<h2 id="Demo-screenshot"><a href="#Demo-screenshot" class="headerlink" title="Demo - screenshot"></a>Demo - screenshot</h2><h3 id="setup"><a href="#setup" class="headerlink" title="setup"></a>setup</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="selector-tag">i</span> puppeteer --save</span><br></pre></td></tr></table></figure>
+<h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3><p>打开<code>example.com</code>，截屏，生成文件<code>example.png</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// screenshot.js</span></span><br><span class="line"><span class="keyword">const</span> puppeteer = <span class="built_in">require</span>(<span class="string">'puppeteer'</span>);</span><br><span class="line"></span><br><span class="line">puppeteer.launch(&#123;</span><br><span class="line">  headless: <span class="literal">false</span></span><br><span class="line">&#125;).then(<span class="keyword">async</span> browser =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.newPage();</span><br><span class="line">  <span class="keyword">await</span> page.goto(<span class="string">'https://example.com'</span>);</span><br><span class="line">  <span class="keyword">await</span> page.screenshot(&#123;<span class="attr">path</span>: <span class="string">'example.png'</span>&#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">await</span> browser.close();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// run the demo</span></span><br><span class="line"><span class="comment">// node screenshot.js</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://sinacloud.net/woodysblog/img/screenshot-puppeteer.gif" alt="&quot;screenshot-puppeteer&quot;"></p>
+<h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><ul>
+<li><a href="https://developers.google.com/web/updates/2017/04/headless-chrome" target="_blank" rel="noopener">Getting Started with Headless Chrome</a></li>
+<li><a href="https://try-puppeteer.appspot.com/" target="_blank" rel="noopener">Try Puppeteer</a></li>
+<li><a href="https://pptraas.com/" target="_blank" rel="noopener">Puppeteer as a service</a></li>
+<li><a href="https://github.com/GoogleChromeLabs/puppeteer-examples" target="_blank" rel="noopener">puppeteer-examples</a></li>
+<li><a href="https://developers.google.com/web/tools/puppeteer/" target="_blank" rel="noopener">Puppeteer Docs</a></li>
+</ul>
+<p>Youtube Video:<br><a href="https://youtu.be/7-XnEMrQnn4?t=986" target="_blank" rel="noopener">“Intro of Puppeteer - Chrome Dev Summit 2017”</a><br><a href="https://www.youtube.com/watch?v=lhZOFUY1weo" target="_blank" rel="noopener">“The power of Headless Chrome and browser automation (Google I/O ‘18)”</a></p>
+
+		</div>
+
+		<footer>
+			
+	<section class="post__meta post__tag">
+		
+			<a href="/blog/tags/front-end/">front-end</a>
+		
+			<a href="/blog/tags/testing/">testing</a>
+		
+	</section>
+
+			<section class="post__meta">
+	<a href="/blog/donate.html" title="码字辛苦求打赏" class="u-clearfix wgt-shield">
+		<span class="title">Donate</span>
+		<span class="desc">￥￥￥</span>
+	</a>
+
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" 
+		title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议" class="u-clearfix wgt-shield">
+		<span class="title">License</span>
+		<span class="desc">CC BY-NC-SA</span>
+	</a>
+</section>
+		</footer>
+
+		
+			<section id="wgt-comment" class="wgt-comment" data-permalink="/archives/puppeteer/">
+	<div id="comment-list">
+		<article>暂无数据</article>
+	</div>
+
+	<form id="comment-form" class="comment__form">
+		<input type="text" 
+			name="author" 
+			class="comment--mb10 comment__contentAuthor" 
+			required 
+			max-length="15"
+			placeholder="这里输入你的名字" />
+		<input type="text" 
+			name="content" 
+			class="comment--mb10 comment__contentInput" 
+			required
+			max-length="150"
+			placeholder="这里输入评论内容" />
+		<input type="hidden" name="parentId" id="comment-reply-id" />
+		<!-- <label>
+			<span>Email: </span>
+			<input type="email" name="email">
+		</label>
+		<label>
+			<span>website: </span>
+			<input type="url" name="website">
+		</label> -->
+
+		<footer class="comment--clearfix comment--tRight" id="comment-form-footer">
+			<a id="comment-box-submit" class="comment--fontsizeMeta comment--colorAccent comment__submitReply">加上去</a>
+		</footer>
+	</form>
+</section>
+		
+	</div>
+</article>
+
+		</div>
+		
+	</div>
+</div>
+
+<link rel="stylesheet" href="/blog//build/css/iconfont_201704181501.css">
+
+
+	<footer class="wgt-footer" id="footer">
+	<div class="center">
+		<p>
+		&copy; 
+		2014-2018
+
+		
+			<a href="/blog/">Yuying Wu</a>
+		
+
+		&nbsp;|&nbsp;
+		<a href="https://github.com/YuyingWu"><i class="iconfont icon-github"></i> Github</a>&nbsp;|&nbsp;
+<a href="http://www.weibo.com/wuyuying1128"><i class="iconfont icon-weibo"></i> 微博</a>&nbsp;|&nbsp;
+<a href="http://www.douban.com/people/wuyuying1128/"><i class="iconfont icon-douban"></i>豆瓣</a>
+		</p>
+		<p>
+			京ICP备16019960号&nbsp;
+			Powered by 
+			<a href="https://hexo.io" target="_blank">Hexo</a>, using theme 
+			<a href="https://github.com/YuyingWu/hexo-theme-fresh" 
+				target="_blank">Fresh</a>
+		.</p>
+	</div>
+</footer>
+
+
+
+<script src="http://cdn1.lncld.net/static/js/2.1.4/av-min.js"></script>
+<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+<script src="http://cdn.bootcss.com/moment.js/2.18.1/moment.min.js"></script>
+<script src="/blog//build/js/comment.js"></script>
+
+
+<script src="//sinacloud.net/woodysblog/statics/lazyload.js"></script>
+<script>
+	new LazyLoad({
+		threshold: 600
+	});
+</script>
+<script src="/blog//dist/base.js"></script>
+</body>
+</html>

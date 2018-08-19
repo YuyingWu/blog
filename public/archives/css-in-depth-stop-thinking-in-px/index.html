@@ -91,7 +91,7 @@
 				<header>
 					<p><i class="iconfont icon-folder"></i>&nbsp;文章大纲</p>
 				</header>
-				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-em和rem"><span class="toc-number">1.</span> <span class="toc-text">2.2 em和rem</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-对font-size使用rem"><span class="toc-number">1.1.</span> <span class="toc-text">2.2.2 对font-size使用rem</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#可用性：对font-size使用相对长度单位"><span class="toc-number">1.1.1.</span> <span class="toc-text">可用性：对font-size使用相对长度单位</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-停止使用像素思维去思考"><span class="toc-number">2.</span> <span class="toc-text">2.3 停止使用像素思维去思考</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-设置一个合理的字号默认值"><span class="toc-number">2.1.</span> <span class="toc-text">2.3.1 设置一个合理的字号默认值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-让这个面板变得“响应式”"><span class="toc-number">2.2.</span> <span class="toc-text">2.3.3 让这个面板变得“响应式”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-调整单个组件的大小"><span class="toc-number">2.3.</span> <span class="toc-text">2.3.3 调整单个组件的大小</span></a></li></ol></li></ol>
+				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-em和rem"><span class="toc-number">1.</span> <span class="toc-text">2.2 em和rem</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-对font-size使用rem"><span class="toc-number">1.1.</span> <span class="toc-text">2.2.2 对font-size使用rem</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#可用性：对font-size使用相对长度单位"><span class="toc-number">1.1.1.</span> <span class="toc-text">可用性：对font-size使用相对长度单位</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-停止使用像素思维去思考"><span class="toc-number">2.</span> <span class="toc-text">2.3 停止使用像素思维去思考</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-设置一个合理的字号默认值"><span class="toc-number">2.1.</span> <span class="toc-text">2.3.1 设置一个合理的字号默认值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-让这个面板变得“响应式”"><span class="toc-number">2.2.</span> <span class="toc-text">2.3.2 让这个面板变得“响应式”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-调整单个组件的大小"><span class="toc-number">2.3.</span> <span class="toc-text">2.3.3 调整单个组件的大小</span></a></li></ol></li></ol>
 			</aside>
 			<p>前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章<a href="https://livebook.manning.com/#!/book/css-in-depth/chapter-2" target="_blank" rel="noopener">《Working with relative units》</a>，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 <a href="https://github.com/YuyingWu/blog/tree/dev/source/_posts" target="_blank" rel="noopener">Github PR</a> ^_^）</p>
 <p>《别说你懂CSS相对单位》系列译文：</p>
@@ -113,7 +113,7 @@
 </li>
 <li>2.3 停止使用像素思维去思考<ul>
 <li>2.3.1 设置一个合理的字号默认值</li>
-<li>2.3.3 让这个面板变得“响应式”</li>
+<li>2.3.2 让这个面板变得“响应式”</li>
 <li>2.3.3 调整单个组件的大小</li>
 </ul>
 </li>
@@ -177,7 +177,7 @@
 <p>这段代码给面板添加了一个细边框以及定义了标题的样式。我希望标题的字号小一点，但要加粗和全是大写。（你可以根据自己的设计，把字号改大点或者使用不同的排版方式）</p>
 <p>第二个选择器<code>&gt;</code>是一个直接后代组合选择符（direct descendant combinator），它代表的是<code>.panel</code>下的子元素<code>h2</code>。更完整的选择器和组合选择符的索引可以看附录A。</p>
 <p>在代码片段2.13中，为了更清晰看到效果，我给<code>body</code>添加了一个类<code>panel-body</code>，不过你会发现，在你自己的代码里是不需要的。因为这个元素从根元素上继承了字号大小，它已经是你想要看到的那样。</p>
-<h3 id="2-3-3-让这个面板变得“响应式”"><a href="#2-3-3-让这个面板变得“响应式”" class="headerlink" title="2.3.3 让这个面板变得“响应式”"></a>2.3.3 让这个面板变得“响应式”</h3><p>我们再更深入地看看这个问题。你可以根据屏幕尺寸的变化，添加媒体查询来改变基础字号大小，这可以令面板在不同尺寸的屏幕下，有不同的大小变化。（见图2.8）</p>
+<h3 id="2-3-2-让这个面板变得“响应式”"><a href="#2-3-2-让这个面板变得“响应式”" class="headerlink" title="2.3.2 让这个面板变得“响应式”"></a>2.3.2 让这个面板变得“响应式”</h3><p>我们再更深入地看看这个问题。你可以根据屏幕尺寸的变化，添加媒体查询来改变基础字号大小，这可以令面板在不同尺寸的屏幕下，有不同的大小变化。（见图2.8）</p>
 <p>[ 图 2.8 在不同屏幕大小的响应式面板：300px（左上角），800px（右上角），1440px（下面） ]</p>
 <p><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig08_alt.jpg" alt="&quot;图 2.8&quot;"></p>
 <blockquote>
@@ -200,7 +200,7 @@
 <p>[ 图 2.9 在一个页面上的普通尺寸面板和大号面板 ]</p>
 <p><img src="http://sinacloud.net/woodysblog/css-in-depth/02fig09_alt.jpg" alt="&quot;图 2.9&quot;"></p>
 <p>我们来对面板的字号声明方式做一些小的修改。你还是在使用相对单位，但需要调整它们的基准值。第一点，给每个面板的父元素字号大小的定义<code>font-size: 1rem</code>。这里指的是，不管在什么地方使用这个面板，每个面板的字号大小是一个确定值。</p>
-<p>第二点，使用rem重新声明标题的字号大小，而不使用em，这样标题就可以和刚才声明的父元素字号1rem关联起来。下面是对应的代码，更新下你的样式表代码吧。</p>
+<p>第二点，使用em重新声明标题的字号大小，而不使用rem，这样标题就可以和刚才声明的父元素字号1rem关联起来。下面是对应的代码，更新下你的样式表代码吧。</p>
 <p>[ 代码片段 2.16 创建一个面板的大号版本 ]</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.panel</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1rem</span>;               1</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#999</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">0.5em</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.panel</span> &gt; <span class="selector-tag">h2</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0.8em</span>;              2</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">  <span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
@@ -245,7 +245,7 @@
 </li>
 <li>2.3 停止使用像素思维去思考<ul>
 <li>2.3.1 设置一个合理的字号默认值</li>
-<li>2.3.3 让这个面板变得“响应式”</li>
+<li>2.3.2 让这个面板变得“响应式”</li>
 <li>2.3.3 调整单个组件的大小</li>
 </ul>
 </li>

@@ -111,7 +111,7 @@ restful:
     keywords: false
     categories: true
     tags: true
-  categories: true  # 分类数据
-  tags: true        # 标签数据
-  post: true        # 文章数据
+  categories: false  # 分类数据
+  tags: false        # 标签数据
+  post: false        # 文章数据
   pages: false      # 额外的 Hexo 页面数据, 如 About
