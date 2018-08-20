@@ -108,3 +108,89 @@ Graph（图）结构：
 
 * 0级：RootQueryType，属性`user`类型为`UserType`
 * 1级：`UserType`通过数据库中的`companyId`查询到`company`的数据，再返回到`UserType.company`
+
+## Query语法
+
+### 别名
+
+```
+{
+  apple: company(id: "1") {
+    id
+  }
+  google: compnay(id: "2") {
+    id
+  }
+}
+```
+
+请求了两次company，入参id分别为1和2，返回结果是：
+
+```
+{
+  data: {
+    apple: {
+      id: "1"
+    },
+    google: {
+      id: "2"
+    }
+  }
+}
+```
+
+### query fragment 查询片段
+
+有时候多个query会共享一些查询属性，如：
+
+```
+{
+  apple: company(id: "1") {
+    id
+    name
+    description
+  }
+  google: compnay(id: "2") {
+    id
+    name
+    description
+  }
+}
+```
+
+两个query查询一致的字段（`id`、`name`、`desciption`），加入需要修改，需要多处修改。这个时候，我们可以声明一段query fragment，维护这份公用的query字段。
+
+```
+{
+  apple: company(id: "1") {
+    ...companyFields
+  }
+  google: compnay(id: "2") {
+    ...companyFields
+  }
+}
+
+fragment companyFields on Company {
+  id
+  name
+  description
+}
+```
+
+划重点：
+
+1. 用关键字`fragment`声明查询片段`companyFields`；
+2. 关键字`on`后是GraphQLType`Company`，表明以下字段属于类型`Company`，GraphQL也会对这些字段作类型和是否存在的检查；
+3. 在query语句中，使用`...companyFields`。
+
+## 当GraphQL遇到前端
+
+![](http://sinacloud.net/woodysblog/img/graph-come-across-frontend.png)
+
+> DB -> Express/GraphQL Server -> GraphQL Client -> ReactJS
+
+其中，GraphQL Client担当了类似GraphiQL的角色，把query转化为HTTP请求。
+
+以下是几个GraphQL Client框架的介绍和对比。
+
+![](http://sinacloud.net/woodysblog/img/graphql-client.png)
