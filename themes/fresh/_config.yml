@@ -16,6 +16,6 @@ skip_render:
 - node_modules/*
 
 # GOOGLE ANALYTICS
-ga: UA-74424222-1
+ga: UA-74424222-3
 
 footer_info: 京ICP备16019960号
