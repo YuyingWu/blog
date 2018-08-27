@@ -9,6 +9,10 @@ date: 2015-04-23 00:35:45
 updateDate: 2017-04-02 15:13:02
 ---
 
+**2018.08.26**
+{% douban "https://book.douban.com/subject/26541801" %}
+{% douban "https://book.douban.com/subject/30292589/" %}
+
 **2017.04.02**
 1. jQuery -> Zepto
 2. fancybox -> magnific popup
