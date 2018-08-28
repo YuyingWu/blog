@@ -81,3 +81,18 @@ fatal: The remote end hung up unexpectedly
 // Solution
 git config http.postBuffer  524288000
 ```
+
+`问`：不同的SSH key给不同的站点使用
+`答`：在`.ssh`目录下，添加`config`文件，给对应的站点指定读对应的rsa文件
+
+```
+Host github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/github_rsa
+
+Host git.coding.net
+User wuyuying1128@163.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/coding_rsa
+```

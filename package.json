@@ -21,7 +21,7 @@
     "hexo-renderer-sass": "^0.3.2",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.2.0",
-    "hexo-tag-douban": "^1.0.2"
+    "hexo-tag-douban": "^1.0.3"
   },
   "scripts": {
     "start": "hexo s",
