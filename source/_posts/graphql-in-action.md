@@ -194,3 +194,121 @@ fragment companyFields on Company {
 以下是几个GraphQL Client框架的介绍和对比。
 
 ![](http://sinacloud.net/woodysblog/img/graphql-client.png)
+
+下面的demo以Apollo为例。
+
+### React应用接入Apollo
+
+1. 创建一个`Apollo Client`对象（与server端相关GraphQL配置关联）；
+2. 引入`react-apollo`，类似Redux，把从服务器端获取的GraphQL相关请求的返回数据打进react组件的props中。
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ApolloClient from 'apollo-client';
+import { ApolloProvider } from 'react-apollo';
+import App from './compenents/App';
+
+const client = new ApolloClient({});
+
+const Root = () => {
+  return (
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  )
+};
+
+ReactDOM.render(
+  <Root />,
+  document.querySelector('#root')
+);
+```
+
+### 在React组件中利用GraphQL查询数据
+
+> #### [graphql-tag](https://www.npmjs.com/package/graphql-tag)
+> 把GraphQL的query字符串转化成GraphQL的AST。  
+> #### [React Apollo](https://s3.amazonaws.com/apollo-docs-1.x/index.html)
+> 基于Apollo Client，在react应用中管理服务器端GraphQL的数据。
+
+#### 数据请求
+
+* 步骤一、引入了`graphql-tag`和`react-apollo`的`graphql`
+* 步骤二、查询songList数据的GraphQL query，在GraphiQL面板中调试query
+* 步骤三、给组件打入基于这段query的数据管理，`graphql(query)(SongList)`
+
+#### 数据返回
+
+Apollo帮我们做了请求和返回数据的事情，通过以上的连接，组件在加载时会基于那段query发一个请求，组件props的变化会有以下2个阶段。
+
+* 阶段一、请求发送开始。此时`this.props`的`data`就是Apollo更新的状态，其中有个`loading`字段，值为`true`，用于标记请求在发送中，但返回数据还没有回来。
+* 阶段二、接收到请求数据。此时`loading`的值是`false`，且多了`songs`字段（我们在query中定义的结构），我们就可以根据返回值做我们想做的事情。
+
+```js
+import React, { Component } from 'react';
+import gql from 'graphql-tag';
+import { graphql } from 'react-apollo';
+
+class SongList extends Component {
+  render() {
+    const { data = {} } = this.props;
+    const { loading, songs } = data;
+
+    return (
+      <div>
+        <h1>song List</h1>
+
+        <ul className="collection">
+          { !loading && songs.length ? songs.map(song => (
+            <li className="collection-item" key={`song-${song.id}`}>{ song.title }</li>
+          )) : <li>Loading...</li> }
+        </ul>
+      </div>
+    );
+  }
+}
+
+const query = gql`
+  query {
+    songs {
+      title
+      id
+    }
+  }
+`;
+
+export default graphql(query)(SongList);
+```
+
+### 当React遇上GraphQL mutation
+
+query可以跟着组件的生命周期走，但是mutation很多时候是在用户跟页面有交互时才触发的，应该怎么在事件的回调函数中加入GraphQL mutation呢？
+
+```js
+// 组件中的click提交函数
+onSubmit() {
+  const value = this.element.value;
+  const { mutate } = this.props;
+
+  mutate({
+    variables: { // 传给mutation的参数
+      title: value
+    }
+  }).then(() => {
+    // blah blah
+  });
+}
+
+const mutation = gql`
+  mutation addSong($title: String) {
+    addSong(title: $title) {
+      title
+    }
+  }
+`;
+```
+
+同样的，Apollo会在组件初始化时，把mutation函数传入this.props，以供后续的调用。
+
+值得注意的是，mutation一般是需要传入参数的，我们可以在声明mutation的字符串语句中，支持传入一个String类型的$title，在实际mutation函数中，继承这个变量。
