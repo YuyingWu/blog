@@ -3,15 +3,17 @@ title: GraphQL in Action
 tags:
   - GraphQL
 date: 2018-08-15 23:11:24
+updateDate: 2018-09-24 18:20:13
 ---
+## GraphQL解决什么问题
 
-## REST-ful Routing
+### REST-ful Routing
 
 Given a collection of records on a server, there should be a uniform URL and HTTP request method to utilize that collection of records.
 
 ![](http://sinacloud.net/woodysblog/img/restful-api.png)
 
-## GraphQL解决什么问题？
+### GraphQL是如何解决问题的
 
 ![](http://sinacloud.net/woodysblog/img/what-problem-GraphQL-solve.png)
 
@@ -180,26 +182,26 @@ fragment companyFields on Company {
 划重点：
 
 1. 用关键字`fragment`声明查询片段`companyFields`；
-2. 关键字`on`后是GraphQLType`Company`，表明以下字段属于类型`Company`，GraphQL也会对这些字段作类型和是否存在的检查；
+2. 关键字`on`后是GraphQLType`Company`，表明以下字段属于类型`Company`，GraphQL也会对这些字段作类型和是否存在的检查；
 3. 在query语句中，使用`...companyFields`。
 
-## 当GraphQL遇到前端
+## 当GraphQL遇到前端
 
 ![](http://sinacloud.net/woodysblog/img/graph-come-across-frontend.png)
 
-> DB -> Express/GraphQL Server -> GraphQL Client -> ReactJS
+> DB -> Express/GraphQL Server -> GraphQL Client -> ReactJS
 
 其中，GraphQL Client担当了类似GraphiQL的角色，把query转化为HTTP请求。
 
-以下是几个GraphQL Client框架的介绍和对比。
+以下是几个GraphQL Client框架的介绍和对比。
 
 ![](http://sinacloud.net/woodysblog/img/graphql-client.png)
 
 下面的demo以Apollo为例。
 
-### React应用接入Apollo
+### React应用接入Apollo
 
-1. 创建一个`Apollo Client`对象（与server端相关GraphQL配置关联）；
+1. 创建一个`Apollo Client`对象（与server端相关GraphQL配置关联）；
 2. 引入`react-apollo`，类似Redux，把从服务器端获取的GraphQL相关请求的返回数据打进react组件的props中。
 
 ```js
@@ -234,15 +236,15 @@ ReactDOM.render(
 
 #### 数据请求
 
-* 步骤一、引入了`graphql-tag`和`react-apollo`的`graphql`
+* 步骤一、引入了`graphql-tag`和`react-apollo`的`graphql`
 * 步骤二、查询songList数据的GraphQL query，在GraphiQL面板中调试query
 * 步骤三、给组件打入基于这段query的数据管理，`graphql(query)(SongList)`
 
-#### 数据返回
+#### 数据返回（query）
 
-Apollo帮我们做了请求和返回数据的事情，通过以上的连接，组件在加载时会基于那段query发一个请求，组件props的变化会有以下2个阶段。
+Apollo帮我们做了请求和返回数据的事情，通过以上的连接，组件在加载时会基于那段query发一个请求，组件props的变化会有以下2个阶段。
 
-* 阶段一、请求发送开始。此时`this.props`的`data`就是Apollo更新的状态，其中有个`loading`字段，值为`true`，用于标记请求在发送中，但返回数据还没有回来。
+* 阶段一、请求发送开始。此时`this.props`的`data`就是Apollo更新的状态，其中有个`loading`字段，值为`true`，用于标记请求在发送中，但返回数据还没有回来。
 * 阶段二、接收到请求数据。此时`loading`的值是`false`，且多了`songs`字段（我们在query中定义的结构），我们就可以根据返回值做我们想做的事情。
 
 ```js
@@ -281,9 +283,23 @@ const query = gql`
 export default graphql(query)(SongList);
 ```
 
+若query需要接收动态传入的参数，Apollo Clien支持对`query`传入`options`参数。
+
+```js
+export default graphql(query, {
+  options: props => {
+    return {
+      variables: {
+        songId: props.params.songId,
+      }
+    }
+  }
+})(Song);
+```
+
 ### 当React遇上GraphQL mutation
 
-query可以跟着组件的生命周期走，但是mutation很多时候是在用户跟页面有交互时才触发的，应该怎么在事件的回调函数中加入GraphQL mutation呢？
+query可以跟着组件的生命周期走，但是mutation很多时候是在用户跟页面有交互时才触发的，应该怎么在事件的回调函数中加入GraphQL mutation呢？
 
 ```js
 // 组件中的click提交函数
@@ -311,4 +327,23 @@ const mutation = gql`
 
 同样的，Apollo会在组件初始化时，把mutation函数传入this.props，以供后续的调用。
 
-值得注意的是，mutation一般是需要传入参数的，我们可以在声明mutation的字符串语句中，支持传入一个String类型的$title，在实际mutation函数中，继承这个变量。
+值得注意的是，mutation一般是需要传入参数的，我们可以在声明mutation的字符串语句中，支持传入一个String类型的$
+
+> Warm Cache in Apollo
+> 列表页中，query执行一次后，返回了当前的数据（共3条）到Apollo Store存储在`List`中。
+> 操作页中，当在别的component中对数据进行mutation后，服务器端的list数据多了一条（共4条）；
+> 回到列表页，Apollo不会re-fetch，在Apollo Store的`List`绑定的是前3条数据（已经请求过了），并不会重新发请求把服务器中新增的第4条更新到列表中。
+> 解决方式：在mutation后，refetch希望更新到最新数据的query。
+
+```js
+mutate({
+  variables: {
+    title: value
+  },
+  refetchQueries: [{
+    query: fetchSongQuery, // refetch指定的query
+  }]
+}).then(() => {
+  // callback
+});
+```
