@@ -10,6 +10,8 @@ tags:
 
 换句话说，**增长黑客就是一群以数据驱动营销、以市场指导产品，通过技术化手段贯彻增长目标的人**。
 
+{% douban "https://book.douban.com/subject/26541801" %}
+
 <!--more-->
 
 > 在每一封用Hotmail发出的邮件末尾签名处，增加了一行附言：“我爱你。快来Hotmail申请你的免费邮箱。”（PS:I love you.Get your free E-mail at Hotmail.）这一改动在仅仅几个小时之后，使Hotmail的用户注册曲线发生了戏剧性的变化，原本无人问津的服务，开始以每天3000个新用户的速度增长。
