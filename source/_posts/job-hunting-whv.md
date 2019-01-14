@@ -53,7 +53,6 @@ walk in Opotiki的三家packhouse（Eastpack、OPAC、Riverlock），反正最�
 我们花了一个多小时walk in，几乎全问了一遍，加上我们有repacking的经验（在一个领域有经验，后面找工作真的容易很多），最后Seeka和HUME都说要人，明天来签合同~Bingo！
 
 !["找工记录"](http://cdn.sinacloud.net/workingholiday/whv-job-hunting/jobList.jpg)  
-!["Seeka的合同"](http://cdn.sinacloud.net/workingholiday/whv-job-hunting/seekaContract.jpg)  
 
 看看我们的工作时间公告牌和工作环境（内容）吧~
 !["公告牌"](http://cdn.sinacloud.net/workingholiday/whv-job-hunting/seekaWorktime.JPG)  
