@@ -54,7 +54,7 @@ chsh -s /bin/zsh
 
 对于习惯使用windows的同学们，学习OS还是有点成本的，导致有的朋友把mac刷成windows了；
 
-在猩爷的带领下，学习[唠科](http://www.weibo.com/laotech?from=feed&amp;loc=nickname)大神的mac入门视频，有条理，入门很快，推荐一下[《深入浅出OS X》](http://v.youku.com/v_show/id_XNDk1NTA0OTU2.html?from=y1.2-1-105.3.10-2.1-1-1-9)
+学习[唠科](http://www.weibo.com/laotech?from=feed&amp;loc=nickname)大神的mac入门视频，有条理，入门很快，推荐一下[《深入浅出OS X》](http://v.youku.com/v_show/id_XNDk1NTA0OTU2.html?from=y1.2-1-105.3.10-2.1-1-1-9)
 
 期间也看过两本关于OS的书：
 
