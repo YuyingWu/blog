@@ -7,13 +7,6 @@ type: photo
 cover: http://sinacloud.net/woodysblog/taobao-maker-festival/entry-2.jpg
 ---
 
-<figure>
-<img alt="大门口"
-	src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg"
-    data-src="http://sinacloud.net/woodysblog/taobao-maker-festival/entry-1.jpg" />
-<figcaption>大门口</figcaption>
-</figure>
-
 2017淘宝造物节 —— 年轻就要造起来！
 
 我之前不知道有造物节，可能是因为我不在杭州，又或者媒体报道得也不多。今年的邀请函太吸引了，还有阿里内网、朋友圈、淘宝多个渠道以及各种公号的报道，尤其是黑科技浓浓的Tao Cafe无人便利店（我老爸都来问我知不知道这个店，宣传得太到位了），想不感兴趣都不行，拿到今天的票，就请假跑来“造”一下。
