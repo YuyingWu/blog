@@ -1,7 +1,7 @@
 # Yuying Wu's Blog
 
-## 技术文章列表
+## Tech Article List
 
-## 读书笔记
+## Reading Notes
 
-## 杂谈
+## Others

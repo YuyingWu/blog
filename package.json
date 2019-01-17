@@ -1,30 +1,65 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "blog-of-yuying-wu",
   "private": true,
-  "hexo": {
-    "version": "3.7.1"
+  "description": "Yuying Wu's Blog",
+  "version": "0.1.0",
+  "author": "Yuying Wu <wuyuying1128@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/YuyingWu/blog/issues"
   },
   "dependencies": {
-    "hexo": "^3.2.0",
-    "hexo-generator-archive": "^0.1.4",
-    "hexo-generator-baidu-sitemap": "^0.1.2",
-    "hexo-generator-category": "^0.1.3",
-    "hexo-generator-feed": "^1.2.2",
-    "hexo-generator-index-plus": "^1.0.0",
-    "hexo-generator-restful": "^0.2.3",
-    "hexo-generator-sitemap": "^1.2.0",
-    "hexo-generator-tag": "^0.2.0",
-    "hexo-pagination": "^0.1.0",
-    "hexo-renderer-ejs": "^0.3.1",
-    "hexo-renderer-marked": "^0.3.0",
-    "hexo-renderer-sass": "^0.3.2",
-    "hexo-renderer-stylus": "^0.3.3",
-    "hexo-server": "^0.2.0",
-    "hexo-tag-douban": "^1.0.4"
+    "gatsby": "^2.0.76",
+    "gatsby-image": "^2.0.22",
+    "gatsby-plugin-feed": "^2.0.8",
+    "gatsby-plugin-google-analytics": "^2.0.5",
+    "gatsby-plugin-manifest": "^2.0.5",
+    "gatsby-plugin-offline": "^2.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.0.6",
+    "gatsby-plugin-typography": "^2.2.0",
+    "gatsby-remark-copy-linked-files": "^2.0.5",
+    "gatsby-remark-images": "^2.0.4",
+    "gatsby-remark-prismjs": "^3.0.0",
+    "gatsby-remark-responsive-iframe": "^2.0.5",
+    "gatsby-remark-smartypants": "^2.0.5",
+    "gatsby-source-filesystem": "^2.0.2",
+    "gatsby-transformer-remark": "^2.1.6",
+    "gatsby-transformer-sharp": "^2.1.3",
+    "prismjs": "^1.15.0",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.13",
+    "typeface-merriweather": "0.0.43",
+    "typeface-montserrat": "0.0.43",
+    "typography": "^0.16.17",
+    "typography-theme-wordpress-2016": "^0.15.10"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.2"
+  },
+  "homepage": "https://github.com/YuyingWu/blog#readme",
+  "keywords": [
+    "gatsby",
+    "Yuying Wu",
+    "blog"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuyingWu/blog.git"
   },
   "scripts": {
-    "start": "hexo s",
-    "draft": "hexo s --draft"
+    "dev": "gatsby develop",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }
