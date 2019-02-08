@@ -8,7 +8,7 @@ type: photo
 cover: http://sinacloud.net/blog-image/mobile-camera-composition.jpeg
 ---
 
-> 下面篇幅的照片和配图，来自[《手机摄影，凭什么比相机还酷》](https://book.douban.com/subject/27186717/)（韩松、谭凌飞、张薇著）。
+> 注：下面属于读书笔记，部分内容以及文中的照片和配图，部分摘自[《手机摄影，凭什么比相机还酷》](https://book.douban.com/subject/27186717/)（韩松、谭凌飞、张薇著）。
 
 ## 1. 构图是什么
 
