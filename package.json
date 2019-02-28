@@ -1,5 +1,5 @@
 {
-  "name": "blog-of-yuying-wu",
+  "name": "wyy-gatsby",
   "private": true,
   "description": "Yuying Wu's Blog",
   "version": "0.1.0",
@@ -8,7 +8,7 @@
     "url": "https://github.com/YuyingWu/blog/issues"
   },
   "dependencies": {
-    "gatsby": "^2.0.76",
+    "gatsby": "^2.1.19",
     "gatsby-image": "^2.0.22",
     "gatsby-plugin-feed": "^2.0.8",
     "gatsby-plugin-google-analytics": "^2.0.5",
@@ -39,6 +39,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.14.2"
   },
   "homepage": "https://github.com/YuyingWu/blog#readme",
@@ -59,6 +60,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gatsby-master",
     "start": "npm run develop",
     "build": "gatsby build",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
