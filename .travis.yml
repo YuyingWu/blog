@@ -10,6 +10,8 @@ cache:
 install:
 - npm install
 script:
+- npm run build
+after_success:
 - cd ./public
 - git init
 - git config user.name "Yuying Wu"
@@ -17,8 +19,6 @@ script:
 - git add .
 - git commit -m "Update site"
 - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gatsby-output
-after_success:
-- echo -e "deploy success!!!"
 branches:
   only:
   - gatsby-master
