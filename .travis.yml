@@ -10,10 +10,13 @@ cache:
 install:
 - npm install
 script:
+- cd ./public
 - git init
-- git config --local  user.name "Yuying Wu"
-- git config --local  user.email "wuyuying1128@gmail.com"
-- npm run deploy
+- git config user.name "Yuying Wu"
+- git config user.email "wuyuying1128@gmail.com"
+- git add .
+- git commit -m "Update site"
+- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gatsby-output
 after_success:
 - echo -e "deploy success!!!"
 branches:
