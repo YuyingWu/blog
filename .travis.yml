@@ -10,6 +10,7 @@ cache:
 install:
 - npm install
 script:
+- git init
 - git config -–global user.name "Yuying Wu"
 - git config -–global user.email "wuyuying1128@gmail.com"
 - npm run deploy
