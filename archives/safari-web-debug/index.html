@@ -1,0 +1,244 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="">
+
+	
+<link rel="stylesheet" href="/blog//css/post.css">
+
+
+	<title>Safari调试无线页面 - 小伍</title>
+
+	<!--[if lte IE 8]>
+        <script>
+            (function(){
+                var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+                i=e.length;
+                while(i--){document.createElement(e[i])}
+             })();
+        </script>
+    <![endif]-->
+</head>
+<body class="page-post">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74424222-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-74424222-3');
+</script>
+
+
+<!--[if lte IE 8]>
+    <p class="browserupgrade">貌似你还在用<strong>低版本IE</strong>浏览器喔~ 为了更好的体验，去下载一个<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=chrome&rsv_pq=c275ed8c0000204b&rsv_t=b404%2BiFxvZfvn%2FqqBMyJKwHyShj%2FipQgL7TfJsGKrHxZhoWCUisbVukJsNw&rqlang=cn&rsv_enter=1&rsv_sug3=6&rsv_sug1=5&rsv_sug7=100&rsv_sug2=0&inputT=891&rsv_sug4=891" target="_blank">最新版Chrome</a>吧 ：）</p>
+<![endif]-->
+
+
+	<header>
+	<section class="u-clearfix header__container">
+		<nav class="grid-r header__nav--list">
+			
+				<a href="/blog/">Blog</a>
+			
+				<a href="/blog/archives/">Archive</a>
+			
+				<a href="/blog/about.html">About</a>
+			
+		</nav>
+
+		<h1 class="grid">
+			<a href="/">小伍</a>
+		</h1>
+	</section>
+</header><!-- /header -->
+
+
+<div id="content">
+	<div class="center">
+		<div class="main-col">
+			
+	
+	<article class="article article-detail post article-post">
+	<div class="post-content">
+		<header>
+			
+	
+		
+			<h1 class="title" data-role="articleTitle">Safari调试无线页面</h1>
+		
+	
+
+			<div class="post__meta">
+	<time datetime="2016-02-25T05:36:54.000Z">2016-02-25</time>
+
+	
+</div>
+			
+	<section class="post__meta">
+		<i class="iconfont icon-folder"></i>
+		<span>分类：</span>
+		
+			<a href="/blog/categories/tech/">tech</a>
+		
+	</section>
+
+		</header>
+
+		<div class="entry">
+			<aside class="wgt-toc">
+				<header>
+					<p><i class="iconfont icon-folder"></i>&nbsp;文章大纲</p>
+				</header>
+				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac-OS-Safari设置"><span class="toc-number">1.</span> <span class="toc-text">Mac OS Safari设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iPhone-iOS-Safari-设置："><span class="toc-number">2.</span> <span class="toc-text">iPhone iOS Safari 设置：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1"><span class="toc-number">2.1.</span> <span class="toc-text">Step 1:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2"><span class="toc-number">2.2.</span> <span class="toc-text">Step 2:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-3"><span class="toc-number">2.3.</span> <span class="toc-text">Step 3:</span></a></li></ol></li></ol>
+			</aside>
+			<p>进行无线开发时，很多时候会发现，有些bug是在电脑浏览器如chrome模拟时无法复现的，得在真机上调试。无奈手机浏览器没有PC的功能那么完善，不设断点很难调试，于是以前我会使用比较傻的方式是，用原生的alert输出我想得到的信息（人肉断点）。</p>
+<p>后来还是QA同学告诉我，可以用Safari连接mobile和PC，在PC Safari中打开调试界面，console设断点或者执行各种命令进行调试，在mobile Safari中浏览效果，非常方便，在这记录一下 :)</p>
+<a id="more"></a>
+<p>准备：</p>
+<ol>
+<li>一台Macbook</li>
+<li>一台iPhone</li>
+</ol>
+<p>没有mac和iPhone怎么破？没事，看看姐妹篇<a href="/archives/uc-web-debug/">《UC浏览器调试无线页面》</a></p>
+<hr>
+<h2 id="Mac-OS-Safari设置"><a href="#Mac-OS-Safari设置" class="headerlink" title="Mac OS Safari设置"></a>Mac OS Safari设置</h2><p>Safari - 偏好设置 - 高级 - 在菜单栏中显示“开发”菜单</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/safari-web-debug/1.png" alt="" title="OS Safari 设置"></p>
+<h2 id="iPhone-iOS-Safari-设置："><a href="#iPhone-iOS-Safari-设置：" class="headerlink" title="iPhone iOS Safari 设置："></a>iPhone iOS Safari 设置：</h2><p>设置 - Safari - 高级 - web检查器 - 打开</p>
+<p><a href="http://cdn.sinacloud.net/woodysblog/safari-web-debug/2.png" target="_blank" rel="noopener"><img src="http://cdn.sinacloud.net/woodysblog/safari-web-debug/2.png" alt="" title="iOS Safari 设置"></a></p>
+<hr>
+<p>okay，所有设置都好啦，接下来可以开始调试啦~~~</p>
+<h3 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1:"></a>Step 1:</h3><p>把手机连接到电脑上~</p>
+<h3 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2:"></a>Step 2:</h3><p>打开 Mac Safari</p>
+<h3 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3:"></a>Step 3:</h3><p>Mac Safari - 菜单“开发” - xxx’s iPhone （找到你连接的iPhone的名字） - 选择你要调试的页面</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/safari-web-debug/3.png" alt="" title="safari 菜单选择iPhone"></p>
+<p>选中调试页面后，Safari会自动打开一个调试窗口，在里面就可以开始查看各种元素和断点的设置等等，跟PC调试页面一样啦，很方便~</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/safari-web-debug/4.png" alt="" title="Safari web检查器"></p>
+<p>譬如在这，我在console命令行执行一个alert，手机屏幕上就会响应这个命令。</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/safari-web-debug/5.jpg" alt="" title="mobile Safari alert"></p>
+
+		</div>
+
+		<footer>
+			
+	<section class="post__meta post__tag">
+		
+			<a href="/blog/tags/tech/">tech</a>
+		
+			<a href="/blog/tags/web/">web</a>
+		
+			<a href="/blog/tags/mobile-deug/">mobile deug</a>
+		
+	</section>
+
+			<section class="post__meta">
+	<a href="/blog/donate.html" title="码字辛苦求打赏" class="u-clearfix wgt-shield">
+		<span class="title">Donate</span>
+		<span class="desc">￥￥￥</span>
+	</a>
+
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" 
+		title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议" class="u-clearfix wgt-shield">
+		<span class="title">License</span>
+		<span class="desc">CC BY-NC-SA</span>
+	</a>
+</section>
+		</footer>
+
+		
+			<section id="wgt-comment" class="wgt-comment" data-permalink="/archives/safari-web-debug/">
+	<div id="comment-list">
+		<article>暂无数据</article>
+	</div>
+
+	<form id="comment-form" class="comment__form">
+		<input type="text" 
+			name="author" 
+			class="comment--mb10 comment__contentAuthor" 
+			required 
+			max-length="15"
+			placeholder="这里输入你的名字" />
+		<input type="text" 
+			name="content" 
+			class="comment--mb10 comment__contentInput" 
+			required
+			max-length="150"
+			placeholder="这里输入评论内容" />
+		<input type="hidden" name="parentId" id="comment-reply-id" />
+		<!-- <label>
+			<span>Email: </span>
+			<input type="email" name="email">
+		</label>
+		<label>
+			<span>website: </span>
+			<input type="url" name="website">
+		</label> -->
+
+		<footer class="comment--clearfix comment--tRight" id="comment-form-footer">
+			<a id="comment-box-submit" class="comment--fontsizeMeta comment--colorAccent comment__submitReply">加上去</a>
+		</footer>
+	</form>
+</section>
+		
+	</div>
+</article>
+
+		</div>
+		
+	</div>
+</div>
+
+<link rel="stylesheet" href="/blog//build/css/iconfont_201704181501.css">
+
+
+	<footer class="wgt-footer" id="footer">
+	<div class="center">
+		<p>
+		&copy; 
+		2014-2019
+
+		
+			<a href="/blog/">Yuying Wu</a>
+		
+
+		&nbsp;|&nbsp;
+		<a href="https://github.com/YuyingWu"><i class="iconfont icon-github"></i> Github</a> | 
+<a href="http://wuyuying.com/blog/atom.xml" target="_blank">RSS</a>
+		</p>
+		<p>
+			京ICP备16019960号&nbsp;
+			Powered by 
+			<a href="https://hexo.io" target="_blank">Hexo</a>, using theme 
+			<a href="https://github.com/YuyingWu/hexo-theme-fresh" 
+				target="_blank">Fresh</a>
+		.</p>
+	</div>
+</footer>
+
+
+
+<script src="http://cdn1.lncld.net/static/js/2.1.4/av-min.js"></script>
+<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+<script src="http://cdn.bootcss.com/moment.js/2.18.1/moment.min.js"></script>
+<script src="/blog//build/js/comment.js"></script>
+
+
+<script src="//sinacloud.net/woodysblog/statics/lazyload.js"></script>
+<script>
+	new LazyLoad({
+		threshold: 600
+	});
+</script>
+<script src="/blog//dist/base.js"></script>
+</body>
+</html>

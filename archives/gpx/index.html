@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="">
+
+	
+<link rel="stylesheet" href="/blog//css/post.css">
+
+
+	<title>怎么把Moves数据（.gpx）导入到Google Map - 小伍</title>
+
+	<!--[if lte IE 8]>
+        <script>
+            (function(){
+                var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+                i=e.length;
+                while(i--){document.createElement(e[i])}
+             })();
+        </script>
+    <![endif]-->
+</head>
+<body class="page-post">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74424222-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-74424222-3');
+</script>
+
+
+<!--[if lte IE 8]>
+    <p class="browserupgrade">貌似你还在用<strong>低版本IE</strong>浏览器喔~ 为了更好的体验，去下载一个<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=chrome&rsv_pq=c275ed8c0000204b&rsv_t=b404%2BiFxvZfvn%2FqqBMyJKwHyShj%2FipQgL7TfJsGKrHxZhoWCUisbVukJsNw&rqlang=cn&rsv_enter=1&rsv_sug3=6&rsv_sug1=5&rsv_sug7=100&rsv_sug2=0&inputT=891&rsv_sug4=891" target="_blank">最新版Chrome</a>吧 ：）</p>
+<![endif]-->
+
+
+	<header>
+	<section class="u-clearfix header__container">
+		<nav class="grid-r header__nav--list">
+			
+				<a href="/blog/">Blog</a>
+			
+				<a href="/blog/archives/">Archive</a>
+			
+				<a href="/blog/about.html">About</a>
+			
+		</nav>
+
+		<h1 class="grid">
+			<a href="/">小伍</a>
+		</h1>
+	</section>
+</header><!-- /header -->
+
+
+<div id="content">
+	<div class="center">
+		<div class="main-col">
+			
+	
+	<article class="article article-detail post article-post">
+	<div class="post-content">
+		<header>
+			
+	
+		
+			<h1 class="title" data-role="articleTitle">怎么把Moves数据（.gpx）导入到Google Map</h1>
+		
+	
+
+			<div class="post__meta">
+	<time datetime="2016-11-19T12:06:18.000Z">2016-11-19</time>
+
+	
+</div>
+			
+		</header>
+
+		<div class="entry">
+			<aside class="wgt-toc">
+				<header>
+					<p><i class="iconfont icon-folder"></i>&nbsp;文章大纲</p>
+				</header>
+				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#从Moves导出定位数据-——-gpx文件"><span class="toc-number">1.</span> <span class="toc-text">从Moves导出定位数据 —— gpx文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在Google-Map创建自己的地图"><span class="toc-number">2.</span> <span class="toc-text">在Google Map创建自己的地图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#地图编辑"><span class="toc-number">3.</span> <span class="toc-text">地图编辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分享"><span class="toc-number">4.</span> <span class="toc-text">分享</span></a></li></ol>
+			</aside>
+			<p>装逼我们是认真的，论怎样高逼格的暴露自己的行踪~</p>
+<a id="more"></a>
+<p>所以本文的目标，说到底只是想暴露一下我的第一次9小时的雪山穿越~</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/8show.jpg" alt="&quot;Tongariro Alpine Crossing in Tongariro Nation Park&quot;"></p>
+<p>不打算介绍高逼格、记录行踪神器<a href="https://www.moves-app.com/" target="_blank" rel="noopener">Moves</a>和<a href="https://www.google.co.nz/maps/" target="_blank" rel="noopener">Google Map</a>了~所以本文只适合已经知道这些的盆友们。</p>
+<h2 id="从Moves导出定位数据-——-gpx文件"><a href="#从Moves导出定位数据-——-gpx文件" class="headerlink" title="从Moves导出定位数据 —— gpx文件"></a>从Moves导出定位数据 —— gpx文件</h2><ol>
+<li>进入Moves相关应用 —— Moves Export的页面</li>
+<li>点击”GET STARTED”获取Moves授权的PIN码</li>
+<li>PIN码页面上有授权提示啦，其实就是在手机上的Moves输入PIN码完成授权过程</li>
+<li>页面自动跳转，在Moves Export的菜单栏，选择”Your Storylines“，看到某天某个时间段的行踪了吧~</li>
+<li>选好日期，在右侧一堆按钮里选择绿色”GPX”，把GPX文件保存到本地。</li>
+</ol>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/1getGpx.jpg" alt=""></p>
+<h2 id="在Google-Map创建自己的地图"><a href="#在Google-Map创建自己的地图" class="headerlink" title="在Google Map创建自己的地图"></a>在Google Map创建自己的地图</h2><p>菜单 -&gt; 您的地点 -&gt; 地图 -&gt; 创建地图 -&gt; 导入GPX文件</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/2createMap.jpg" alt="&quot;创建地图&quot;"></p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/3import.jpg" alt="&quot;导入gpx数据&quot;"></p>
+<h2 id="地图编辑"><a href="#地图编辑" class="headerlink" title="地图编辑"></a>地图编辑</h2><p>1.新增标记、绘制线条、添加路线等</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/4create.jpg" alt=""></p>
+<p>2.图层数据编辑(重命名、编辑原始数据表、删除图层)</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/5layer.jpg" alt=""></p>
+<p>3.某个点的图标、定义编辑</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/6pointEdit.jpg" alt=""></p>
+<p>4.在编辑菜单拉到最下面的“基本地图”，是要选择你想怎样显示地图，包括默认视图、卫星、地形等等。本文例子的穿越高山主题，所以地图我选择了”地形”展示。</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/6map.jpg" alt=""></p>
+<h2 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h2><p>1.设置地图的访问权限：共享 - “私密” -&gt; “在网络公开”</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/7share1.jpg" alt="&quot;共享&quot;"></p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/7share2.jpg" alt="&quot;私密&quot;"></p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/7share3.jpg" alt="&quot;公开&quot;"></p>
+<p>2.分享</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/7share4.jpg" alt=""></p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/7share5.jpg" alt=""></p>
+<p>i. 图片（自行截图或打印）</p>
+<p><img src="http://cdn.sinacloud.net/woodysblog/gpx/8show.jpg" alt=""></p>
+<p>ii. 分享链接</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http<span class="variable">s:</span>//drive.google.<span class="keyword">com</span>/<span class="keyword">open</span>?id=<span class="number">1</span>O9TyJoQQ3lCV3lh9pAJkMoHYyiU&amp;usp=sharing</span><br></pre></td></tr></table></figure>
+<p>iii.嵌入到网站(具体以官方代码为准哈，此处为适应博客主题，iframe样式有调整过)</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe <span class="attribute">src</span>=<span class="string">"https://www.google.com/maps/d/u/0/embed?mid=1O9TyJoQQ3lCV3lh9pAJkMoHYyiU"</span> <span class="attribute">width</span>=<span class="string">"640"</span> <span class="attribute">height</span>=<span class="string">"480"</span>&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>下面是Google Map的iframe~可能没有翻墙会看不到 T_T</p>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1O9TyJoQQ3lCV3lh9pAJkMoHYyiU" width="100%" height="480"></iframe>
+
+		</div>
+
+		<footer>
+			
+	<section class="post__meta post__tag">
+		
+			<a href="/blog/tags/Google-Map/">Google Map</a>
+		
+			<a href="/blog/tags/gpx/">gpx</a>
+		
+	</section>
+
+			<section class="post__meta">
+	<a href="/blog/donate.html" title="码字辛苦求打赏" class="u-clearfix wgt-shield">
+		<span class="title">Donate</span>
+		<span class="desc">￥￥￥</span>
+	</a>
+
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" 
+		title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议" class="u-clearfix wgt-shield">
+		<span class="title">License</span>
+		<span class="desc">CC BY-NC-SA</span>
+	</a>
+</section>
+		</footer>
+
+		
+			<section id="wgt-comment" class="wgt-comment" data-permalink="/archives/gpx/">
+	<div id="comment-list">
+		<article>暂无数据</article>
+	</div>
+
+	<form id="comment-form" class="comment__form">
+		<input type="text" 
+			name="author" 
+			class="comment--mb10 comment__contentAuthor" 
+			required 
+			max-length="15"
+			placeholder="这里输入你的名字" />
+		<input type="text" 
+			name="content" 
+			class="comment--mb10 comment__contentInput" 
+			required
+			max-length="150"
+			placeholder="这里输入评论内容" />
+		<input type="hidden" name="parentId" id="comment-reply-id" />
+		<!-- <label>
+			<span>Email: </span>
+			<input type="email" name="email">
+		</label>
+		<label>
+			<span>website: </span>
+			<input type="url" name="website">
+		</label> -->
+
+		<footer class="comment--clearfix comment--tRight" id="comment-form-footer">
+			<a id="comment-box-submit" class="comment--fontsizeMeta comment--colorAccent comment__submitReply">加上去</a>
+		</footer>
+	</form>
+</section>
+		
+	</div>
+</article>
+
+		</div>
+		
+	</div>
+</div>
+
+<link rel="stylesheet" href="/blog//build/css/iconfont_201704181501.css">
+
+
+	<footer class="wgt-footer" id="footer">
+	<div class="center">
+		<p>
+		&copy; 
+		2014-2019
+
+		
+			<a href="/blog/">Yuying Wu</a>
+		
+
+		&nbsp;|&nbsp;
+		<a href="https://github.com/YuyingWu"><i class="iconfont icon-github"></i> Github</a> | 
+<a href="http://wuyuying.com/blog/atom.xml" target="_blank">RSS</a>
+		</p>
+		<p>
+			京ICP备16019960号&nbsp;
+			Powered by 
+			<a href="https://hexo.io" target="_blank">Hexo</a>, using theme 
+			<a href="https://github.com/YuyingWu/hexo-theme-fresh" 
+				target="_blank">Fresh</a>
+		.</p>
+	</div>
+</footer>
+
+
+
+<script src="http://cdn1.lncld.net/static/js/2.1.4/av-min.js"></script>
+<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+<script src="http://cdn.bootcss.com/moment.js/2.18.1/moment.min.js"></script>
+<script src="/blog//build/js/comment.js"></script>
+
+
+<script src="//sinacloud.net/woodysblog/statics/lazyload.js"></script>
+<script>
+	new LazyLoad({
+		threshold: 600
+	});
+</script>
+<script src="/blog//dist/base.js"></script>
+</body>
+</html>

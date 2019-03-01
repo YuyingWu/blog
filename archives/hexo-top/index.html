@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="">
+
+	
+<link rel="stylesheet" href="/blog//css/post.css">
+
+
+	<title>Hexo主题的置顶功能 - 小伍</title>
+
+	<!--[if lte IE 8]>
+        <script>
+            (function(){
+                var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+                i=e.length;
+                while(i--){document.createElement(e[i])}
+             })();
+        </script>
+    <![endif]-->
+</head>
+<body class="page-post">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74424222-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-74424222-3');
+</script>
+
+
+<!--[if lte IE 8]>
+    <p class="browserupgrade">貌似你还在用<strong>低版本IE</strong>浏览器喔~ 为了更好的体验，去下载一个<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=chrome&rsv_pq=c275ed8c0000204b&rsv_t=b404%2BiFxvZfvn%2FqqBMyJKwHyShj%2FipQgL7TfJsGKrHxZhoWCUisbVukJsNw&rqlang=cn&rsv_enter=1&rsv_sug3=6&rsv_sug1=5&rsv_sug7=100&rsv_sug2=0&inputT=891&rsv_sug4=891" target="_blank">最新版Chrome</a>吧 ：）</p>
+<![endif]-->
+
+
+	<header>
+	<section class="u-clearfix header__container">
+		<nav class="grid-r header__nav--list">
+			
+				<a href="/blog/">Blog</a>
+			
+				<a href="/blog/archives/">Archive</a>
+			
+				<a href="/blog/about.html">About</a>
+			
+		</nav>
+
+		<h1 class="grid">
+			<a href="/">小伍</a>
+		</h1>
+	</section>
+</header><!-- /header -->
+
+
+<div id="content">
+	<div class="center">
+		<div class="main-col">
+			
+	
+	<article class="article article-detail post article-post">
+	<div class="post-content">
+		<header>
+			
+	
+		
+			<h1 class="title" data-role="articleTitle">Hexo主题的置顶功能</h1>
+		
+	
+
+			<div class="post__meta">
+	<time datetime="2017-02-02T05:23:18.000Z">2017-02-02</time>
+
+	
+</div>
+			
+		</header>
+
+		<div class="entry">
+			<aside class="wgt-toc">
+				<header>
+					<p><i class="iconfont icon-folder"></i>&nbsp;文章大纲</p>
+				</header>
+				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、hexo-generator-index修改"><span class="toc-number">1.</span> <span class="toc-text">一、hexo-generator-index修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、日志配置"><span class="toc-number">2.</span> <span class="toc-text">二、日志配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、置顶文案-样式设定"><span class="toc-number">3.</span> <span class="toc-text">三、置顶文案/样式设定</span></a></li></ol>
+			</aside>
+			<p>忽然想要一个置顶功能，可惜原生的<code>hexo-generator-index</code>没有提供这样的方法，那只能自己搞一个了~</p>
+<a id="more"></a>
+<h2 id="一、hexo-generator-index修改"><a href="#一、hexo-generator-index修改" class="headerlink" title="一、hexo-generator-index修改"></a>一、hexo-generator-index修改</h2><p>Hexo排序编译组件，一般默认安装的，默认配置（按date排序）</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">index_generator:</span></span><br><span class="line"><span class="symbol">  per_page:</span> <span class="number">10</span></span><br><span class="line"><span class="symbol">  order_by:</span> -date</span><br></pre></td></tr></table></figure>
+<p>如果没有安装的话，可执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-index --save</span><br></pre></td></tr></table></figure>
+<p>在<code>node_modules/lib/generator.js</code>添加以下排序代码：</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">posts.data = posts.data.sort(function(a, b) &#123;</span><br><span class="line">  !a.<span class="built_in">top</span> &amp;&amp; (a.<span class="built_in">top</span> = <span class="number">0</span>);</span><br><span class="line">  !b.<span class="built_in">top</span> &amp;&amp; (b.<span class="built_in">top</span> = <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">  // 若<span class="built_in">top</span>值一样则按照文章日期降序排，否则按照<span class="built_in">top</span>值降序排</span><br><span class="line">  <span class="keyword">if</span>(a.<span class="built_in">top</span> == b.<span class="built_in">top</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> b.date - a.date; // </span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b.<span class="built_in">top</span> - a.<span class="built_in">top</span>; // </span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="二、日志配置"><a href="#二、日志配置" class="headerlink" title="二、日志配置"></a>二、日志配置</h2><p>在Front-matter添加top属性</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的2016</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">总结</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2017</span><span class="bullet">-01</span><span class="bullet">-20</span> <span class="number">00</span><span class="string">:11:18</span></span><br><span class="line"><span class="attr">top:</span> <span class="number">1</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、置顶文案-样式设定"><a href="#三、置顶文案-样式设定" class="headerlink" title="三、置顶文案/样式设定"></a>三、置顶文案/样式设定</h2><p><img src="http://cdn.sinacloud.net/woodysblog/articles/top.png" alt=""></p>
+<p>简单在日期边上加了个“置顶”的箭头~</p>
+<p>添加一个模板<code>theme/landscape/layout/_partial/post/top.ejs</code>，判断当前日志是否有top属性（<code>post.top</code>）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">post.top</span>)&#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-arrow-up article-top"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后在你想添加的位置，引用该模板组件</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">blah</span></span> blah ...</span><br><span class="line"></span><br><span class="line">&lt;%- partial(<span class="string">'post/top'</span>) %&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">blah</span></span> blah ...</span><br></pre></td></tr></table></figure>
+<p>Reference:<br><a href="http://www.netcan666.com" target="_blank" rel="noopener">Netcan</a>的<a href="http://www.netcan666.com/2015/11/22/解决Hexo置顶问题/" target="_blank" rel="noopener">《解决hexo置顶问题》</a></p>
+
+		</div>
+
+		<footer>
+			
+	<section class="post__meta post__tag">
+		
+			<a href="/blog/tags/blog/">blog</a>
+		
+			<a href="/blog/tags/theme/">theme</a>
+		
+	</section>
+
+			<section class="post__meta">
+	<a href="/blog/donate.html" title="码字辛苦求打赏" class="u-clearfix wgt-shield">
+		<span class="title">Donate</span>
+		<span class="desc">￥￥￥</span>
+	</a>
+
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" 
+		title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议" class="u-clearfix wgt-shield">
+		<span class="title">License</span>
+		<span class="desc">CC BY-NC-SA</span>
+	</a>
+</section>
+		</footer>
+
+		
+			<section id="wgt-comment" class="wgt-comment" data-permalink="/archives/hexo-top/">
+	<div id="comment-list">
+		<article>暂无数据</article>
+	</div>
+
+	<form id="comment-form" class="comment__form">
+		<input type="text" 
+			name="author" 
+			class="comment--mb10 comment__contentAuthor" 
+			required 
+			max-length="15"
+			placeholder="这里输入你的名字" />
+		<input type="text" 
+			name="content" 
+			class="comment--mb10 comment__contentInput" 
+			required
+			max-length="150"
+			placeholder="这里输入评论内容" />
+		<input type="hidden" name="parentId" id="comment-reply-id" />
+		<!-- <label>
+			<span>Email: </span>
+			<input type="email" name="email">
+		</label>
+		<label>
+			<span>website: </span>
+			<input type="url" name="website">
+		</label> -->
+
+		<footer class="comment--clearfix comment--tRight" id="comment-form-footer">
+			<a id="comment-box-submit" class="comment--fontsizeMeta comment--colorAccent comment__submitReply">加上去</a>
+		</footer>
+	</form>
+</section>
+		
+	</div>
+</article>
+
+		</div>
+		
+	</div>
+</div>
+
+<link rel="stylesheet" href="/blog//build/css/iconfont_201704181501.css">
+
+
+	<footer class="wgt-footer" id="footer">
+	<div class="center">
+		<p>
+		&copy; 
+		2014-2019
+
+		
+			<a href="/blog/">Yuying Wu</a>
+		
+
+		&nbsp;|&nbsp;
+		<a href="https://github.com/YuyingWu"><i class="iconfont icon-github"></i> Github</a> | 
+<a href="http://wuyuying.com/blog/atom.xml" target="_blank">RSS</a>
+		</p>
+		<p>
+			京ICP备16019960号&nbsp;
+			Powered by 
+			<a href="https://hexo.io" target="_blank">Hexo</a>, using theme 
+			<a href="https://github.com/YuyingWu/hexo-theme-fresh" 
+				target="_blank">Fresh</a>
+		.</p>
+	</div>
+</footer>
+
+
+
+<script src="http://cdn1.lncld.net/static/js/2.1.4/av-min.js"></script>
+<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+<script src="http://cdn.bootcss.com/moment.js/2.18.1/moment.min.js"></script>
+<script src="/blog//build/js/comment.js"></script>
+
+
+<script src="//sinacloud.net/woodysblog/statics/lazyload.js"></script>
+<script>
+	new LazyLoad({
+		threshold: 600
+	});
+</script>
+<script src="/blog//dist/base.js"></script>
+</body>
+</html>

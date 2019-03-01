@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="">
+
+	
+<link rel="stylesheet" href="/blog//css/post.css">
+
+
+	<title>《WEB界面设计》书摘：设计界面前来看一眼，UED很赞 - 小伍</title>
+
+	<!--[if lte IE 8]>
+        <script>
+            (function(){
+                var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+                i=e.length;
+                while(i--){document.createElement(e[i])}
+             })();
+        </script>
+    <![endif]-->
+</head>
+<body class="page-post">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74424222-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-74424222-3');
+</script>
+
+
+<!--[if lte IE 8]>
+    <p class="browserupgrade">貌似你还在用<strong>低版本IE</strong>浏览器喔~ 为了更好的体验，去下载一个<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=chrome&rsv_pq=c275ed8c0000204b&rsv_t=b404%2BiFxvZfvn%2FqqBMyJKwHyShj%2FipQgL7TfJsGKrHxZhoWCUisbVukJsNw&rqlang=cn&rsv_enter=1&rsv_sug3=6&rsv_sug1=5&rsv_sug7=100&rsv_sug2=0&inputT=891&rsv_sug4=891" target="_blank">最新版Chrome</a>吧 ：）</p>
+<![endif]-->
+
+
+	<header>
+	<section class="u-clearfix header__container">
+		<nav class="grid-r header__nav--list">
+			
+				<a href="/blog/">Blog</a>
+			
+				<a href="/blog/archives/">Archive</a>
+			
+				<a href="/blog/about.html">About</a>
+			
+		</nav>
+
+		<h1 class="grid">
+			<a href="/">小伍</a>
+		</h1>
+	</section>
+</header><!-- /header -->
+
+
+<div id="content">
+	<div class="center">
+		<div class="main-col">
+			
+	
+	<article class="article article-detail post article-post">
+	<div class="post-content">
+		<header>
+			
+	
+		
+			<h1 class="title" data-role="articleTitle">《WEB界面设计》书摘：设计界面前来看一眼，UED很赞</h1>
+		
+	
+
+			<div class="post__meta">
+	<time datetime="2012-10-30T09:00:16.000Z">2012-10-30</time>
+
+	
+</div>
+			
+		</header>
+
+		<div class="entry">
+			<aside class="wgt-toc">
+				<header>
+					<p><i class="iconfont icon-folder"></i>&nbsp;文章大纲</p>
+				</header>
+				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#交互设计模式"><span class="toc-number">1.</span> <span class="toc-text">交互设计模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#直截了当（哪里输出，就要允许在哪里输入）"><span class="toc-number">1.1.</span> <span class="toc-text">直截了当（哪里输出，就要允许在哪里输入）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简化交互"><span class="toc-number">1.2.</span> <span class="toc-text">简化交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#足不出户"><span class="toc-number">1.3.</span> <span class="toc-text">足不出户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提供邀请"><span class="toc-number">1.4.</span> <span class="toc-text">提供邀请</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用变换"><span class="toc-number">1.5.</span> <span class="toc-text">使用变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#即时反应"><span class="toc-number">1.6.</span> <span class="toc-text">即时反应</span></a></li></ol></li></ol>
+			</aside>
+			<h2 id="交互设计模式"><a href="#交互设计模式" class="headerlink" title="交互设计模式"></a>交互设计模式</h2><h3 id="直截了当（哪里输出，就要允许在哪里输入）"><a href="#直截了当（哪里输出，就要允许在哪里输入）" class="headerlink" title="直截了当（哪里输出，就要允许在哪里输入）"></a>直截了当（哪里输出，就要允许在哪里输入）</h3><p>example：flickr 图片名字编辑，单击图片名，即可更改，有 save OR cancel 支持</p>
+<pre><code>• 页内编辑（直接编辑内容：用户不会离开页面，在页面内直接编辑完成）
+        ○ 单字段行内编辑
+                § 易发现性
+                § 易访问性
+                § 易编辑性
+        ○ 多行字段内编辑
+        ○ 覆盖层编辑
+                § 满足更多、更复杂的编辑要求
+        ○ 表格编辑
+        ○ 群组编辑
+        ○ 模块配置
+        ○ Advice：
+                • 如果页面中有一个字段需要编辑，应该优先使用单字段行内编辑
+                • 对于多个字段或更复杂的编辑，可以使用多字段行内编辑
+                • 如果编辑时的上下文无关紧要，或者用户在编辑时应该全身关注，则使用覆盖层编辑
+                • 对于网格编辑，应该遵循表格编辑模式
+                • 在处理页面中的多个项时，群组编辑是平衡视觉干扰与易发现性的有效方案
+                • 如果想让用户直接配置模式，则应该使用模块配置模式
+• 利用拖放（使用鼠标直接移动对象）
+        ○ 用户怎么知道可以拖动？
+                • 页面加载
+                • 鼠标悬停
+                • 鼠标按下
+                • 拖动启动（通常标准是移动3px）
+                • 拖动离开原始位置
+                • 拖动重新进入原始位置
+                • 拖动进入有效目标
+                • 拖动退出有效目标
+                • 拖动进入无效目标
+                • 拖动进入非特定目标
+                • 拖动悬停于有效目标
+                • 拖动悬停于无效目标
+                • 放置被接受
+                • 放置被拒绝
+                • 放置在父容器上
+        ○ 拖放对象的目的是什么？（要达成最佳的拖动体验，应该通过被遮住模块的中心点位置来确定把被拖动模块放在何处）
+                • 拖放模块
+                        □ 占位符目标
+                        □ 中心点边界
+                        □ 全尺寸模块拖动
+                        □ 幻影呈现
+                • 拖放列表
+                • 拖放对象
+                        □ 插入目标来表示放置位置
+                        □ 对于父子关系，凸显父容器表明放置位置
+                        □ 对象被拖动3px或者鼠标按下超过0.5秒时启动拖动
+                        □ 与光标同步直接定位被拖动的对象
+                        □ 鼠标悬停在可以拖动的对象上时，要通过改变光标来表明可以拖动
+                • 拖放操作
+                        □ 提供backup方案，如果用户不拖放，怎么办
+                • 拖放集合
+        ○ 在哪里可以或不可以放置拖动的对象？
+        ○ 通过什么视觉元素来表示拖动能力？
+        ○ 拖动期间，怎样表示有效和无效的放置目标？
+        ○ 是否允许用户拖动实际的对象？
+        ○ 还是只允许用户拖动实际对象的幻影（ghost）？
+        ○ 还是拖动一个小缩略图？
+        ○ 整个拖动与放置期间，要对用户给出哪些视觉反馈？
+• 直接选择（通过操作直接选择对象）
+</code></pre><h3 id="简化交互"><a href="#简化交互" class="headerlink" title="简化交互"></a>简化交互</h3><h3 id="足不出户"><a href="#足不出户" class="headerlink" title="足不出户"></a>足不出户</h3><h3 id="提供邀请"><a href="#提供邀请" class="headerlink" title="提供邀请"></a>提供邀请</h3><pre><code>• 静态邀请
+        ○ 引导操作邀请
+        ○ 漫游探索邀请
+                • 对话框覆盖层引导
+</code></pre><h3 id="使用变换"><a href="#使用变换" class="headerlink" title="使用变换"></a>使用变换</h3><h3 id="即时反应"><a href="#即时反应" class="headerlink" title="即时反应"></a>即时反应</h3>
+		</div>
+
+		<footer>
+			
+	<section class="post__meta post__tag">
+		
+			<a href="/blog/tags/front-end/">front-end</a>
+		
+			<a href="/blog/tags/reading/">reading</a>
+		
+			<a href="/blog/tags/CSS/">CSS</a>
+		
+			<a href="/blog/tags/design/">design</a>
+		
+	</section>
+
+			<section class="post__meta">
+	<a href="/blog/donate.html" title="码字辛苦求打赏" class="u-clearfix wgt-shield">
+		<span class="title">Donate</span>
+		<span class="desc">￥￥￥</span>
+	</a>
+
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" 
+		title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议" class="u-clearfix wgt-shield">
+		<span class="title">License</span>
+		<span class="desc">CC BY-NC-SA</span>
+	</a>
+</section>
+		</footer>
+
+		
+			<section id="wgt-comment" class="wgt-comment" data-permalink="/archives/web-ui-design/">
+	<div id="comment-list">
+		<article>暂无数据</article>
+	</div>
+
+	<form id="comment-form" class="comment__form">
+		<input type="text" 
+			name="author" 
+			class="comment--mb10 comment__contentAuthor" 
+			required 
+			max-length="15"
+			placeholder="这里输入你的名字" />
+		<input type="text" 
+			name="content" 
+			class="comment--mb10 comment__contentInput" 
+			required
+			max-length="150"
+			placeholder="这里输入评论内容" />
+		<input type="hidden" name="parentId" id="comment-reply-id" />
+		<!-- <label>
+			<span>Email: </span>
+			<input type="email" name="email">
+		</label>
+		<label>
+			<span>website: </span>
+			<input type="url" name="website">
+		</label> -->
+
+		<footer class="comment--clearfix comment--tRight" id="comment-form-footer">
+			<a id="comment-box-submit" class="comment--fontsizeMeta comment--colorAccent comment__submitReply">加上去</a>
+		</footer>
+	</form>
+</section>
+		
+	</div>
+</article>
+
+		</div>
+		
+	</div>
+</div>
+
+<link rel="stylesheet" href="/blog//build/css/iconfont_201704181501.css">
+
+
+	<footer class="wgt-footer" id="footer">
+	<div class="center">
+		<p>
+		&copy; 
+		2014-2019
+
+		
+			<a href="/blog/">Yuying Wu</a>
+		
+
+		&nbsp;|&nbsp;
+		<a href="https://github.com/YuyingWu"><i class="iconfont icon-github"></i> Github</a> | 
+<a href="http://wuyuying.com/blog/atom.xml" target="_blank">RSS</a>
+		</p>
+		<p>
+			京ICP备16019960号&nbsp;
+			Powered by 
+			<a href="https://hexo.io" target="_blank">Hexo</a>, using theme 
+			<a href="https://github.com/YuyingWu/hexo-theme-fresh" 
+				target="_blank">Fresh</a>
+		.</p>
+	</div>
+</footer>
+
+
+
+<script src="http://cdn1.lncld.net/static/js/2.1.4/av-min.js"></script>
+<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+<script src="http://cdn.bootcss.com/moment.js/2.18.1/moment.min.js"></script>
+<script src="/blog//build/js/comment.js"></script>
+
+
+<script src="//sinacloud.net/woodysblog/statics/lazyload.js"></script>
+<script>
+	new LazyLoad({
+		threshold: 600
+	});
+</script>
+<script src="/blog//dist/base.js"></script>
+</body>
+</html>

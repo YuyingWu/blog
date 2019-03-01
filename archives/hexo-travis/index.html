@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="">
+
+	
+<link rel="stylesheet" href="/blog//css/post.css">
+
+
+	<title>开箱即用，Hexo博客的github+server自动部署 - 小伍</title>
+
+	<!--[if lte IE 8]>
+        <script>
+            (function(){
+                var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+                i=e.length;
+                while(i--){document.createElement(e[i])}
+             })();
+        </script>
+    <![endif]-->
+</head>
+<body class="page-post">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74424222-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-74424222-3');
+</script>
+
+
+<!--[if lte IE 8]>
+    <p class="browserupgrade">貌似你还在用<strong>低版本IE</strong>浏览器喔~ 为了更好的体验，去下载一个<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=chrome&rsv_pq=c275ed8c0000204b&rsv_t=b404%2BiFxvZfvn%2FqqBMyJKwHyShj%2FipQgL7TfJsGKrHxZhoWCUisbVukJsNw&rqlang=cn&rsv_enter=1&rsv_sug3=6&rsv_sug1=5&rsv_sug7=100&rsv_sug2=0&inputT=891&rsv_sug4=891" target="_blank">最新版Chrome</a>吧 ：）</p>
+<![endif]-->
+
+
+	<header>
+	<section class="u-clearfix header__container">
+		<nav class="grid-r header__nav--list">
+			
+				<a href="/blog/">Blog</a>
+			
+				<a href="/blog/archives/">Archive</a>
+			
+				<a href="/blog/about.html">About</a>
+			
+		</nav>
+
+		<h1 class="grid">
+			<a href="/">小伍</a>
+		</h1>
+	</section>
+</header><!-- /header -->
+
+
+<div id="content">
+	<div class="center">
+		<div class="main-col">
+			
+	
+	<article class="article article-detail post article-post">
+	<div class="post-content">
+		<header>
+			
+	
+		
+			<h1 class="title" data-role="articleTitle">开箱即用，Hexo博客的github+server自动部署</h1>
+		
+	
+
+			<div class="post__meta">
+	<time datetime="2018-05-26T06:35:18.000Z">2018-05-26</time>
+
+	
+</div>
+			
+		</header>
+
+		<div class="entry">
+			<aside class="wgt-toc">
+				<header>
+					<p><i class="iconfont icon-folder"></i>&nbsp;文章大纲</p>
+				</header>
+				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#闲聊日志的快捷发布"><span class="toc-number">1.</span> <span class="toc-text">闲聊日志的快捷发布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO的开发分支与生产分支"><span class="toc-number">2.</span> <span class="toc-text">HEXO的开发分支与生产分支</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#开发分支-dev"><span class="toc-number">2.1.</span> <span class="toc-text">开发分支 dev</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生产分支-gh-pages"><span class="toc-number">2.2.</span> <span class="toc-text">生产分支 gh-pages</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Travis-CI"><span class="toc-number">3.</span> <span class="toc-text">Travis CI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-编译并同步到gh-pages"><span class="toc-number">3.1.</span> <span class="toc-text">1. 编译并同步到gh-pages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-CI到我的服务器"><span class="toc-number">3.2.</span> <span class="toc-text">2. CI到我的服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文章"><span class="toc-number">4.</span> <span class="toc-text">参考文章</span></a></li></ol>
+			</aside>
+			<p><img src="http://lc-wpyqjumv.cn-n1.lcfile.com/9fb19e9b112f127c1adc.jpg" alt="&quot;Travis CI&quot;"></p>
+<p>用了一段时间HEXO搭建个人的博客，但每次发布文章，都需要打开电脑<code>hexo g</code>编译之后，再提交到服务器上，确实挺麻烦的，和小伙伴聊完他的日志发布方式之后，痛定思痛，<strong>快捷发布日志</strong>这个问题需要解决一下了！Travis CLI搞起来！</p>
+<h2 id="闲聊日志的快捷发布"><a href="#闲聊日志的快捷发布" class="headerlink" title="闲聊日志的快捷发布"></a>闲聊日志的快捷发布</h2><p>前几天，跟小伙伴Pipe一起参加个分享会，看到他做了笔记，结束后我说你发给我呀，他说直接看我博客（<a href="https://zhoukekestar.github.io/notes/2018/05/25/better-me.html" target="_blank" rel="noopener">《工作思维方式简记》</a>）呀！我的天，写完瞬间就发到站点去了！Pipe非常高产，去看看他的<a href="https://zhoukekestar.github.io/notes" target="_blank" rel="noopener">博客</a>，用“高产似母猪”来描述都不足为过，5月份还没有过完，发布了7篇日志。</p>
+<p>我问他，怎么做到那么高产？Pipe说，第一点是他的日志是碎片化的偏记录的，不一定要憋出大文章才发，然后就是博客系统要方便，随写随发。</p>
+<p>反观我的博客，更新频率真的很低，一方面是喜欢憋专题文章，拖着拖着，然后就没有然后了。另一方面也是发布确实麻烦，电脑编辑好markdown，还要执行各种命令，最后push到github和自己的服务器，文章才能被大家看到，一开始觉得还好蛮geek的，但后来确实由于这些门槛，有打击到那些随时来的写作思绪。</p>
+<p>By the way，Pipe用的是<code>jekyll</code>，跟github的持续集成是天生的，而HEXO没有这样的优势。从Hexo换到Jekyll吧，也不是很麻烦，但是我在Hexo生态做了一些东西，还是有点不舍哈。</p>
+<ul>
+<li><a href="https://github.com/YuyingWu/blog" target="_blank" rel="noopener">github blog</a>：我的博客分支</li>
+<li><a href="https://github.com/YuyingWu/hexo-generator-index-plus/blob/master/README.md" target="_blank" rel="noopener">hexo-generator-index-plus</a>：hexo小插件，首页排序生成器，和原生的index-generator比较显著的区别是加了置顶功能，可以在front-matter添加<code>top</code>属性即可。</li>
+<li><a href="https://github.com/YuyingWu/hexo-theme-fresh" target="_blank" rel="noopener">hexo-theme-fresh</a>：hexo博客主题，绿色小清新，Medium风格。</li>
+</ul>
+<p><img src="//lc-wpyqjumv.cn-n1.lcfile.com/3061dbf0241049f3b646.gif" alt="&quot;hexo-theme-fresh效果截屏&quot;"></p>
+<h2 id="HEXO的开发分支与生产分支"><a href="#HEXO的开发分支与生产分支" class="headerlink" title="HEXO的开发分支与生产分支"></a>HEXO的开发分支与生产分支</h2><p>仓库分成2个分支，主开发开支dev，以及生产环境的gh-pages分支。<br>查看博客可以通过访问<a href="https://yuyingwu.github.io/blog/" target="_blank" rel="noopener">github pages</a>，又或者直接访问我的域名 <a href="http://www.wuyuying.com/blog/archives/hexo-travis/" target="_blank" rel="noopener">wuyuying.com/blog</a>。</p>
+<h3 id="开发分支-dev"><a href="#开发分支-dev" class="headerlink" title="开发分支 dev"></a>开发分支 dev</h3><p>在我的博客里，开发分支是<code>dev</code>，目录结构就是一开始<code>hexo init</code>后的结构。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- scaffolds <span class="comment">// 页面的模板，包括草稿（draft.md）、页面（page.md）、文章（post.md）以及其他自定义模板</span></span><br><span class="line">- source <span class="comment">// 放页面和文章markdown文档</span></span><br><span class="line">- themes <span class="comment">// 博客主题</span></span><br><span class="line">- _config<span class="selector-class">.yml</span> <span class="comment">// 配置文件</span></span><br><span class="line">- package.json</span><br><span class="line">- <span class="selector-class">.travis</span><span class="selector-class">.yml</span> <span class="comment">// 持续集成服务travis的文件</span></span><br></pre></td></tr></table></figure>
+<p>本地开发流程一般是这样。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//</span> hexo server, 启动本地服务器，预览我的文章</span><br><span class="line">hexo s </span><br><span class="line"></span><br><span class="line"><span class="string">//</span> hexo generate，编译文章，把 `source` 里面的页面和文章编译成 `public` 里面的html文件</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"><span class="string">//</span> hexo <span class="keyword">deploy</span>，如果 _config.yml 有配置<span class="keyword">deploy</span>的内容，执行该命令是会执行相应的部署逻辑</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>HEXO的详细科普和指令在这里就不写了哈，官方文档里都有 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">&gt;&gt; 传送门</a>。</p>
+<h3 id="生产分支-gh-pages"><a href="#生产分支-gh-pages" class="headerlink" title="生产分支 gh-pages"></a>生产分支 gh-pages</h3><p>在<code>dev</code>分支里，执行了<code>hexo g</code>编译之后，编译后的静态文件会存在<code>public</code>文件夹里，而我们就把里面的内容挪到最终的生产环境分支<code>gh-pages</code>里，也就是最终我们看到的静态博客。</p>
+<p>当我们在github里把github-pages服务打开，并渲染<code>gh-pages</code>分支，我们就能访问自己的博客了（<a href="https://yuyingwu.github.io/blog/" target="_blank" rel="noopener">https://yuyingwu.github.io/blog/</a>）。</p>
+<p><img src="//lc-wpyqjumv.cn-n1.lcfile.com/d3ebf243ea2b0dfd9dd1.png" alt="&quot;看看我的博客&quot;"></p>
+<h2 id="Travis-CI"><a href="#Travis-CI" class="headerlink" title="Travis CI"></a>Travis CI</h2><p>在大致了解HEXO的开发流程之后，我们可以开始考虑，如果要实现快捷发布，是要做什么？<br><code>User Story</code>：<strong>希望可以在github上写一篇文章，提交之后，可以直接在我的线上博客看到</strong>。</p>
+<p>在这里，我们用到了提供持续集成（CI, Continuous Integration）服务的<a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI</a>，但其实用到的不是它提供的CI服务，而更多的是通过监听分支提交的动态，在集成成功后去执行我们自定义的部署逻辑。</p>
+<blockquote>
+<p>持续集成是一种软件开发实践，即团队开发成员经常集成他们的工作，通过每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试）来验证，从而尽早地发现集成错误。</p>
+</blockquote>
+<p>噢，还有些事前准备：</p>
+<ul>
+<li>先在<code>dev</code>分支里，创建<code>.travis.yml</code></li>
+<li>在<a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CLI</a>平台上打开这个分支的CI开关</li>
+</ul>
+<h3 id="1-编译并同步到gh-pages"><a href="#1-编译并同步到gh-pages" class="headerlink" title="1. 编译并同步到gh-pages"></a>1. 编译并同步到gh-pages</h3><p>那直接上我的CI配置代码吧。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br><span class="line"><span class="attr">node_js:</span> <span class="string">stable</span></span><br><span class="line"></span><br><span class="line"><span class="attr">addons:</span> <span class="comment"># Travis CI建议加的，自动更新api</span></span><br><span class="line"><span class="attr">  apt:</span></span><br><span class="line"><span class="attr">    update:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line"><span class="attr">  directories:</span> </span><br><span class="line"><span class="bullet">  -</span> <span class="string">node_modules</span> <span class="comment"># 缓存 node_modules</span></span><br><span class="line"></span><br><span class="line"><span class="attr">install:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">npm</span> <span class="string">install</span> <span class="comment"># 初次安装，在CI环境中，执行安装npm依赖</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># before_script: </span></span><br><span class="line"></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo</span> <span class="string">g</span> <span class="comment"># 执行 hexo generate，把文章编译到public中</span></span><br><span class="line"></span><br><span class="line"><span class="attr">after_success:</span> <span class="comment"># 执行script成功后，进入到public，把里面的代码提交到博客的gh-pages分支</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">cd</span> <span class="string">./public</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">git</span> <span class="string">init</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">git</span> <span class="string">config</span> <span class="string">user.name</span> <span class="string">"Yuying Wu"</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">git</span> <span class="string">config</span> <span class="string">user.email</span> <span class="string">"wuyuying1128@gmail.com"</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">git</span> <span class="string">add</span> <span class="string">.</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">git</span> <span class="string">commit</span> <span class="bullet">-m</span> <span class="string">"Update site"</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">git</span> <span class="string">push</span> <span class="bullet">--force</span> <span class="bullet">--quiet</span> <span class="string">"https://$&#123;GH_TOKEN&#125;@$&#123;GH_REF&#125;"</span> <span class="attr">master:gh-pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">branches:</span></span><br><span class="line"><span class="attr">  only:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">dev</span> <span class="comment"># CI 只针对分支 dev</span></span><br><span class="line"></span><br><span class="line"><span class="attr">env:</span></span><br><span class="line"><span class="attr">  global:</span> <span class="comment"># 全局变量，上面的提交到github的命令有用到</span></span><br><span class="line"><span class="attr">  - GH_REF:</span> <span class="string">github.com/YuyingWu/blog.git</span></span><br><span class="line"><span class="attr">  - secure:</span> </span><br><span class="line"><span class="comment"># secure是自动生成的，执行`travis encrypt 'GH_TOKEN=$&#123;your_github_personal_access_token&#125;' --add`</span></span><br></pre></td></tr></table></figure>
+<p>相信代码和注释写得很清楚了，有个地方需要进一步解释的，github提交那part，涉及github access token的生成和加密。</p>
+<ol>
+<li>生成github的<a href="https://github.com/settings/tokens" target="_blank" rel="noopener">Personal Access Tokens</a>（打开分支提交的权限）</li>
+<li>安装Travis CLI <code>gem install travis</code>（如果登录遇到环境问题，可以看看下面参考文章里面的解决方案）</li>
+<li>进入到本地<code>dev</code>目录下（带有<code>.travis.yml</code>），执行<code>travis login</code>登录，再执行<code>travis encrypt &#39;GH_TOKEN=${your_github_personal_access_token}&#39; --add</code>加密你的personal access token（也就是后来<code>.travis.yml</code>的<code>env.global.secure</code>的值）</li>
+</ol>
+<p>把<code>.travis.yml</code>提交之后，看看Travis CLI上，开始持续集成了哈。</p>
+<p><img src="//lc-wpyqjumv.cn-n1.lcfile.com/cbf00765c8f94a151965.png" alt="&quot;开始准备&quot;"><br><img src="//lc-wpyqjumv.cn-n1.lcfile.com/b82303e0f85deb2088ce.png" alt="&quot;after_success把代码部署到gh-pages&quot;"></p>
+<p>大功告成，集成之后，在github pages的页面上也能看到文章的更新。</p>
+<h3 id="2-CI到我的服务器"><a href="#2-CI到我的服务器" class="headerlink" title="2. CI到我的服务器"></a>2. CI到我的服务器</h3><p>我的服务器是DO家（Digital Ocean）的，那一开始服务器初始化的过程，大家可以参考各个server商提供的setup文档哈，总的来说，在本地有个服务器信任的<code>id_rsa</code>的ssh文件，我们是可以通过<code>ssh user@ip_address</code>登录到服务器的。</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这个命令会自动把 id_rsa 加密传送到 .git 指定的仓库对应的 travis 中去（在我本地这个文件叫qq_rsa，不是默认的id_rsa）</span></span><br><span class="line">travis <span class="built_in">encrypt</span>-<span class="built_in">file</span> ~/.ssh/id_rsa <span class="comment">--add</span></span><br></pre></td></tr></table></figure>
+<p>执行这个命令后，<code>.travis.yml</code>多了一行代码：（注意把其中的转义符<code>\</code>干掉哈），也会在分支目录下生成一个<code>id_rsa.enc</code>的加密文件，记得把这个文件也提交上去哟。</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">before_install:</span><br><span class="line">-<span class="ruby"> openssl aes-<span class="number">256</span>-cbc -K $encrypted_3cf6c1fd150f_key -iv $encrypted_3cf6c1fd150f_iv</span></span><br><span class="line"><span class="ruby">  -<span class="keyword">in</span> qq_rsa.enc -out ~<span class="regexp">/.ssh/id</span>_rsa -d</span></span><br></pre></td></tr></table></figure>
+<p>然后为了保证在Travis里面能正常执行，我们处理下运行环境的rsa文件权限和输出提示信息，before_install如下。</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">before_install:</span><br><span class="line">-<span class="ruby"> openssl aes-<span class="number">256</span>-cbc -K $encrypted_3cf6c1fd150f_key -iv $encrypted_3cf6c1fd150f_iv</span></span><br><span class="line"><span class="ruby">  -<span class="keyword">in</span> qq_rsa.enc -out ~<span class="regexp">/.ssh/id</span>_rsa -d</span></span><br><span class="line"><span class="ruby">- chmod <span class="number">600</span> ~<span class="regexp">/.ssh/id</span>_rsa</span></span><br><span class="line"><span class="ruby">- echo -e <span class="string">"Host 主机IP地址\n\tStrictHostKeyChecking no\n"</span> <span class="meta">&gt;&gt; </span>~<span class="regexp">/.ssh/config</span></span></span><br></pre></td></tr></table></figure>
+<p>最后，在<code>after_success</code>里添加<strong>拷贝目标文件到服务器目标目录</strong>的操作，就大功告成了！</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">after_success</span><br><span class="line"><span class="comment"># other actions</span></span><br><span class="line">- scp -o stricthostkeychecking=no -r ./* root<span class="variable">@138</span>.<span class="number">68.161</span>.<span class="number">48</span><span class="symbol">:/home/wyyNode/public/blog/</span></span><br></pre></td></tr></table></figure>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
+<li><a href="https://juejin.im/post/596e39916fb9a06baf2ed273" target="_blank" rel="noopener">如何快速搭建一个有域名且持续集成的hexo博客(2.0版)</a> - <a href="https://github.com/zytx121" target="_blank" rel="noopener">Eva-Yue</a></li>
+<li><a href="http://lotabout.me/2016/Hexo-Auto-Deploy-to-Github/" target="_blank" rel="noopener">Hexo 自动部署到 Github</a> - <a href="http://lotabout.me/" target="_blank" rel="noopener">三点水</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html" target="_blank" rel="noopener">持续集成服务 Travis CI 教程</a> - 阮一峰</li>
+<li><a href="https://github.com/travis-ci/travis.rb/issues/190" target="_blank" rel="noopener">“no implicit conversion of nil into String” when logging in</a> - 在执行<code>travis login</code>遇到的问题的解决方案</li>
+<li><a href="https://iamstarkov.com/deploy-gh-pages-from-travis/" target="_blank" rel="noopener">Deploy to GitHub pages from Travis CI</a></li>
+<li><a href="https://segmentfault.com/a/1190000009093621" target="_blank" rel="noopener">使用 Travis 将 GitHub 文件上传传至服务器</a> - <a href="https://github.com/Godi13" target="_blank" rel="noopener">Godi13</a></li>
+</ul>
+
+		</div>
+
+		<footer>
+			
+	<section class="post__meta post__tag">
+		
+			<a href="/blog/tags/blog/">blog</a>
+		
+			<a href="/blog/tags/travisCI/">travisCI</a>
+		
+			<a href="/blog/tags/CI/">CI</a>
+		
+			<a href="/blog/tags/hexo/">hexo</a>
+		
+	</section>
+
+			<section class="post__meta">
+	<a href="/blog/donate.html" title="码字辛苦求打赏" class="u-clearfix wgt-shield">
+		<span class="title">Donate</span>
+		<span class="desc">￥￥￥</span>
+	</a>
+
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" 
+		title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议" class="u-clearfix wgt-shield">
+		<span class="title">License</span>
+		<span class="desc">CC BY-NC-SA</span>
+	</a>
+</section>
+		</footer>
+
+		
+			<section id="wgt-comment" class="wgt-comment" data-permalink="/archives/hexo-travis/">
+	<div id="comment-list">
+		<article>暂无数据</article>
+	</div>
+
+	<form id="comment-form" class="comment__form">
+		<input type="text" 
+			name="author" 
+			class="comment--mb10 comment__contentAuthor" 
+			required 
+			max-length="15"
+			placeholder="这里输入你的名字" />
+		<input type="text" 
+			name="content" 
+			class="comment--mb10 comment__contentInput" 
+			required
+			max-length="150"
+			placeholder="这里输入评论内容" />
+		<input type="hidden" name="parentId" id="comment-reply-id" />
+		<!-- <label>
+			<span>Email: </span>
+			<input type="email" name="email">
+		</label>
+		<label>
+			<span>website: </span>
+			<input type="url" name="website">
+		</label> -->
+
+		<footer class="comment--clearfix comment--tRight" id="comment-form-footer">
+			<a id="comment-box-submit" class="comment--fontsizeMeta comment--colorAccent comment__submitReply">加上去</a>
+		</footer>
+	</form>
+</section>
+		
+	</div>
+</article>
+
+		</div>
+		
+	</div>
+</div>
+
+<link rel="stylesheet" href="/blog//build/css/iconfont_201704181501.css">
+
+
+	<footer class="wgt-footer" id="footer">
+	<div class="center">
+		<p>
+		&copy; 
+		2014-2019
+
+		
+			<a href="/blog/">Yuying Wu</a>
+		
+
+		&nbsp;|&nbsp;
+		<a href="https://github.com/YuyingWu"><i class="iconfont icon-github"></i> Github</a> | 
+<a href="http://wuyuying.com/blog/atom.xml" target="_blank">RSS</a>
+		</p>
+		<p>
+			京ICP备16019960号&nbsp;
+			Powered by 
+			<a href="https://hexo.io" target="_blank">Hexo</a>, using theme 
+			<a href="https://github.com/YuyingWu/hexo-theme-fresh" 
+				target="_blank">Fresh</a>
+		.</p>
+	</div>
+</footer>
+
+
+
+<script src="http://cdn1.lncld.net/static/js/2.1.4/av-min.js"></script>
+<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+<script src="http://cdn.bootcss.com/moment.js/2.18.1/moment.min.js"></script>
+<script src="/blog//build/js/comment.js"></script>
+
+
+<script src="//sinacloud.net/woodysblog/statics/lazyload.js"></script>
+<script>
+	new LazyLoad({
+		threshold: 600
+	});
+</script>
+<script src="/blog//dist/base.js"></script>
+</body>
+</html>

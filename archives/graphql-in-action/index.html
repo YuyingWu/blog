@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="">
+
+	
+<link rel="stylesheet" href="/blog//css/post.css">
+
+
+	<title>GraphQL in Action - 小伍</title>
+
+	<!--[if lte IE 8]>
+        <script>
+            (function(){
+                var e="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+                i=e.length;
+                while(i--){document.createElement(e[i])}
+             })();
+        </script>
+    <![endif]-->
+</head>
+<body class="page-post">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74424222-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-74424222-3');
+</script>
+
+
+<!--[if lte IE 8]>
+    <p class="browserupgrade">貌似你还在用<strong>低版本IE</strong>浏览器喔~ 为了更好的体验，去下载一个<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=chrome&rsv_pq=c275ed8c0000204b&rsv_t=b404%2BiFxvZfvn%2FqqBMyJKwHyShj%2FipQgL7TfJsGKrHxZhoWCUisbVukJsNw&rqlang=cn&rsv_enter=1&rsv_sug3=6&rsv_sug1=5&rsv_sug7=100&rsv_sug2=0&inputT=891&rsv_sug4=891" target="_blank">最新版Chrome</a>吧 ：）</p>
+<![endif]-->
+
+
+	<header>
+	<section class="u-clearfix header__container">
+		<nav class="grid-r header__nav--list">
+			
+				<a href="/blog/">Blog</a>
+			
+				<a href="/blog/archives/">Archive</a>
+			
+				<a href="/blog/about.html">About</a>
+			
+		</nav>
+
+		<h1 class="grid">
+			<a href="/">小伍</a>
+		</h1>
+	</section>
+</header><!-- /header -->
+
+
+<div id="content">
+	<div class="center">
+		<div class="main-col">
+			
+	
+	<article class="article article-detail post article-post">
+	<div class="post-content">
+		<header>
+			
+	
+		
+			<h1 class="title" data-role="articleTitle">GraphQL in Action</h1>
+		
+	
+
+			<div class="post__meta">
+	<time datetime="2018-08-15T15:11:24.000Z">2018-08-15</time>
+
+	
+</div>
+			
+		</header>
+
+		<div class="entry">
+			<aside class="wgt-toc">
+				<header>
+					<p><i class="iconfont icon-folder"></i>&nbsp;文章大纲</p>
+				</header>
+				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#GraphQL解决什么问题"><span class="toc-number">1.</span> <span class="toc-text">GraphQL解决什么问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#REST-ful-Routing"><span class="toc-number">1.1.</span> <span class="toc-text">REST-ful Routing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GraphQL是如何解决问题的"><span class="toc-number">1.2.</span> <span class="toc-text">GraphQL是如何解决问题的</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GraphQL服务器作为代理层"><span class="toc-number">2.</span> <span class="toc-text">GraphQL服务器作为代理层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#当数据库在自己的服务器"><span class="toc-number">2.1.</span> <span class="toc-text">当数据库在自己的服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#当我们使用第三方数据源"><span class="toc-number">2.2.</span> <span class="toc-text">当我们使用第三方数据源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#中间层：Express-GraphQL-Server"><span class="toc-number">2.3.</span> <span class="toc-text">中间层：Express/GraphQL Server</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么情况下，我们需要Resolver"><span class="toc-number">3.</span> <span class="toc-text">什么情况下，我们需要Resolver</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DB-model和GraphQL的设计差异"><span class="toc-number">4.</span> <span class="toc-text">DB model和GraphQL的设计差异</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Query语法"><span class="toc-number">5.</span> <span class="toc-text">Query语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#别名"><span class="toc-number">5.1.</span> <span class="toc-text">别名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#query-fragment-查询片段"><span class="toc-number">5.2.</span> <span class="toc-text">query fragment 查询片段</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#当GraphQL遇到前端"><span class="toc-number">6.</span> <span class="toc-text">当GraphQL遇到前端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#React应用接入Apollo"><span class="toc-number">6.1.</span> <span class="toc-text">React应用接入Apollo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在React组件中利用GraphQL查询数据"><span class="toc-number">6.2.</span> <span class="toc-text">在React组件中利用GraphQL查询数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#graphql-tag"><span class="toc-number">6.2.1.</span> <span class="toc-text">graphql-tag</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#React-Apollo"><span class="toc-number">6.2.2.</span> <span class="toc-text">React Apollo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据请求"><span class="toc-number">6.2.3.</span> <span class="toc-text">数据请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据返回（query）"><span class="toc-number">6.2.4.</span> <span class="toc-text">数据返回（query）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#当React遇上GraphQL-mutation"><span class="toc-number">6.3.</span> <span class="toc-text">当React遇上GraphQL mutation</span></a></li></ol></li></ol>
+			</aside>
+			<h2 id="GraphQL解决什么问题"><a href="#GraphQL解决什么问题" class="headerlink" title="GraphQL解决什么问题"></a>GraphQL解决什么问题</h2><h3 id="REST-ful-Routing"><a href="#REST-ful-Routing" class="headerlink" title="REST-ful Routing"></a>REST-ful Routing</h3><p>Given a collection of records on a server, there should be a uniform URL and HTTP request method to utilize that collection of records.</p>
+<p><img src="http://sinacloud.net/woodysblog/img/restful-api.png" alt=""></p>
+<h3 id="GraphQL是如何解决问题的"><a href="#GraphQL是如何解决问题的" class="headerlink" title="GraphQL是如何解决问题的"></a>GraphQL是如何解决问题的</h3><p><img src="http://sinacloud.net/woodysblog/img/what-problem-GraphQL-solve.png" alt=""></p>
+<p>在REST-ful API中，我们会一层一层地定义路由，但假如出现上图的多层结构，我们希望：</p>
+<ul>
+<li>查询“当前用户的所有朋友的公司名” <ul>
+<li>利用当前用户查询朋友的userId，再用每个人的userId查询company <code>users/currentUserID/friends</code> -&gt; <code>users/friendUserID/company</code></li>
+<li><code>users/currentUserID/friends/companies</code> </li>
+</ul>
+</li>
+<li>获取”当前用户的所有朋友的公司名+位置“<ul>
+<li><code>users/currentUserID/friends_with_position_and_company</code></li>
+</ul>
+</li>
+</ul>
+<p>有可能需要提供3个或更多不同的路由。</p>
+<p>若是层级嵌套或组合更多，REST-ful的路由规则会越来越多和复杂，GraphQL就是解决这类问题的利器。</p>
+<p><img src="http://sinacloud.net/woodysblog/img/graph.png" alt=""></p>
+<p>Graph（图）表达了节点和节点间的Edges（路径）。</p>
+<p>同样地要实现”获取当前用户的所有朋友的公司名+位置“，我们会这样告诉GraphQL：</p>
+<ol>
+<li>查询<code>userID</code>为<code>N</code>的当前用户<code>WYY</code></li>
+<li>查询所有朋友为<code>WYY</code>的用户数组<code>X</code></li>
+<li>查询每个<code>X</code>下的<code>company</code>和<code>position</code></li>
+</ol>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">query&#123;</span><br><span class="line">  user(id: <span class="string">"N"</span>) &#123;</span><br><span class="line">    friends &#123;</span><br><span class="line">      company &#123;</span><br><span class="line">        name</span><br><span class="line">      &#125;</span><br><span class="line">      position &#123;</span><br><span class="line">        address</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="GraphQL服务器作为代理层"><a href="#GraphQL服务器作为代理层" class="headerlink" title="GraphQL服务器作为代理层"></a>GraphQL服务器作为代理层</h2><h3 id="当数据库在自己的服务器"><a href="#当数据库在自己的服务器" class="headerlink" title="当数据库在自己的服务器"></a>当数据库在自己的服务器</h3><p><img src="http://sinacloud.net/woodysblog/img/graphql-as-proxy-1.png" alt=""></p>
+<h3 id="当我们使用第三方数据源"><a href="#当我们使用第三方数据源" class="headerlink" title="当我们使用第三方数据源"></a>当我们使用第三方数据源</h3><p><img src="http://sinacloud.net/woodysblog/img/graphql-as-proxy-2.png" alt=""></p>
+<h3 id="中间层：Express-GraphQL-Server"><a href="#中间层：Express-GraphQL-Server" class="headerlink" title="中间层：Express/GraphQL Server"></a>中间层：Express/GraphQL Server</h3><p>当我们的服务需要结合本地数据源和第三方数据源时，可以通过Express/GraphQL服务器统一处理数据源的聚合和结构抹平，再把api提供给前端应用使用。</p>
+<h2 id="什么情况下，我们需要Resolver"><a href="#什么情况下，我们需要Resolver" class="headerlink" title="什么情况下，我们需要Resolver"></a>什么情况下，我们需要Resolver</h2><p><img src="http://sinacloud.net/woodysblog/img/what-resolver-does.png" alt=""></p>
+<p>如上图，当数据库的model设计的字段<code>companyId</code>，和GraphQL的query需要获取的字段<code>companyName</code>不一致时，需要在GraphQLType定义字段<code>companyName</code>中添加对应的resolver，以入参<code>companyId</code>查询数据库中对应的项，再return对应<code>companyName</code>。</p>
+<p>也就是说，当数据库model和GraphQL对象的字段对应不上，返回数据和入参需要特别处理时，<code>resolver</code>来完成这样的工作。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const <span class="type">UserType</span> = <span class="keyword">new</span> <span class="type">GraphQLObjectType</span>(&#123;</span><br><span class="line">  name: <span class="symbol">'Use</span>r',</span><br><span class="line">  fields: () =&gt; (&#123;</span><br><span class="line">    id: &#123; <span class="class"><span class="keyword">type</span></span>: <span class="type">GraphQLID</span> &#125;,</span><br><span class="line">    firstName: &#123; <span class="class"><span class="keyword">type</span></span>: <span class="type">GraphQLString</span> &#125;,</span><br><span class="line">    age: &#123; <span class="class"><span class="keyword">type</span></span>: <span class="type">GraphQLInt</span> &#125;,</span><br><span class="line">    company: &#123;</span><br><span class="line">      <span class="class"><span class="keyword">type</span></span>: <span class="keyword">new</span> <span class="type">GraphQLList</span>(<span class="type">CompanyType</span>),</span><br><span class="line">      resolve(parent, args) &#123;</span><br><span class="line">        <span class="comment">// code to get data from db / other source</span></span><br><span class="line">        <span class="comment">// args.id</span></span><br><span class="line">        <span class="keyword">return</span> <span class="type">CompanyDBModel</span>.find(&#123;</span><br><span class="line">          companyId: parent.companyId</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="DB-model和GraphQL的设计差异"><a href="#DB-model和GraphQL的设计差异" class="headerlink" title="DB model和GraphQL的设计差异"></a>DB model和GraphQL的设计差异</h2><p><img src="http://sinacloud.net/woodysblog/img/model-in-reality.png" alt=""></p>
+<p>数据库中的表结构：<br><code>User</code>的属性<code>companyId</code>，关联着<code>Company</code>的<code>id</code>属性。</p>
+<p><img src="http://sinacloud.net/woodysblog/img/query-in-graphql.png" alt=""></p>
+<p>Graph（图）结构：  </p>
+<ul>
+<li>0级：RootQueryType，属性<code>user</code>类型为<code>UserType</code></li>
+<li>1级：<code>UserType</code>通过数据库中的<code>companyId</code>查询到<code>company</code>的数据，再返回到<code>UserType.company</code></li>
+</ul>
+<h2 id="Query语法"><a href="#Query语法" class="headerlink" title="Query语法"></a>Query语法</h2><h3 id="别名"><a href="#别名" class="headerlink" title="别名"></a>别名</h3><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  apple: company(<span class="name">id:</span> <span class="string">"1"</span>) &#123;</span><br><span class="line">    id</span><br><span class="line">  &#125;</span><br><span class="line">  google: compnay(<span class="name">id:</span> <span class="string">"2"</span>) &#123;</span><br><span class="line">    id</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>请求了两次company，入参id分别为1和2，返回结果是：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attribute">data</span>: &#123;</span><br><span class="line">    apple: &#123;</span><br><span class="line">      id: <span class="string">"1"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="selector-tag">google</span>: &#123;</span><br><span class="line">      <span class="attribute">id</span>: <span class="string">"2"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="query-fragment-查询片段"><a href="#query-fragment-查询片段" class="headerlink" title="query fragment 查询片段"></a>query fragment 查询片段</h3><p>有时候多个query会共享一些查询属性，如：</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  apple: company(<span class="name">id:</span> <span class="string">"1"</span>) &#123;</span><br><span class="line">    id</span><br><span class="line">    name</span><br><span class="line">    description</span><br><span class="line">  &#125;</span><br><span class="line">  google: compnay(<span class="name">id:</span> <span class="string">"2"</span>) &#123;</span><br><span class="line">    id</span><br><span class="line">    name</span><br><span class="line">    description</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>两个query查询一致的字段（<code>id</code>、<code>name</code>、<code>desciption</code>），加入需要修改，需要多处修改。这个时候，我们可以声明一段query fragment，维护这份公用的query字段。</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  apple: company(<span class="built_in">id</span>: <span class="string">"1"</span>) &#123;</span><br><span class="line">    ...companyFields</span><br><span class="line">  &#125;</span><br><span class="line">  google: compnay(<span class="built_in">id</span>: <span class="string">"2"</span>) &#123;</span><br><span class="line">    ...companyFields</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fragment companyFields <span class="keyword">on</span> Company &#123;</span><br><span class="line">  <span class="built_in">id</span></span><br><span class="line">  <span class="built_in">name</span></span><br><span class="line">  description</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>划重点：</p>
+<ol>
+<li>用关键字<code>fragment</code>声明查询片段<code>companyFields</code>；</li>
+<li>关键字<code>on</code>后是GraphQLType<code>Company</code>，表明以下字段属于类型<code>Company</code>，GraphQL也会对这些字段作类型和是否存在的检查；</li>
+<li>在query语句中，使用<code>...companyFields</code>。</li>
+</ol>
+<h2 id="当GraphQL遇到前端"><a href="#当GraphQL遇到前端" class="headerlink" title="当GraphQL遇到前端"></a>当GraphQL遇到前端</h2><p><img src="http://sinacloud.net/woodysblog/img/graph-come-across-frontend.png" alt=""></p>
+<blockquote>
+<p>DB -&gt; Express/GraphQL Server -&gt; GraphQL Client -&gt; ReactJS</p>
+</blockquote>
+<p>其中，GraphQL Client担当了类似GraphiQL的角色，把query转化为HTTP请求。</p>
+<p>以下是几个GraphQL Client框架的介绍和对比。</p>
+<p><img src="http://sinacloud.net/woodysblog/img/graphql-client.png" alt=""></p>
+<p>下面的demo以Apollo为例。</p>
+<h3 id="React应用接入Apollo"><a href="#React应用接入Apollo" class="headerlink" title="React应用接入Apollo"></a>React应用接入Apollo</h3><ol>
+<li>创建一个<code>Apollo Client</code>对象（与server端相关GraphQL配置关联）；</li>
+<li>引入<code>react-apollo</code>，类似Redux，把从服务器端获取的GraphQL相关请求的返回数据打进react组件的props中。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"><span class="keyword">import</span> ApolloClient <span class="keyword">from</span> <span class="string">'apollo-client'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; ApolloProvider &#125; <span class="keyword">from</span> <span class="string">'react-apollo'</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./compenents/App'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> client = <span class="keyword">new</span> ApolloClient(&#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Root = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;ApolloProvider client=&#123;client&#125;&gt;</span><br><span class="line">      &lt;App /&gt;</span><br><span class="line">    &lt;<span class="regexp">/ApolloProvider&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">ReactDOM.render(</span></span><br><span class="line"><span class="regexp">  &lt;Root /</span>&gt;,</span><br><span class="line">  <span class="built_in">document</span>.querySelector(<span class="string">'#root'</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h3 id="在React组件中利用GraphQL查询数据"><a href="#在React组件中利用GraphQL查询数据" class="headerlink" title="在React组件中利用GraphQL查询数据"></a>在React组件中利用GraphQL查询数据</h3><blockquote>
+<h4 id="graphql-tag"><a href="#graphql-tag" class="headerlink" title="graphql-tag"></a><a href="https://www.npmjs.com/package/graphql-tag" target="_blank" rel="noopener">graphql-tag</a></h4><p>把GraphQL的query字符串转化成GraphQL的AST。  </p>
+<h4 id="React-Apollo"><a href="#React-Apollo" class="headerlink" title="React Apollo"></a><a href="https://s3.amazonaws.com/apollo-docs-1.x/index.html" target="_blank" rel="noopener">React Apollo</a></h4><p>基于Apollo Client，在react应用中管理服务器端GraphQL的数据。</p>
+</blockquote>
+<h4 id="数据请求"><a href="#数据请求" class="headerlink" title="数据请求"></a>数据请求</h4><ul>
+<li>步骤一、引入了<code>graphql-tag</code>和<code>react-apollo</code>的<code>graphql</code></li>
+<li>步骤二、查询songList数据的GraphQL query，在GraphiQL面板中调试query</li>
+<li>步骤三、给组件打入基于这段query的数据管理，<code>graphql(query)(SongList)</code></li>
+</ul>
+<h4 id="数据返回（query）"><a href="#数据返回（query）" class="headerlink" title="数据返回（query）"></a>数据返回（query）</h4><p>Apollo帮我们做了请求和返回数据的事情，通过以上的连接，组件在加载时会基于那段query发一个请求，组件props的变化会有以下2个阶段。</p>
+<ul>
+<li>阶段一、请求发送开始。此时<code>this.props</code>的<code>data</code>就是Apollo更新的状态，其中有个<code>loading</code>字段，值为<code>true</code>，用于标记请求在发送中，但返回数据还没有回来。</li>
+<li>阶段二、接收到请求数据。此时<code>loading</code>的值是<code>false</code>，且多了<code>songs</code>字段（我们在query中定义的结构），我们就可以根据返回值做我们想做的事情。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> gql <span class="keyword">from</span> <span class="string">'graphql-tag'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; graphql &#125; <span class="keyword">from</span> <span class="string">'react-apollo'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SongList</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; data = &#123;&#125; &#125; = <span class="keyword">this</span>.props;</span><br><span class="line">    <span class="keyword">const</span> &#123; loading, songs &#125; = data;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;song List&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">        &lt;ul className="collection"&gt;</span></span><br><span class="line"><span class="regexp">          &#123; !loading &amp;&amp; songs.length ? songs.map(song =&gt; (</span></span><br><span class="line"><span class="regexp">            &lt;li className="collection-item" key=&#123;`song-$&#123;song.id&#125;`&#125;&gt;&#123; song.title &#125;&lt;/</span>li&gt;</span><br><span class="line">          )) : <span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span> &#125;</span><br><span class="line">        &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> query = gql<span class="string">`</span></span><br><span class="line"><span class="string">  query &#123;</span></span><br><span class="line"><span class="string">    songs &#123;</span></span><br><span class="line"><span class="string">      title</span></span><br><span class="line"><span class="string">      id</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> graphql(query)(SongList);</span><br></pre></td></tr></table></figure>
+<p>若query需要接收动态传入的参数，Apollo Clien支持对<code>query</code>传入<code>options</code>参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> graphql(query, &#123;</span><br><span class="line">  options: <span class="function"><span class="params">props</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      variables: &#123;</span><br><span class="line">        songId: props.params.songId,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)(Song);</span><br></pre></td></tr></table></figure>
+<h3 id="当React遇上GraphQL-mutation"><a href="#当React遇上GraphQL-mutation" class="headerlink" title="当React遇上GraphQL mutation"></a>当React遇上GraphQL mutation</h3><p>query可以跟着组件的生命周期走，但是mutation很多时候是在用户跟页面有交互时才触发的，应该怎么在事件的回调函数中加入GraphQL mutation呢？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 组件中的click提交函数</span></span><br><span class="line">onSubmit() &#123;</span><br><span class="line">  <span class="keyword">const</span> value = <span class="keyword">this</span>.element.value;</span><br><span class="line">  <span class="keyword">const</span> &#123; mutate &#125; = <span class="keyword">this</span>.props;</span><br><span class="line"></span><br><span class="line">  mutate(&#123;</span><br><span class="line">    variables: &#123; <span class="comment">// 传给mutation的参数</span></span><br><span class="line">      title: value</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// blah blah</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mutation = gql<span class="string">`</span></span><br><span class="line"><span class="string">  mutation addSong($title: String) &#123;</span></span><br><span class="line"><span class="string">    addSong(title: $title) &#123;</span></span><br><span class="line"><span class="string">      title</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>;</span><br></pre></td></tr></table></figure>
+<p>同样的，Apollo会在组件初始化时，把mutation函数传入this.props，以供后续的调用。</p>
+<p>值得注意的是，mutation一般是需要传入参数的，我们可以在声明mutation的字符串语句中，支持传入一个String类型的$</p>
+<blockquote>
+<p>Warm Cache in Apollo<br>列表页中，query执行一次后，返回了当前的数据（共3条）到Apollo Store存储在<code>List</code>中。<br>操作页中，当在别的component中对数据进行mutation后，服务器端的list数据多了一条（共4条）；<br>回到列表页，Apollo不会re-fetch，在Apollo Store的<code>List</code>绑定的是前3条数据（已经请求过了），并不会重新发请求把服务器中新增的第4条更新到列表中。<br>解决方式：在mutation后，refetch希望更新到最新数据的query。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mutate(&#123;</span><br><span class="line">  variables: &#123;</span><br><span class="line">    title: value</span><br><span class="line">  &#125;,</span><br><span class="line">  refetchQueries: [&#123;</span><br><span class="line">    query: fetchSongQuery, <span class="comment">// refetch指定的query</span></span><br><span class="line">  &#125;]</span><br><span class="line">&#125;).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// callback</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+		</div>
+
+		<footer>
+			
+	<section class="post__meta post__tag">
+		
+			<a href="/blog/tags/GraphQL/">GraphQL</a>
+		
+	</section>
+
+			<section class="post__meta">
+	<a href="/blog/donate.html" title="码字辛苦求打赏" class="u-clearfix wgt-shield">
+		<span class="title">Donate</span>
+		<span class="desc">￥￥￥</span>
+	</a>
+
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" 
+		title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议" class="u-clearfix wgt-shield">
+		<span class="title">License</span>
+		<span class="desc">CC BY-NC-SA</span>
+	</a>
+</section>
+		</footer>
+
+		
+			<section id="wgt-comment" class="wgt-comment" data-permalink="/archives/graphql-in-action/">
+	<div id="comment-list">
+		<article>暂无数据</article>
+	</div>
+
+	<form id="comment-form" class="comment__form">
+		<input type="text" 
+			name="author" 
+			class="comment--mb10 comment__contentAuthor" 
+			required 
+			max-length="15"
+			placeholder="这里输入你的名字" />
+		<input type="text" 
+			name="content" 
+			class="comment--mb10 comment__contentInput" 
+			required
+			max-length="150"
+			placeholder="这里输入评论内容" />
+		<input type="hidden" name="parentId" id="comment-reply-id" />
+		<!-- <label>
+			<span>Email: </span>
+			<input type="email" name="email">
+		</label>
+		<label>
+			<span>website: </span>
+			<input type="url" name="website">
+		</label> -->
+
+		<footer class="comment--clearfix comment--tRight" id="comment-form-footer">
+			<a id="comment-box-submit" class="comment--fontsizeMeta comment--colorAccent comment__submitReply">加上去</a>
+		</footer>
+	</form>
+</section>
+		
+	</div>
+</article>
+
+		</div>
+		
+	</div>
+</div>
+
+<link rel="stylesheet" href="/blog//build/css/iconfont_201704181501.css">
+
+
+	<footer class="wgt-footer" id="footer">
+	<div class="center">
+		<p>
+		&copy; 
+		2014-2019
+
+		
+			<a href="/blog/">Yuying Wu</a>
+		
+
+		&nbsp;|&nbsp;
+		<a href="https://github.com/YuyingWu"><i class="iconfont icon-github"></i> Github</a> | 
+<a href="http://wuyuying.com/blog/atom.xml" target="_blank">RSS</a>
+		</p>
+		<p>
+			京ICP备16019960号&nbsp;
+			Powered by 
+			<a href="https://hexo.io" target="_blank">Hexo</a>, using theme 
+			<a href="https://github.com/YuyingWu/hexo-theme-fresh" 
+				target="_blank">Fresh</a>
+		.</p>
+	</div>
+</footer>
+
+
+
+<script src="http://cdn1.lncld.net/static/js/2.1.4/av-min.js"></script>
+<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+<script src="http://cdn.bootcss.com/moment.js/2.18.1/moment.min.js"></script>
+<script src="/blog//build/js/comment.js"></script>
+
+
+<script src="//sinacloud.net/woodysblog/statics/lazyload.js"></script>
+<script>
+	new LazyLoad({
+		threshold: 600
+	});
+</script>
+<script src="/blog//dist/base.js"></script>
+</body>
+</html>
