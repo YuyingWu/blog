@@ -10,7 +10,7 @@ cache:
 install:
 - npm install
 script:
-- npm run test
+- npm run deploy
 after_success:
 - echo -e "deploy success!!!"
 branches:
