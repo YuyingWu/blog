@@ -12,14 +12,15 @@ install:
 script:
 - npm run build
 after_success:
-- cp -rf ./travis_configs/. ./public/
+# - cp -rf ./travis_configs/. ./public/
 - cd ./public
-- git init
-- git config user.name "Yuying Wu"
-- git config user.email "wuyuying1128@gmail.com"
-- git add .
-- git commit -m "Update site" -m "`$commitDate`"
-- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gatsby-output
+- scp -o stricthostkeychecking=no -r ./* root@138.68.161.48:/home/wyyGatsby/
+# - git init
+# - git config user.name "Yuying Wu"
+# - git config user.email "wuyuying1128@gmail.com"
+# - git add .
+# - git commit -m "Update site" -m "`$commitDate`"
+# - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gatsby-output
 branches:
   only:
   - gatsby-master
