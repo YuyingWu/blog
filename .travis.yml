@@ -30,6 +30,7 @@ after_success:
 branches:
   only:
   - gastby-master
+  - dev
 env:
   global:
   - GH_REF: github.com/YuyingWu/blog.git
