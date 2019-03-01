@@ -29,7 +29,7 @@ after_success:
 # - scp -o stricthostkeychecking=no -r ./* root@138.68.161.48:/home/wyyGatsby/
 branches:
   only:
-  - gastby-master
+  - gatsby-master
   - dev
 env:
   global:
