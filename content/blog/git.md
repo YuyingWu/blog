@@ -53,6 +53,10 @@ git remote add origin git@github.com:YuyingWu/blog.git
 git add .
 git commit -m "init"
 git push origin preact:preact
+
+// 删除分支
+git push origin :Branch1 // 删除远程分支 :代表delete
+git branch -d branchName // 删除本地分支
 ```
 
 ## Git小贴士
