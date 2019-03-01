@@ -18,6 +18,7 @@ install:
 script:
 # - npm run deploy
 after_success:
+ - echo -e "hello, travis"
 # - cd ./public
 # - git init
 # - git config user.name "Yuying Wu"
