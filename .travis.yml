@@ -13,7 +13,7 @@ script:
 - npm run build
 after_success:
 - cd ./public
-- scp -o stricthostkeychecking=no -r ./404.html root@138.68.161.48:/home/wyyGatsby/
+- scp -o stricthostkeychecking=no -r ./* root@138.68.161.48:/home/wyyGatsby/
 branches:
   only:
   - dev
