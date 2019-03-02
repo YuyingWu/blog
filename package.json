@@ -59,7 +59,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && cd ./public && scp -o stricthostkeychecking=no -r ./* root@138.68.161.48:/home/wyyGatsby/",
+    "deploy": "gatsby build --prefix-paths && cd ./public && scp -o stricthostkeychecking=no -r ./README.md root@138.68.161.48:/home/wyyGatsby/",
     "start": "npm run develop",
     "build": "gatsby build",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
