@@ -43,6 +43,10 @@ chsh -s /bin/zsh
 
 ## 实用小软件
 
+### [Vanilla](https://matthewpalmer.net/vanilla/?peachs_referral_code=changeable-mitten-6908&utm_source=changeable-mitten-6908&utm_medium=refer_link&utm_campaign=peachs)
+
+Hide menu bar icons on your Mac. 把顶部菜单上的icon都隐藏掉~ 世界都清净了~
+
 ### Caffeine
 这杯小咖啡可以让你的Mac不会自动锁屏，有时候在写东西，走神一段时间，回神一看，屏幕锁了，多不开心呀，可以要把屏幕hold住~ 附上[官网](http://lightheadsw.com/caffeine/)。
 
