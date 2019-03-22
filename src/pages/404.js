@@ -3,8 +3,22 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+import { navigate } from 'gatsby'
 
 class NotFoundPage extends React.Component {
+  componentDidMount() {
+    this.renderBlogPrefix();
+  }
+
+  redirectBlogPrefix() {
+    const { pathname } = window.location;
+    const regex = /\/blog\/archives/;
+
+    if (regex.test(pathname)) {
+      navigate(pathname.replace(regex, ''));
+    }
+  }
+
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title

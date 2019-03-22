@@ -2,6 +2,10 @@
 
 ## Change Log
 
+### 2019.03.22
+
+* 在404中，添加`/blog/archives`的旧url redirect
+
 ### 添加 favicon
 
 在`Layout.js`中，注入Helmet，如下。
@@ -23,3 +27,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
 </Helmet>
 ```
+
+备注：
+免费icon的站点：https://icons8.com
