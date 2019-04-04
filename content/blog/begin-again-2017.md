@@ -7,7 +7,7 @@ tags:
 - life
 ---
 
-<img src="http://sinacloud.net/woodysblog/blog/img-placeholder.jpg" data-src="http://sinacloud.net/woodysblog/blog/begin-again-ali-day.jpg" />
+!["Hi, Alibaba"](http://sinacloud.net/woodysblog/blog/begin-again-ali-day.jpg)
 
 想跟大家分享我找工作的故事。
 
