@@ -1,7 +1,6 @@
 ---
 title: 2014经验小伙伴的圣诞节
-tags:
-  - life
+tags: [ life ]
 id: 68
 categories:
   - life

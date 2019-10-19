@@ -1,9 +1,12 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require('path')
+const _ = require('lodash')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const { createPage } = actions;
+
+  const blogPost = path.resolve(`./src/templates/blog-post.js`);
+  const tagTemplate = path.resolve(`./src/templates/tags.js`);
 
   return graphql(
     `
@@ -19,13 +22,20 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                tags
               }
             }
+          }
+        }
+        tagsGroup: allMarkdownRemark(limit: 2000) {
+          group(field: frontmatter___tags) {
+            fieldValue
           }
         }
       }
     `
   ).then(result => {
+    // handle errors
     if (result.errors) {
       throw result.errors
     }
@@ -46,7 +56,21 @@ exports.createPages = ({ graphql, actions }) => {
           next,
         },
       })
-    })
+    });
+
+    // Extract tag data from query
+    const tags = result.data.tagsGroup.group
+
+    // Make tag pages
+    tags.forEach(tag => {
+      createPage({
+        path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+        component: tagTemplate,
+        context: {
+          tag: tag.fieldValue,
+        },
+      })
+    });
   })
 }
 

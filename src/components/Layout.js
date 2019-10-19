@@ -80,9 +80,11 @@ class Layout extends React.Component {
         {header}
         {children}
 
-        <footer>
-          © 2014-{new Date().getFullYear()}, Yuying Wu <br />
-          京ICP备16019960号
+        <footer style={{
+          marginTop: rhythm(1),
+          textAlign: 'center',
+        }}>
+          © 2014-{new Date().getFullYear()}, Yuying Wu, 京ICP备16019960号
         </footer>
       </div>
     )
