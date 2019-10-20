@@ -6,7 +6,10 @@ module.exports = {
     description: `小伍的自留地`,
     siteUrl: `http://wuyuying.com`,
     social: {
-      twitter: ``,
+      twitter: 'https://mobile.twitter.com/wuyuying1128',
+      github: 'https://github.com/YuyingWu',
+      douban: 'https://www.douban.com/people/wuyuying1128_',
+      zhihu: 'https://www.zhihu.com/people/yuying_wu',
     },
   },
   plugins: [

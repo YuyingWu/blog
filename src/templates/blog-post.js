@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-// import Bio from '../components/Bio'
+import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
 import Tags from '../components/tags'
+import Categories from '../components/categories'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -30,13 +31,23 @@ class BlogPostTemplate extends React.Component {
 
         <Tags tags={post.frontmatter.tags}/>
 
+        { post.frontmatter.categories ? <Categories categories={post.frontmatter.categories} /> : null }
+
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
         <hr
           style={{
             marginBottom: rhythm(1),
           }}
         />
-        {/* <Bio /> */}
+
+        <Bio />
+  
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
 
         <ul
           style={{
@@ -85,6 +96,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         tags
+        categories
       }
     }
   }

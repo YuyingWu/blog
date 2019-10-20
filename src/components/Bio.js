@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
 
 import { rhythm } from '../utils/typography'
@@ -10,33 +10,35 @@ function Bio() {
       query={bioQuery}
       render={data => {
         const { author, social } = data.site.siteMetadata
+
         return (
           <div
             style={{
               display: `flex`,
-              marginBottom: rhythm(2.5),
+              marginBottom: rhythm(1),
+              marginTop: rhythm(1),
             }}
           >
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
+            <Link to="/" style={{ boxShadow: 'none' }}>
+              <Image
+                fixed={data.avatar.childImageSharp.fixed}
+                alt={author}
+                style={{
+                  marginRight: rhythm(1 / 2),
+                  marginBottom: 0,
+                  minWidth: 50,
+                  borderRadius: `100%`,
+                }}
+                imgStyle={{
+                  borderRadius: `50%`,
+                }}
+              />
+            </Link>
+            <p style={{ marginBottom: 0 }}>
+              <Link to="/" style={{ color: '#333' }}><strong>{author}</strong></Link> 的个人博客，文字、代码、照片 记录工作和生活 <br />
+              你可以在这里关注我：{ Object.keys(social).map(key => <a key={`social-${key}`} href={social[key]} target="_blank" style={{
                 marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            />
-            <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
+              }}>{ key }</a>) }
             </p>
           </div>
         )
@@ -47,7 +49,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/avatar.jpg/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
@@ -59,6 +61,9 @@ const bioQuery = graphql`
         author
         social {
           twitter
+          douban
+          github
+          zhihu
         }
       }
     }
