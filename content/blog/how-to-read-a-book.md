@@ -1,7 +1,7 @@
 ---
 title: 如何有效阅读一本书 - 奥野宣之
-tags:
-  - reading
+categories: [reading]
+tags: []
 date: 2019-04-05 00:55:18
 ---
 

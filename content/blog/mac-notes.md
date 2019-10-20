@@ -1,12 +1,7 @@
 ---
 title: Mac使用记录
-tags:
-  - life
-  - mac
-  - study
-id: 58
-categories:
-  - study
+categories: [tech]
+tags: []
 date: 2014-10-26 23:24:50
 updateDate: 2017-04-21 17:02:00
 type: title

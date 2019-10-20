@@ -4,27 +4,19 @@ import PropTypes from "prop-types"
 // Components
 import { Link, graphql } from "gatsby"
 import Layout from '../components/Layout'
-import { rhythm } from '../utils/typography'
 
 class Tags extends Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { tag } = this.props.pageContext
     const { edges, totalCount } = this.props.data.allMarkdownRemark
-    const tagHeader = `${totalCount} post${
-      totalCount === 1 ? "" : "s"
-    } tagged with "${tag}"`
+    const tagHeader = <>
+      <Link to="/tags">Tags</Link> - <span>{tag}({totalCount})</span>
+    </>;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <h1>{tagHeader}</h1>
-
-        <p style={{
-          marginTop: rhythm(1),
-          marginBottom: rhythm(1),
-        }}>
-          <Link to="/tags">>> All tags</Link>
-        </p>
 
         <ul>
           {edges.map(({ node }) => {

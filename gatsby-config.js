@@ -11,6 +11,22 @@ module.exports = {
       douban: 'https://www.douban.com/people/wuyuying1128_',
       zhihu: 'https://www.zhihu.com/people/yuying_wu',
     },
+    nav: [{
+      title: 'Home',
+      link: '/',
+    }, {
+      title: '技术',
+      link: '/categories/tech/',
+    }, {
+      title: '食色笔记',
+      link: '/categories/life/',
+    }, {
+      title: '读万卷书',
+      link: '/categories/reading/',
+    }, {
+      title: '行万里路',
+      link: '/categories/travel/',
+    }]
   },
   plugins: [
     {

@@ -1,8 +1,7 @@
 ---
 title: puppeteer调研
-tags:
-  - front-end
-  - testing
+categories: [tech]
+tags: [puppeteer]
 date: 2018-07-10 22:37:18
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: 信息爆炸时代，今天你整理了吗？
-tags:
-  - reading
-  - work
-id: 216
-categories:
-  - reading
-  - work
+categories: [reading]
+tags: []
 date: 2016-02-27 17:33:08
 ---
 

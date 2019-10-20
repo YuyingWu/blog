@@ -1,10 +1,7 @@
 ---
 title: 老麦咖啡馆
-tags:
-  - reading
-id: 76
-categories:
-  - reading
+categories: [reading]
+tags: []
 date: 2015-02-15 20:12:20
 ---
 

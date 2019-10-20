@@ -1,8 +1,7 @@
 ---
 title: 怎么给微信分享页面添加配图呢？
-tags:
-  - tech
-  - weixin
+categories: [tech]
+tags: []
 date: 2016-04-29 15:44:19
 ---
 怎么给我们漂亮的移动页面添加微信分享的配图呢？  

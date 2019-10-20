@@ -1,8 +1,7 @@
 ---
 title: 和团队谈个人成长 - 克军
-tags:
-  - tech
-  - reading
+categories: [tech]
+tags: []
 date: 2018-10-29 21:26:18
 ---
 

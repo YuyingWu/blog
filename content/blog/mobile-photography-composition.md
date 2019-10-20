@@ -1,9 +1,8 @@
 ---
 title: 手机摄影-构图
 date: 2019-02-08 12:21:55
-tags:
-- reading
-- photography
+categories: [reading,travel]
+tags: [photography]
 type: photo
 cover: http://sinacloud.net/blog-image/mobile-camera-composition.jpeg
 ---

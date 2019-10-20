@@ -1,12 +1,7 @@
 ---
 title: MacTalk跨越边界：谈谈老程序员和技术leader
-tags:
-  - coder
-  - mactalk
-  - reading
-id: 288
-categories:
-  - 未分类
+categories: [reading]
+tags: []
 date: 2016-03-21 17:08:19
 ---
 

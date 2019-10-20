@@ -1,7 +1,7 @@
 ---
 title: 突然就走到了西藏
-tags:
-  - reading
+categories: [reading]
+tags: []
 date: 2019-09-01 22:29:33
 ---
 

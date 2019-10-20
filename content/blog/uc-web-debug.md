@@ -1,9 +1,7 @@
 ---
 title: UC浏览器调试无线页面
-tags:
-  - tech
-  - web
-  - mobile deug
+categories: [tech]
+tags: []
 date: 2016-04-19 14:20:54
 ---
 

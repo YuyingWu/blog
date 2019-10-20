@@ -1,10 +1,7 @@
 ---
 title: Hello blog
-tags:
-  - life
-id: 11
-categories:
-  - life
+categories: [tech]
+tags: [blog]
 date: 2015-04-21 14:06:44
 ---
 

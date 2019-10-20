@@ -1,12 +1,7 @@
 ---
 title: 什么是价值投资
-tags:
-  - finance
-  - reading
-id: 80
-categories:
-  - finance
-  - reading
+categories: [reading]
+tags: [理财]
 date: 2015-02-18 20:14:40
 ---
 

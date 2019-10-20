@@ -1,8 +1,7 @@
 ---
 title: 博客优化之路：从WordPress到Hexo
-tags:
-  - tech
-  - blog
+categories: [tech]
+tags: [blog]
 date: 2016-04-06 17:43:19
 ---
 经历了WordPress、jekyll、Hexo、WordPress，前几天我还是把博客迁回到Hexo，因为WordPress太庞大了，想修改主题优化下页面性能或者加些个性化的小组件吧，也没折腾出一个前端构建的流程，开发起来很麻烦，放弃治疗啦，于是又回归到**静态博客**的怀抱。

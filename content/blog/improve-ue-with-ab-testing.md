@@ -2,9 +2,8 @@
 title: AB Testing是如何提升用户体验的
 date: 2018-09-16 17:06:07
 updateDate: 2018-10-22 18:45:00
-tags:
-- reading
-- ab testing
+categories: [tech,reading]
+tags: []
 type: photo
 cover: http://sinacloud.net/blog-image/data-driven-types.png
 ---

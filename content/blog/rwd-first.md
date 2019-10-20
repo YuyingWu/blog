@@ -1,12 +1,7 @@
 ---
 title: 初探响应式设计
-tags:
-  - Responsive Web Design
-  - rwd
-id: 119
-categories:
-  - reading
-  - tech
+categories: [reading,tech]
+tags: []
 date: 2015-05-20 21:54:14
 ---
 

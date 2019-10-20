@@ -1,8 +1,7 @@
 ---
 title: Hexo主题的置顶功能
-tags:
-  - blog
-  - theme
+categories: [tech]
+tags: [blog,hexo]
 date: 2017-02-02 13:23:18
 ---
 

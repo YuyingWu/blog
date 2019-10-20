@@ -1,10 +1,8 @@
 ---
 title: CSS Variables学习笔记
 date: 2018-01-11 17:32:16
-tags:
-- front-end
-- CSS
-- CSS Variables
+categories: [tech]
+tags: [css]
 type: photo
 cover: http://sinacloud.net/woodysblog/img/css-var-case-sensitive.png
 ---

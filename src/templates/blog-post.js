@@ -29,7 +29,7 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
 
-        <Tags tags={post.frontmatter.tags}/>
+        { post.frontmatter.tags ? <Tags tags={post.frontmatter.tags}/> : null }
 
         { post.frontmatter.categories ? <Categories categories={post.frontmatter.categories} /> : null }
 

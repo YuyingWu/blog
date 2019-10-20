@@ -1,9 +1,7 @@
 ---
 title: 2014经验小伙伴的圣诞节
-tags: [ life ]
-id: 68
-categories:
-  - life
+tags: [ baidu ]
+categories: []
 date: 2014-12-26 20:06:18
 ---
 

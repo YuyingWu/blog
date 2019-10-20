@@ -1,9 +1,8 @@
 ---
 title: GraphQL小记
 date: 2018-06-26 21:32:09
-tags:
-- front-end
-- graphql
+categories: [tech]
+tags: [note]
 ---
 
 !["structure"](http://sinacloud.net/woodysblog/graphql/structure.png)

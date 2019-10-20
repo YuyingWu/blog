@@ -1,10 +1,7 @@
 ---
 title: markdown学习笔记
-tags:
-  - study
-id: 105
-categories:
-  - study
+categories: [tech]
+tags: [note]
 date: 2014-10-20 18:32:27
 ---
 

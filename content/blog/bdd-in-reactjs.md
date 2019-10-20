@@ -1,8 +1,7 @@
 ---
 title: Behavior Driven Development in ReactJS
-tags:
-  - testing
-  - front-end
+categories: [tech]
+tags: [testing]
 date: 2018-06-02 20:13:25
 ---
 

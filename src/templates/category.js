@@ -4,27 +4,19 @@ import PropTypes from "prop-types"
 // Components
 import { Link, graphql } from "gatsby"
 import Layout from '../components/Layout'
-import { rhythm } from '../utils/typography'
 
 class Category extends Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { category } = this.props.pageContext
     const { edges, totalCount } = this.props.data.allMarkdownRemark
-    const tagHeader = `${totalCount} post${
-      totalCount === 1 ? "" : "s"
-    } categoried with "${category}"`
+    const tagHeader = <>
+      <Link to="/categories">Category</Link> - <span>{category}({totalCount})</span>
+    </>;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <h1>{tagHeader}</h1>
-
-        <p style={{
-          marginTop: rhythm(1),
-          marginBottom: rhythm(1),
-        }}>
-          <Link to="/categories">>> All categories</Link>
-        </p>
 
         <ul>
           {edges.map(({ node }) => {

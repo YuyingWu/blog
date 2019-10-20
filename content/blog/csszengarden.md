@@ -1,10 +1,8 @@
 ---
 title: 《CSS禅道之美》：My Feelings
 date: 2012-11-05 14:24:45
-tags:
-- front-end
-- CSS
-- reading
+categories: [tech,reading]
+tags: [css]
 ---
 
 这本估计是本好书，以“禅意花园”这个网站为原型进行分析、解剖，但是对于没什么css基础的人来说，只是觉得很美好，却没什么所得，说是技术书，不如说是一本设计书，境界高，起点也高，还是等我学习完基本的css才看这书吧。

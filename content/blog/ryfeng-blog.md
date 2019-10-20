@@ -1,10 +1,7 @@
 ---
 title: 阮一峰博客文集
-tags:
-  - reading
-id: 70
-categories:
-  - reading
+categories: [reading]
+tags: []
 date: 2015-01-16 20:07:47
 ---
 

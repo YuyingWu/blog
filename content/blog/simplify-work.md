@@ -1,13 +1,7 @@
 ---
 title: 会简化工作的人升职更快
-tags:
-  - efficiency
-  - reading
-  - time management
-  - work
-id: 64
-categories:
-  - reading
+categories: [reading]
+tags: []
 date: 2014-12-21 23:32:16
 ---
 

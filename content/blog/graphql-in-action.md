@@ -1,7 +1,7 @@
 ---
 title: GraphQL in Action
-tags:
-  - GraphQL
+categories: [tech]
+tags: [note]
 date: 2018-08-15 23:11:24
 updateDate: 2018-09-24 18:20:13
 ---

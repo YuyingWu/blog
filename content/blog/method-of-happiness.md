@@ -1,11 +1,7 @@
 ---
 title: 幸福的方法 —— 泰勒•本•沙哈尔
-tags:
-  - happiness
-  - reading
-id: 61
-categories:
-  - reading
+categories: [reading]
+tags: []
 date: 2014-11-10 23:31:28
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 再手写table做EDM你就out啦
-tags:
-  - tech
+categories: [tech]
+tags: [EDM]
 date: 2016-05-18 18:20:18
 ---
 工作期间，有接触过产品线发的[EDM](http://baike.baidu.com/subview/1212416/8602812.htm#viewPageContent)(Email Direct Marketing 电子邮件营销)，也就是大家经常说的“垃圾邮件”，可能发EDM的账户会进部分邮箱的黑名单，有时候我自己测试发的邮件可能要到垃圾箱找 >3< 

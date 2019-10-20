@@ -1,7 +1,7 @@
 ---
 title: fis3安装时遇到的node版本问题
-tags:
-  - tech
+categories: [tech]
+tags: []
 date: 2017-01-18 00:18:45
 ---
 今天在调试demo，执行编译命令时，

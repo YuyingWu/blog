@@ -1,7 +1,7 @@
 ---
 title: Koa.js
-tags:
-  - front-end
+categories: [tech]
+tags: [note]
 date: 2019-06-23 14:23:38
 ---
 

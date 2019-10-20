@@ -2,11 +2,8 @@
 title: 2017年Web开发者的技能蓝图
 type: title
 date: 2017-04-22 21:54:29
-tags:
-- front-end
-- back-end
-- devops
-- roadmap
+categories: [tech]
+tags: [roadmap]
 ---
 
 在Medium看到一篇文章，分享了github网友<a href="https://github.com/kamranahmedse" target="_blank">@kamranahmedse</a>发布的<a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank">developer-roadmap</a>。

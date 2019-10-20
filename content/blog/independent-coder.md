@@ -1,12 +1,7 @@
 ---
 title: 关于独立开发者
-tags:
-  - life
-  - reading
-id: 94
-categories:
-  - life
-  - reading
+categories: [reading]
+tags: []
 date: 2015-05-01 10:14:57
 ---
 

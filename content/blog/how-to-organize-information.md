@@ -1,7 +1,7 @@
 ---
 title: 如何有效整理信息 - 奥野宣之
-tags:
-  - reading
+categories: [reading]
+tags: []
 date: 2019-07-07 17:26:33
 ---
 

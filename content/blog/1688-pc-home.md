@@ -1,7 +1,7 @@
 ---
 title: 这！就是1688 PC首页
-tags:
-  - tech
+categories: [tech]
+tags: [puppeteer]
 date: 2019-09-24 23:14:18
 ---
 

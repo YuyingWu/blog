@@ -1,7 +1,7 @@
 ---
 title: Notes for Docker
-tags:
-  - tech
+categories: [tech]
+tags: [docker]
 date: 2019-10-10 23:09:18
 ---
 

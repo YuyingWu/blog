@@ -1,11 +1,7 @@
 ---
 title: JavaScript网页动画设计：velocity.js
-tags:
-  - tech
-  - reading
-  - javascript animation
-  - animate
-  - velocity.js
+categories: [tech,reading]
+tags: [animate,velocity.js]
 date: 2016-04-22 16:46:19
 ---
 

@@ -1,11 +1,8 @@
 ---
 title: 悄悄发布一个hexo的npm模块
 date: 2017-04-03 11:52:02
-tags:
-  - blog
-  - hexo-generator-index-plus
-  - hexo-plugin
-  - npm
+categories: [tech]
+tags: [blog,hexo]
 ---
 
 **hexo-generator-index-plus**，这是什么东东？其实就是hexo博客生成器的一个文章排序插件，基于默认插件fork的，添加按文章**置顶**和**二次编辑的更新时间**排序的功能。

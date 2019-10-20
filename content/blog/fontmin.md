@@ -1,10 +1,7 @@
 ---
 title: 'Hi,fontmin'
-tags:
-  - tech
-id: 126
-categories:
-  - tech
+categories: [tech]
+tags: []
 date: 2015-05-27 23:38:54
 ---
 

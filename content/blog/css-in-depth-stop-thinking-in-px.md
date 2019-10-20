@@ -1,9 +1,8 @@
 ---
 title: 如何更愉快地使用rem —— 别说你懂CSS相对单位
 date: 2018-07-05 13:28:01
-tags:
-- front-end
-- css
+categories: [tech]
+tags: [css]
 ---
 
 前段时间试译了Keith J.Grant的CSS好书《CSS in Depth》，其中的第二章[《Working with relative units》](https://livebook.manning.com/#!/book/css-in-depth/chapter-2)，书中对relative units的讲解和举例可以说相当全面，看完之后发现自己并不太懂CSS相对单位，也希望分享给大家，所以有了这个译文系列。（若有勘误或翻译建议，欢迎 [Github PR](https://github.com/YuyingWu/blog/tree/dev/source/_posts) ^_^）

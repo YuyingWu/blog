@@ -1,11 +1,8 @@
 ---
 title: "[译] React性能优化-虚拟Dom原理浅析"
 date: 2018-05-13 19:15:19
-tags:
-  - front-end
-  - performance
-  - reactjs
-  - translation
+categories: [tech]
+tags: [react.js]
 type: photo
 cover: http://sinacloud.net/woodysblog/img/bkg.jpg
 ---

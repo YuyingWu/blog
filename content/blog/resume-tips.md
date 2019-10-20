@@ -1,12 +1,7 @@
 ---
 title: 人人都有好工作 - 简历篇
-tags:
-  - job
-  - reading
-  - resume
-id: 66
-categories:
-  - reading
+categories: [reading]
+tags: []
 date: 2014-12-24 20:04:21
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: 我读《国内前端行业十日谈》
-tags:
-  - front-end
-  - reading
+categories: [tech,reading]
+tags: []
 date: 2012-10-10 14:54:50
 ---
 

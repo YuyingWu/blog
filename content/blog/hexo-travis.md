@@ -1,11 +1,8 @@
 ---
 title: 开箱即用，Hexo博客的github+server自动部署
 date: 2018-05-26 14:35:18
-tags:
-  - blog
-  - travisCI
-  - CI
-  - hexo
+categories: [tech]
+tags: [blog,hexo,travisCI]
 ---
 
 !["Travis CI"](http://lc-wpyqjumv.cn-n1.lcfile.com/9fb19e9b112f127c1adc.jpg)

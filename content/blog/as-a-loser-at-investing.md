@@ -1,12 +1,8 @@
 ---
 title: 韭菜的自我修养
 date: 2018-10-17 22:47:30
-tags:
-- reading
-- investing
-- 李笑来
-- 区块链
-- 比特币
+categories: [reading]
+tags: [理财]
 ---
 
 现在的A股上证指数2485点，看本文最下方的图，正处于“人心惶惶”的阶段。

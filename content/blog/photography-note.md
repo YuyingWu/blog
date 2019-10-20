@@ -1,10 +1,7 @@
 ---
 title: 摄影笔记：初识摄影
-tags:
-  - photography
-id: 143
-categories:
-  - photography
+categories: [travel]
+tags: [photography]
 date: 2015-07-26 22:01:51
 ---
 

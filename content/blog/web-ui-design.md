@@ -1,11 +1,8 @@
 ---
 title: 《WEB界面设计》书摘：设计界面前来看一眼，UED很赞
 date: 2012-10-30 17:00:16
-tags:
-  - front-end
-  - CSS
-  - reading
-  - design
+categories: [tech,reading]
+tags: []
 ---
 
 ## 交互设计模式

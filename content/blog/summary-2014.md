@@ -1,11 +1,7 @@
 ---
 title: 2014 - 年度总结
-tags:
-  - life
-  - 总结
-id: 72
-categories:
-  - life
+categories: []
+tags: [总结]
 date: 2015-01-02 20:09:23
 type: title
 ---

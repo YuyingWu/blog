@@ -1,9 +1,8 @@
 ---
 title: 读书笔记 - CSS网站布局实录
 date: 2017-02-07 12:42:07
-tags:
-- reading
-- css
+categories: [tech,reading]
+tags: [css]
 ---
 
 有些书籍，就算内容赶不上潮流，经典始终是经典，无论什么时候看，总会觉得有些新的感受新的收获。

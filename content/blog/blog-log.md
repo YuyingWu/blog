@@ -1,10 +1,7 @@
 ---
 title: Blog Log
-tags:
-  - blog
-id: 31
-categories:
-  - tech
+categories: [tech]
+tags: [blog]
 date: 2015-04-23 00:35:45
 updateDate: 2017-04-02 15:13:02
 ---

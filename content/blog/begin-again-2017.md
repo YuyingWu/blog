@@ -3,8 +3,8 @@ title: Begin Again, 2017
 date: 2017-06-01 20:40:30
 type: photo
 cover: http://sinacloud.net/woodysblog/blog/begin-again-ali-night.jpg
-tags:
-- life
+categories: []
+tags: [总结]
 ---
 
 !["Hi, Alibaba"](http://sinacloud.net/woodysblog/blog/begin-again-ali-day.jpg)

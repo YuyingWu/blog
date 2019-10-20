@@ -1,12 +1,7 @@
 ---
 title: Safari调试无线页面
-tags:
-  - tech
-  - web
-  - mobile deug
-id: 200
-categories:
-  - tech
+categories: [tech]
+tags: []
 date: 2016-02-25 13:36:54
 ---
 

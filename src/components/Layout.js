@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
-
 import { rhythm, scale } from '../utils/typography'
+import Nav from '../components/Nav'
 
 function Layout({ location, title, children }) {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -83,6 +83,9 @@ function Layout({ location, title, children }) {
             </Helmet>
 
             {header}
+
+            <Nav />
+
             {children}
 
             <footer style={{

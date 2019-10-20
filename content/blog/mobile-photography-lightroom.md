@@ -1,9 +1,8 @@
 ---
 title: 手机摄影-后期
 date: 2019-02-08 15:44:54
-tags:
-- reading
-- photography
+categories: [reading,travel]
+tags: [photography]
 type: photo
 cover: http://sinacloud.net/blog-image/mobile-camera-lightroom-1.jpeg
 ---

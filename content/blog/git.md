@@ -1,9 +1,8 @@
 ---
 title: git学习笔记
 date: 2017-01-23 18:35:51
-tags:
-- tech
-- git
+categories: [tech]
+tags: [note]
 ---
 最近想要做博客的云端编码，在哪都能发日志，于是入了coding.net的坑，从svn转到git下~
 

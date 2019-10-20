@@ -1,11 +1,7 @@
 ---
 title: Google工作整理术
-tags:
-  - efficiency
-  - reading
-id: 283
-categories:
-  - 未分类
+categories: [reading]
+tags: []
 date: 2016-03-12 20:12:20
 type: title
 ---

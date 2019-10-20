@@ -1,11 +1,7 @@
 ---
 title: 图解HTTP
-tags:
-  - reading
-  - tech
-id: 272
-categories:
-  - 未分类
+categories: [tech,reading]
+tags: [http]
 date: 2015-02-26 18:33:38
 ---
 

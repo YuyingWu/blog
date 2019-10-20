@@ -1,10 +1,7 @@
 ---
 title: 来谈谈最近上线的项目「百度师傅」
-tags:
-  - work
-id: 162
-categories:
-  - work
+categories: [tech]
+tags: [baidu]
 date: 2015-08-09 19:15:19
 type: photo
 cover: http://cdn.sinacloud.net/woodysblog/shifu/shifu.png
