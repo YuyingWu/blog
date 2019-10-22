@@ -1,8 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
-
 import { rhythm } from '../utils/typography'
+import Styles from './Bio.module.css';
 
 function Bio() {
   return (
@@ -18,6 +18,7 @@ function Bio() {
               marginBottom: rhythm(1),
               marginTop: rhythm(1),
             }}
+            className={Styles.container}
           >
             <Link to="/" style={{ boxShadow: 'none' }}>
               <Image
