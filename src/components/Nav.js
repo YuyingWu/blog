@@ -11,7 +11,7 @@ const Nav = () => {
         const { nav = [] } = data.site.siteMetadata;
 
         return (
-          <nav style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <nav style={{ display: 'flex', justifyContent: 'space-between' }}>
             { nav.map(item => (
               <Link to={item.link} key={`nav-${item.title}`}>{item.title}</Link>
             )) }

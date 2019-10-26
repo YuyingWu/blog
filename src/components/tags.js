@@ -8,17 +8,17 @@ const tags = ({
 }) => (
   <>
     { tags.length ? (
-      <ul style={{
+      <p style={{
         ...scale(-1 / 5),
         listStyle: 'none',
         margin: 0,
         padding: 0,
       }}>
-        <li style={{ display: 'inline-block', marginRight: '10px' }}>Tags:</li>
-        { tags.map((tag, index) => <li key={`tag-${index}`} style={{ display: 'inline-block' }}>
+        <span style={{ marginRight: '10px' }}>Tags:</span>
+        { tags.map((tag, index) => <span style={{ marginRight: '10px' }} key={`tag-${index}`}>
           <Link to={`/tags/${kebabCase(tag)}/`}>{ tag }</Link>
-        </li>)}
-      </ul>
+        </span>)}
+      </p>
     ) : null }
   </>
 )

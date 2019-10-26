@@ -23,7 +23,7 @@ class BlogPostTemplate extends React.Component {
             ...scale(-1 / 5),
             display: `block`,
             marginBottom: 0,
-            marginTop: rhythm(-1),
+            marginTop: rhythm(-0.5),
           }}
         >
           {post.frontmatter.date}
@@ -33,7 +33,7 @@ class BlogPostTemplate extends React.Component {
 
         { post.frontmatter.categories ? <Categories categories={post.frontmatter.categories} /> : null }
 
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div style={{ marginTop: rhythm(1) }} dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <hr
           style={{
