@@ -27,7 +27,7 @@ docker rm nginx
 docker images
 
 # remove images
-docker rmi nginx 
+docker rmi nginx
 
 # execute a command inside the container
 docker exec name_of_a_container cat /etc/hosts
@@ -72,14 +72,39 @@ docker logs container_name
 
 ### ENV Variables in Docker
 
-```
+```bash
 docker run -e APP_COLOR=blue docker_image
 ```
 
 How to inspect the ENV Variables in a docker container?
 
-```
+```bash
 docker inspect container_name
 ```
 
 ENV Variables will be in the object `Config.Env`
+
+## How to create my own image
+
+1. OS - ubuntu
+2. update apt repo
+3. install dependencies using apt
+4. install python dependencies using pip
+5. copy source code to /opt folder
+6. run the web server using `flask` command
+
+```bash
+FROM Ubuntu
+# start from a base OS
+
+RUN apt-get update
+RUN apt-get install python
+
+RUN pip install flask
+RUN pip install flask-mysql
+
+COPY . /opt/source-code
+
+ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
+# specify ENTRYPOINT, run the image as a container
+```
