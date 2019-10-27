@@ -1,10 +1,10 @@
 body {
-  --green: rgba(0,0,0,.84);
+  --basicColor: rgba(0,0,0,.84);
   --bg: #ffffff;
-  --header: var(--green);
+  --header: var(--basicColor);
   --textNormal: #222;
   --textTitle: #222;
-  --textLink: var(--green);
+  --textLink: var(--basicColor);
   --hr: hsla(0, 0%, 0%, 0.2);
   --inlineCode-bg: rgba(255, 229, 100, 0.2);
   --inlineCode-text: #1a1a1a;
