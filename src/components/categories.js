@@ -8,17 +8,17 @@ const Categories = ({
 }) => (
   <>
     { categories.length ? (
-      <ul style={{
+      <p style={{
         ...scale(-1 / 5),
         listStyle: 'none',
         margin: 0,
         padding: 0,
       }}>
-        <li style={{ display: 'inline-block', marginRight: '10px' }}>Categories:</li>
-        { categories.map((tag, index) => <li key={`tag-${index}`} style={{ display: 'inline-block' }}>
+        <span style={{ marginRight: '10px' }}>Categories:</span>
+        { categories.map((tag, index) => <span key={`tag-${index}`} style={{ marginRight: '10px' }}>
           <Link to={`/categories/${kebabCase(tag)}/`}>{ tag }</Link>
-        </li>)}
-      </ul>
+        </span>)}
+      </p>
     ) : null }
   </>
 )

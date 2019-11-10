@@ -36,7 +36,7 @@ function Bio() {
               />
             </Link>
             <p style={{ marginBottom: 0 }}>
-              <Link to="/" style={{ color: '#333' }}><strong>{author}</strong></Link> 的个人博客，文字、代码、照片 记录工作和生活 <br />
+              <Link to="/"><strong>{author}</strong></Link> 的个人博客，文字、代码、照片 记录工作和生活 <br />
               你可以在这里关注我：{ Object.keys(social).map(key => <a key={`social-${key}`} href={social[key]} target="_blank" style={{
                 marginRight: rhythm(1 / 2),
               }}>{ key }</a>) }
