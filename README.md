@@ -30,6 +30,10 @@
 * [无单位数字和行高](http://www.wuyuying.com/css-in-depth-unitless-number/)
 * [CSS自定义属性](http://www.wuyuying.com/css-in-depth-css-variables/)
 
+### 面试
+
+* [人人都有好工作 - 简历篇](https://github.com/YuyingWu/blog/issues/2)
+
 ### Read More
 
 [更多精彩内容 >>](http://www.wuyuying.com/)
