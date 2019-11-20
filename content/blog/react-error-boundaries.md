@@ -117,11 +117,18 @@ export default ErrorBoundary;
 
 ## Wrapping It Up
 
-回到文章的一开头，很多时候，我们在日常开发中，会不断地往前冲，开发很多酷炫的交互或者功能，有时可能忘记停下来，把更多的目光在质量保障上。不同的设备环境、网络环境、用户操作路径，会不会在你不知道的情况下，我们的页面“坏”了，还是需要把这些信息收集起来，让我们看到“想当然”以外更多的东西。
+回到文章的一开头，很多时候，我们在日常开发中，会不断地往前冲，开发很多酷炫的交互或者功能，有时可能忘记停下来，把更多的目光在质量保障上，本文提到的React Error Boundaries只是其中一个小的点。不同的设备环境、网络环境、用户操作路径，会不会在你不知道的情况下，我们的页面“坏”了，还是需要把这些信息收集起来，让我们看到“想当然”以外更多的东西。
 
 共勉～
 
 ## 附录
+
+值得注意的是，错误边界有一些无法捕获错误的场景：
+
+> 事件处理  
+> 异步代码（如 `setTimeout` 和 `requestAnimationFrame` 回调函数）  
+> 服务端渲染  
+> ErrorBoundary自身抛出的异常（并非来自子组件）
 
 * [React Error Boundaries官方文档](https://reactjs.org/docs/error-boundaries.html)
 * [社区自建的react-error-boundary](https://github.com/bvaughn/react-error-boundary)
