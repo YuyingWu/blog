@@ -35,7 +35,7 @@ Wordpress2016.overrideThemeStyles = () => {
       color: 'inherit',
       borderLeftColor: 'inherit',
       opacity: '0.8',
-      fontSize: '0.8rem',
+      fontSize: '1rem',
     },
     'blockquote.translation': {
       fontSize: '1em',
