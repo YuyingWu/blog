@@ -12,6 +12,7 @@
 
 ### React.js
 
+* [浅谈 React Error Boundaries](https://github.com/YuyingWu/blog/issues/3)
 * [译-React性能优化-虚拟Dom原理浅析](http://www.wuyuying.com/optimizing-react-virtual-dom-explained/)
 * [Behavior Driven Development in ReactJS](http://www.wuyuying.com/bdd-in-reactjs/)
 
