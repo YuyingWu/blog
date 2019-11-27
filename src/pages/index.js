@@ -23,6 +23,7 @@ class BlogIndex extends React.Component {
 
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          const categories = node.frontmatter.categories || []
           return (
             <div key={node.fields.slug}>
               <h3
@@ -32,6 +33,12 @@ class BlogIndex extends React.Component {
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
+                  { categories.length ? categories.map(c => <span style={{
+                    fontSize: '12px',
+                    color: '#25b864',
+                    marginLeft: '5px',
+                    fontWeight: '400',
+                  }}>[{ c }]</span>) : null }
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
@@ -63,6 +70,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            categories
           }
         }
       }
