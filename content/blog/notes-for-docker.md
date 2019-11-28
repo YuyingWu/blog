@@ -2,7 +2,7 @@
 title: Notes for Docker
 categories: [tech]
 tags: [docker]
-date: 2019-11-12 14:32:18
+date: 2019-11-28 13:54:18
 createDate: 2019-10-10 23:09:18
 ---
 
@@ -55,6 +55,31 @@ cat unbuntu.tar.gz | docker import - ubuntu:18.04
 
 ```
 docker [image] build -t myImage:1.0
+```
+
+### 4. 存出和载入镜像
+
+1. 存出 save
+
+把镜像导出到本地文件
+
+```
+docker save -o xxx.tar TARGET_IMAGE:TAG_ID
+```
+
+2. 载入 load
+
+从本地文件中载入本地镜像列表
+
+```
+docker load > dockerImageFile.tar
+```
+
+### 5. 上传镜像
+
+```
+docker tag nginx:lastest wyy/nginx:1.0
+docker push wyy/nginx:1.0
 ```
 
 ## command
