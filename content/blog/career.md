@@ -10,7 +10,7 @@ date: 2019-12-05 17:55:19
 <a name="mx0zfn"></a>
 ## 联系我
 
-我是在职前端鼓（ji）励（shu）专家，请加我微信`wuyuying1128`，加之前附录自己的博客或者github地址，简历可直接发`wuyuying1128@gmail.com`，目前只找p6以及以上，不招p5，年龄学历不限，关键是能力。
+我是在职前端鼓（ji）励（shu）专家，请加我微信`wuyuying1128`，加之前附录自己的博客或者github地址，简历可直接发`wuyuying1128@gmail.com`，目前只招p6以及以上，不招p5，年龄学历不限，关键是能力。
 
 <a name="faqtbl"></a>
 ## 业务介绍
