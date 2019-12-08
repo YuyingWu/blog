@@ -11,7 +11,7 @@ date: 2019-07-07 17:26:33
 
 ## MindNode
 
-![](http://static.wuyuying.com/how-to-organize-your-information.png)
+![](//static.wuyuying.com/how-to-organize-your-information.png)
 
 ## 书摘
 

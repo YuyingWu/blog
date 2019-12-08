@@ -5,7 +5,7 @@ tags: []
 date: 2019-12-05 17:55:19
 ---
 
-!["日常在茶馆的脑爆"](http://static.wuyuying.com/team-brain-storm.jpeg)
+!["日常在茶馆的脑爆"](//static.wuyuying.com/team-brain-storm.jpeg)
 
 <a name="mx0zfn"></a>
 ## 联系我

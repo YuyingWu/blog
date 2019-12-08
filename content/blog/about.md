@@ -7,7 +7,7 @@ date: 2019-11-20 13:51:18
 
 我叫伍玉莹（Yuying Wu），90后，喜欢 前端开发 / 摄影 / 旅行。
 
-!["Yuying Wu's Bio Photo"](http://static.wuyuying.com/bio-photo.jpg)
+!["Yuying Wu's Bio Photo"](//static.wuyuying.com/bio-photo.jpg)
 
 13年，大学毕业后加入百度，知识搜索部，百度知道&百度经验，当时为了抛弃历史包袱，搞业务的技术重构比较多（tangram to jQuery），从0孵化O2O业务“百度师傅”；
 
