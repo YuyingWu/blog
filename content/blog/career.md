@@ -5,6 +5,8 @@ tags: []
 date: 2019-12-05 17:55:19
 ---
 
+!["日常在茶馆的脑爆"](http://static.wuyuying.com/team-brain-storm.jpeg)
+
 <a name="mx0zfn"></a>
 ## 联系我
 
@@ -19,6 +21,8 @@ date: 2019-12-05 17:55:19
 ## 团队介绍
 
 我们是1688的大前端团队，致力于链接商业与设计，给客户提供专业的人机交互解决方案，尽管B端业务通常较为低调，但是我们的技术团队拥有多个集团领先的技术产品如Fusion Design、Open CMS、Just研发平台、设计前端协同产品UDPL、中后台框架Seek、可视化构建系统Hive、表单框架AForm等等，我们的技术栈以react、weex(rax)和nodejs为主，配以我们集团领先的研发工具，使得我们的前端研发流程的体验非常舒爽。
+
+更多介绍：[CBU体验技术团队的github >>](https://github.com/1688fe/magazine)
 
 <a name="fesrgc"></a>
 ## 职位要求
