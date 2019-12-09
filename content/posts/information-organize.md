@@ -58,8 +58,8 @@ date: 2016-02-27 17:33:08
   
 给某件事情定个完成的时间点然后到点提醒，原理很普通，支持自然语言输入，但我最喜欢Due的特点是它非常具有破坏性的提醒，除非你mark完成，否则会每分钟提醒一次，震到你接受治疗为止，就喜欢它的简单而粗暴！
   
-![due](http://cdn.sinacloud.net/woodysblog/information-organize/due.png)</div>
-</div>
+![due](http://cdn.sinacloud.net/woodysblog/information-organize/due.png)
+
 &nbsp;
 
 * * *
