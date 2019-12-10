@@ -7,8 +7,7 @@ updateDate: 2017-04-02 15:13:02
 ---
 
 **2018.08.26**
-{% douban "https://book.douban.com/subject/26541801" %}
-{% douban "https://book.douban.com/subject/30292589/" %}
+豆瓣插件 [hexo-tag-douban](https://www.npmjs.com/package/hexo-tag-douban)
 
 **2017.04.02**
 1. jQuery -> Zepto

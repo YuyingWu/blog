@@ -3,14 +3,22 @@ module.exports = {
   siteMetadata: {
     title: `Yuying Wu`,
     author: `Yuying Wu`,
-    description: `小伍的自留地`,
+    description: `个人博客，文字、代码、照片，记录工作和生活`,
+    copyright: `&copy;2014-${(new Date()).getFullYear()} 京ICP备16019960号`,
     siteUrl: `http://wuyuying.com`,
-    social: {
-      twitter: 'https://mobile.twitter.com/wuyuying1128',
-      github: 'https://github.com/YuyingWu',
-      douban: 'https://www.douban.com/people/wuyuying1128_',
-      zhihu: 'https://www.zhihu.com/people/yuying_wu',
-    },
+    social: [{
+      name: 'twitter',
+      url: 'https://mobile.twitter.com/wuyuying1128',
+    }, {
+      name: 'github',
+      url: 'https://github.com/YuyingWu',
+    }, {
+      name: 'douban',
+      url: 'https://www.douban.com/people/wuyuying1128_',
+    }, {
+      name: 'zhihu',
+      url: 'https://www.zhihu.com/people/yuying_wu'
+    }],
     nav: [{
       title: 'Home',
       link: '/',

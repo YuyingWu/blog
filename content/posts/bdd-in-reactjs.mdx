@@ -28,8 +28,6 @@ Coding of features and tests go hand in hand.
 * Given notes, when deleting, then remove a note.
 * BDD consists of scenarios/specifications.
 
-<!-- more -->
-
 ## Test Tools
 
 * Jest
@@ -290,18 +288,19 @@ Next, add a src/tempPolyfills.js file to create the global request animation fra
 
 src/tempPolyfills.js should contain the following contents:
 
-```
+```js
 const requestAnimationFrame = global.requestAnimationFrame = callback => {
   setTimeout(callback, 0);
 }
-```
 
 export default requestAnimationFrame;
+```
+
 Finally, add a src/setupTests.js file to configure the enzmye adapter for our tests. The disableLifecyleMethods portion is needed to allow us to modify props through different tests.
 
 src/setupTests.js should contain the following contents:
 
-```
+```js
 import requestAnimationFrame from './tempPolyfills';
 
 import { configure } from 'enzyme';
