@@ -39,7 +39,9 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-theme-chaton`,
-      options: {},
+      options: {
+        googleAnalytics: 'UA-74424222-4',
+      },
     },
   ],
   // plugins: [
