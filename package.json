@@ -18,6 +18,8 @@
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^2.0.1",
     "prettier": "^1.14.2",
+  },
+  "peerDependencies": {
     "@mdx-js/mdx": "^1.5.1",
     "gatsby-plugin-mdx": "^1.0.56",
     "gatsby-plugin-sharp": "^2.2.37",
