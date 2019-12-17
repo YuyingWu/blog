@@ -4,16 +4,17 @@ node_js:
 addons:
   apt:
     update: true
-cache:
-  directories:
-  - node_modules
+#cache:
+#  directories:
+#  - node_modules
 install:
-- npm install
+- yarn
 script:
-- npm run build
+- yarn build
 after_success:
 - cd ./public
-- scp -o stricthostkeychecking=no -r ./* root@138.68.161.48:/home/wyyGatsby/
+- ls
+# - scp -o stricthostkeychecking=no -r ./* root@138.68.161.48:/home/wyyGatsby/
 branches:
   only:
   - dev
