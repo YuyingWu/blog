@@ -5,7 +5,8 @@ module.exports = {
     author: `Yuying Wu`,
     description: `个人博客，文字、代码、照片，记录工作和生活`,
     copyright: `&copy;2014-${(new Date()).getFullYear()} 京ICP备16019960号`,
-    siteUrl: `http://wuyuying.com`,
+    siteUrl: `https://wuyuying.com`,
+    aboutUrl: `/about`,
     social: [{
       name: 'twitter',
       url: 'https://mobile.twitter.com/wuyuying1128',
