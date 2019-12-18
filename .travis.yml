@@ -7,14 +7,14 @@ addons:
 cache:
  directories:
  - $HOME/.cache/yarn
+ - $HOME/.npm
 install:
 - yarn
 script:
 - yarn build
 after_success:
 - cd ./public
-- ls
-# - scp -o stricthostkeychecking=no -r ./* root@138.68.161.48:/home/wyyGatsby/
+- scp -o stricthostkeychecking=no -r ./* root@138.68.161.48:/home/wyyGatsby/
 branches:
   only:
   - dev
