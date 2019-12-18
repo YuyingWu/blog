@@ -4,9 +4,9 @@ node_js:
 addons:
   apt:
     update: true
-#cache:
-#  directories:
-#  - node_modules
+cache:
+ directories:
+ - $HOME/.cache/yarn
 install:
 - yarn
 script:
