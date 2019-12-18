@@ -1,0 +1,34 @@
+---
+title: Notes on TypeScript
+categories: [tech]
+tags: [TypeScript]
+date: 2019-12-18 13:44:18
+---
+
+`[TypeScript](https://www.typescriptlang.org/)` is **a typed superset** of `JavaScript` that compiles to plain JavaScript.
+
+## TypeScript in 5 minutes
+
+优势：
+* 类型检查
+* 下一代JS特性的超集（编译成原生JS，在老浏览器中使用）
+* 一些非JS的特性，如 Interface（接口） 或 Generics（泛型）
+* 元编程（meta programming）的特性，如 Decorators（装饰器）
+* 丰富的配置扩展（各种loader）
+* 更多现代工具的支持
+
+### 安装
+
+```
+npm install -g typescript
+```
+
+### 编译
+
+TS并不能原生地在浏览器或者node环境运行，需要被编译为原生的JS后，再运行。
+
+```
+tsc demo.ts
+```
+
+OUTPUT >> `demo.js`
