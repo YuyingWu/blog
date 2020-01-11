@@ -2,7 +2,7 @@
 title: 读懂一本书
 date: 2019-12-31 22:47:30
 categories: [reading]
-tags: ["读书"]
+tags: [读书]
 ---
 
 书名：[《读懂一本书：樊登读书法》](https://book.douban.com/subject/34858308/)
