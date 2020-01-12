@@ -10,10 +10,19 @@ export default ({ children, ...props }) => (
       <script>
         {`
         wx.ready(function () {      //需在用户可能点击分享按钮前就先调用
+          wx.updateAppMessageShareData({
+            title: 'Yuying Wu', // 分享标题
+            desc: '', // 分享描述
+            link: 'https://wuyuying.com/', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'https://wuyuying.com/favicon-96x96.png', // 分享图标
+            success: function () {
+              // 设置成功
+            }
+          });
           wx.updateTimelineShareData({ 
-            title: '我的2019 ｜ Yuying Wu', // 分享标题
-            link: 'https://wuyuying.com/year-2019/', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-            imgUrl: 'https://static.wuyuying.com/travel.jpg', // 分享图标
+            title: 'Yuying Wu', // 分享标题
+            link: 'https://wuyuying.com/', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'https://wuyuying.com/favicon-96x96.png', // 分享图标
             success: function () {
               // 设置成功
             }
