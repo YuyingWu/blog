@@ -2,11 +2,104 @@
 title: Notes for Docker
 categories: [tech]
 tags: [docker]
-date: 2019-11-28 13:54:18
+date: 2020-03-11 22:56:18
 createDate: 2019-10-10 23:09:18
 ---
 
 记录前端同学学习Docker的笔记。
+
+## 2020.03
+
+## command
+
+```
+# verified cli can talk to engine
+docker verison
+
+# most config values of engine
+docker info
+
+# docker command line structure
+# docker <command> <sub-command> (options)
+```
+
+## start a Nginx Web Server
+
+```
+# --publish 80:80 -> <host port>:<container port> 
+docker container run --publish 80:80 nginx
+
+# --detach, run the container background
+# you'll get a container id, which is unique
+docker container run --publish 80:80 --detach nginx
+
+# list containers that are active
+docker container ls -a
+
+# --name, name your container
+docker container run --publish 80:80 --detach  --name webhost nginx
+
+# top command to see the process inside the container
+docker container top webhost
+
+# logs
+docker container logs webhost
+
+# stop a container
+docker container stop <container id>
+
+# remove a container
+docker container rm <container id>
+```
+
+1. downloaded image nginx from Docker Hub
+2. started a new container from that image
+3. opened port 80 on the host IP
+4. routes that traffic to the container IP, port 80
+
+### what happens when we run a container
+
+1. looks for that image locally in image cache, doesn't find anything
+2. then looks in remote image repo (defaults to Docker Hub)
+3. downloads the latest version by default
+4. creates new container based on that image and prepares to start
+5. gives it a virtual IP on a private network inside docker engine
+6. opens up port 80 on host and forwards to port 80 in container
+7. starts container by using the CMD in the image Dockerfile
+
+### container vs VM
+
+Container is just a process, you can find the process with a process tool.
+
+```
+# if the container is running, you can find it.
+ps aux | grep <pid or process name>
+```
+
+### what's going on in containers
+
+```
+# process list in one container
+docker container top
+
+# details of one container config
+docker container inspect
+
+# performance stats for all containers, CPU/memory/IO/...
+docker container stats
+```
+
+### Assignment
+
+1. run a `nginx` , a `mysql` , and a `httpd` server
+1. run all of them `--detach` , name them with `--name` 
+1. nginx should listen on 80:80, httpd on 8080:80, mysql on 3306:3306
+1. when running mysql, use the `--env` or `-e` to pass in `MYSQL_RANDOM_ROOT_PASSWORD=yes` 
+1. use `docker container logs` on mysql to find the password it created on startup
+1. clean it all up with `docker container stop`  and `docker container rm` 
+1. use `docker container ls` to ensure everything is correct before and after cleanup
+
+## 2019.10
 
 ## 核心概念
 
@@ -199,6 +292,7 @@ ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 
 ## 附录
 
-* Docker —— 从入门到实践
-  * >> [实体书](https://book.douban.com/subject/27178710/)
-  * >> [在线版](https://yeasy.gitbooks.io/docker_practice/content/)
+- [Docker for the Virtualization Admin](https://github.com/mikegcoleman/docker101/blob/master/Docker_eBook_Jan_2017.pdf)
+- [Cgroups, namespaces, and beyond: what are containers made from?](https://www.youtube.com/watch?v=sK5i-N34im8&feature=youtu.be&list=PLBmVKD7o3L8v7Kl_XXh3KaJl9Qw2lyuFl)
+- [Docker Documentation](https://docs.docker.com/)
+- Docker —— 从入门到实践 [实体书](https://book.douban.com/subject/27178710/) [在线版](https://yeasy.gitbooks.io/docker_practice/content/)
