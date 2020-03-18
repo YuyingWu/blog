@@ -8,8 +8,15 @@
     "url": "https://github.com/YuyingWu/blog/issues"
   },
   "dependencies": {
+    "@antv/g2plot": "^1.0.1",
+    "antd": "^4.0.3",
+    "axios": "^0.19.1",
     "gatsby": "^2.17.11",
+    "gatsby-plugin-antd": "^2.2.0",
+    "gatsby-plugin-less": "^3.0.21",
     "gatsby-theme-chaton": "*",
+    "less": "^3.11.1",
+    "moment": "^2.24.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
@@ -38,7 +45,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "deploy": "gatsby build --prefix-paths && cd ./public && scp -o stricthostkeychecking=no -r ./* root@138.68.161.48:/home/wyyGatsby/",
-    "start": "npm run develop",
+    "start": "gatsby serve",
     "build": "gatsby build",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
