@@ -12,6 +12,7 @@ const FUND_TYPE = {
 }
 
 const SERVER_PREFIX = 'https://server.wuyuying.com';
+// const SERVER_PREFIX = 'http://127.0.0.1:3000';
 
 export {
   toFixFormat,

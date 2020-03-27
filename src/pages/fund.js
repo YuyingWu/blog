@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Table, Tag, Row, Col, Select, Button } from 'antd';
+import { Table, Tag, Row, Col, Select, Button, Collapse } from 'antd';
 import moment from 'moment';
 import { toFixFormat, FUND_TYPE, SERVER_PREFIX } from '../utils/fund';
 import mockData from '../data/fund';
-import FundChart from '../components/fund/index'
+import FundChart from '../components/fund/index';
+import EvaluateTable from '../components/fund/evaluate';
 
+const { Panel } = Collapse;
 const { Option } = Select;
 const DATE_FORMAT = 'YY/MM/DD';
 
@@ -87,7 +89,7 @@ export default class extends Component {
       if (DEBUG) {
         fundBuyData = mockData;
       } else {
-        const res = await axios.get(`${SERVER_PREFIX}/api/fund`);
+        const res = await axios.get(`${SERVER_PREFIX}/api/fund/buyRecord`);
         fundBuyData = res.data.list;
       }
       
@@ -95,7 +97,7 @@ export default class extends Component {
 
       for (const fund of fundBuyData) {
         if (!fundDB[`${fund.code}`]) {
-          const response = await axios.get(`${SERVER_PREFIX}/fund?id=${fund.code}`);
+          const response = await axios.get(`${SERVER_PREFIX}/api/fund/detail?id=${fund.code}`);
 
           if (response && response.data && response.data.data) {
             let fundMarketData = response.data.data;
@@ -267,7 +269,14 @@ export default class extends Component {
       <div>
         <Row>
           <Col sm={{ span: 24 }} md={{ span: 20, offset: 2}}>
-            { marketData.length ? <FundChart data={marketData} /> : null }
+            <Collapse defaultActiveKey={['']}>
+              <Panel header="饼图" key="1">
+                { marketData.length ? <FundChart data={marketData} /> : null }
+              </Panel>
+              <Panel header="估值" key="2">
+                <EvaluateTable />
+              </Panel>
+            </Collapse>
 
             <header style={{ margin: '20px 0' }}>
               <Select defaultValue="createDate" style={{ width: 120 }} onChange={this.onPropsSelect}>
