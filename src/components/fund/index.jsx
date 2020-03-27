@@ -3,12 +3,20 @@ import { Pie } from '@antv/g2plot'
 import { FUND_TYPE } from '../../utils/fund'
 
 export default class extends Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      marketData: props.data.filter(item => item.holdingShare > 0),
+    }
+  }
+
   componentDidMount() {
     this.formatChart();    
   }
 
   formatChart = () => {
-    const { data: marketData } = this.props;
+    const { marketData } = this.state;
     const fundTypeMarketObject = {};
     const fundGroupArray = [];
 

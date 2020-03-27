@@ -71,4 +71,4 @@ yarn-error.log
 .yarn-integrity
 
 # ide
-.vscode
+.vscode.env

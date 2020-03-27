@@ -143,7 +143,7 @@ export default class extends Component {
           </Col>
           <Col sm={24} md={6}>
             <p>
-              持有份额：{holdingShare}，成本市值 {toFixFormat(buyShare * buyWorth)}
+              持有份额：{toFixFormat(holdingShare)}，成本市值 {toFixFormat(buyShare * buyWorth)}
             </p>
           </Col>
           <Col sm={24} md={6}>
@@ -161,12 +161,13 @@ export default class extends Component {
         {sellRecords.length
           ? sellRecords.map((record, index) => {
               const { share: sellShare, worth: sellWorth, date } = record;
+              const sellRatio = sellWorth - buyWorth;
 
               return (
                 <Col sm={24} md={24/sellRecords.length} key={`col-${index}`}>
                   <Tag color="orange">卖</Tag> ¥{sellWorth} * {sellShare} = ¥
-                  {sellWorth * sellShare} （
-                  {toFixFormat(((sellWorth - buyWorth) / buyWorth) * 100)}%）<Tag>{moment(date).format(DATE_FORMAT)}</Tag>
+                  {toFixFormat(sellWorth * sellShare)} <Tag color={sellRatio > 0 ? '#87d068' : '#f50'}>
+                  {toFixFormat((sellRatio / buyWorth) * 100)}%</Tag> <Tag>{moment(date).format(DATE_FORMAT)}</Tag>
                 </Col>
               );
             })
