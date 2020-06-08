@@ -13,7 +13,7 @@ tags: []
 
 ![](http://cdn.sinacloud.net/woodysblog/articles/en-to-zh.png)
 
-职业习惯，我在chrome和Safari都测了一下，稳定浮现，bug~
+职业习惯，我在chrome和Safari都测了一下，稳定复现，bug~
 恰好这个站点是开源的，那就去github fork一下，把这个bug修了吧。
 
 原href：https://ant.design/
