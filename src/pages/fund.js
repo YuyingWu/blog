@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import { Table, Tag, Row, Col, Select, Button, Collapse } from 'antd';
-import moment from 'moment';
-import { toFixFormat, FUND_TYPE, SERVER_PREFIX } from '../utils/fund';
-import mockData from '../data/fund';
-import FundChart from '../components/fund/index';
-import EvaluateTable from '../components/fund/evaluate';
+import React, { Component } from 'react'
+import axios from 'axios'
+import { Table, Tag, Row, Col, Select, Button, Collapse } from 'antd'
+import moment from 'moment'
+import { toFixFormat, FUND_TYPE, SERVER_PREFIX } from '../utils/fund'
+import mockData from '../data/fund'
+import FundChart from '../components/fund/index'
+import EvaluateTable from '../components/fund/evaluate'
 
-const { Panel } = Collapse;
-const { Option } = Select;
-const DATE_FORMAT = 'YY/MM/DD';
+const { Panel } = Collapse
+const { Option } = Select
+const DATE_FORMAT = 'YY/MM/DD'
 
-const DEBUG = false;
+const DEBUG = false
 
 export default class extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       marketData: [],
@@ -23,43 +23,46 @@ export default class extends Component {
       isLoading: false,
       filterProps: {
         key: 'createDate',
-        value: 'ASC'
-      }
-    };
+        value: 'ASC',
+      },
+    }
   }
 
   componentDidMount() {
-    this.fetchFund();
+    this.fetchFund()
   }
 
   resetState = callback => {
-    this.setState({
-      marketData: [],
-      displayList: [],
-      isLoading: false,
-      filterProps: {
-        key: 'createDate',
-        value: 'ASC'
+    this.setState(
+      {
+        marketData: [],
+        displayList: [],
+        isLoading: false,
+        filterProps: {
+          key: 'createDate',
+          value: 'ASC',
+        },
+      },
+      () => {
+        callback && callback()
       }
-    }, () => {
-      callback && callback();
-    });
+    )
   }
 
   formatMarketData = data => {
     return data.map(item => {
-      const { buyWorth, buyShare, sellRecords = [], netWorth } = item;
-      let sellShare = 0;
+      const { buyWorth, buyShare, sellRecords = [], netWorth } = item
+      let sellShare = 0
 
       if (sellRecords.length) {
         sellRecords.map(r => {
-          sellShare += r.share;
-        });
+          sellShare += r.share
+        })
       }
 
-      const holdingShare = buyShare - sellShare;
-      const ratio = ((netWorth - buyWorth) / buyWorth);
-      const ratioMoney = toFixFormat(holdingShare * buyWorth * ratio);
+      const holdingShare = buyShare - sellShare
+      const ratio = (netWorth - buyWorth) / buyWorth
+      const ratioMoney = toFixFormat(holdingShare * buyWorth * ratio)
 
       return {
         ...item,
@@ -69,83 +72,106 @@ export default class extends Component {
         ratioMoney,
         marketValue: toFixFormat(holdingShare * netWorth),
       }
-    });
+    })
   }
 
   fetchFund = async () => {
     this.setState({
       isLoading: true,
-    });
+    })
 
-    const Storage = localStorage.getItem('fund');
+    const Storage = localStorage.getItem('fund')
 
-    let marketData = [];
+    let marketData = []
 
     if (Storage) {
-      marketData = JSON.parse(Storage);
+      marketData = JSON.parse(Storage)
     } else {
-      let fundBuyData = [];
+      let fundBuyData = []
 
       if (DEBUG) {
-        fundBuyData = mockData;
+        fundBuyData = mockData
       } else {
-        const res = await axios.get(`${SERVER_PREFIX}/api/fund/buyRecord`);
-        fundBuyData = res.data.list;
+        const res = await axios.get(`${SERVER_PREFIX}/api/fund/buyRecord`)
+        fundBuyData = res.data.list
       }
-      
-      let fundDB = {};
 
-      for (const fund of fundBuyData) {
-        if (!fundDB[`${fund.code}`]) {
-          const response = await axios.get(`${SERVER_PREFIX}/api/fund/detail?id=${fund.code}`);
+      let fundDB = {}
 
-          if (response && response.data && response.data.data) {
-            let fundMarketData = response.data.data;
+      for (let fund of fundBuyData) {
+        if (fund) {
+          if (!fundDB[`${fund.code}`]) {
+            const response = await axios.get(
+              `${SERVER_PREFIX}/api/fund/detail?id=${fund.code}`
+            )
 
-            fundDB[`${fund.code}`] = {
-              netWorth: fundMarketData.netWorth,
-              name: fundMarketData.name,
-            };
+            if (response && response.data && response.data.data) {
+              let fundMarketData = response.data.data
+
+              fundDB[`${fund.code}`] = {
+                netWorth: fundMarketData.netWorth,
+                name: fundMarketData.name,
+              }
+            } else {
+              fundDB[`${fund.code}`] = {};
+            }
           }
+
+          fund.name = fundDB[`${fund.code}`].name
+          fund.netWorth = fundDB[`${fund.code}`].netWorth
+
+          marketData.push(fund)
         }
-
-        fund.name = fundDB[`${fund.code}`].name;
-        fund.netWorth = fundDB[`${fund.code}`].netWorth;
-
-        marketData.push(fund);
       }
 
-      marketData = this.formatMarketData(marketData);
+      marketData = this.formatMarketData(marketData)
 
-      localStorage.setItem('fund', JSON.stringify(marketData));
+      localStorage.setItem('fund', JSON.stringify(marketData))
     }
 
     this.setState({
       marketData,
       displayList: marketData,
       isLoading: false,
-    });
-  };
+    })
+  }
 
   detailRender = (text, record, index) => {
-    const { buyWorth, buyShare, code, sellRecords = [], createDate, name, netWorth, holdingShare, ratio, sellShare, ratioMoney, type } = record;
+    const {
+      buyWorth,
+      buyShare,
+      code,
+      sellRecords = [],
+      createDate,
+      name,
+      netWorth,
+      holdingShare,
+      ratio,
+      sellShare,
+      ratioMoney,
+      type,
+    } = record
 
     return (
-      <div style={{
-        background: holdingShare <= 0 ? '#ccc' : '',
-      }}>
+      <div
+        style={{
+          background: holdingShare <= 0 ? '#ccc' : '',
+        }}
+      >
         <p>
           <Tag color="geekblue">{name}</Tag> ({code}) | {FUND_TYPE[`${type}`]}
         </p>
         <Row>
           <Col sm={24} md={6}>
             <p>
-              份额：买入{buyShare}，卖出{sellShare} <Tag>{moment(createDate).format(DATE_FORMAT)}</Tag>
+              份额：买入{buyShare}，卖出{sellShare}{' '}
+              <Tag>{moment(createDate).format(DATE_FORMAT)}</Tag>
             </p>
           </Col>
           <Col sm={24} md={6}>
             <p>
-              持有份额：{toFixFormat(holdingShare)}，成本市值 {toFixFormat(buyShare * buyWorth)}
+              持有份额：{toFixFormat(holdingShare)}，成本市值{' '}
+              {toFixFormat(buyShare * buyWorth)}
             </p>
           </Col>
           <Col sm={24} md={6}>
@@ -154,36 +180,50 @@ export default class extends Component {
             </p>
           </Col>
           <Col sm={24} md={6}>
-            <p>浮盈亏：<Tag color={ratio > 0 ? '#87d068' : '#f50'}>{toFixFormat(ratio * 100)}%</Tag>
-          = ¥ {ratioMoney}</p>
+            <p>
+              浮盈亏：
+              <Tag color={ratio > 0 ? '#87d068' : '#f50'}>
+                {toFixFormat(ratio * 100)}%
+              </Tag>
+              = ¥ {ratioMoney}
+            </p>
           </Col>
         </Row>
-        
-        <Row>
-        {sellRecords.length
-          ? sellRecords.map((record, index) => {
-              const { share: sellShare, worth: sellWorth, date } = record;
-              const sellRatio = sellWorth - buyWorth;
 
-              return (
-                <Col sm={24} md={24/sellRecords.length} key={`col-${index}`}>
-                  <Tag color="orange">卖</Tag> ¥{sellWorth} * {sellShare} = ¥
-                  {toFixFormat(sellWorth * sellShare)} <Tag color={sellRatio > 0 ? '#87d068' : '#f50'}>
-                  {toFixFormat((sellRatio / buyWorth) * 100)}%</Tag> <Tag>{moment(date).format(DATE_FORMAT)}</Tag>
-                </Col>
-              );
-            })
-          : null}
+        <Row>
+          {sellRecords.length
+            ? sellRecords.map((record, index) => {
+                const { share: sellShare, worth: sellWorth, date } = record
+                const sellRatio = sellWorth - buyWorth
+
+                return (
+                  <Col
+                    sm={24}
+                    md={24 / sellRecords.length}
+                    key={`col-${index}`}
+                  >
+                    <Tag color="orange">卖</Tag> ¥{sellWorth} * {sellShare} = ¥
+                    {toFixFormat(sellWorth * sellShare)}{' '}
+                    <Tag color={sellRatio > 0 ? '#87d068' : '#f50'}>
+                      {toFixFormat((sellRatio / buyWorth) * 100)}%
+                    </Tag>{' '}
+                    <Tag>{moment(date).format(DATE_FORMAT)}</Tag>
+                  </Col>
+                )
+              })
+            : null}
         </Row>
       </div>
-    );
-  };
+    )
+  }
 
   onPropsSelect = value => {
-    const { filterProps: {
-      // key,
-      value: filterValue,
-    }} = this.state;
+    const {
+      filterProps: {
+        // key,
+        value: filterValue,
+      },
+    } = this.state
 
     const props = {
       key: value,
@@ -192,61 +232,64 @@ export default class extends Component {
 
     this.setState({
       filterProps: props,
-    });
+    })
   }
 
   onPropsValueSelect = value => {
-    const { filterProps: {
-      key,
-    }} = this.state;
+    const {
+      filterProps: { key },
+    } = this.state
 
     const props = {
       key,
       value,
-    };
+    }
 
     this.setState({
       filterProps: props,
-    });
+    })
   }
 
   onSearch = () => {
-    const { filterProps } = this.state;
-    const { marketData } = this.state;
+    const { filterProps } = this.state
+    const { marketData } = this.state
 
     const displayList = marketData.sort((a, b) => {
-      let valueA = a[`${filterProps.key}`];
-      let valueB = b[`${filterProps.key}`];
+      let valueA = a[`${filterProps.key}`]
+      let valueB = b[`${filterProps.key}`]
 
       if (filterProps.key === 'createDate') {
         // date
-        valueA = (new Date(valueA)).getTime();
-        valueB = (new Date(valueB)).getTime();
+        valueA = new Date(valueA).getTime()
+        valueB = new Date(valueB).getTime()
       }
-      let compareResult = valueA - valueB;
+      let compareResult = valueA - valueB
 
       if (filterProps.value === 'DESC') {
-        compareResult = -compareResult;
+        compareResult = -compareResult
       }
 
-      return compareResult;
-    });
+      return compareResult
+    })
 
-    this.setState({
-      displayList: [],
-      isLoading: true,
-    }, () => {
-      this.setState({
-        displayList,
-        isLoading: false,
-      });
-    });
+    this.setState(
+      {
+        displayList: [],
+        isLoading: true,
+      },
+      () => {
+        this.setState({
+          displayList,
+          isLoading: false,
+        })
+      }
+    )
   }
 
   onRefresh = () => {
-    localStorage.removeItem('fund');
+    localStorage.removeItem('fund')
 
-    this.resetState(this.fetchFund);
+    this.resetState(this.fetchFund)
   }
 
   render() {
@@ -257,21 +300,21 @@ export default class extends Component {
       //   key: "createDate",
       // },
       {
-        title: "详情",
-        dataIndex: "netWorth",
-        key: "netWorth",
+        title: '详情',
+        dataIndex: 'netWorth',
+        key: 'netWorth',
         render: this.detailRender,
       },
-    ];
-    const { displayList, isLoading, marketData } = this.state;
+    ]
+    const { displayList, isLoading, marketData } = this.state
 
     return (
       <div>
         <Row>
-          <Col sm={{ span: 24 }} md={{ span: 20, offset: 2}}>
+          <Col sm={{ span: 24 }} md={{ span: 20, offset: 2 }}>
             <Collapse defaultActiveKey={['']}>
               <Panel header="饼图" key="1">
-                { marketData.length ? <FundChart data={marketData} /> : null }
+                {marketData.length ? <FundChart data={marketData} /> : null}
               </Panel>
               <Panel header="估值" key="2">
                 <EvaluateTable />
@@ -279,27 +322,47 @@ export default class extends Component {
             </Collapse>
 
             <header style={{ margin: '20px 0' }}>
-              <Select defaultValue="createDate" style={{ width: 120 }} onChange={this.onPropsSelect}>
+              <Select
+                defaultValue="createDate"
+                style={{ width: 120 }}
+                onChange={this.onPropsSelect}
+              >
                 <Option value="createDate">日期</Option>
                 <Option value="code">代码</Option>
                 <Option value="ratioMoney">盈亏市值</Option>
                 <Option value="marketValue">持有市值</Option>
               </Select>
 
-              <Select defaultValue="ASC" style={{ width: 120 }} onChange={this.onPropsValueSelect}>
+              <Select
+                defaultValue="ASC"
+                style={{ width: 120 }}
+                onChange={this.onPropsValueSelect}
+              >
                 <Option value="ASC">升序</Option>
                 <Option value="DESC">降序</Option>
               </Select>
 
-              <Button type="primary" onClick={this.onSearch}>查询</Button>
+              <Button type="primary" onClick={this.onSearch}>
+                查询
+              </Button>
 
-              <Button type="secondary" onClick={this.onRefresh}>更新数据</Button>
+              <Button type="secondary" onClick={this.onRefresh}>
+                更新数据
+              </Button>
             </header>
 
-            { displayList.length ? <Table dataSource={displayList} columns={columns} rowKey={record => record.updatedAt} pagination={false} loading={isLoading} /> : null }
+            {displayList.length ? (
+              <Table
+                dataSource={displayList}
+                columns={columns}
+                rowKey={record => record.updatedAt}
+                pagination={false}
+                loading={isLoading}
+              />
+            ) : null}
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }

@@ -1,32 +1,49 @@
 # Yuying Wu's Blog
 
-## Change Log
+## 主题开发
 
-### 2019.03.22
+> node >= 10.13.0
 
-* 在404中，添加`/blog/archives`的旧url redirect
+文件目录：  
 
-### 添加 favicon
-
-在`Layout.js`中，注入Helmet，如下。
+- workspace
+  - blog (current repo)
+  - gatsby-theme-chaton
+  - package.json
 
 ```
-<Helmet>
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"/>
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"/>
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"/>
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"/>
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"/>
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"/>
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"/>
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"/>
-  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-</Helmet>
+# workspace/package.json
+
+{
+  "name": "gatsby-starter-theme-workspace",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn workspace wyy-blog develop",
+    "build": "yarn workspace wyy-blog build",
+    "serve": "yarn workspace wyy-blog serve"
+  },
+  "workspaces": [
+    "wyy-blog",
+    "gatsby-theme-chaton"
+  ]
+}
 ```
 
-备注：
-免费icon的站点：https://icons8.com
+其中，在blog中的 `package.json` 对 `gatsby-theme-chaton` 依赖的版本为 `*`。
+
+```
+# blog/package.json
+
+"dependencies": {
+  "gatsby-theme-chaton": "*"
+}
+```
+
+运行：
+
+```shell
+yarn dev
+```
