@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Table, Tag, Row, Col, Select, Button, Collapse } from 'antd'
+import {
+  Table,
+  Tag,
+  Row,
+  Col,
+  Select,
+  Button,
+  // Collapse,
+} from 'antd'
 import moment from 'moment'
 import { toFixFormat, FUND_TYPE, SERVER_PREFIX } from '../utils/fund'
 import mockData from '../data/fund'
-import FundChart from '../components/fund/index'
-import EvaluateTable from '../components/fund/evaluate'
+// import FundChart from '../components/fund/index'
+// import EvaluateTable from '../components/fund/evaluate'
 
-const { Panel } = Collapse
+// const { Panel } = Collapse
 const { Option } = Select
 const DATE_FORMAT = 'YY/MM/DD'
 
@@ -312,14 +320,14 @@ export default class extends Component {
       <div>
         <Row>
           <Col sm={{ span: 24 }} md={{ span: 20, offset: 2 }}>
-            <Collapse defaultActiveKey={['']}>
+            {/* <Collapse defaultActiveKey={['']}>
               <Panel header="饼图" key="1">
                 {marketData.length ? <FundChart data={marketData} /> : null}
               </Panel>
               <Panel header="估值" key="2">
                 <EvaluateTable />
               </Panel>
-            </Collapse>
+            </Collapse> */}
 
             <header style={{ margin: '20px 0' }}>
               <Select
