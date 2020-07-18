@@ -8,17 +8,17 @@
     "url": "https://github.com/YuyingWu/blog/issues"
   },
   "dependencies": {
-    "@antv/g2plot": "^1.0.1",
-    "antd": "^4.0.3",
     "axios": "^0.19.1",
     "gatsby": "^2.17.11",
-    "gatsby-plugin-antd": "^2.2.0",
     "gatsby-plugin-less": "^3.0.21",
     "gatsby-theme-chaton": "*",
     "less": "^3.11.1",
     "moment": "^2.24.0",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "@material-ui/core": "^4.9.0",
+    "@material-ui/styles": "^4.9.0",
+    "gatsby-plugin-material-ui": "^2.1.6"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -27,11 +27,7 @@
     "prettier": "^1.14.2"
   },
   "homepage": "https://github.com/YuyingWu/blog#readme",
-  "keywords": [
-    "gatsby",
-    "Yuying Wu",
-    "blog"
-  ],
+  "keywords": ["gatsby", "Yuying Wu", "blog"],
   "license": "MIT",
   "main": "n/a",
   "repository": {

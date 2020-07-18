@@ -1,5 +1,8 @@
 node_modules
 
+# code sandbox
+.codesandbox/*
+
 # Logs
 logs
 *.log

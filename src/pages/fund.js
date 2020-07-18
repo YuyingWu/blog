@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import {
-  Table,
-  Tag,
-  Row,
-  Col,
-  Select,
-  Button,
-  // Collapse,
-} from 'antd'
+import Select from '@material-ui/core/Select'
+import MenuItem from '@material-ui/core/MenuItem'
+import Button from '@material-ui/core/Button'
+import '@material-ui/core/styles'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableCell from '@material-ui/core/TableCell'
+import TableContainer from '@material-ui/core/TableContainer'
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
+import Grid from '@material-ui/core/Grid'
+import Drawer from '@material-ui/core/Drawer'
 import moment from 'moment'
 import { toFixFormat, FUND_TYPE, SERVER_PREFIX } from '../utils/fund'
 import mockData from '../data/fund'
+import Tag from '../components/tag/index'
 // import FundChart from '../components/fund/index'
-// import EvaluateTable from '../components/fund/evaluate'
+import EvaluateTable from '../components/fund/evaluate'
 
-// const { Panel } = Collapse
-const { Option } = Select
 const DATE_FORMAT = 'YY/MM/DD'
 
 const DEBUG = false
@@ -29,6 +31,7 @@ export default class extends Component {
       marketData: [],
       displayList: [],
       isLoading: false,
+      drawerVisible: false,
       filterProps: {
         key: 'createDate',
         value: 'ASC',
@@ -121,7 +124,7 @@ export default class extends Component {
                 name: fundMarketData.name,
               }
             } else {
-              fundDB[`${fund.code}`] = {};
+              fundDB[`${fund.code}`] = {}
             }
           }
 
@@ -144,7 +147,7 @@ export default class extends Component {
     })
   }
 
-  detailRender = (text, record, index) => {
+  detailRender = record => {
     const {
       buyWorth,
       buyShare,
@@ -167,47 +170,51 @@ export default class extends Component {
         }}
       >
         <p>
-          <Tag color="geekblue">{name}</Tag> ({code}) | {FUND_TYPE[`${type}`]}
+          <Tag>{name}</Tag> ({code}) | {FUND_TYPE[`${type}`]}
         </p>
-        <Row>
-          <Col sm={24} md={6}>
+        <Grid container>
+          <Grid item xs={12} sm={12} md={3}>
             <p>
               份额：买入{buyShare}，卖出{sellShare}{' '}
               <Tag>{moment(createDate).format(DATE_FORMAT)}</Tag>
             </p>
-          </Col>
-          <Col sm={24} md={6}>
+          </Grid>
+          <Grid item xs={12} sm={12} md={3}>
             <p>
               持有份额：{toFixFormat(holdingShare)}，成本市值{' '}
               {toFixFormat(buyShare * buyWorth)}
             </p>
-          </Col>
-          <Col sm={24} md={6}>
+          </Grid>
+          <Grid item xs={12} sm={12} md={3}>
             <p>
               现价：{netWorth} ｜ 买入价：{buyWorth}
             </p>
-          </Col>
-          <Col sm={24} md={6}>
-            <p>
-              浮盈亏：
-              <Tag color={ratio > 0 ? '#87d068' : '#f50'}>
-                {toFixFormat(ratio * 100)}%
-              </Tag>
-              = ¥ {ratioMoney}
-            </p>
-          </Col>
-        </Row>
+          </Grid>
+          {holdingShare > 0 ? (
+            <Grid item xs={12} sm={12} md={3}>
+              <p>
+                浮盈亏：
+                <Tag color={ratio > 0 ? '#87d068' : '#f50'}>
+                  {toFixFormat(ratio * 100)}%
+                </Tag>
+                = ¥ {ratioMoney}
+              </p>
+            </Grid>
+          ) : null}
+        </Grid>
 
-        <Row>
+        <Grid container>
           {sellRecords.length
             ? sellRecords.map((record, index) => {
                 const { share: sellShare, worth: sellWorth, date } = record
                 const sellRatio = sellWorth - buyWorth
 
                 return (
-                  <Col
-                    sm={24}
-                    md={24 / sellRecords.length}
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={12 / sellRecords.length}
                     key={`col-${index}`}
                   >
                     <Tag color="orange">卖</Tag> ¥{sellWorth} * {sellShare} = ¥
@@ -216,16 +223,16 @@ export default class extends Component {
                       {toFixFormat((sellRatio / buyWorth) * 100)}%
                     </Tag>{' '}
                     <Tag>{moment(date).format(DATE_FORMAT)}</Tag>
-                  </Col>
+                  </Grid>
                 )
               })
             : null}
-        </Row>
+        </Grid>
       </div>
     )
   }
 
-  onPropsSelect = value => {
+  onPropsSelect = event => {
     const {
       filterProps: {
         // key,
@@ -234,7 +241,7 @@ export default class extends Component {
     } = this.state
 
     const props = {
-      key: value,
+      key: event.target.value,
       value: filterValue,
     }
 
@@ -243,14 +250,14 @@ export default class extends Component {
     })
   }
 
-  onPropsValueSelect = value => {
+  onPropsValueSelect = event => {
     const {
       filterProps: { key },
     } = this.state
 
     const props = {
       key,
-      value,
+      value: event.target.value,
     }
 
     this.setState({
@@ -300,26 +307,33 @@ export default class extends Component {
     this.resetState(this.fetchFund)
   }
 
+  toggleDrawer(data, event) {
+    const { open } = data
+
+    event.preventDefault()
+
+    if (
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return
+    }
+
+    this.setState({
+      drawerVisible: open,
+    })
+  }
+
   render() {
-    const columns = [
-      // {
-      //   title: "日期",
-      //   dataIndex: "createDate",
-      //   key: "createDate",
-      // },
-      {
-        title: '详情',
-        dataIndex: 'netWorth',
-        key: 'netWorth',
-        render: this.detailRender,
-      },
-    ]
-    const { displayList, isLoading, marketData } = this.state
+    const { displayList, drawerVisible, isLoading, marketData } = this.state
+
+    console.log(drawerVisible)
 
     return (
       <div>
-        <Row>
-          <Col sm={{ span: 24 }} md={{ span: 20, offset: 2 }}>
+        <Grid container>
+          <Grid item sm={12} md={12}>
+            {/* <Col sm={{ span: 24 }} md={{ span: 20, offset: 2 }}> */}
             {/* <Collapse defaultActiveKey={['']}>
               <Panel header="饼图" key="1">
                 {marketData.length ? <FundChart data={marketData} /> : null}
@@ -329,16 +343,25 @@ export default class extends Component {
               </Panel>
             </Collapse> */}
 
+            <Drawer anchor="right" open={drawerVisible}>
+              <EvaluateTable
+                onClick={this.toggleDrawer.bind(this, {
+                  anchor: 'right',
+                  open: false,
+                })}
+              />
+            </Drawer>
+
             <header style={{ margin: '20px 0' }}>
               <Select
                 defaultValue="createDate"
                 style={{ width: 120 }}
                 onChange={this.onPropsSelect}
               >
-                <Option value="createDate">日期</Option>
-                <Option value="code">代码</Option>
-                <Option value="ratioMoney">盈亏市值</Option>
-                <Option value="marketValue">持有市值</Option>
+                <MenuItem value="createDate">日期</MenuItem>
+                <MenuItem value="code">代码</MenuItem>
+                <MenuItem value="ratioMoney">盈亏市值</MenuItem>
+                <MenuItem value="marketValue">持有市值</MenuItem>
               </Select>
 
               <Select
@@ -346,30 +369,51 @@ export default class extends Component {
                 style={{ width: 120 }}
                 onChange={this.onPropsValueSelect}
               >
-                <Option value="ASC">升序</Option>
-                <Option value="DESC">降序</Option>
+                <MenuItem value="ASC">升序</MenuItem>
+                <MenuItem value="DESC">降序</MenuItem>
               </Select>
 
-              <Button type="primary" onClick={this.onSearch}>
+              <Button color="primary" onClick={this.onSearch}>
                 查询
               </Button>
 
-              <Button type="secondary" onClick={this.onRefresh}>
+              <Button color="secondary" onClick={this.onRefresh}>
                 更新数据
+              </Button>
+
+              <Button
+                color="secondary"
+                onClick={this.toggleDrawer.bind(this, {
+                  anchor: 'right',
+                  open: true,
+                })}
+              >
+                查看估值
               </Button>
             </header>
 
             {displayList.length ? (
-              <Table
-                dataSource={displayList}
-                columns={columns}
-                rowKey={record => record.updatedAt}
-                pagination={false}
-                loading={isLoading}
-              />
+              <TableContainer>
+                <Table aria-label="simple table">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>详情</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {displayList.map(row => (
+                      <TableRow key={row.objectId}>
+                        <TableCell component="th" scope="row">
+                          {this.detailRender(row)}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
             ) : null}
-          </Col>
-        </Row>
+          </Grid>
+        </Grid>
       </div>
     )
   }
