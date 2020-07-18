@@ -9,15 +9,15 @@ date: 2018-07-10 22:37:18
 
 Puppeteer金字塔
 
-!["Puppeteer Pyramid"](http://sinacloud.net/woodysblog/img/puppeteer-pyramid.png)
+!["Puppeteer Pyramid"](https://sinacloud.net/woodysblog/img/puppeteer-pyramid.png)
 
 无需再通过Chrome的开发协议，写冗长复杂的代码，轻松调用Chrome API。
 
-!["puppeteer-devtools-protocol"](http://sinacloud.net/woodysblog/img/puppeteer-devtools-protocol.png)
+!["puppeteer-devtools-protocol"](https://sinacloud.net/woodysblog/img/puppeteer-devtools-protocol.png)
 
 Puppeteer的使用场景。
 
-!["Puppeteer use case"](http://sinacloud.net/woodysblog/img/puppeteer-use-cases.png)
+!["Puppeteer use case"](https://sinacloud.net/woodysblog/img/puppeteer-use-cases.png)
 
 ## Demo - screenshot
 
@@ -49,7 +49,7 @@ puppeteer.launch({
 // node screenshot.js
 ```
 
-!["screenshot-puppeteer"](http://sinacloud.net/woodysblog/img/screenshot-puppeteer.gif)
+!["screenshot-puppeteer"](https://sinacloud.net/woodysblog/img/screenshot-puppeteer.gif)
 
 ## Links
 
