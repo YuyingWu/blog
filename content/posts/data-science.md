@@ -2,8 +2,15 @@
 title: 数据科学之路
 categories: [tech]
 tags: [data-science]
-date: 2020-07-22 00:08:18
+date: 2020-07-23 23:51:18
+createDate: 2020-07-22 00:08:18
 ---
+
+## 07.23
+
+今天代码课，Python 入门，一小时内把变量、基础类型、数组&变换、函数和 package 的概念直接过掉，略快……中间还有写代码的时间，期间投屏直播了一会写代码，上一次直播写代码还是来面试阿里的时候 Orz
+
+!["coding class"](https://static.wuyuying.com/data-science/0723-data-science.jpg)
 
 ## 07.21
 
