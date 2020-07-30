@@ -2,9 +2,15 @@
 title: 数据科学之路
 categories: [tech]
 tags: [data-science]
-date: 2020-07-23 23:51:18
+date: 2020-07-30 23:02:18
 createDate: 2020-07-22 00:08:18
 ---
+
+## 07.30
+
+今天做学习委员，给大家讲一下NumPy，现学现卖，传送门 >> [NumPy](https://wuyuying.com/numpy/)
+
+!["NumPy讲堂"](https://static.wuyuying.com/data-science/0730.JPG)
 
 ## 07.23
 
