@@ -23,4 +23,6 @@ date: 2019-11-20 13:51:18
 
 ## License
 
-!["CC BY-NC-ND"](https://camo.githubusercontent.com/9192a5be47b4cbca703977acb1ce06d81442a704/687474703a2f2f7374617469632e7775797579696e672e636f6d2f6173736574732f63632d6c6963656e73652e706e67)
+署名-非商业性使用-禁止演绎 4.0 国际
+
+!["CC BY-NC-ND"](https://static.wuyuying.com/license/cc-by-nc-nd.png)
