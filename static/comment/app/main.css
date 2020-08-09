@@ -1,0 +1,98 @@
+/* reset */
+.wgt-comment p,
+.wgt-comment pre {
+  margin: 0;
+}
+.wgt-comment a {
+  text-decoration: none;
+}
+.wgt-comment a:hover {
+  background: #00ab6b;
+  color: #fff;
+}
+/* comment */
+/* base */
+.comment--colorAccent {
+  color: #00ab6b;
+}
+.comment--colorError {
+  color: red;
+}
+.comment--colorMeta {
+  color: #8F8F8F;
+}
+.comment--fontsizeMeta {
+  font-size: 12px;
+}
+.comment--grid {
+  float: left;
+}
+.comment--grid-r {
+  float: right;
+}
+.comment--clearfix:after {
+  display: block;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  content: '';
+}
+.comment--mt10 {
+  margin-top: 10px;
+}
+.comment--mb10 {
+  margin-bottom: 10px;
+}
+.comment--tRight {
+  text-align: right;
+}
+/* detail */
+.comment__item {
+  margin-bottom: 10px;
+}
+.comment__header {
+  background: #F0F6F3;
+  width: 100%;
+}
+.comment__content {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.comment__quote {
+  border-left: 1px solid #000;
+  margin: 20px 0;
+  padding: 0 0 0 20px;
+}
+/* form */
+.comment__form label,
+.comment__form input {
+  border: 1px solid #E8E8E8;
+  border-radius: 3px;
+  padding: 5px 10px;
+  outline: 0;
+}
+.comment__form label:disabled,
+.comment__form input:disabled {
+  background-color: #F5F5F5;
+}
+.comment__contentInput {
+  width: calc(100% - 20px);
+}
+.comment__submitReply {
+  cursor: pointer;
+}
+.comment__submitReply.disabled {
+  background: #F5F5F5;
+  cursor: wait;
+  color: #000;
+}
+.comment__submitReply.disabled:hover {
+  background: #F5F5F5;
+  color: #000;
+}
+.comment__replyComment {
+  width: calc(100% - 8px);
+  padding: 3px 4px;
+  background: #F0F6F3;
+  cursor: pointer;
+}
