@@ -1,6 +1,4 @@
 import React, { PureComponent } from 'react'
-import Header from 'gatsby-theme-chaton/src/components/header'
-// import Layout from '../gatsby-theme-chaton/components/layout.js'
 
 export default class extends PureComponent {
   render() {
@@ -15,7 +13,7 @@ export default class extends PureComponent {
             margin: '0 auto',
             display: 'block',
           }}
-          src="/comment/index.html"
+          src="/comment-source/index.html"
         />
       </div>
     )
