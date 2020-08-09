@@ -15,7 +15,7 @@ export default class extends PureComponent {
             margin: '0 auto',
             display: 'block',
           }}
-          src="https://3gm9h-9000.sse.codesandbox.io/comment/index.html"
+          src="/comment/index.html"
         />
       </div>
     )

@@ -70,5 +70,13 @@ module.exports = {
         javascriptEnabled: true,
       },
     },
+    {
+      resolve: 'gatsby-plugin-static-folders',
+      options: {
+        folders: [
+          './comment',
+        ]
+      }
+    }
   ],
 }
