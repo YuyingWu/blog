@@ -74,7 +74,7 @@ module.exports = {
       resolve: 'gatsby-plugin-static-folders',
       options: {
         folders: [
-          './comment',
+          './static/comment',
         ]
       }
     }
