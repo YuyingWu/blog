@@ -91,13 +91,13 @@ docker container stats
 
 ### Assignment
 
-1. run a `nginx` , a `mysql` , and a `httpd` server
-1. run all of them `--detach` , name them with `--name` 
+1. run a `nginx` , a `mysql` , and a `httpd` server
+1. run all of them `--detach` , name them with `--name` 
 1. nginx should listen on 80:80, httpd on 8080:80, mysql on 3306:3306
-1. when running mysql, use the `--env` or `-e` to pass in `MYSQL_RANDOM_ROOT_PASSWORD=yes` 
-1. use `docker container logs` on mysql to find the password it created on startup
-1. clean it all up with `docker container stop`  and `docker container rm` 
-1. use `docker container ls` to ensure everything is correct before and after cleanup
+1. when running mysql, use the `--env` or `-e` to pass in `MYSQL_RANDOM_ROOT_PASSWORD=yes` 
+1. use `docker container logs` on mysql to find the password it created on startup
+1. clean it all up with `docker container stop`  and `docker container rm` 
+1. use `docker container ls` to ensure everything is correct before and after cleanup
 
 ## 2019.10
 

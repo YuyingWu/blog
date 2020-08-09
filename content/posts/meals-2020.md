@@ -2,7 +2,7 @@
 title: 2020年做的那些菜
 categories: [life]
 tags: [cooking]
-date: 2020-07-19 12:11:27
+date: 2020-08-09 12:21:27
 createDate: 2020-07-18 11:17:27
 ---
 
@@ -11,6 +11,54 @@ createDate: 2020-07-18 11:17:27
 今年注定是厨艺飞速成长的一年，为了记录厨艺渣渣的成长历程，我要开个帖，顺便晒你们~
 
 ---
+
+## 08.08
+
+自己做的烤翅和口蘑，今晚的鸡翅比上次的皮要松脆一点，搭配全麦面包，yummy 👍
+
+!["鸡翅和全麦面包"](https://static.wuyuying.com/meal-2020/0808.jpg)
+
+## 08.07
+
+阿七被我的烤盘征服了，哈哈，天天喊着要吃烤鸡翅，烤口蘑满分 💯
+
+!["鸡翅"](https://static.wuyuying.com/meal-2020/0807-1.jpg)
+
+## 08.06
+
+买了面包机，第一次做全麦面包，0 糖 0 高筋面粉，看起来很硬，像块陨石，但是其实里面还算松软~
+
+!["陨石"](https://static.wuyuying.com/meal-2020/0806-1.jpg)
+
+第一次切得不太好，应该是刀比较钝，哈哈~
+
+!["切面包"](https://static.wuyuying.com/meal-2020/0806-2.jpg)
+
+## 08.03
+
+元气满满的周一早餐~
+
+!["排骨和口蘑"](https://static.wuyuying.com/meal-2020/0803.jpg)
+
+## 08.02
+
+排骨和口蘑，有点厉害~ 不过排骨的肉太少了，下次还是做鸡翅吧 ：）
+
+!["排骨和口蘑"](https://static.wuyuying.com/meal-2020/0802.jpg)
+
+## 08.01
+
+阿七做的清蒸鸡和葫芦瓜，好吃~
+
+!["清蒸鸡"](https://static.wuyuying.com/meal-2020/0801-1.jpg)
+
+!["葫芦瓜"](https://static.wuyuying.com/meal-2020/0801-2.jpg)
+
+## 07.26
+
+千岛湖回来，自己做点好吃的~
+
+!["牛排"](https://static.wuyuying.com/meal-2020/0726.jpg)
 
 ## 07.19
 
