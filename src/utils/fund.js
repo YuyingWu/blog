@@ -11,7 +11,7 @@ const FUND_TYPE = {
   crude: '原油',
 }
 
-// const SERVER_PREFIX = 'https://server.wuyuying.com';
-const SERVER_PREFIX = 'http://127.0.0.1:3000'
+const SERVER_PREFIX = 'https://server.wuyuying.com';
+// const SERVER_PREFIX = 'http://127.0.0.1:3000'
 
 export { toFixFormat, FUND_TYPE, SERVER_PREFIX }
