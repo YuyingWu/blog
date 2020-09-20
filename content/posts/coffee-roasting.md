@@ -5,6 +5,26 @@ tags: [coffee]
 date: 2020-08-16 19:25:18
 ---
 
+## 09.20
+
+最近喝咖啡比较凶，闲置很久的烘豆机重出江湖~ 但是原来无论控温还是记录都比较粗，很难把控，所以就萌生了Coffee Pi的想法，用树莓派武装烘豆机，加上2个温度传感器，打通烘豆软件Artisan画豆温、环境温度、风门变化的图。
+
+不过，还没有好，哈哈，所以用了最传统的方式，温度仪 + `open roast` 先走一波，至少目前不会烤焦了。
+
+!["open roast + 温度仪"](https://static.wuyuying.com/coffee-roasting/coffee-open-roast.jpg)
+
+树莓咖啡的雏形。
+
+!["树莓咖啡"](https://static.wuyuying.com/coffee-roasting/coffee-pi-0912.jpg)
+
+哈哈，第一次把烘的豆带去公司做奶咖，味道可以的 👍
+
+!["燕麦奶咖"](https://static.wuyuying.com/coffee-roasting/make-coffee-0816.jpg)
+
+---
+
+> 以下是读书学习笔记
+
 ## Roasts Style and Flavor
 
 * The most lightly roasted coffee (usually called `cinnamon`: internal bean temperature at conclusion of roast `below 400°F/205°C`; SCAA color tile #95) is very light brown in color, will display a strong, sometimes sour acidity, little aroma, an often grainy taste, and thin body. The surface of the bean will be dry.
