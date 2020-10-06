@@ -23,6 +23,10 @@ date: 2020-10-06 17:24:27
 
 ![木格措](https://static.wuyuying.com/chuanxi-2020/mugecuo-2.JPG)
 
+![木格措](https://static.wuyuying.com/chuanxi-2020/mugecuo-7.jpg)
+
+![木格措](https://static.wuyuying.com/chuanxi-2020/mugecuo-8.jpg)
+
 ![木格措](https://static.wuyuying.com/chuanxi-2020/mugecuo-3.JPG)
 
 ![木格措](https://static.wuyuying.com/chuanxi-2020/mugecuo-4.JPG)
@@ -40,5 +44,51 @@ date: 2020-10-06 17:24:27
 ![藏彝走廊](https://static.wuyuying.com/chuanxi-2020/zangyizoulang-2.JPG)
 
 ![藏彝走廊](https://static.wuyuying.com/chuanxi-2020/zangyizoulang-3.JPG)
+
+## 沿途玩耍
+
+### 泸定桥
+
+哈哈，路上李师傅说要红色教育~
+
+![ludingqiao.jpg](https://static.wuyuying.com/chuanxi-2020/ludingqiao.jpg)
+
+飞夺泸定桥，了解一下~
+
+![feiduo-ludingqiao.jpg](https://static.wuyuying.com/chuanxi-2020/feiduo-ludingqiao.jpg)
+
+这里的栗子略出名，很有栗子味，哈哈，我吃了一路栗子~
+
+![lizi-2.jpg](https://static.wuyuying.com/chuanxi-2020/lizi-2.jpg)
+
+### 木格措
+
+晚上我们就在这里住宿，在木格措的山脚，晚上还是很冷的，立马就换上了抓绒的外套和裤子。
+
+![mugecuo-shanjiao.jpg](https://static.wuyuying.com/chuanxi-2020/mugecuo-shanjiao.jpg)
+
+![mugecuo-me.jpg](https://static.wuyuying.com/chuanxi-2020/mugecuo-me.jpg)
+
+木格措的语文老师上线~
+
+![qing-mugecuo.jpg](https://static.wuyuying.com/chuanxi-2020/qing-mugecuo.jpg)
+
+木格措和三嬢汇合，突然变成了一个旅行团~
+
+![hezhao.jpg](https://static.wuyuying.com/chuanxi-2020/hezhao.jpg)
+
+湖边的[玛尼堆](https://baike.baidu.com/item/%E7%8E%9B%E5%B0%BC%E5%A0%86/4859153)
+
+> 它是藏族刻在石头上的追求、理想、感情和希望
+
+![manidui.jpg](https://static.wuyuying.com/chuanxi-2020/manidui.jpg)
+
+![manidui-2.jpg](https://static.wuyuying.com/chuanxi-2020/manidui-2.jpg)
+
+看到这两片绿色，有种“怒放的生命”的感觉~
+
+![life-roar.jpg](https://static.wuyuying.com/chuanxi-2020/life-roar.jpg)
+
+![life-roar-2.jpg](https://static.wuyuying.com/chuanxi-2020/life-roar-2.jpg)
 
 > To be continued.
