@@ -85,10 +85,38 @@ date: 2020-10-06 17:24:27
 
 ![manidui-2.jpg](https://static.wuyuying.com/chuanxi-2020/manidui-2.jpg)
 
-看到这两片绿色，有种“怒放的生命”的感觉~
+看到这几片绿色，有种“怒放的生命”的感觉~
 
 ![life-roar.jpg](https://static.wuyuying.com/chuanxi-2020/life-roar.jpg)
 
 ![life-roar-2.jpg](https://static.wuyuying.com/chuanxi-2020/life-roar-2.jpg)
+
+![tree-1.jpg](https://static.wuyuying.com/chuanxi-2020/tree-1.jpg)
+
+![tree-2.jpg](https://static.wuyuying.com/chuanxi-2020/tree-2.jpg)
+
+![tree-3.jpg](https://static.wuyuying.com/chuanxi-2020/tree-3.jpg)
+
+![waterfall.jpg](https://static.wuyuying.com/chuanxi-2020/waterfall.jpg)
+
+![waterfall-2.jpg](https://static.wuyuying.com/chuanxi-2020/waterfall-2.jpg)
+
+### 公路野餐
+
+从木格措离开，前往九龙县的路上，我们到了山顶，找了块空地野餐，XP壁纸的既视感。
+
+我们往车尾箱塞了超多好吃的，尤其是自热小火锅/自热米饭，真的是神发明，哈哈，带矿泉水就完了，米饭煮出来还不错，赞 >3<
+
+![camping.jpg](https://static.wuyuying.com/chuanxi-2020/camping.jpg)
+
+![camping-2.jpg](https://static.wuyuying.com/chuanxi-2020/camping-2.jpg)
+
+这条公路，最高海拔应该破4000，青总没扛住开始吸氧气了，哈哈哈，路上完美演绎“在云端”，最高的地方，车子应该是穿云而过，厉害了……
+
+![on-the-road-1](https://static.wuyuying.com/chuanxi-2020/on-the-road-1.jpg)
+
+![on-the-road-2](https://static.wuyuying.com/chuanxi-2020/on-the-road-2.jpg)
+
+![on-the-road-3](https://static.wuyuying.com/chuanxi-2020/on-the-road-3.jpg)
 
 > To be continued.
