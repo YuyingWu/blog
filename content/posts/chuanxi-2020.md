@@ -101,7 +101,7 @@ date: 2020-10-06 17:24:27
 
 ![waterfall-2.jpg](https://static.wuyuying.com/chuanxi-2020/waterfall-2.jpg)
 
-### 公路野餐
+### 在路上
 
 从木格措离开，前往九龙县的路上，我们到了山顶，找了块空地野餐，XP壁纸的既视感。
 
@@ -119,4 +119,42 @@ date: 2020-10-06 17:24:27
 
 ![on-the-road-3](https://static.wuyuying.com/chuanxi-2020/on-the-road-3.jpg)
 
-> To be continued.
+海拔太高，青总终于开始吸氧气了，哈哈
+
+![yangqi](https://static.wuyuying.com/chuanxi-2020/yangqi.jpg)
+
+前往九龙的路，有点遥远，今天没有控制好时间，辛苦李师傅了~ 今天是10.2，九月十六，月亮好圆，可惜月亮没拍好，但是在路上看到一个很漂亮的星空，也是由于技术原因，没拍好，抬头一看，繁星流动~
+
+![sky](https://static.wuyuying.com/chuanxi-2020/sky.jpg)
+
+### 伍须海
+
+伍须海也是个原始森林的点，边上有一大片草原，还有很多牛（fen）~ 天气好的时候，蓝天白云，湖天一色，肯定很美 比较遗憾，我们在湖边的2个小时，天气不太好，灰蒙蒙的，只等到一点点阳光照下来~
+
+![wuxuhai-5](https://static.wuyuying.com/chuanxi-2020/wuxuhai-5.jpg)
+
+![wuxuhai-4](https://static.wuyuying.com/chuanxi-2020/wuxuhai-4.jpg)
+
+![wuxuhai-6](https://static.wuyuying.com/chuanxi-2020/wuxuhai-6.jpg)
+
+![wuxuhai](https://static.wuyuying.com/chuanxi-2020/wuxuhai.jpg)
+
+![wuxuhai-2](https://static.wuyuying.com/chuanxi-2020/wuxuhai-2.jpg)
+
+![wuxuhai-3](https://static.wuyuying.com/chuanxi-2020/wuxuhai-3.jpg)
+
+九龙县的民族广场，天一黑，广场舞舞起~
+
+![wuxuhai-7](https://static.wuyuying.com/chuanxi-2020/wuxuhai-7.jpg)
+
+## 期待下一次
+
+川西小环线，真的很美，路上风光无限，除了有的地方海拔特别高（可能会有高反），哈哈，希望锻炼下车技，有一天可以自驾跑一下藏彝走廊这条线。伍须海可能要再去一次，希望下次去天气好一些。泸定桥和九龙的栗子不错，哈哈，几乎吃了一路，yummy~
+
+好像没怎么放吃的，最后放几张吃的，在这边吃的主要是牦牛肉、黄牛肉，很硬，哈哈。
+
+![food-1](https://static.wuyuying.com/chuanxi-2020/food-1.jpg)
+
+![food-2](https://static.wuyuying.com/chuanxi-2020/food-2.jpg)
+
+![food-3](https://static.wuyuying.com/chuanxi-2020/food-3.jpg)
