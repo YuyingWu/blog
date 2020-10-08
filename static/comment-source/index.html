@@ -8,16 +8,16 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Comment</title>
-    <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="/comment/app/main.css" />
+    <link rel="stylesheet" type="text/css" href="/comment-source/app/main.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./app/main.css" /> -->
   </head>
-  <body>
+  <body style="margin: 0;">
     <section id="wgt-comment" class="wgt-comment" data-permalink="/comment/">
       <div id="comment-list">
         <article class="comment--fontsizeMeta">加载中...</article>
       </div>
 
-      <h2>留言板</h2>
+      <h4>你的评论</h4>
       <form id="comment-form" class="comment__form">
         <input
           type="text"
@@ -60,7 +60,21 @@
     <script src="https://cdn1.lncld.net/static/js/2.1.4/av-min.js"></script>
     <script src="https://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
     <script src="https://cdn.bootcss.com/moment.js/2.18.1/moment.min.js"></script>
-    <!-- <script src="/comment/dist/app/bundle.js"></script> -->
-    <script src="/comment/app/bundle.js"></script>
+    <script>
+      var commentElement = document.getElementById('wgt-comment');
+
+      try {
+        var postId = window.location.search.split('?')[1].split('=')[1];
+
+        commentElement.setAttribute('data-permalink', postId);
+      } catch (e) {
+        var postId = '/comment/';
+
+        commentElement.setAttribute('data-permalink', postId);
+      }
+      
+    </script>
+    <!-- <script src="./app/bundle.js"></script> -->
+    <script src="/comment-source/app/bundle.js"></script>
   </body>
 </html>
