@@ -1,4 +1,5 @@
 import React from "react"
+import ReactDOM from "react-dom"
 import { Styled, css } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import PostFooter from "gatsby-theme-chaton/src/components/post-footer"
@@ -20,6 +21,7 @@ const Post = ({
   next,
 }) => {
   let tags = post.tags || [];
+  let height;
 
   return (
     <Layout location={location} title={title}>
@@ -49,6 +51,19 @@ const Post = ({
 
         <MDXRenderer>{post.body}</MDXRenderer>
       </main>
+
+      <iframe
+        title="comment"
+        style={{
+          border: 0,
+          height: '60vh',
+          width: '100%',
+          margin: '0 auto',
+          display: 'block',
+          overflowY: 'visible',
+        }}
+        src={`https://wuyuying.com/comment-source?post=/archives${post.slug}`}
+      />
 
       <PostFooter {...{ previous, next }} />
     </Layout>
