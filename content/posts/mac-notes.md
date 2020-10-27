@@ -2,14 +2,20 @@
 title: Mac使用记录
 categories: [tech]
 tags: []
-date: 2014-10-26 23:24:50
-updateDate: 2017-04-21 17:02:00
+date: 2020-10-27 22:27:50
+createDate: 2014-10-26 23:24:50
 type: title
 ---
+
+> created at 2014-10-26 23:24:50
 
 慢慢记录Mac OS那些好用的东东~
 
 ## 程序员的那些软件/使用技巧
+
+### code path
+
+通过 `code` 用 VSCode 打开当前路径，进入 VSCode 的面板，`SHIFT + CMD + P`，录入 `shell command`，点击 `Shell command 'code' successfully installed in PATH.`
 
 ### iTerm —— oh-my-zsh
 
