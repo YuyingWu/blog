@@ -52,18 +52,18 @@ const Post = ({
         <MDXRenderer>{post.body}</MDXRenderer>
       </main>
 
-      <iframe
+      {/* <iframe
         title="comment"
         style={{
           border: 0,
-          height: '60vh',
+          // height: '60vh',
           width: '100%',
           margin: '0 auto',
           display: 'block',
           overflowY: 'visible',
         }}
         src={`https://wuyuying.com/comment-source?post=/archives${post.slug}`}
-      />
+      /> */}
 
       <PostFooter {...{ previous, next }} />
     </Layout>
