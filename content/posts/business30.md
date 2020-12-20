@@ -2,7 +2,8 @@
 title: 商业通识30讲
 categories: [reading]
 tags: [reading]
-date: 2020-11-22 16:40:19
+date: 2020-12-20 15:42:19
+createDate: 2020-11-22 16:40:19
 ---
 
 > 仅做学习用途，请勿转载 或 用于其他意图。
@@ -15,7 +16,7 @@ date: 2020-11-22 16:40:19
 - 商业到哪里去
 - 我们如何顺势而为
 
-![](https://cdn.nlark.com/yuque/0/2020/png/198542/1598971054957-ded73a22-1fa8-414a-a2fc-a6dd159b11db.png#align=left&display=inline&height=394&margin=%5Bobject%20Object%5D&originHeight=394&originWidth=700&size=0&status=done&style=none&width=700)
+![](https://static.wuyuying.com/business30/general.png)
 
 ## 商业是什么
 
@@ -29,7 +30,7 @@ date: 2020-11-22 16:40:19
 
 商业的本质，是交易。更先进的商业，就是更高效率的交易。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/198542/1598972197613-bdc2f272-245e-40af-8fb1-ec5563351012.jpeg#align=left&display=inline&height=1225&margin=%5Bobject%20Object%5D&originHeight=1225&originWidth=700&size=0&status=done&style=none&width=700)
+![](https://static.wuyuying.com/business30/shangye-benzhi.png)
 
 ### 为什么天下的生意总是难做的
 
@@ -44,7 +45,7 @@ date: 2020-11-22 16:40:19
 
 > 这个买卖的交易结构，是张三从李四手上，用5元的价格“买”到大米，然后用20元的价格“卖”给王五。张三作为“中间商”，赚了15元的差价。几乎什么都不用做，就能获得15元的差价。这份利益合法而且诱人。但是，这份差价，客观上减少了买家的购买意愿，减缓了商品的流通，抑制了生产者创造的热情，最终减少了整个社会的财富总量。
 
-![](https://cdn.nlark.com/yuque/0/2020/png/198542/1598973229792-3af86f67-fa0d-4b9e-bcfb-5f9fb5d35b38.png#align=left&display=inline&height=85&margin=%5Bobject%20Object%5D&originHeight=85&originWidth=700&size=0&status=done&style=none&width=700)
+![](https://static.wuyuying.com/business30/xiaoxi.png)
 
 利用“构建”信息不对称赚钱，是一种重要的、短期获利办法；利用“打破”信息不对称赚钱，才是一种更重要的、长期获利办法。
 
@@ -52,9 +53,7 @@ date: 2020-11-22 16:40:19
 
 信用不传递，就是离我越远的人我越不信任。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/198542/1598973458537-f057ca2d-e7bd-4b4c-8283-d146054f4258.jpeg#align=left&display=inline&height=62&margin=%5Bobject%20Object%5D&originHeight=62&originWidth=700&size=0&status=done&style=none&width=700)
-
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/198542/1598973478987-a8f40d95-1c7d-4bc0-8096-95cc6f1d8118.jpeg#align=left&display=inline&height=1225&margin=%5Bobject%20Object%5D&originHeight=1225&originWidth=700&size=0&status=done&style=none&width=700)
+![](https://static.wuyuying.com/business30/xinren.png)
 
 ### 交易成本
 
@@ -65,8 +64,6 @@ date: 2020-11-22 16:40:19
 交易成本，是克服“信息不对称、信用不传递”的交易阻力，而必须付出的代价。伟大的公司之所以伟大，就是因为它们能不断降低商业世界的“交易成本”，减小代价。
 
 商业进化的方向，就是从“交易成本=∞”，向“交易成本= 0”前进的方向。
-
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/198542/1599056029152-da8f9e6b-40be-426d-ad10-c63cbe71c5d6.jpeg#align=left&display=inline&height=1225&margin=%5Bobject%20Object%5D&originHeight=1225&originWidth=700&size=0&status=done&style=none&width=700)
 
 #### 交易前
 
@@ -110,8 +107,6 @@ date: 2020-11-22 16:40:19
 
 如果说淘宝的成功，是因为降低了搜寻成本；支付宝的成功，就是因为降低了付款成本。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/198542/1599056585442-1a472ad8-28a4-47a3-a013-c43c6114ddae.jpeg#align=left&display=inline&height=1225&margin=%5Bobject%20Object%5D&originHeight=1225&originWidth=700&size=0&status=done&style=none&width=700)
-
 #### 交易后
 
 运输成本，也就是为了物理上完成商品的交付，所必须付出的运输、保管、管理成本
@@ -119,8 +114,6 @@ date: 2020-11-22 16:40:19
 售后成本，也就是为了保障承诺的正常使用，所必须付出的服务成本
 
 费敏老师在华为时，负责整个华为的研发体系。他说，华为是不会这么设计产品的。华为如果做空调，一定会把空调“模块化”。维修工人上门后，就可以直接拔走坏掉的模块，换上新的，走人。这样的售后成本，是最低的。
-
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/198542/1599057239819-9569e635-794b-49e7-86b7-21fe2a1a88da.jpeg#align=left&display=inline&height=1225&margin=%5Bobject%20Object%5D&originHeight=1225&originWidth=700&size=0&status=done&style=none&width=700)
 
 #### 降低交易成本那些事
 
@@ -160,7 +153,7 @@ date: 2020-11-22 16:40:19
 是的。但所有这些的背后，是连接，越来越进步，越来越高效的连接。
 高效的连接，必然短路低效的连接，从而推动交易网络的结构性改变，带来伟大的机会。
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/198542/1599376686618-58f03735-5e6d-47a7-bb3b-3d83e05c2bc1.png#align=left&display=inline&height=380&margin=%5Bobject%20Object%5D&name=image.png&originHeight=380&originWidth=1225&size=560293&status=done&style=none&width=1225)
+![image.png](https://static.wuyuying.com/business30/xiulu.png)
 
 连接改变商业世界的方式有两个：
 
@@ -179,13 +172,13 @@ date: 2020-11-22 16:40:19
 
 网络密度为0
 
-![](https://cdn.nlark.com/yuque/0/2020/png/198542/1599377791397-8b376002-31d9-44f4-9fbe-ad9f1520398f.png#align=left&display=inline&height=506&margin=%5Bobject%20Object%5D&originHeight=506&originWidth=700&size=0&status=done&style=none&width=700)
+![](https://static.wuyuying.com/business30/yuanshishehui.png)
 
 #### 小农经济
 
 网络密度 = 7 / 136 = 5.1%
 
-![](https://cdn.nlark.com/yuque/0/2020/png/198542/1599377869009-13bd1fe3-c15e-4d21-a147-b447b32ad93e.png#align=left&display=inline&height=506&margin=%5Bobject%20Object%5D&originHeight=506&originWidth=700&size=0&status=done&style=none&width=700)
+![](https://static.wuyuying.com/business30/xiaonongshehui.png)
 
 #### 线段型商业文明
 
@@ -197,9 +190,9 @@ date: 2020-11-22 16:40:19
 
 目前还是有很多行业的商业模式处于线段型，每一段的断开都会带来新的机会。
 
-![](https://cdn.nlark.com/yuque/0/2020/png/198542/1599377960262-4fff16a2-c8a2-407a-bc43-ad6ff1bd15e9.png#align=left&display=inline&height=506&margin=%5Bobject%20Object%5D&originHeight=506&originWidth=700&size=0&status=done&style=none&width=700)
+![](https://static.wuyuying.com/business30/xianxingwenming.png)
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/198542/1599379791970-4959ab14-2e88-4b83-a948-795769fbfedb.png#align=left&display=inline&height=617&margin=%5Bobject%20Object%5D&name=image.png&originHeight=617&originWidth=517&size=302958&status=done&style=none&width=517)
+![](https://static.wuyuying.com/business30/silk.png)
 
 如何克服信息不对称？
 
@@ -223,14 +216,14 @@ date: 2020-11-22 16:40:19
 
 一些交易节点因为天然的地理优势、政策优势、技术优势，成为了“超级节点”
 
-![](https://cdn.nlark.com/yuque/0/2020/png/198542/1599378059066-d500d31c-6187-428d-bcbe-e4b84e599e4d.png#align=left&display=inline&height=506&margin=%5Bobject%20Object%5D&originHeight=506&originWidth=700&size=0&status=done&style=none&width=700)
+![](https://static.wuyuying.com/business30/zhongxinxing.png)
 
 如何克服信息不对称？
 
 沃尔玛 和 京东，中心化的卖货
 淘宝和薇雅，平台，连接买卖家
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/198542/1599381983954-cc4d2d37-0b08-4845-9fb8-84a38331e787.png#align=left&display=inline&height=589&margin=%5Bobject%20Object%5D&name=image.png&originHeight=589&originWidth=517&size=420950&status=done&style=none&width=517)
+![](https://static.wuyuying.com/business30/zhongxin-model.png)
 
 如何克服信用不传递？
 
@@ -243,11 +236,7 @@ date: 2020-11-22 16:40:19
 网络密度增加，带来了超级节点；网络密度的进一步增加，开始消灭超级节点。
 这就像以前家家都没有电视，你家有，你就成了街坊邻居的超级节点。后来每家都有电视了，大家开始回家看电视，超级节点被消灭。
 
-![](https://cdn.nlark.com/yuque/0/2020/png/198542/1599378180348-d2d276e2-f9cd-47e2-96d0-c8409626d6f7.png#align=left&display=inline&height=506&margin=%5Bobject%20Object%5D&originHeight=506&originWidth=700&size=0&status=done&style=none&width=700)
-
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/198542/1599384531259-f6a4da1b-2b4c-4e0e-8f89-0fd5d996b089.png#align=left&display=inline&height=616&margin=%5Bobject%20Object%5D&name=image.png&originHeight=616&originWidth=502&size=412845&status=done&style=none&width=502)
-
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/198542/1599386974909-80aec632-2d7e-4ad3-95e2-f0818816d9ea.png#align=left&display=inline&height=613&margin=%5Bobject%20Object%5D&name=image.png&originHeight=613&originWidth=519&size=398347&status=done&style=none&width=519)
+![](https://static.wuyuying.com/business30/quzhongxin.png)
 
 线段型商业克服“信用不传递”的方法是“信用中介”，中心型商业是“信用中心”，去中心型商业是“信用科技”。
 
@@ -268,9 +257,9 @@ date: 2020-11-22 16:40:19
 
 这个“玻璃上的商业社会”，可能会有三个特征：1）商人的最终归宿，是不再需要商人；2）商品的定倍率，无限接近于1；3）可以不断接近，永远无法到达。
 
-![](https://cdn.nlark.com/yuque/0/2020/png/198542/1599378297003-7cfd8951-1b8b-4f9e-9298-39c203bf4b2c.png#align=left&display=inline&height=506&margin=%5Bobject%20Object%5D&originHeight=506&originWidth=700&size=0&status=done&style=none&width=700)
+![](https://static.wuyuying.com/business30/quanlianjie.png)
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/198542/1599379298062-c39fc940-67b8-49f0-90b2-f67338146cc5.jpeg#align=left&display=inline&height=1225&margin=%5Bobject%20Object%5D&originHeight=1225&originWidth=700&size=0&status=done&style=none&width=700)
+![](https://static.wuyuying.com/business30/wangluomidu.jpg)
 
 ## 交易效率 & 生产效率
 
@@ -283,7 +272,7 @@ date: 2020-11-22 16:40:19
 - 20世纪50年代，第三次工业革命开始了。这次革命被称为“信息时代”。可再生能源 & 计算资源。
 - 第四次工业革命？马老师说，未来30年，数据将取代石油，成为最强大能源。因为能源对商业的最大价值，是提高人类的“生产效率”。而未来提高人类生产效率的最大动力，是“大数据”。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/198542/1599390304788-c28f9db2-e2e3-4785-b35f-f0f6a991b3fe.jpeg#align=left&display=inline&height=295&margin=%5Bobject%20Object%5D&originHeight=295&originWidth=700&size=0&status=done&style=none&width=700)
+![](https://static.wuyuying.com/business30/geming.png)
 
 ## 我们如何顺势而为
 
@@ -297,7 +286,7 @@ date: 2020-11-22 16:40:19
 - 什么是工资？短暂的供需失衡带来了红利，也必然带来竞争。竞争导致供需重回平衡。这时，你只能赚到“社会平均利润”，也就是“工资”。你以为你在创业，其实你只是在为这个社会打工。
 - 什么是利润？利润，来自于没有竞争。只有牢牢守住自己的生态位，让竞争对手望而却步，才能享受真正的利润。
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/198542/1599391857564-54ba6cc6-ed00-47da-bd60-d4f4cb71e0f4.png#align=left&display=inline&height=619&margin=%5Bobject%20Object%5D&name=image.png&originHeight=619&originWidth=518&size=405496&status=done&style=none&width=518)
+![](https://static.wuyuying.com/business30/geming.png)
 
 ### 如何持续赚取利润 —— 护城河
 
@@ -317,8 +306,6 @@ date: 2020-11-22 16:40:19
 - 第四类，迁移成本，包括习惯和资产。
    - 习惯：苹果的滑屏解锁专利
    - 资产：携号转网、百度云盘
-
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/198542/1599392220348-2aad1e76-4726-4f84-a0e7-a0fb26bde6e5.png#align=left&display=inline&height=618&margin=%5Bobject%20Object%5D&name=image.png&originHeight=618&originWidth=515&size=467848&status=done&style=none&width=515)
 
 ## 商业进化的未来史
 
