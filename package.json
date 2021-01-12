@@ -28,7 +28,11 @@
     "prettier": "^1.14.2"
   },
   "homepage": "https://github.com/YuyingWu/blog#readme",
-  "keywords": ["gatsby", "Yuying Wu", "blog"],
+  "keywords": [
+    "gatsby",
+    "Yuying Wu",
+    "blog"
+  ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
