@@ -41,10 +41,10 @@ const Post = ({
           })}
         >
           {post.date}
-          <Styled.a as={Link} to="https://wuyuying.com/comment/" css={css({
+          {/* <Styled.a as={Link} to="https://wuyuying.com/comment/" css={css({
             px: 2,
             display: 'inline-block',
-          })}>>> 前往留言板</Styled.a>
+          })}>>> 前往留言板</Styled.a> */}
         </Styled.p>
 
         <Tags tags={tags} />
