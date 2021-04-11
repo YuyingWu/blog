@@ -9,8 +9,8 @@ module.exports = {
     aboutUrl: `/about`,
     social: [
       {
-        name: 'twitter',
-        url: 'https://mobile.twitter.com/wuyuying1128',
+        name: 'rss',
+        url: 'https://wuyuying.com/rss.xml',
       },
       {
         name: 'github',
@@ -18,7 +18,7 @@ module.exports = {
       },
       {
         name: 'douban',
-        url: 'https://www.douban.com/people/wuyuying1128_',
+        url: 'https://www.douban.com/people/wuyuying1128_/',
       },
       {
         name: 'zhihu',
