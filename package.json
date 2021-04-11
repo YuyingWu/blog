@@ -15,7 +15,7 @@
     "gatsby-plugin-less": "^3.0.21",
     "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-static-folders": "^1.0.1",
-    "gatsby-theme-chaton": "^0.0.12",
+    "gatsby-theme-chaton": "^0.0.13",
     "less": "^3.11.1",
     "moment": "^2.24.0",
     "react": "^16.11.0",
