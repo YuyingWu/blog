@@ -4,14 +4,12 @@ date: 2021-05-01 19:42:09
 categories: [travel]
 tags: []
 ---
-
-都说烟花三月下扬州，扬州离杭州也没有很远，于是我们就来了。
-
 ![image.png](https://static.wuyuying.com/yangzhou/DSC_3544.jpg)
 
 ![image.png](https://static.wuyuying.com/yangzhou/DSC_3553.jpg)
 
 ![image.png](https://static.wuyuying.com/yangzhou/DSC_3555.jpg)
+都说烟花三月下扬州，扬州离杭州也没有很远，于是我们就来了。
 
 所以，“烟花”是谁？有人说，“烟”是指“烟柳”，“花”是指各种花，抑或是“琼花”，就是最上面那张，我们看到就说这是不是古代的绣球，哈哈。
 
