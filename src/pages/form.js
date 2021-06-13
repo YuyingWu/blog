@@ -3,12 +3,13 @@ import React, { PureComponent } from 'react'
 export default class extends PureComponent {
   render() {
     return (
-      <form name="contact" netlify>
+      <form name="comments" method="post">
+        <input type="hidden" name="form-name" value="contact" />
         <p>
-          <label>Name <input type="text" name="name" /></label>
+          <label>Your Name: <input type="text" name="name" /></label>
         </p>
         <p>
-          <label>Email <input type="email" name="email" /></label>
+          <label>Your Email: <input type="email" name="email" /></label>
         </p>
         <p>
           <label>Comment: <textarea name="comment"></textarea></label>
