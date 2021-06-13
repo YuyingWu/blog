@@ -21,7 +21,7 @@ OK，其实就我个人而言，读完这本书的最大收获是了解到媒体
 
 举个栗子：[百度经验520专题活动](http://jingyan.baidu.com/z/2015-520/index.html)（手机浏览好吗~）
 
-![百度经验 | 520专题](http://cdn.sinacloud.net/woodysblog/rwd/qrcode.png "百度经验 | 520专题")
+![百度经验 | 520专题](https://cdn.sinacloud.net/woodysblog/rwd/qrcode.png "百度经验 | 520专题")
 
 对于一个那么“丰满”的页面，页面的元素、内容特别多，怎么破？按照我以前的做法都是用px去定宽定高，只针对用户量最大的屏幕大小去做适配，其他太大或者太小的屏幕，就“顾不上”了~
 

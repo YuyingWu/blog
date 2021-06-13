@@ -45,7 +45,7 @@ tags: []
 
 ## 二、AARRR转化漏洞模型
 
-!["AARRR model"](http://sinacloud.net/woodysblog/img/AARRR.png)
+!["AARRR model"](https://sinacloud.net/woodysblog/img/AARRR.png)
 
 增长的对象不仅包含用户量的累加，更囊括了产品生命周期中各个阶段的重要指标。根据不同阶段用户参与行为的深度和类型，我们可以将增长目标拆分并概括为“AARRR”转化漏洞模型。
 

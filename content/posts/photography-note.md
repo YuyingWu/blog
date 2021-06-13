@@ -27,9 +27,9 @@ Talk is cheap，不要想太多，just do it！于是我拿起了书架上那本
 模式：A/Av（光圈优先）
 对焦模式：自动对焦（A）
 
-![Nikon D3100 正面](http://cdn.sinacloud.net/woodysblog/photography-note/1.jpg)
+![Nikon D3100 正面](https://cdn.sinacloud.net/woodysblog/photography-note/1.jpg)
 
-![Nikon D3100 侧面](http://cdn.sinacloud.net/woodysblog/photography-note/2.jpg)
+![Nikon D3100 侧面](https://cdn.sinacloud.net/woodysblog/photography-note/2.jpg)
 
 # 三、参数用途
 

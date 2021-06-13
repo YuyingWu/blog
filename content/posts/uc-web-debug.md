@@ -31,7 +31,7 @@ Wifi条件下，PC浏览器输入手机ip:9998打开UC浏览器的调试界面
 设置 - WLAN - 选中连接中的WiFi - IP地址
 ```
 
-![](http://cdn.sinacloud.net/woodysblog/safari-web-debug/ip.png)
+![](https://cdn.sinacloud.net/woodysblog/safari-web-debug/ip.png)
 
 ## 浏览器端
 
@@ -46,10 +46,10 @@ Wifi条件下，PC浏览器输入手机ip:9998打开UC浏览器的调试界面
 
 电脑浏览器访问该地址时，UC浏览器会弹窗提示“是否允许远端设备的调试请求？” 确定即可。
 
-![](http://cdn.sinacloud.net/woodysblog/safari-web-debug/authorize.png)
+![](https://cdn.sinacloud.net/woodysblog/safari-web-debug/authorize.png)
 
 在PC调试界面中，选中你需要调试的tab，就会出现console的界面，enjoy你的调试过程吧！
 
-![](http://cdn.sinacloud.net/woodysblog/safari-web-debug/uc_index.png)  
+![](https://cdn.sinacloud.net/woodysblog/safari-web-debug/uc_index.png)  
 
-![](http://cdn.sinacloud.net/woodysblog/safari-web-debug/uc_debug.png)
+![](https://cdn.sinacloud.net/woodysblog/safari-web-debug/uc_debug.png)

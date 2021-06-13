@@ -17,7 +17,7 @@ tags: [note]
 	* 当你使用`git add`时，是把本地代码提交到暂存区；
 	* 而使用`git commit`时，则把暂存区的代码提交到当前的分支；
 
-![](http://cdn.sinacloud.net/woodysblog/git/git.jpg)
+![](https://cdn.sinacloud.net/woodysblog/git/git.jpg)
 
 ## 常用命令
 
@@ -66,12 +66,12 @@ git branch -d branchName // 删除本地分支
 ssh-keygen -t rsa -C “your email address”
 ```
 
-![](http://cdn.sinacloud.net/woodysblog/git/ssh.png)
+![](https://cdn.sinacloud.net/woodysblog/git/ssh.png)
 
 `问`：想把一份代码同步到多个git源，咋整？
 `答`：打开本地工作区的.git/config文件，给remote "origin"多添加几个url即可
 
-![](http://cdn.sinacloud.net/woodysblog/git/remote.png)
+![](https://cdn.sinacloud.net/woodysblog/git/remote.png)
 
 `问`：RPC failed
 `答`：默认Git设置`http post`的缓存为1MB，改为500MB后成功提交

@@ -5,7 +5,7 @@ updateDate: 2018-10-22 18:45:00
 categories: [tech,reading]
 tags: []
 type: photo
-cover: http://sinacloud.net/blog-image/data-driven-types.png
+cover: https://sinacloud.net/blog-image/data-driven-types.png
 ---
 
 ## 三种基于数据的决策模式
@@ -14,7 +14,7 @@ cover: http://sinacloud.net/blog-image/data-driven-types.png
 * data informed
 * data aware（本书提出）
 
-!["三种数据决策模式"](http://sinacloud.net/blog-image/data-driven-types.png)
+!["三种数据决策模式"](https://sinacloud.net/blog-image/data-driven-types.png)
 
 ### Data-driven Design
 
@@ -24,7 +24,7 @@ cover: http://sinacloud.net/blog-image/data-driven-types.png
 
 > 对于data driven模式，比较恰当的比喻是一辆在轨道上的火车。你知道自己离目的地越来越近，这段旅程是可靠的，你想要追寻的东西是明确的、直接的、可预判的以及可复制的。
 
-!["data driven"](http://sinacloud.net/blog-image/data-driven.jpg)
+!["data driven"](https://sinacloud.net/blog-image/data-driven.jpg)
 
 ### Data-informed Design
 
@@ -32,7 +32,7 @@ cover: http://sinacloud.net/blog-image/data-driven-types.png
 
 > 对于data-informed模式，比较恰当的比喻是一个火车站。你知道有各种各样的火车，它们是去不同的地方的。你知道自己可以有很多的选择，有一些途径可以帮助你找到想上哪一辆车。在最后你有可能去到不同的目的地，有着更少的确定性和更多探索的可能性。
 
-!["data informed"](http://sinacloud.net/blog-image/data-informed.jpg)
+!["data informed"](https://sinacloud.net/blog-image/data-informed.jpg)
 
 ### Data-aware Design
 
@@ -42,7 +42,7 @@ cover: http://sinacloud.net/blog-image/data-driven-types.png
 
 > 地图（mapping）、运输系统（transportation）、导航（navigation）可能会更接近data-aware模式。火车只是在大陆上跑的一种方式，而你拥有整个世界去探索。
 
-!["data aware"](http://sinacloud.net/blog-image/data-aware.jpg)
+!["data aware"](https://sinacloud.net/blog-image/data-aware.jpg)
 
 ## 书摘
 

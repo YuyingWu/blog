@@ -28,7 +28,7 @@ date: 2016-04-29 15:44:19
 1. 发布页面，在微信APP中访问（缺点没法实时调试）
 2. 微信开发神器 **微信web开发者工具**，熟悉的Chrome Devtools，棒棒哒~终于不用一直用微信扫扫扫啦！ 
 
-![微信添加图片](http://cdn.sinacloud.net/woodysblog/wx-developer/wx-share.png)
+![微信添加图片](https://cdn.sinacloud.net/woodysblog/wx-developer/wx-share.png)
 
 * [微信web开发者工具文档](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1455784140&token=&lang=zh_CN)
 * 下载地址：

@@ -21,7 +21,7 @@ date: 2016-02-27 17:33:08
 ### 我最喜欢用的信息收集&amp;整理工具 —— Evernote
 
 再一次强烈推荐看看《Evernote超效率数字笔记术》，搭建属于你自己的印象笔记工作台/生活空间。  
-![evernote-下载](http://cdn.sinacloud.net/woodysblog/information-organize/evernote-download.jpg)
+![evernote-下载](https://cdn.sinacloud.net/woodysblog/information-organize/evernote-download.jpg)
   
 我从2013年开始使用印象笔记，至今几乎每天都在记录，包括自己写的工作日记、邮件&amp;网页剪贴、旅行攻略等等，现在积累的1500+篇笔记，偶尔有人问起一些久远的项目的详情，我随时能查阅到，笔记在我生活或者工作中起到非常重要的作用，感觉已经离不开了，哈哈，活生生的变成evernote的脑残粉。  
 分类好不好，其实会严重影响到我们用evernote用得是否顺手。建议根据自己的日常需求、偏好来设定自己的目录，也有人习惯直接用搜索，我习惯分类+搜索，萝卜青菜各有所爱吧，开心就好了。  
@@ -46,7 +46,7 @@ date: 2016-02-27 17:33:08
 7.  封存：相当于“归档”，把不需要care但偶尔需要查阅的文档放里面来
 8.  记录：对工作日记、总结&amp;计划的归档
   
-![woody’s evernote](http://cdn.sinacloud.net/woodysblog/information-organize/woody-evernote.png)
+![woody’s evernote](https://cdn.sinacloud.net/woodysblog/information-organize/woody-evernote.png)
 
 * * *
 
@@ -54,11 +54,11 @@ date: 2016-02-27 17:33:08
 
 ### 提醒 —— Due
 
-![due-下载](http://cdn.sinacloud.net/woodysblog/information-organize/due-download.jpg)
+![due-下载](https://cdn.sinacloud.net/woodysblog/information-organize/due-download.jpg)
   
 给某件事情定个完成的时间点然后到点提醒，原理很普通，支持自然语言输入，但我最喜欢Due的特点是它非常具有破坏性的提醒，除非你mark完成，否则会每分钟提醒一次，震到你接受治疗为止，就喜欢它的简单而粗暴！
   
-![due](http://cdn.sinacloud.net/woodysblog/information-organize/due.png)
+![due](https://cdn.sinacloud.net/woodysblog/information-organize/due.png)
 
 &nbsp;
 
@@ -67,7 +67,7 @@ date: 2016-02-27 17:33:08
 ### 日历 —— Fantastical 2
   
 其实我觉得苹果自带的日历APP也挺好用的，但更喜欢fantastical多一点，为什么？人家颜值高啊，UI漂亮到爆炸！而且新建事件支持自然语言输入，譬如标题上写“date with xxx at tomorrow 6pm”，时间、地点、人物会自动填好，不用手动输入，方便快捷！  
-![fantastical2-下载](http://cdn.sinacloud.net/woodysblog/information-organize/fantastical2-download.jpg)
+![fantastical2-下载](https://cdn.sinacloud.net/woodysblog/information-organize/fantastical2-download.jpg)
 
 fantastical小技巧：
 
@@ -78,4 +78,4 @@ fantastical小技巧：
 * 待办：task / todo / reminder / remind me to
 * 提醒：alert 5min
   
-![fantastical2 全家福](http://cdn.sinacloud.net/woodysblog/information-organize/fantastical-2.png)
+![fantastical2 全家福](https://cdn.sinacloud.net/woodysblog/information-organize/fantastical-2.png)

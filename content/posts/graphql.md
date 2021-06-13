@@ -5,7 +5,7 @@ categories: [tech]
 tags: [note]
 ---
 
-!["structure"](http://sinacloud.net/woodysblog/graphql/structure.png)
+!["structure"](https://sinacloud.net/woodysblog/graphql/structure.png)
 
 基于GraphQL、express、MongoDB、Apollo、React.js的小应用。
 ->> 项目源码[github传送门](https://github.com/YuyingWu/playground/tree/master/graphql-playlist)
@@ -316,7 +316,7 @@ export default compose(
 )(BookList);
 ```
 
-!["graphql compose"](http://sinacloud.net/woodysblog/graphql/gql-compose.png)
+!["graphql compose"](https://sinacloud.net/woodysblog/graphql/gql-compose.png)
 
 #### 3.通过this.props.data获取请求数据
 
@@ -339,11 +339,11 @@ export default compose(
 
 第一次，`loading`为`true`，没有`books`这个字段。
 
-!["loading"](http://sinacloud.net/woodysblog/graphql/apollo-loading.png)
+!["loading"](https://sinacloud.net/woodysblog/graphql/apollo-loading.png)
 
 第二次，`loading`为`false`，而`books`返回了一个数组。
 
-!["loaded"](http://sinacloud.net/woodysblog/graphql/apollo-loaded.png)
+!["loaded"](https://sinacloud.net/woodysblog/graphql/apollo-loaded.png)
 
 #### 4. Mutation
 

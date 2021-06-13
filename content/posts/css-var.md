@@ -4,7 +4,7 @@ date: 2018-01-11 17:32:16
 categories: [tech]
 tags: [css]
 type: photo
-cover: http://sinacloud.net/woodysblog/img/css-var-case-sensitive.png
+cover: https://sinacloud.net/woodysblog/img/css-var-case-sensitive.png
 ---
 
 最近看了下CSS Variables（CSS变量，又名CSS自定义属性），跟大家分享一下我的学习笔记。
@@ -70,7 +70,7 @@ document.getElementsByTagName('body')[0].style.setProperty('--color', 'red')
 }
 ```
 
-![](http://sinacloud.net/woodysblog/img/css-var-case-sensitive.png)
+![](https://sinacloud.net/woodysblog/img/css-var-case-sensitive.png)
 
 从以上测试代码可以看出：
 
@@ -113,7 +113,7 @@ body{
 
 而`.css-var-text`在自己的作用域中，重写了`--color`，出来的字体颜色是overwrite后的`blue`。
 
-![](http://sinacloud.net/woodysblog/img/css-var-inherit.png)
+![](https://sinacloud.net/woodysblog/img/css-var-inherit.png)
 
 ### 3. 浏览器支持
 
@@ -125,7 +125,7 @@ PC的话，IE 11和Edge的支持度都很差，而Chrome（2016.3）、Firefox
 
 Mobile的话，Safari在2016年的版本已经支持CSS变量了，但Opera、Chrome、UC等的支持还不太好。
 
-![](http://sinacloud.net/woodysblog/img/css-var-browser-support.png)
+![](https://sinacloud.net/woodysblog/img/css-var-browser-support.png)
 
 #### ii. fallbacks
 
@@ -156,7 +156,7 @@ Mobile的话，Safari在2016年的版本已经支持CSS变量了，但Opera、C
 
 ### 2. flexbox属性的DEMO
 
-![](http://sinacloud.net/woodysblog/img/css-var-flexbox.png)
+![](https://sinacloud.net/woodysblog/img/css-var-flexbox.png)
 
 之前在团队也做过一下下flexbox的分享，大家也知道，flex属性和对应的值特别多，当时就很想做个可以随时变属性值看效果的playground。
 

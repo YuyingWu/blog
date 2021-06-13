@@ -4,7 +4,7 @@ date: 2019-02-08 15:44:54
 categories: [reading,travel]
 tags: [photography]
 type: photo
-cover: http://sinacloud.net/blog-image/mobile-camera-lightroom-1.jpeg
+cover: https://sinacloud.net/blog-image/mobile-camera-lightroom-1.jpeg
 ---
 
 > 注：下面属于读书笔记，部分内容以及文中的照片和配图，部分摘自[《手机摄影，凭什么比相机还酷》](https://book.douban.com/subject/27186717/)（韩松、谭凌飞、张薇著）。
@@ -19,13 +19,13 @@ cover: http://sinacloud.net/blog-image/mobile-camera-lightroom-1.jpeg
 
 这张是原图。
 
-!["后期-原图"](http://sinacloud.net/blog-image/mobile-camera-lightroom-original-photo.jpeg)
+!["后期-原图"](https://sinacloud.net/blog-image/mobile-camera-lightroom-original-photo.jpeg)
 
 ### 第一层 —— 原片到再构图
 
 通过后期的裁切、旋转、拉直等可以进行一次轻微的再构图过程，这是后期的第一层。
 
-!["后期-再构图"](http://sinacloud.net/blog-image/mobile-camera-lightroom-composition.jpeg)
+!["后期-再构图"](https://sinacloud.net/blog-image/mobile-camera-lightroom-composition.jpeg)
 
 经过裁切和矫正调整，想要表现的主体更突出。
 
@@ -33,13 +33,13 @@ cover: http://sinacloud.net/blog-image/mobile-camera-lightroom-1.jpeg
 
 手机摄影者应该对影调和色彩的基本概念有了解，知道调整它们画面会出现什么样的效果：如亮度、对比度、高光、阴影、色温等（如Snapseed最基础调色选项）。对曲线、直方图等了解越多越好，熟练掌握这些参数的调整，才是后期处理的核心。
 
-!["后期-影调和色彩"](http://sinacloud.net/blog-image/mobile-camera-lightroom-color.jpeg)
+!["后期-影调和色彩"](https://sinacloud.net/blog-image/mobile-camera-lightroom-color.jpeg)
 
 经过影调和色彩调整后，曝光得到了补偿，VSCO的A6滤镜奠定了色彩基调。
 
 ### 第三层 —— 暗角、光影、颗粒等特效
 
-!["后期-特效"](http://sinacloud.net/blog-image/mobile-camera-lightroom-effects.jpeg)
+!["后期-特效"](https://sinacloud.net/blog-image/mobile-camera-lightroom-effects.jpeg)
 
 加了些许暗角和颗粒（不用很明显），让照片更有质感。
 
@@ -66,7 +66,7 @@ cover: http://sinacloud.net/blog-image/mobile-camera-lightroom-1.jpeg
 
 > app：SKEW
 
-!["后期-自由变换"](http://sinacloud.net/blog-image/mobile-camera-lightroom-skew.jpeg)
+!["后期-自由变换"](https://sinacloud.net/blog-image/mobile-camera-lightroom-skew.jpeg)
 
 #### iii. 梯形校正
 
@@ -75,9 +75,9 @@ cover: http://sinacloud.net/blog-image/mobile-camera-lightroom-1.jpeg
 * 拍摄建筑和空间时，竖直线条会经常“倾斜”，产生三点透视
 * 经过梯形矫正后，修直竖直线条
 
-!["后期-梯形校正-原图"](http://sinacloud.net/blog-image/mobile-camera-lightroom-tixing-1.jpeg)
+!["后期-梯形校正-原图"](https://sinacloud.net/blog-image/mobile-camera-lightroom-tixing-1.jpeg)
 
-!["后期-梯形校正-校正后"](http://sinacloud.net/blog-image/mobile-camera-lightroom-tixing-2.jpeg)
+!["后期-梯形校正-校正后"](https://sinacloud.net/blog-image/mobile-camera-lightroom-tixing-2.jpeg)
 
 ### 3. 影调——明暗、对比
 
@@ -90,23 +90,23 @@ cover: http://sinacloud.net/blog-image/mobile-camera-lightroom-1.jpeg
 * 高光和阴影
 * 局部：影调还可以自定义调整区域，以获得局部的影调调整
 
-!["手机摄影后期演示"](http://sinacloud.net/blog-image/mobile-camera-lightroom-1.jpeg)
+!["手机摄影后期演示"](https://sinacloud.net/blog-image/mobile-camera-lightroom-1.jpeg)
 
-!["手机摄影后期演示"](http://sinacloud.net/blog-image/mobile-camera-lightroom-2.jpeg)
+!["手机摄影后期演示"](https://sinacloud.net/blog-image/mobile-camera-lightroom-2.jpeg)
 
-!["手机摄影后期演示"](http://sinacloud.net/blog-image/mobile-camera-lightroom-3.jpeg)
+!["手机摄影后期演示"](https://sinacloud.net/blog-image/mobile-camera-lightroom-3.jpeg)
 
-!["手机摄影后期演示"](http://sinacloud.net/blog-image/mobile-camera-lightroom-4.jpeg)
+!["手机摄影后期演示"](https://sinacloud.net/blog-image/mobile-camera-lightroom-4.jpeg)
 
-!["手机摄影后期演示"](http://sinacloud.net/blog-image/mobile-camera-lightroom-5.jpeg)
+!["手机摄影后期演示"](https://sinacloud.net/blog-image/mobile-camera-lightroom-5.jpeg)
 
-!["手机摄影后期演示"](http://sinacloud.net/blog-image/mobile-camera-lightroom-6.jpeg)
+!["手机摄影后期演示"](https://sinacloud.net/blog-image/mobile-camera-lightroom-6.jpeg)
 
 ### 4. 层次 —— 简单的细节提升
 
 层次感，需要有更多细节。技术上来说，就是一张照片的高光、中间调、暗部都保有较多细节。尤其是中间调，让人觉得不会是“一笔带过”。
 
-!["层次-原图"](http://sinacloud.net/blog-image/mobile-cam-layer-1.jpeg)
+!["层次-原图"](https://sinacloud.net/blog-image/mobile-cam-layer-1.jpeg)
 
 #### i. snapseed “戏剧效果”
 
@@ -114,35 +114,35 @@ snapseed - 滤镜 - 戏剧效果
 
 “戏剧效果”，可以直观地给我们带来层次感。
 
-!["层次-戏剧效果"](http://sinacloud.net/blog-image/mobile-cam-layer-2-drama.jpeg)
+!["层次-戏剧效果"](https://sinacloud.net/blog-image/mobile-cam-layer-2-drama.jpeg)
 
 #### ii. 氛围
 
 snapseed - 调节图片 - 氛围
 
-!["层次-氛围"](http://sinacloud.net/blog-image/mobile-cam-layer-1-fenwei.jpeg)
+!["层次-氛围"](https://sinacloud.net/blog-image/mobile-cam-layer-1-fenwei.jpeg)
 
 #### iii. 质感
 
-!["层次-质感-原图"](http://sinacloud.net/blog-image/mobile-cam-layer-2.jpeg)
+!["层次-质感-原图"](https://sinacloud.net/blog-image/mobile-cam-layer-2.jpeg)
 
 snapseed - 突出细节 - 结构
 
 增加Snapseed“突出细节”菜单下的“结构”参数可以增加表面质感。
 
-!["层次-质感-增强结构"](http://sinacloud.net/blog-image/mobile-cam-layer-2-jiegou-plus.jpeg)
+!["层次-质感-增强结构"](https://sinacloud.net/blog-image/mobile-cam-layer-2-jiegou-plus.jpeg)
 
 减小Snapseed“突出细节”菜单下的“结构” 参数，可以达到类似“磨皮”的效果。
 
-!["层次-质感-减少结构"](http://sinacloud.net/blog-image/mobile-cam-layer-2-jiegou-minus.jpeg)
+!["层次-质感-减少结构"](https://sinacloud.net/blog-image/mobile-cam-layer-2-jiegou-minus.jpeg)
 
 ### 5. 调色 —— 开始有了情绪
 
 在Snapseed中，调色主要通过后期调整“白平衡”，以及“调整图片”中的“暖色调”完成。
 
-!["色调 - 原图"](http://sinacloud.net/blog-image/mobile-cam-sediao-1.jpeg)
+!["色调 - 原图"](https://sinacloud.net/blog-image/mobile-cam-sediao-1.jpeg)
 
-!["色调 - 冷色调"](http://sinacloud.net/blog-image/mobile-cam-sediao-2.jpeg)
+!["色调 - 冷色调"](https://sinacloud.net/blog-image/mobile-cam-sediao-2.jpeg)
 
 ## 三、懂一点直方图和曲线
 
@@ -150,7 +150,7 @@ snapseed - 突出细节 - 结构
 
 曲线的调整逻辑并不复杂，左、中、右的曲线分别调整暗部、中间调、高光，往上拉是拉亮，往下拉是变暗。
 
-!["曲线调节"](http://sinacloud.net/blog-image/mobile-cam-quxian.jpeg)
+!["曲线调节"](https://sinacloud.net/blog-image/mobile-cam-quxian.jpeg)
 
 ### 1. 变亮（变暗）曲线
 
@@ -182,7 +182,7 @@ snapseed - 突出细节 - 结构
 * 背景虚化
 * 逆光
 
-!["日系风格"](http://sinacloud.net/blog-image/mobile-cam-lightroom-destructure.jpeg)
+!["日系风格"](https://sinacloud.net/blog-image/mobile-cam-lightroom-destructure.jpeg)
 
 #### ii. 性冷淡风
 
@@ -191,7 +191,7 @@ snapseed - 突出细节 - 结构
 * 明快的亮度
 * 合适的色调
 
-!["性冷淡风"](http://sinacloud.net/blog-image/mobile-cam-lightroom-destructure-2.jpeg)
+!["性冷淡风"](https://sinacloud.net/blog-image/mobile-cam-lightroom-destructure-2.jpeg)
 
 ## Reference
 

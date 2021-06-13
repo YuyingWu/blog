@@ -19,11 +19,11 @@ date: 2016-04-06 17:43:19
 
 ### Hexo（官方主题[Landscape](https://github.com/hexojs/hexo-theme-landscape))
   
-![Hexo首页加载情况](http://cdn.sinacloud.net/woodysblog/blog-opt/hexo-request.png)
+![Hexo首页加载情况](https://cdn.sinacloud.net/woodysblog/blog-opt/hexo-request.png)
 
 ### WordPress（2016年官方主题twenty-sixteen）
   
-![WordPress首页加载情况](http://cdn.sinacloud.net/woodysblog/blog-opt/wp-request.png)
+![WordPress首页加载情况](https://cdn.sinacloud.net/woodysblog/blog-opt/wp-request.png)
 
 ***
 
@@ -33,7 +33,7 @@ date: 2016-04-06 17:43:19
 
 仪表盘（wp-admin） -> 工具 -> 导出
 
-!["WordPress数据导出"](http://cdn.sinacloud.net/woodysblog/blog-opt/wp-export.png)
+!["WordPress数据导出"](https://cdn.sinacloud.net/woodysblog/blog-opt/wp-export.png)
 
 ## 2. 搭建Hexo
 

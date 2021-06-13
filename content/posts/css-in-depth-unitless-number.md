@@ -47,7 +47,7 @@ tags: [css]
 
 [ 图 2.11 不带单位的行高，会在每个后代元素下重新计算出实际值 ]
 
-!["图 2.11"](http://sinacloud.net/woodysblog/css-in-depth/02fig11.jpg)
+!["图 2.11"](https://sinacloud.net/woodysblog/css-in-depth/02fig11.jpg)
 
 把代码片段2.21的内容添加到你的样式表。段落（`<p>`）继承了1.2的行高。因为字号是32px（`2em` * 16px，浏览器默认字号大小），所以本地的行高计算值是38.4px（32px * 1.2）。这会给段落的行间距留下比较合适的空间。
 
@@ -68,7 +68,7 @@ body {
 如果你给行高设定了一个带单位的值，你可能会得到意想不到的结果，如图2.12那样，行间文字互相重叠了，代码片段2.22则是造成这个结果的CSS代码。
 
 [ 图 2.12 继承行高造成的行间互叠 ]
-!["图 2.12"](http://sinacloud.net/woodysblog/css-in-depth/02fig12.jpg)
+!["图 2.12"](https://sinacloud.net/woodysblog/css-in-depth/02fig12.jpg)
 
 [ 代码片段 2.22 带单位的行高值造成意外的结果 ]
 

@@ -14,7 +14,7 @@ Fontmin做的事情简单来说，引用字体文件弄成fontface，然后在fo
 
 我用的是OS版的fontmin-app（可以点[这里](https://github.com/ecomfe/fontmin-app/releases)下载哈），可视化界面，拖进字体文件（tff格式），输入目标文字，点击“生成”，然后帮你生成css文件（fontface声明）和相关格式的字体文件eot/svg/ttf/woff（多种格式应该是出于浏览器兼容的考虑吧~）
 
-![](http://cdn.sinacloud.net/woodysblog/fontmin/1.jpg "fontmin-app")
+![](https://cdn.sinacloud.net/woodysblog/fontmin/1.jpg "fontmin-app")
 
     @font-face {
         font-family: "SourceHanSansK-Bold";
@@ -46,11 +46,11 @@ Fontmin做的事情简单来说，引用字体文件弄成fontface，然后在fo
 
 推荐一个app：Fontographer
 
-![](http://cdn.sinacloud.net/woodysblog/fontmin/2.jpg "Fontographer")
+![](https://cdn.sinacloud.net/woodysblog/fontmin/2.jpg "Fontographer")
 
 步骤：
 
 *   准备好字体文件（otf格式）
 *   在Fontographer中打开otf文件【 file -&gt; open 】
 *   转换格式 【 file -&gt; generate font files -&gt; ttf】
-![](http://cdn.sinacloud.net/woodysblog/fontmin/3.jpg "generate font files")
+![](https://cdn.sinacloud.net/woodysblog/fontmin/3.jpg "generate font files")

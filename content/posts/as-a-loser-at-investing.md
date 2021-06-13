@@ -115,6 +115,6 @@ tags: [理财]
 
 > 两张图表可以帮助你更深地理解。一个是“库伯勒—罗丝改变曲线”（Kübler-Ross change curve），一个是“新生事物的发展过程”（Transition Curve）。
 
-!["库伯勒—罗丝改变曲线"](http://sinacloud.net/blog-image/change-curve.jpeg)  
+!["库伯勒—罗丝改变曲线"](https://sinacloud.net/blog-image/change-curve.jpeg)  
 
-!["新生事物的发展过程"](http://sinacloud.net/blog-image/transition-curve.jpeg)
+!["新生事物的发展过程"](https://sinacloud.net/blog-image/transition-curve.jpeg)

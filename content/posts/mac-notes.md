@@ -23,7 +23,7 @@ type: title
 
 又一个程序员的装B神器~ 目前对我最有用的是可以直接看到git branch的信息，更重要的是很好看，哈哈 ：）
 
-![](http://sinacloud.net/woodysblog/articles/oh-my-zsh.png)
+![](https://sinacloud.net/woodysblog/articles/oh-my-zsh.png)
 
 ```sh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh

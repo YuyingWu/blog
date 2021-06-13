@@ -4,14 +4,14 @@ categories: [tech]
 tags: [baidu]
 date: 2015-08-09 19:15:19
 type: photo
-cover: http://cdn.sinacloud.net/woodysblog/shifu/shifu.png
+cover: https://cdn.sinacloud.net/woodysblog/shifu/shifu.png
 ---
 
 <!--more-->
 
 昨天是8月8号，百度的周年庆典summer party，而在同一天[「百度师傅」](http://shifu.baidu.com)一期项目终于也推出去跟小伙伴们见面，这两天的订单量也破了新高，收到一条条用户下订单的短信，作为研发同学的我也表示非常的开心和激动，这两个月没白忙有木有！
 
-[![](http://cdn.sinacloud.net/woodysblog/shifu/shifu.png "Baidu Shifu")](http://shifu.baidu.com/)
+[![](https://cdn.sinacloud.net/woodysblog/shifu/shifu.png "Baidu Shifu")](http://shifu.baidu.com/)
 
 [「百度师傅」](http://shifu.baidu.com)是从百度知道衍生出来的新方向，一个从0到1的项目，目标是连接人与服务，哈哈，提供最优质专业的维修服务。 （目前仅限北京地区，有三个服务：[电脑清灰](http://shifu.baidu.com/service/DNQH)、[重装系统](http://shifu.baidu.com/service/CZXT)、[碎屏修理](http://shifu.baidu.com/service/SPXL)）
 

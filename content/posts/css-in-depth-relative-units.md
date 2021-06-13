@@ -69,7 +69,7 @@ em是最常见的相对长度单位，这是排版中使用的一种度量方式
 
 [ 图 2.1：padding为1em的元素（添加虚线是为了让padding更明显）]
 
-!["图 2.1"](http://sinacloud.net/woodysblog/css-in-depth/02fig01_alt.jpg)
+!["图 2.1"](https://sinacloud.net/woodysblog/css-in-depth/02fig01_alt.jpg)
 
 模板代码片段如下。这套样式规则定义字号为16px，也就是元素本身1em代表的值，然后再使用em来声明元素的padding。 把这段代码添加到一个新的样式表里，在`<div class ="padded">`下随手写些文字，然后到浏览器看看效果吧。
 
@@ -94,7 +94,7 @@ em是最常见的相对长度单位，这是排版中使用的一种度量方式
 
 [ 图 2.2：有相对大小的padding和border-radius的元素 ]
 
-!["图 2.2"](http://sinacloud.net/woodysblog/css-in-depth/02fig02.jpg)
+!["图 2.2"](https://sinacloud.net/woodysblog/css-in-depth/02fig02.jpg)
 
 你可以通过用em声明`padding`和`border-radius`来给这些盒子声明样式规则。首先给每个元素设定`padding`和`border-radius`为1em，然后给每个盒子指定不同的字号，那么其他属性会跟着字号缩放。
 
@@ -139,7 +139,7 @@ em是最常见的相对长度单位，这是排版中使用的一种度量方式
 
 [ 图 2.3 以em为单位的两种不同的字号大小 ]
 
-!["图 2.3"](http://sinacloud.net/woodysblog/css-in-depth/02fig03.jpg)
+!["图 2.3"](https://sinacloud.net/woodysblog/css-in-depth/02fig03.jpg)
 
 在你的页面添加以下代码片段。第一行文字，在`<body>`标签里面，它会按body的字号大小渲染。第二部分，口号（slogan），继承父元素的字号大小。
 
@@ -186,7 +186,7 @@ slogan声明的字号大小是1.2em，为了计算转换成像素值，你需要
 
 [ 图2.4 一个font-size为1.2em以及padding为1.2em的元素 ]
 
-!["图 2.4"](http://sinacloud.net/woodysblog/css-in-depth/02fig04_alt.jpg)
+!["图 2.4"](https://sinacloud.net/woodysblog/css-in-depth/02fig04_alt.jpg)
 
 现在的情况是，这个段落从`body`继承了16px的字号大小，通过计算得到值为19.2px的字号计算值。这意味着，19.2px是1em在当前域的基础值，而这个值会被用作计算`padding`的值。对应的CSS代码在下面，更新你的样式表并查看你的测试页面吧。
 
@@ -217,7 +217,7 @@ body {
 
 [ 图 2.5 嵌套列表中的字号缩小现象 ]
 
-!["图 2.5"](http://sinacloud.net/woodysblog/css-in-depth/02fig05.jpg)
+!["图 2.5"](https://sinacloud.net/woodysblog/css-in-depth/02fig05.jpg)
 
 当你多层嵌套列表，而每一层声明的字号大小以em为单位，字号收缩现象就会发生。在代码片段2.7和2.8的例子里，无序列表的字号是0.8em。这个选择器对页面上所有的ul有效，所以当一个列表从另外一个列表继承到字号大小的时候，em就产生复合效果。
 
@@ -265,7 +265,7 @@ ul {
 
 [ 图 2.6 字号正常的多层嵌套列表 ]
 
-!["图 2.6"](http://sinacloud.net/woodysblog/css-in-depth/02fig06.jpg)
+!["图 2.6"](https://sinacloud.net/woodysblog/css-in-depth/02fig06.jpg)
 
 其中一种实现的方式可以看看代码片段2.9。第一个列表的字号大小还是0.8 em（见示例2.7），第二个选择器对嵌套在无序列表的无序列表有效 —— 也就是除了第一个无序列表以外的所有无序列表。现在嵌套的列表设定了跟父元素一致的字号大小，正如图2.6一样。
 

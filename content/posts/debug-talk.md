@@ -11,7 +11,7 @@ tags: []
 
 偶然访问了阿里[Ant Design](https://ant.design/)，默认是英文版本，我看右上角有个切换到中文的按钮，就过去一点，咦，跳到错误页了~
 
-![](http://cdn.sinacloud.net/woodysblog/articles/en-to-zh.png)
+![](https://cdn.sinacloud.net/woodysblog/articles/en-to-zh.png)
 
 职业习惯，我在chrome和Safari都测了一下，稳定复现，bug~
 恰好这个站点是开源的，那就去github fork一下，把这个bug修了吧。
@@ -25,19 +25,19 @@ Safari下跳转到：https://index-cn/ant.design/
 
 咋眼一看，我以为是程序猿或者PM在配置时写错了，于是我打开console，检查这个按钮的元素，看有什么关键字（url、data-属性、id、特别的classname等）
 
-![](http://cdn.sinacloud.net/woodysblog/articles/antd-button.png)
+![](https://cdn.sinacloud.net/woodysblog/articles/antd-button.png)
 
 没有链接，看来是js控制的，那就去翻源码吧~问题来了，怎么翻呢？
 
 从上图看，这个`button`没什么特色，不过，仔细一看，有个不太普通的类名，`ant-btn-ghost`，那我们就去模板那搜`ghost`吧！
 
-![](http://cdn.sinacloud.net/woodysblog/articles/antd-folder.png)
+![](https://cdn.sinacloud.net/woodysblog/articles/antd-folder.png)
 
 从目录可以看出来，整个源是非常庞大的，除了官网页面、文档，还有Ant Design UI库的源码。凭”直觉“，到`site`文件夹搜`ghost`，因为那么多文件夹，就site比较像是放官网的。
 
 Bingo!!!
 
-![](http://cdn.sinacloud.net/woodysblog/articles/antd-search.png)
+![](https://cdn.sinacloud.net/woodysblog/articles/antd-search.png)
 
 ### button
 

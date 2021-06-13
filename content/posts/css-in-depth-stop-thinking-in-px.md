@@ -120,7 +120,7 @@ html {
 
 [ 图 2.7 使用相对单位和继承字号的面板 ]
 
-!["图 2.7"](http://sinacloud.net/woodysblog/css-in-depth/02fig07_alt.jpg)
+!["图 2.7"](https://sinacloud.net/woodysblog/css-in-depth/02fig07_alt.jpg)
 
 下面是模板，加到你的页面吧。
 
@@ -174,7 +174,7 @@ html {
 
 [ 图 2.8 在不同屏幕大小的响应式面板：300px（左上角），800px（右上角），1440px（下面） ]
 
-!["图 2.8"](http://sinacloud.net/woodysblog/css-in-depth/02fig08_alt.jpg)
+!["图 2.8"](https://sinacloud.net/woodysblog/css-in-depth/02fig08_alt.jpg)
 
 > 媒体查询（media query） —— 通过`@media`规则来声明样式，在不同的屏幕尺寸或者媒体类型（如打印机或显示器）下，触发对应的样式控制。这是响应式设计的关键要素。详情看代码片段2.15的这个例子，我在第8章会更深入的讨论媒体查询这个话题。
 
@@ -220,7 +220,7 @@ html {
 
 [ 图 2.9 在一个页面上的普通尺寸面板和大号面板 ]
 
-!["图 2.9"](http://sinacloud.net/woodysblog/css-in-depth/02fig09_alt.jpg)
+!["图 2.9"](https://sinacloud.net/woodysblog/css-in-depth/02fig09_alt.jpg)
 
 我们来对面板的字号声明方式做一些小的修改。你还是在使用相对单位，但需要调整它们的基准值。第一点，给每个面板的父元素字号大小的定义`font-size: 1rem`。这里指的是，不管在什么地方使用这个面板，每个面板的字号大小是一个确定值。
 

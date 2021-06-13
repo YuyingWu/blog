@@ -11,11 +11,11 @@ updateDate: 2018-09-24 18:20:13
 
 Given a collection of records on a server, there should be a uniform URL and HTTP request method to utilize that collection of records.
 
-![](http://sinacloud.net/woodysblog/img/restful-api.png)
+![](https://sinacloud.net/woodysblog/img/restful-api.png)
 
 ### GraphQL是如何解决问题的
 
-![](http://sinacloud.net/woodysblog/img/what-problem-GraphQL-solve.png)
+![](https://sinacloud.net/woodysblog/img/what-problem-GraphQL-solve.png)
 
 在REST-ful API中，我们会一层一层地定义路由，但假如出现上图的多层结构，我们希望：
 
@@ -29,7 +29,7 @@ Given a collection of records on a server, there should be a uniform URL and HTT
 
 若是层级嵌套或组合更多，REST-ful的路由规则会越来越多和复杂，GraphQL就是解决这类问题的利器。
 
-![](http://sinacloud.net/woodysblog/img/graph.png)
+![](https://sinacloud.net/woodysblog/img/graph.png)
 
 Graph（图）表达了节点和节点间的Edges（路径）。
 
@@ -58,11 +58,11 @@ query{
 
 ### 当数据库在自己的服务器
 
-![](http://sinacloud.net/woodysblog/img/graphql-as-proxy-1.png)
+![](https://sinacloud.net/woodysblog/img/graphql-as-proxy-1.png)
 
 ### 当我们使用第三方数据源
 
-![](http://sinacloud.net/woodysblog/img/graphql-as-proxy-2.png)
+![](https://sinacloud.net/woodysblog/img/graphql-as-proxy-2.png)
 
 ### 中间层：Express/GraphQL Server
 
@@ -70,7 +70,7 @@ query{
 
 ## 什么情况下，我们需要Resolver
 
-![](http://sinacloud.net/woodysblog/img/what-resolver-does.png)
+![](https://sinacloud.net/woodysblog/img/what-resolver-does.png)
 
 如上图，当数据库的model设计的字段`companyId`，和GraphQL的query需要获取的字段`companyName`不一致时，需要在GraphQLType定义字段`companyName`中添加对应的resolver，以入参`companyId`查询数据库中对应的项，再return对应`companyName`。
 
@@ -99,12 +99,12 @@ const UserType = new GraphQLObjectType({
 
 ## DB model和GraphQL的设计差异
 
-![](http://sinacloud.net/woodysblog/img/model-in-reality.png)
+![](https://sinacloud.net/woodysblog/img/model-in-reality.png)
 
 数据库中的表结构：  
 `User`的属性`companyId`，关联着`Company`的`id`属性。
 
-![](http://sinacloud.net/woodysblog/img/query-in-graphql.png)
+![](https://sinacloud.net/woodysblog/img/query-in-graphql.png)
 
 Graph（图）结构：  
 
@@ -187,7 +187,7 @@ fragment companyFields on Company {
 
 ## 当GraphQL遇到前端
 
-![](http://sinacloud.net/woodysblog/img/graph-come-across-frontend.png)
+![](https://sinacloud.net/woodysblog/img/graph-come-across-frontend.png)
 
 > DB -> Express/GraphQL Server -> GraphQL Client -> ReactJS
 
@@ -195,7 +195,7 @@ fragment companyFields on Company {
 
 以下是几个GraphQL Client框架的介绍和对比。
 
-![](http://sinacloud.net/woodysblog/img/graphql-client.png)
+![](https://sinacloud.net/woodysblog/img/graphql-client.png)
 
 下面的demo以Apollo为例。
 

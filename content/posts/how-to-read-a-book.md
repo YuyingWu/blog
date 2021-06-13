@@ -9,7 +9,7 @@ date: 2019-04-05 00:55:18
 > 作者：奥野宣之  
 > 日期：2019.04.03  
 
-![](http://sinacloud.net/blog-image/how-to-read-a-book.png)
+![](https://sinacloud.net/blog-image/how-to-read-a-book.png)
 
 下面是摘录与思考。
 

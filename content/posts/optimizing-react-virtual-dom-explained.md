@@ -4,7 +4,7 @@ date: 2018-05-13 19:15:19
 categories: [tech]
 tags: [react.js]
 type: photo
-cover: http://sinacloud.net/woodysblog/img/bkg.jpg
+cover: https://sinacloud.net/woodysblog/img/bkg.jpg
 ---
 
 本文译自[《Optimizing React: Virtual DOM explained》](https://evilmartians.com/chronicles/optimizing-react-virtual-dom-explained)，作者是[Alexey Ivanov](https://github.com/iAdramelk)和[Andy Barnov](https://github.com/progapandist)，来自[Evil Martians’ team](https://evilmartians.com/chronicles)团队。
@@ -23,7 +23,7 @@ React在前端圈内保持领先的原因之一，因为它的学习曲线非常
 
 下面看看我们其中一个项目中的React table：
 
-!["eBay上的一个巨大的React表格  用于业务。"](http://sinacloud.net/woodysblog/img/ebay_table.png)
+!["eBay上的一个巨大的React表格  用于业务。"](https://sinacloud.net/woodysblog/img/ebay_table.png)
 
 这个表里有数百个动态（表格内容变化）和可过滤的选项，理解这个框架更精细的点，对于保证顺畅的用户体验至关重要。
 
@@ -389,7 +389,7 @@ class App extends Component {
 
 我们首先要看看的是，哪些元素以及什么时候导致Virtual DOM的更新。在浏览器的开发工具中，打开React面板并选择“Highlight Updates”复选框：
 
-!["在Chrome中使用“突出显示更新”复选框选中DevTools"](http://sinacloud.net/woodysblog/img/react_dev_tools.png)
+!["在Chrome中使用“突出显示更新”复选框选中DevTools"](https://sinacloud.net/woodysblog/img/react_dev_tools.png)
 
 现在尝试在表格中添加一行。如你所见，页面上的每个元素周围都会显示一个边框。这意味着每次添加一行时，React都在计算和比较整个虚拟DOM树。现在尝试点击一行内的counter按钮。你将看到`state`更新后虚拟DOM如何更新 —— 只有引用了`state key`的元素及其children受到影响。
 
@@ -397,7 +397,7 @@ React DevTools会提示问题出在哪里，但不会告诉我们有关细节的
 
 添加`?react_perf`到应用的URL，然后转到Chrome DevTools中的“Performance”标签。点击“录制”（Record）并在表格上点击。添加一些row，更改一下counter，然后点击“停止”（Stop）。
 
-!["React DevTools的“Performance”选项卡"](http://sinacloud.net/woodysblog/img/react_perf_tools.png)
+!["React DevTools的“Performance”选项卡"](https://sinacloud.net/woodysblog/img/react_perf_tools.png)
 
 在输出的结果中，我们关注“User timing”这项指标。放大时间轴直到看到“React Tree Reconciliation”这个组及其子项。这些就是我们组件的名称，它们旁边都写着[update]或[mount]。
 

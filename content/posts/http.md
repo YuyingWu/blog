@@ -22,23 +22,23 @@ date: 2015-02-26 18:33:38
 6.  OPTIONS 询问支持的方法
 7.  TRACE 追踪路径
 8.  CONNECT 要求用隧道协议连接代理
-![HTTP协议跟其他协议的关系](http://cdn.sinacloud.net/woodysblog/http/relation.jpg)
+![HTTP协议跟其他协议的关系](https://cdn.sinacloud.net/woodysblog/http/relation.jpg)
 
 ### 二、HTTP的那些方法（method）
 
-![method-1](http://cdn.sinacloud.net/woodysblog/http/method-1.jpg)
+![method-1](https://cdn.sinacloud.net/woodysblog/http/method-1.jpg)
 
 * * *
 
-![method-2](http://cdn.sinacloud.net/woodysblog/http/method-2.jpg)
+![method-2](https://cdn.sinacloud.net/woodysblog/http/method-2.jpg)
 
 * * *
 
-![method-3](http://cdn.sinacloud.net/woodysblog/http/method-3.jpg)
+![method-3](https://cdn.sinacloud.net/woodysblog/http/method-3.jpg)
 
 ### 三、HTTP报文结构
 
-![content](http://cdn.sinacloud.net/woodysblog/http/content.jpg)
+![content](https://cdn.sinacloud.net/woodysblog/http/content.jpg)
 
 ### 四、状态码
 
@@ -50,4 +50,4 @@ date: 2015-02-26 18:33:38
 | 4XX      | client error（客户端错误状态码）      |   服务器无法处理请求 |
 | 5XX | server error（服务器错误状态码）      |    服务器处理请求出错 |
 
-![status](http://cdn.sinacloud.net/woodysblog/http/status.jpg)
+![status](https://cdn.sinacloud.net/woodysblog/http/status.jpg)

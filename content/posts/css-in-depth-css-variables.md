@@ -55,7 +55,7 @@ tags: [css]
 
 [ 图 2.13 对一个简单段落使用用变量声明的字体sans-serif ]
 
-!["图 2.13"](http://sinacloud.net/woodysblog/css-in-depth/02fig13_alt.jpg)
+!["图 2.13"](https://sinacloud.net/woodysblog/css-in-depth/02fig13_alt.jpg)
 
 我们可以用一个叫作`var()`的函数去引用自定义属性的值。现在，你可以利用这个函数去引用我们刚才声明的变量`--main-font`。把下面展示的代码片段添加到你的样式表中吧，把变量用起来。
 
@@ -123,7 +123,7 @@ p {
 
 [ 图 2.14 自定义属性基于不同域下的值，生成两个颜色不一样的面板 ]
 
-!["图 2.14"](http://sinacloud.net/woodysblog/css-in-depth/02fig14_alt.jpg)
+!["图 2.14"](https://sinacloud.net/woodysblog/css-in-depth/02fig14_alt.jpg)
 
 这个面板类似你之前看到的那个（图2.7），HTML在代码片段2.27。这个面板有两个实例，一个在body下，另一个在一个深色的区块。来，更新下你的代码。
 
@@ -235,7 +235,7 @@ p {
 
 [ 图 2.15 JavaScript可以通过改变变量--main-bg的值改变面板的背景色 ]
 
-!["图 2.15"](http://sinacloud.net/woodysblog/css-in-depth/02fig15_alt.jpg)
+!["图 2.15"](https://sinacloud.net/woodysblog/css-in-depth/02fig15_alt.jpg)
 
 下面的代码片段，会在根元素下给`--main-bg`定义一个新的值，在`<script>`标签的最下面，加上这些的代码。
 

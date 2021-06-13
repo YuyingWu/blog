@@ -111,7 +111,7 @@ subject: My Email Subject
         <columns small="12" large="12">
             <div class="person-area">
                 <a href="">Search...</a><br/>
-                <img src="http://cdn.sinacloud.net/mailchimp/marine.jpg">
+                <img src="https://cdn.sinacloud.net/mailchimp/marine.jpg">
                 <p>
                     Kate Carter<br/>
                     Y...<br/>
@@ -135,13 +135,13 @@ subject: My Email Subject
 
 ```
 
-![pc和wap对比图](http://cdn.sinacloud.net/woodysblog/inky/marine-pc-wap.jpg)
+![pc和wap对比图](https://cdn.sinacloud.net/woodysblog/inky/marine-pc-wap.jpg)
 
 ## 三、相关链接：
 
 ### 1. demo：  
-* 原始文件：[marine-original.html](http://cdn.sinacloud.net/woodysblog/inky/marine-original.html)  
-* 编译后文件：[marine-dist.html](http://cdn.sinacloud.net/woodysblog/inky/marine-dist.html)
+* 原始文件：[marine-original.html](https://cdn.sinacloud.net/woodysblog/inky/marine-original.html)  
+* 编译后文件：[marine-dist.html](https://cdn.sinacloud.net/woodysblog/inky/marine-dist.html)
 
 ### 2. 官网
 

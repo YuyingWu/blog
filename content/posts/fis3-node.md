@@ -12,7 +12,7 @@ fis3 release
 
 报了一大堆错误，一时懵逼~
 <!-- more -->
-![](http://cdn.sinacloud.net/woodysblog/fis3-node/error.png)
+![](https://cdn.sinacloud.net/woodysblog/fis3-node/error.png)
 
 关键行：
 

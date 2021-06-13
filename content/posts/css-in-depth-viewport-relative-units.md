@@ -43,7 +43,7 @@ tags: [css]
 
 [ 图 2.10 如果把一个元素的宽高定义成90vmin，它总会展示成一个正方形，边长稍小于屏幕的视口，不管它的尺寸或方向怎样。 ]
 
-!["图 2.10"](http://sinacloud.net/woodysblog/css-in-depth/02fig10_alt.jpg)
+!["图 2.10"](https://sinacloud.net/woodysblog/css-in-depth/02fig10_alt.jpg)
 
 在代码片段2.18可以看到这个元素的样式，渲染了一个适应屏幕尺寸的大正方形，不管浏览器的尺寸是多少。你可以通过添加`<div class="square">`，再看看页面效果。
 

@@ -2,12 +2,12 @@
 title: Begin Again, 2017
 date: 2017-06-01 20:40:30
 type: photo
-cover: http://sinacloud.net/woodysblog/blog/begin-again-ali-night.jpg
+cover: https://sinacloud.net/woodysblog/blog/begin-again-ali-night.jpg
 categories: []
 tags: [总结]
 ---
 
-!["Hi, Alibaba"](http://sinacloud.net/woodysblog/blog/begin-again-ali-day.jpg)
+!["Hi, Alibaba"](https://sinacloud.net/woodysblog/blog/begin-again-ali-day.jpg)
 
 想跟大家分享我找工作的故事。
 
@@ -83,7 +83,7 @@ gap year后的求职季，止于我现在的团队 —— CBU，让大家见笑�
 
 辛苦您终于看完了，谨以此图聊表谢意，晚安 ：）
 
-![](http://sinacloud.net/woodysblog/blog/begin-again-ali-night.jpg)
+![](https://sinacloud.net/woodysblog/blog/begin-again-ali-night.jpg)
 
 2017.05.31
 写于杭州滨江区
