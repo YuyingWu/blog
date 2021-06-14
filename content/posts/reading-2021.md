@@ -5,13 +5,18 @@ tags: [reading]
 date: 2021-05-13 14:58:14
 createDate: 2021-01-23 22:10:14
 ---
-
+《百万富翁快车道》 M.J. - 21.06.13  
 《复盘网飞》 马克·伦道夫 - 21.02.14  
 《一生的旅程》 罗伯特·艾格 - 21.01.31  
 《我心归处是敦煌》 樊锦诗 - 21.01.23
 
 ***
 
+## 《百万富翁快车道》 M.J.
+
+[《The Millionaire Fastlane》>> 传送门](https://wuyuying.com/millionaire-fastlane/)
+
+![The Millionaire Fastlane](https://static.wuyuying.com/fastlane-cover.jpeg)
 ## 《复盘网飞》马克·伦道夫
 
 ![netflix](https://static.wuyuying.com/reading/netflix.jpg)
