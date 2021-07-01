@@ -1,7 +1,8 @@
-import React from "react"
+import React, { Component } from "react"
 import ReactDOM from "react-dom"
 import { Styled, css } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Helmet from 'react-helmet'
 import PostFooter from "gatsby-theme-chaton/src/components/post-footer"
 import Layout from "gatsby-theme-chaton/src/components/layout"
 import SEO from "gatsby-theme-chaton/src/components/seo"
@@ -9,65 +10,109 @@ import Tags from 'gatsby-theme-chaton/src/components/tags'
 import { Link } from "gatsby"
 import defaultThemeColors from "gatsby-theme-chaton/src/gatsby-plugin-theme-ui/colors"
 
-const Post = ({
-  data: {
-    post,
-    site: {
-      siteMetadata: { title },
-    },
-  },
-  location,
-  previous,
-  next,
-}) => {
-  let tags = post.tags || [];
-  let height;
+class Post extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <Layout location={location} title={title}>
-      <SEO title={post.title} description={post.excerpt} />
+    this.state = {
+      isCommnetReady: false,
+    };
+  }
 
-      <main>
-        <Styled.h1 css={css({
-          fontSize: 3,
-          color: `primary`,
-          mb: 4,
-        })}>{post.title}</Styled.h1>
-        <Styled.p
-          css={css({
-            fontSize: 1,
-            mt: -3,
-            mb: 3,
-          })}
-        >
-          {post.date}
-          {/* <Styled.a as={Link} to="https://wuyuying.com/comment/" css={css({
-            px: 2,
-            display: 'inline-block',
-          })}>>> 前往留言板</Styled.a> */}
-        </Styled.p>
+  componentDidMount() {
+    if (window.__semio__gc_graphlogin) {
+      this.setState({
+        isCommnetReady: true,
+      }, () => {
+        this.loadComment();
+      })
+    }
+  }
 
-        <Tags tags={tags} />
+  loadComment = () => {
+    const { isCommnetReady } = this.state;
+    const {
+      data: {
+        post,
+      }
+    } = this.props;
+    const config = {
+      graphcommentId: "wuyuying", // make sure the id is yours
 
-        <MDXRenderer>{post.body}</MDXRenderer>
-      </main>
+      behaviour: {
+        // HIGHLY RECOMMENDED
+        uid: post.slug // uniq identifer for the comments thread on your page (ex: your page id)
+      },
 
-      {/* <iframe
-        title="comment"
-        style={{
-          border: 0,
-          // height: '60vh',
-          width: '100%',
-          margin: '0 auto',
-          display: 'block',
-          overflowY: 'visible',
-        }}
-        src={`https://wuyuying.com/comment-source?post=/archives${post.slug}`}
-      /> */}
+      // configure your variables here
+    }
 
-      <PostFooter {...{ previous, next }} />
-    </Layout>
-  )
+    isCommnetReady && window.__semio__gc_graphlogin(config);
+  }
+
+  render() {
+    const {
+      data: {
+        post,
+        site: {
+          siteMetadata: { title },
+        },
+      },
+      location,
+      previous,
+      next,
+    } = this.props;
+    const { isCommnetReady } = this.state;
+    let tags = post.tags || [];
+
+    return (
+      <Layout location={location} title={title}>
+        <Helmet>
+          <script async src={isCommnetReady ? '' : `https://integration.graphcomment.com/gc_graphlogin.js?t=${Date.now()}`} onLoad={`
+            var config = {
+              graphcommentId: "wuyuying", // make sure the id is yours
+
+              behaviour: {
+                // HIGHLY RECOMMENDED
+                uid: "${post.slug}" // uniq identifer for the comments thread on your page (ex: your page id)
+              },
+
+              // configure your variables here
+            }
+
+            window.__semio__gc_graphlogin && window.__semio__gc_graphlogin(config);
+          `} />
+        </Helmet>
+
+        <SEO title={post.title} description={post.excerpt} />
+
+        <main>
+          <Styled.h1 css={css({
+            fontSize: 3,
+            color: `primary`,
+            mb: 4,
+          })}>{post.title}</Styled.h1>
+          <Styled.p
+            css={css({
+              fontSize: 1,
+              mt: -3,
+              mb: 3,
+            })}
+          >
+            {post.date}
+          </Styled.p>
+
+          <Tags tags={tags} />
+
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </main>
+
+        <div id="graphcomment"></div>
+
+        <PostFooter {...{ previous, next }} />
+      </Layout>
+    )
+  }
 }
 
 export default Post
