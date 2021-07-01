@@ -107,9 +107,9 @@ class Post extends Component {
           <MDXRenderer>{post.body}</MDXRenderer>
         </main>
 
-        <div id="graphcomment"></div>
-
         <PostFooter {...{ previous, next }} />
+
+        <div id="graphcomment"></div>
       </Layout>
     )
   }
