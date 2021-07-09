@@ -35,6 +35,19 @@ chsh -s /bin/zsh
 
 更多详见[github](https://github.com/robbyrussell/oh-my-zsh)。
 
+centOS安装
+
+```
+yum install zsh -y
+chsh -s /bin/zsh root
+echo $SHELL
+yum install wget git -y
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
+/bin/cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+source ~/.zshrc
+```
+
 ### Sip
 超好用的取色小软件，在切图时尤其好用。附上[官网地址](http://sipapp.io)。
 
