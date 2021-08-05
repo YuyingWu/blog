@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "@material-ui/styles": "^4.11.3",
     "axios": "^0.19.1",
     "gatsby": "^2.32.12",
