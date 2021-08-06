@@ -1,9 +1,10 @@
 ---
 title: 2020年做的那些菜
-categories: [life]
+categories: [life, foodie]
 tags: [cooking]
 date: 2020-09-20 12:46:27
 createDate: 2020-07-18 11:17:27
+cover: https://static.wuyuying.com/meal-2020/0918.jpg
 ---
 
 下半年开始过上了要和室友一起做早餐、做正餐的生活……WHAT!? 以前都是不用做饭的么？真的，我以前都可以抱大厨大腿，要么点外卖，要么出去吃，不……用……做 Orz
