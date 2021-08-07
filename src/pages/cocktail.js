@@ -32,13 +32,16 @@ const styles = {
   },
   logo: {
     display: 'inline-block',
-    width: 120,
-    height: 120,
+    width: HEADER_HEIGHT,
+    height: HEADER_HEIGHT,
+    marginRight: 20,
   },
   logoSmall: {
     display: 'inline-block',
-    width: 100,
-    height: 100,
+    width: 60,
+    height: 60,
+    marginRight: 10,
+    marginTop: -7,
   },
   headerTitle: {
     textAlign: 'left',
@@ -50,7 +53,8 @@ const styles = {
   headerTitleSmall: {
     color: '#C93801',
     lineHeight: 1,
-    fontSize: 24,
+    fontSize: 32,
+    fontWeight: 700,
   },
   footer: {
     backgroundColor: '#000',
@@ -120,7 +124,7 @@ export const pageQuery = graphql`
             tags
             date
           }
-          excerpt(truncate: true)
+          excerpt(truncate: true, pruneLength: 55)
           slug
           body
         }

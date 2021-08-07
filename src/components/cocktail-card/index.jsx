@@ -21,10 +21,13 @@ import moment from 'moment'
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+    backgroundColor: '#DBD0BF',
+    border: '1px solid #ebe9eb',
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    // paddingTop: '56.25%', // 16:9
+    paddingTop: '100%', // 1:1
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -37,11 +40,16 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(180deg)',
   },
   excerpt: {
-    height: 140,
+    height: 50,
   },
   title: {
-    color: '#333',
+    color: '#f95300',
     textDecoration: 'none',
+    fontWeight: 700,
+  },
+  date: {
+    color: '#808080',
+    fontSize: 12,
   }
 }));
 
@@ -71,7 +79,7 @@ export default function RecipeReviewCard({
         }
         action={null}
         title={<a href={`https://wuyuying.com/${slug}`} target="_blank" className={classes.title}>{title}</a>}
-        subheader={moment(date).format('YY/MM/DD')}
+        subheader={<span className={classes.date}>{moment(date).format('YYYY/MM/DD')}</span>}
       />
       <CardMedia
         className={classes.media}
