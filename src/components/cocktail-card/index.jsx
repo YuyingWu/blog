@@ -16,13 +16,16 @@ import Typography from '@material-ui/core/Typography';
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 // import { MDXRenderer } from "gatsby-plugin-mdx"
 import moment from 'moment'
+import cocktailTheme from '../../utils/cocktailTheme';
 // import MoreVertIcon from '@material-ui/icons/MoreVert';
+
+const FONT_FAMILY = 'SF Pro SC,SF Pro Display,SF Pro Icons,AOS Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
-    backgroundColor: '#DBD0BF',
-    border: '1px solid #ebe9eb',
+    backgroundColor: cocktailTheme.black,
+    border: `2px solid ${cocktailTheme.yellow}`,
   },
   media: {
     height: 0,
@@ -41,15 +44,19 @@ const useStyles = makeStyles((theme) => ({
   },
   excerpt: {
     height: 50,
+    color: cocktailTheme.gray,
+    fontFamily: FONT_FAMILY,
   },
   title: {
-    color: '#f95300',
+    color: cocktailTheme.red,
     textDecoration: 'none',
     fontWeight: 700,
+    fontFamily: FONT_FAMILY,
   },
   date: {
-    color: '#808080',
+    color: cocktailTheme.gray,
     fontSize: 12,
+    fontFamily: FONT_FAMILY,
   }
 }));
 

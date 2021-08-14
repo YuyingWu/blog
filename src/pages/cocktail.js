@@ -7,20 +7,18 @@ import Hidden from '@material-ui/core/Hidden';
 import { graphql } from "gatsby";
 import Typography from '@material-ui/core/Typography';
 import CocktailCard from '../components/cocktail-card';
+import cocktailTheme from '../utils/cocktailTheme';
 
 const HEADER_HEIGHT = '20vh';
 const styles = {
   root: {
-    backgroundColor: '#E2DDCC',
+    // backgroundColor: '#E2DDCC',
+    backgroundColor: cocktailTheme.red,
     fontFamily: 'Bradley Hand, cursive, futura-pt-bold, sans-serif',
-  },
-  paper: {
-    height: 140,
-    width: 100,
   },
   headerContainer: {
     height: HEADER_HEIGHT,
-    backgroundColor: '#000',
+    backgroundColor: cocktailTheme.black,
     marginBottom: 16,
   },
   header: {
@@ -45,22 +43,22 @@ const styles = {
   },
   headerTitle: {
     textAlign: 'left',
-    color: '#C93801',
+    color: cocktailTheme.red,
     // lineHeight: HEADER_HEIGHT,
     margin: 0,
     fontSize: 60,
   },
   headerTitleSmall: {
-    color: '#C93801',
+    color: cocktailTheme.red,
     lineHeight: 1,
     fontSize: 32,
     fontWeight: 700,
   },
   footer: {
-    backgroundColor: '#000',
+    backgroundColor: cocktailTheme.black,
     padding: '20px 0',
     textAlign: 'center',
-    color: '#fff',
+    color: cocktailTheme.gray,
     marginTop: '16px',
   }
 };
