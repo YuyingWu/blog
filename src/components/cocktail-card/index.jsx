@@ -57,6 +57,10 @@ const useStyles = makeStyles((theme) => ({
     color: cocktailTheme.gray,
     fontSize: 12,
     fontFamily: FONT_FAMILY,
+  },
+  avatar: {
+    border: `1px solid ${cocktailTheme.yellow}`,
+    borderRadius: '50%',
   }
 }));
 
@@ -80,7 +84,7 @@ export default function RecipeReviewCard({
     <Card className={classes.root}>
       <CardHeader
         avatar={
-          <div aria-label="recipe">
+          <div aria-label="recipe" className={classes.avatar}>
             <Avatar alt="Yuying Wu" src="https://wuyuying.com/static/d07198b678ca849341724d014eb9a47e/eee8e/avatar.jpg" />
           </div>
         }

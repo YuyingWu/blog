@@ -72,6 +72,12 @@ class App extends Component {
   render() {
     const { classes, data } = this.props;
     const { allMdx: { edges: list = [] } = {} } = data;
+    const sortDescDateList = list.sort((a, b) => {
+      const aDate = (new Date(a.node.frontmatter.date)).getTime();
+      const bDate = (new Date(b.node.frontmatter.date)).getTime();
+
+      return bDate - aDate;
+    });
 
     return (
       <div className={classes.root}>
@@ -91,7 +97,7 @@ class App extends Component {
 
         <Container maxWidth="lg">
           <Grid container spacing={2}>
-            { list.map(card => (
+            { sortDescDateList.map(card => (
               <Grid item lg={3} md={4} sm={6} xs={12} key={card.node.slug}>
                 <CocktailCard body={card.node.body} excerpt={card.node.excerpt} slug={card.node.slug} {...card.node.frontmatter} />
               </Grid>
@@ -112,7 +118,7 @@ export default withStyles(styles)(App);
 
 export const pageQuery = graphql`
   {
-    allMdx(filter: {frontmatter: {categories: {in: "foodie"}}}) {
+    allMdx(filter: {frontmatter: {categories: {in: "cocktail"}}}) {
       edges {
         node {
           frontmatter {
