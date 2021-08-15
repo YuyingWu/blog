@@ -4,7 +4,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /@antv/,
+            test: /weixin-js-sdk/,
             use: loaders.null(),
           },
         ],

@@ -97,12 +97,33 @@ class App extends Component {
         window.log && window.log('wx ready');
 
         alert('wx ready');
+
+        wx.updateAppMessageShareData({ 
+          title: 'Keep', // 分享标题
+          desc: 'Keep', // 分享描述
+          link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+          imgUrl: 'http://sf4c.gotokeep.com/qq_default.png', // 分享图标
+          success: function () {
+            // 设置成功
+            alert('好友成功')
+          }
+        })
+
+        wx.updateTimelineShareData({ 
+          title: 'Keep', // 分享标题
+          link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+          imgUrl: 'http://sf4c.gotokeep.com/qq_default.png', // 分享图标
+          success: function () {
+            // 设置成功
+            alert('朋友圈成功')
+          }
+        })
   
-        wx.onMenuShareTimeline({
-          title: 'Keep',
-          link: 'https://www.gotokeep.com/',
-          imgUrl: 'http://sf4c.gotokeep.com/qq_default.png'
-        });
+        // wx.onMenuShareTimeline({
+        //   title: 'Keep',
+        //   link: 'https://www.gotokeep.com/',
+        //   imgUrl: 'http://sf4c.gotokeep.com/qq_default.png'
+        // });
       });
     // }
     // axios.get(`https://server.wuyuying.com/wx/signature?url=${encodeURIComponent(window.location.href)}`)
