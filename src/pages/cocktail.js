@@ -6,8 +6,10 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import { graphql } from "gatsby";
 import Typography from '@material-ui/core/Typography';
+import axios from 'axios';
 import CocktailCard from '../components/cocktail-card';
 import cocktailTheme from '../utils/cocktailTheme';
+import wx from 'weixin-js-sdk';
 
 const HEADER_HEIGHT = '20vh';
 const styles = {
@@ -63,10 +65,55 @@ const styles = {
   }
 };
 
-
 class App extends Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    this.syncWX();
+  }
+
+  syncWX = async () => {
+    const res = await axios.get(`https://server.wuyuying.com/wx/signature?url=${encodeURIComponent(window.location.href)}`);
+
+    alert(JSON.stringify(res));
+
+    // if (res != null) {
+      wx.config(Object.assign({
+        debug: true,
+        // appId: 'wxdb676b2df4a9119f',
+        // timestamp: (new Date()).getTime(),
+        // nonceStr: res.nonceStr,
+        // signature: '2c768e67f6cd86f7fb3daa2c69429718',
+        // jsApiList: [
+        //   'checkJsApi',
+        //   'onMenuShareTimeline',
+        // ],
+      }, res))
+
+      wx.ready(function () {
+
+        window.log && window.log('wx ready');
+
+        alert('wx ready');
+  
+        wx.onMenuShareTimeline({
+          title: 'Keep',
+          link: 'https://www.gotokeep.com/',
+          imgUrl: 'http://sf4c.gotokeep.com/qq_default.png'
+        });
+      });
+    // }
+    // axios.get(`https://server.wuyuying.com/wx/signature?url=${encodeURIComponent(window.location.href)}`)
+    // .then(function (response) {
+    //   // handle success
+    //   console.log(response);
+    // })
+    // .catch(function (error) {
+    //   // handle error
+    //   console.error(error);
+    // });
   }
 
   render() {
