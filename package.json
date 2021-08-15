@@ -15,12 +15,14 @@
     "gatsby": "^2.32.12",
     "gatsby-plugin-less": "^3.0.21",
     "gatsby-plugin-material-ui": "^2.1.6",
+    "gatsby-plugin-react-helmet": "^4.11.0",
     "gatsby-plugin-static-folders": "^1.0.1",
-    "gatsby-theme-chaton": "^0.0.13",
+    "gatsby-theme-chaton": "^0.0.14",
     "less": "^3.11.1",
     "moment": "^2.24.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-helmet": "^6.1.0",
     "weixin-js-sdk": "^1.3.0"
   },
   "devDependencies": {

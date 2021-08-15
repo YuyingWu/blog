@@ -85,11 +85,11 @@ export default function RecipeReviewCard({
       <CardHeader
         avatar={
           <div aria-label="recipe" className={classes.avatar}>
-            <Avatar alt="Yuying Wu" src="https://wuyuying.com/static/d07198b678ca849341724d014eb9a47e/eee8e/avatar.jpg" />
+            <Avatar alt="Yuying Wu" src="https://static.wuyuying.com/avatar.jpeg" />
           </div>
         }
         action={null}
-        title={<a href={`https://wuyuying.com/${slug}`} target="_blank" className={classes.title}>{title}</a>}
+        title={<a href={`https://wuyuying.com/${slug}`} className={classes.title}>{title}</a>}
         subheader={<span className={classes.date}>{moment(date).format('YYYY/MM/DD')}</span>}
       />
       <CardMedia

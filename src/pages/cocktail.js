@@ -6,10 +6,11 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import { graphql } from "gatsby";
 import Typography from '@material-ui/core/Typography';
-import axios from 'axios';
+// import axios from 'axios';
 import CocktailCard from '../components/cocktail-card';
 import cocktailTheme from '../utils/cocktailTheme';
-import wx from 'weixin-js-sdk';
+// import wx from 'weixin-js-sdk';
+import { Helmet } from "react-helmet"
 
 const HEADER_HEIGHT = '20vh';
 const styles = {
@@ -70,7 +71,7 @@ class App extends Component {
     super(props);
   }
 
-  componentDidMount() {
+  /*componentDidMount() {
     this.syncWX();
   }
 
@@ -105,7 +106,7 @@ class App extends Component {
       wx.onMenuShareTimeline({
         title: 'Keep', // 分享标题
         link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-        imgUrl: 'https://wuyuying.com/static/d07198b678ca849341724d014eb9a47e/eee8e/avatar.jpg', // 分享图标
+        imgUrl: 'https://static.wuyuying.com/avatar.jpeg', // 分享图标
         success: function () {
           // 用户点击了分享后执行的回调函数
           alert('朋友圈成功');
@@ -116,7 +117,7 @@ class App extends Component {
         title: 'Keep', // 分享标题
         desc: 'Keep', // 分享描述
         link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-        imgUrl: 'https://wuyuying.com/static/d07198b678ca849341724d014eb9a47e/eee8e/avatar.jpg', // 分享图标
+        imgUrl: 'https://static.wuyuying.com/avatar.jpeg', // 分享图标
         // type: '', // 分享类型,music、video或link，不填默认为link
         // dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         success: function () {
@@ -129,7 +130,7 @@ class App extends Component {
       //   title: 'Keep', // 分享标题
       //   desc: 'Keep', // 分享描述
       //   link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      //   imgUrl: 'https://wuyuying.com/static/d07198b678ca849341724d014eb9a47e/eee8e/avatar.jpg', // 分享图标
+      //   imgUrl: 'https://static.wuyuying.com/avatar.jpeg', // 分享图标
       //   success: function () {
       //     // 设置成功
       //     alert('好友成功')
@@ -139,14 +140,14 @@ class App extends Component {
       // wx.updateTimelineShareData({
       //   title: 'Keep', // 分享标题
       //   link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      //   imgUrl: 'https://wuyuying.com/static/d07198b678ca849341724d014eb9a47e/eee8e/avatar.jpg', // 分享图标
+      //   imgUrl: 'https://static.wuyuying.com/avatar.jpeg', // 分享图标
       //   success: function () {
       //     // 设置成功
       //     alert('朋友圈成功')
       //   }
       // });
     });
-  }
+  } */
 
   render() {
     const { classes, data } = this.props;
@@ -161,6 +162,9 @@ class App extends Component {
     return (
       <div className={classes.root}>
         <CssBaseline />
+        <Helmet>
+          <title>小伍的深夜小酒馆</title>
+        </Helmet>
         <header className={classes.headerContainer}>
           <Container maxWidth="md" className={classes.header}>
             <Hidden only={['sm', 'xs']}>
@@ -185,7 +189,7 @@ class App extends Component {
         </Container>
 
         <footer>
-          <Typography variant="body2" color="textSecondary" component="p" className={classes.footer}>Power by <a href="https://wuyuying.com/" target="_blank" style={{ color: '#fff' }}>wuyuying.com.</a>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.footer}>Power by <a href="https://wuyuying.com/" style={{ color: '#fff' }}>wuyuying.com.</a>
           </Typography>
         </footer>
       </div>
