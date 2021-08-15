@@ -76,8 +76,21 @@ class App extends Component {
 
   syncWX = async () => {
     const res = await axios.get(`https://server.wuyuying.com/wx/signature?url=${encodeURIComponent(window.location.href)}`);
+    const { data = {} } = res;
 
-    alert(JSON.stringify(res));
+    // alert(JSON.stringify(res));
+
+    console.log(Object.assign({
+      debug: true,
+      // appId: 'wxdb676b2df4a9119f',
+      // timestamp: (new Date()).getTime(),
+      // nonceStr: res.nonceStr,
+      // signature: '2c768e67f6cd86f7fb3daa2c69429718',
+      // jsApiList: [
+      //   'checkJsApi',
+      //   'onMenuShareTimeline',
+      // ],
+    }, data));
 
     // if (res != null) {
       wx.config(Object.assign({
@@ -90,7 +103,7 @@ class App extends Component {
         //   'checkJsApi',
         //   'onMenuShareTimeline',
         // ],
-      }, res))
+      }, data))
 
       wx.ready(function () {
 
