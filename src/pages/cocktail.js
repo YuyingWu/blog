@@ -78,76 +78,49 @@ class App extends Component {
     const res = await axios.get(`https://server.wuyuying.com/wx/signature?url=${encodeURIComponent(window.location.href)}`);
     const { data = {} } = res;
 
-    // alert(JSON.stringify(res));
-
-    console.log(Object.assign({
+    wx.config(Object.assign(data, {
       debug: true,
-      // appId: 'wxdb676b2df4a9119f',
-      // timestamp: (new Date()).getTime(),
-      // nonceStr: res.nonceStr,
-      // signature: '2c768e67f6cd86f7fb3daa2c69429718',
-      // jsApiList: [
-      //   'checkJsApi',
-      //   'onMenuShareTimeline',
-      // ],
-    }, data));
+      jsApiList: [
+        'updateAppMessageShareData',
+        'updateTimelineShareData',
+      ]
+    }))
 
-    // if (res != null) {
-      wx.config(Object.assign({
-        debug: true,
-        // appId: 'wxdb676b2df4a9119f',
-        // timestamp: (new Date()).getTime(),
-        // nonceStr: res.nonceStr,
-        // signature: '2c768e67f6cd86f7fb3daa2c69429718',
-        // jsApiList: [
-        //   'checkJsApi',
-        //   'onMenuShareTimeline',
-        // ],
-      }, data))
+    wx.checkJsApi({
+      jsApiList: [
+        'updateAppMessageShareData',
+        'updateTimelineShareData',
+      ], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+      success: function(res) {
+        alert('api success ' + JSON.stringify(res))
+      // 以键值对的形式返回，可用的api值true，不可用为false
+      // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+      },
 
-      wx.ready(function () {
+    });
 
-        window.log && window.log('wx ready');
+    wx.ready(function () {
+      wx.updateAppMessageShareData({
+        title: 'Keep', // 分享标题
+        desc: 'Keep', // 分享描述
+        link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: 'http://sf4c.gotokeep.com/qq_default.png', // 分享图标
+        success: function () {
+          // 设置成功
+          alert('好友成功')
+        }
+      })
 
-        alert('wx ready');
-
-        wx.updateAppMessageShareData({ 
-          title: 'Keep', // 分享标题
-          desc: 'Keep', // 分享描述
-          link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-          imgUrl: 'http://sf4c.gotokeep.com/qq_default.png', // 分享图标
-          success: function () {
-            // 设置成功
-            alert('好友成功')
-          }
-        })
-
-        wx.updateTimelineShareData({ 
-          title: 'Keep', // 分享标题
-          link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-          imgUrl: 'http://sf4c.gotokeep.com/qq_default.png', // 分享图标
-          success: function () {
-            // 设置成功
-            alert('朋友圈成功')
-          }
-        })
-  
-        // wx.onMenuShareTimeline({
-        //   title: 'Keep',
-        //   link: 'https://www.gotokeep.com/',
-        //   imgUrl: 'http://sf4c.gotokeep.com/qq_default.png'
-        // });
+      wx.updateTimelineShareData({
+        title: 'Keep', // 分享标题
+        link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: 'http://sf4c.gotokeep.com/qq_default.png', // 分享图标
+        success: function () {
+          // 设置成功
+          alert('朋友圈成功')
+        }
       });
-    // }
-    // axios.get(`https://server.wuyuying.com/wx/signature?url=${encodeURIComponent(window.location.href)}`)
-    // .then(function (response) {
-    //   // handle success
-    //   console.log(response);
-    // })
-    // .catch(function (error) {
-    //   // handle error
-    //   console.error(error);
-    // });
+    });
   }
 
   render() {
@@ -178,7 +151,7 @@ class App extends Component {
 
         <Container maxWidth="lg">
           <Grid container spacing={2}>
-            { sortDescDateList.map(card => (
+            {sortDescDateList.map(card => (
               <Grid item lg={3} md={4} sm={6} xs={12} key={card.node.slug}>
                 <CocktailCard body={card.node.body} excerpt={card.node.excerpt} slug={card.node.slug} {...card.node.frontmatter} />
               </Grid>
@@ -188,7 +161,7 @@ class App extends Component {
 
         <footer>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.footer}>Power by <a href="https://wuyuying.com/" target="_blank" style={{ color: '#fff' }}>wuyuying.com.</a>
-        </Typography>
+          </Typography>
         </footer>
       </div>
     )
