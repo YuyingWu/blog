@@ -81,15 +81,17 @@ class App extends Component {
     wx.config(Object.assign(data, {
       debug: true,
       jsApiList: [
-        'updateAppMessageShareData',
-        'updateTimelineShareData',
+        // 'updateAppMessageShareData',
+        // 'updateTimelineShareData',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage'
       ]
     }))
 
     wx.checkJsApi({
       jsApiList: [
-        'updateAppMessageShareData',
-        'updateTimelineShareData',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
       ], // 需要检测的JS接口列表，所有JS接口列表见附录2,
       success: function(res) {
         alert('api success ' + JSON.stringify(res))
@@ -100,26 +102,49 @@ class App extends Component {
     });
 
     wx.ready(function () {
-      wx.updateAppMessageShareData({
+      wx.onMenuShareTimeline({
+        title: 'Keep', // 分享标题
+        link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: 'https://wuyuying.com/static/d07198b678ca849341724d014eb9a47e/eee8e/avatar.jpg', // 分享图标
+        success: function () {
+          // 用户点击了分享后执行的回调函数
+          alert('朋友圈成功');
+        }
+      });
+
+      wx.onMenuShareAppMessage({
         title: 'Keep', // 分享标题
         desc: 'Keep', // 分享描述
         link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-        imgUrl: 'http://sf4c.gotokeep.com/qq_default.png', // 分享图标
+        imgUrl: 'https://wuyuying.com/static/d07198b678ca849341724d014eb9a47e/eee8e/avatar.jpg', // 分享图标
+        // type: '', // 分享类型,music、video或link，不填默认为link
+        // dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         success: function () {
-          // 设置成功
+          // 用户点击了分享后执行的回调函数
           alert('好友成功')
         }
-      })
+      });      
 
-      wx.updateTimelineShareData({
-        title: 'Keep', // 分享标题
-        link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-        imgUrl: 'http://sf4c.gotokeep.com/qq_default.png', // 分享图标
-        success: function () {
-          // 设置成功
-          alert('朋友圈成功')
-        }
-      });
+      // wx.updateAppMessageShareData({
+      //   title: 'Keep', // 分享标题
+      //   desc: 'Keep', // 分享描述
+      //   link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+      //   imgUrl: 'https://wuyuying.com/static/d07198b678ca849341724d014eb9a47e/eee8e/avatar.jpg', // 分享图标
+      //   success: function () {
+      //     // 设置成功
+      //     alert('好友成功')
+      //   }
+      // })
+
+      // wx.updateTimelineShareData({
+      //   title: 'Keep', // 分享标题
+      //   link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+      //   imgUrl: 'https://wuyuying.com/static/d07198b678ca849341724d014eb9a47e/eee8e/avatar.jpg', // 分享图标
+      //   success: function () {
+      //     // 设置成功
+      //     alert('朋友圈成功')
+      //   }
+      // });
     });
   }
 
