@@ -7,6 +7,7 @@ module.exports = {
     copyright: `&copy;2014-${new Date().getFullYear()} 京ICP备16019960号`,
     siteUrl: `https://wuyuying.com`,
     aboutUrl: `/about`,
+    avatar: 'https://static.wuyuying.com/avatar.jpeg',
     social: [
       {
         name: 'rss',
@@ -49,6 +50,7 @@ module.exports = {
     ],
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-theme-chaton`,
       options: {
