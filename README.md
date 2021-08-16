@@ -1,4 +1,4 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/YuyingWu/blog)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/YuyingWu/blog) [![Netlify Status](https://api.netlify.com/api/v1/badges/6c2e7c27-9377-4b83-a71c-eef44d173609/deploy-status)](https://app.netlify.com/sites/wuyuying/deploys)
 
 # Yuying Wu's Blog
 
