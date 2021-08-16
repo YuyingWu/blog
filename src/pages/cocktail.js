@@ -29,33 +29,23 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     height: HEADER_HEIGHT,
-    lineHeight: HEADER_HEIGHT,
+    lineHeight: 1,
+  },
+  highlightFontColor: {
+    color: cocktailTheme.yellow,
   },
   logo: {
     display: 'inline-block',
-    width: HEADER_HEIGHT,
-    height: HEADER_HEIGHT,
-    marginRight: 20,
-  },
-  logoSmall: {
-    display: 'inline-block',
-    width: 60,
-    height: 60,
-    marginRight: 10,
-    marginTop: -7,
+    width: '6rem',
+    // height: HEADER_HEIGHT,
+    marginRight: '1rem',
   },
   headerTitle: {
     textAlign: 'left',
     color: cocktailTheme.red,
     // lineHeight: HEADER_HEIGHT,
     margin: 0,
-    fontSize: 60,
-  },
-  headerTitleSmall: {
-    color: cocktailTheme.red,
-    lineHeight: 1,
-    fontSize: 32,
-    fontWeight: 700,
+    fontSize: '3rem',
   },
   footer: {
     backgroundColor: cocktailTheme.black,
@@ -167,14 +157,8 @@ class App extends Component {
         </Helmet>
         <header className={classes.headerContainer}>
           <Container maxWidth="md" className={classes.header}>
-            <Hidden only={['sm', 'xs']}>
-              <img className={classes.logo} src="https://static.wuyuying.com/cocktail-logo.png" />
-              <h1 className={classes.headerTitle}>Home Bar Cocktail</h1>
-            </Hidden>
-            <Hidden only={['md', 'lg', 'xl']}>
-              <img className={classes.logoSmall} src="https://static.wuyuying.com/cocktail-logo.png" />
-              <h1 className={classes.headerTitleSmall}>Home Bar Cocktail</h1>
-            </Hidden>
+            <img className={classes.logo} src="https://static.wuyuying.com/cocktail-logo.png" />
+              <h1 className={classes.headerTitle}>Home Bar <span className={classes.highlightFontColor}>Cocktail</span></h1>
           </Container>
         </header>
 
