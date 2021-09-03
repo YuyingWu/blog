@@ -14,16 +14,17 @@ import Typography from '@material-ui/core/Typography';
 // import FavoriteIcon from '@material-ui/icons/Favorite';
 // import ShareIcon from '@material-ui/icons/Share';
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-// import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import moment from 'moment'
 import cocktailTheme from '../../utils/cocktailTheme';
+import { Link } from "gatsby"
 // import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const FONT_FAMILY = 'SF Pro SC,SF Pro Display,SF Pro Icons,AOS Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    // maxWidth: 345,
     backgroundColor: cocktailTheme.black,
     border: `2px solid ${cocktailTheme.yellow}`,
   },
@@ -44,6 +45,10 @@ const useStyles = makeStyles((theme) => ({
   },
   excerpt: {
     height: 50,
+    color: cocktailTheme.gray,
+    fontFamily: FONT_FAMILY,
+  },
+  body: {
     color: cocktailTheme.gray,
     fontFamily: FONT_FAMILY,
   },
@@ -72,6 +77,7 @@ export default function RecipeReviewCard({
   // tags,
   date,
   excerpt,
+  cardType = 'excerpt',
 }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
@@ -89,18 +95,31 @@ export default function RecipeReviewCard({
           </div>
         }
         action={null}
-        title={<a href={`https://wuyuying.com/${slug}`} className={classes.title}>{title}</a>}
+        title={<Link to={`/cocktail?id=${slug}`} className={classes.title}>{title}</Link>}
         subheader={<span className={classes.date}>{moment(date).format('YYYY/MM/DD')}</span>}
       />
+
+      { cardType !== 'excerpt' ? (
+        <CardContent>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.body}>
+            <MDXRenderer>{body}</MDXRenderer>
+          </Typography>
+        </CardContent>
+      ) : null }
+
       <CardMedia
         className={classes.media}
-        image={cover || 'https://material-ui.com/static/images/cards/paella.jpg'}
+        image={cover}
         title={title}
       />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p" className={classes.excerpt}>{ excerpt }
-        </Typography>
-      </CardContent>
+
+      { cardType === 'excerpt' ? (
+        <CardContent>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.excerpt}>{ excerpt }
+          </Typography>
+        </CardContent>
+      ) : null }
+
       {/* <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
