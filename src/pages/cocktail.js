@@ -166,7 +166,9 @@ class App extends Component {
     const { classes, data } = this.props;
     const { id } = this.state;
     const { allMdx: { edges: list = [] } = {} } = data;
-    const filteredList = id ? list.filter(v => v.node.slug === id) : [...list];
+    let filteredList = id ? list.filter(v => v.node.slug === id) : [...list];
+    const hasIdMatched = id && filteredList.length;
+    filteredList = hasIdMatched ? filteredList : list;
     const sortDescDateList = filteredList.sort((a, b) => {
       const aDate = (new Date(a.node.frontmatter.date)).getTime();
       const bDate = (new Date(b.node.frontmatter.date)).getTime();
@@ -190,8 +192,8 @@ class App extends Component {
         </header>
 
         <Container maxWidth="lg">
-          <Grid container spacing={2} style={{ justifyContent: id ? 'center' : 'flex-start' }}>
-            {id ? <Grid item lg={8} md={12} sm={12} xs={12} key={sortDescDateList[0].node.slug}>
+          <Grid container spacing={2} style={{ justifyContent: hasIdMatched ? 'center' : 'flex-start' }}>
+            {hasIdMatched ? <Grid item lg={8} md={12} sm={12} xs={12} key={sortDescDateList[0].node.slug}>
               <CocktailCard body={sortDescDateList[0].node.body} excerpt={sortDescDateList[0].node.excerpt} slug={sortDescDateList[0].node.slug} {...sortDescDateList[0].node.frontmatter} cardType="body" />
             </Grid> : sortDescDateList.map(card => (
               <Grid item lg={3} md={4} sm={6} xs={12} key={card.node.slug}>
