@@ -101,7 +101,7 @@ export default function RecipeReviewCard({
 
       { cardType !== 'excerpt' ? (
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p" className={classes.body}>
+          <Typography variant="body2" color="textSecondary" component="div" className={classes.body}>
             <MDXRenderer>{body}</MDXRenderer>
           </Typography>
         </CardContent>

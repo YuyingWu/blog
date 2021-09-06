@@ -180,7 +180,7 @@ class App extends Component {
       <div className={classes.root}>
         <CssBaseline />
         <Helmet>
-          <title>小伍的深夜小酒馆</title>
+          <title>{ hasIdMatched ? `${filteredList[0].node.frontmatter.title} | 小伍的深夜小酒馆` : '小伍的深夜小酒馆' }</title>
         </Helmet>
         <header className={classes.headerContainer}>
           <Link to="/cocktail" className={classes.headerLink}>
