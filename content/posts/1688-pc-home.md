@@ -23,7 +23,7 @@ date: 2019-09-24 23:14:18
 
 来，先感受一下新旧版首页的UI对比。
 
-![](//static.wuyuying.com/1.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/1.png)
 
 
 
@@ -67,7 +67,7 @@ date: 2019-09-24 23:14:18
 1. 运营产出一个业务的业务池，每个业务展示3个场景，其中每个场景的offer图是个性化产出的；
 1. 目前业务池中，只有以上8个横向模块，所以业务的坑位暂时是确定的，在未来这个区域的业务更丰富，可通过智谱，根据用户的偏好（核身身份、主营类目或采购等）展示不同的业务模块中的不同场景，希望更高效更精准地做流量分发。
 
-![](//static.wuyuying.com/2.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/2.png)
 
 
 
@@ -79,7 +79,7 @@ date: 2019-09-24 23:14:18
 
 在未来，首页在猜你模块也会进行迭代，添加卡片的混排，进一步在商品中推场景，提升转化效率。
 
-![](//static.wuyuying.com/3.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/3.png)
 
 
 
@@ -87,7 +87,7 @@ date: 2019-09-24 23:14:18
 
 首页的改版，在业务上，透传出更多今天1688的核心战略源头厂货通天下的心智，同时把大量以前需要人肉配置但更新得很低频的模块，升级为由数据驱动、千人千面的智能模块，每个模块的转化效能更高、维护成本更低。下面我画了一个结构图，大家可以更清晰地了解新版首页的整体内容框架、前端做了什么改造以及依赖哪些CBU基础服务和平台。
 
-![](//static.wuyuying.com/4.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/4.png)
 
 
 
@@ -105,7 +105,7 @@ PC首页转型成智能化的流量分发渠道，整张页面需要人肉配置
 
 因此，首页的构成，从多个基于jQuery组件的组件式搭建，到1个基于React 16.x的assets应用+纯数据配置的源码页面式搭建。
 
-![](//static.wuyuying.com/5.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/5.png)
 
 
 
@@ -117,7 +117,7 @@ PC首页转型成智能化的流量分发渠道，整张页面需要人肉配置
 
 用puppeteer做了什么？一图胜千言。
 
-![](//static.wuyuying.com/6.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/6.png)
 
 
 
@@ -127,9 +127,9 @@ PC首页转型成智能化的流量分发渠道，整张页面需要人肉配置
 
 首页性能谈不上快吧，由于业务节奏的问题抓紧先上了一版，在Main里可以看到很多小红旗提示有可能的性能瓶颈，预加载、pwa、code splitting等等，还有很多的优化空间，性能优化之路仍需持续进行。
 
-![](//static.wuyuying.com/7.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/7.png)
 
-![](//static.wuyuying.com/8.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/8.png)
 
 
 
@@ -144,7 +144,7 @@ PC首页转型成智能化的流量分发渠道，整张页面需要人肉配置
 - 第二屏的会场智能分流器
 - 全页的大促氛围主题色以及各个日常区块在大促下的配色调整等
 
-![](//static.wuyuying.com/9.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/9.png)
 
 
 
@@ -179,7 +179,7 @@ PC首页转型成智能化的流量分发渠道，整张页面需要人肉配置
 - off（手动关）
 - auto（自动，识别大促数据源中的开关字段判断开关）
 
-![](//static.wuyuying.com/10.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/10.png)
 
 
 
@@ -189,7 +189,7 @@ PC首页转型成智能化的流量分发渠道，整张页面需要人肉配置
 
 氛围资源配置不再写死在每个组件的静态配置中，由大富翁统一管理，如下图，顶通banner、动态logo、五连珠素材，针对不同的阶段氛围场景（日常、预热、爆发、返场等等），同一个时间段投放对应的资源，定时自动切换数据。这解决了蹲点更新数据的问题。
 
-![](//static.wuyuying.com/11.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/11.png)
 
 
 
@@ -216,7 +216,7 @@ PC首页转型成智能化的流量分发渠道，整张页面需要人肉配置
 > 1688PC首页的源站由于历史原因是一个Java应用(cbu-static)，需要做灰度的频率比较低。采用的做法是，创建两个页面，这两个页面都在cbu_static上承载，CDN节点依然部署了上述的分桶逻辑，当回源到cbu_static时，在tengine层面可以根据请求头中的x-air-pt来proxy_pass到不同的路径上，以实现灰度的效果。
 
 
-![](//static.wuyuying.com/12.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/12.png)
 
 结合CDN+源站的灰度多版本缓存机制，www.1688.com的灰度流程如下：
 
@@ -236,9 +236,9 @@ PC首页转型成智能化的流量分发渠道，整张页面需要人肉配置
 
 所以，在首页的灰度方案中，新老页面的spm是一致的，在此基础上加上spm b位的版本号，其中新版本的是 `a260k.dacugeneral/new` ，旧版本的是 `a260k.dacugeneral/default` 。灰度的数据统计使用的是 A+ 的AB Test，支持离线和实时的数据统计。除了页面概况，也可以通过搜索spm c位，查询某个页面版本的某个区块的数据情况。
 
-![](//static.wuyuying.com/13.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/13.png)
 
-![](//static.wuyuying.com/14.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/14.png)
 
 
 
@@ -277,7 +277,7 @@ PC首页转型成智能化的流量分发渠道，整张页面需要人肉配置
 
 把首页retcode监控与GOC监控打通，尽早发现和解决线上问题，避免线上质量问题响应速度慢，持续扩散问题的影响面。
 
-![](//static.wuyuying.com/15.png)
+![](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/15.png)
 
 
 

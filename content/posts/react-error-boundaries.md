@@ -113,7 +113,7 @@ export default ErrorBoundary;
 
 全局或模块级错误边界可能看下图会更直观一些。
 
-!["multi-error-boundaries"](//static.wuyuying.com/multi-error-boundaries.png)
+!["multi-error-boundaries"](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/multi-error-boundaries.png)
 
 ## Wrapping It Up
 

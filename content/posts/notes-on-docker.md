@@ -241,11 +241,11 @@ docker image prune -f
 
 ### PORT mapping
 
-![Alt text](//static.wuyuying.com/docker-port-mapping.png)
+![Alt text](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/docker-port-mapping.png)
 
 ### Volumn mapping
 
-![Alt text](//static.wuyuying.com/docker-volumn-mapping.png)
+![Alt text](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/docker-volumn-mapping.png)
 
 ### docker lab
 

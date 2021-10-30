@@ -13,7 +13,7 @@ tags: []
 
 来杭州2年多，今天第一次去九溪十八涧，这个景确实挺美的，绿油油～
 
-!["九溪烟树"](//static.wuyuying.com/jiuxi.jpg)
+!["九溪烟树"](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/jiuxi.jpg)
 
 ## 稻香小镇
 
@@ -21,5 +21,5 @@ tags: []
 
 和小伙伴们一起去稻香小镇，参加长桌宴，坐在草垛上，闻着香香的稻草味。
 
-!["余杭的稻香小镇"](//static.wuyuying.com/town_of_wheat.JPG)
+!["余杭的稻香小镇"](//wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/town_of_wheat.JPG)
 
