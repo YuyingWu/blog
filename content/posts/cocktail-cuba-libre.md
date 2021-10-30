@@ -3,7 +3,7 @@ title: Cuba Libre 自由古巴
 categories: [cocktail]
 tags: [cocktail, Rum]
 date: 2021-08-14 18:00:27
-cover: https://static.wuyuying.com/cocktail/cuba-liberty.jpg
+cover: https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/cocktail/cuba-liberty.jpg
 ---
 
 古巴朗姆 50ml，可乐 100ml，青柠圆片 1片。

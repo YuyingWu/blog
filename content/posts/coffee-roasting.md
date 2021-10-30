@@ -11,15 +11,15 @@ date: 2020-08-16 19:25:18
 
 不过，还没有好，哈哈，所以用了最传统的方式，温度仪 + `open roast` 先走一波，至少目前不会烤焦了。
 
-!["open roast + 温度仪"](https://static.wuyuying.com/coffee-roasting/coffee-open-roast.jpg)
+!["open roast + 温度仪"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/coffee-roasting/coffee-open-roast.jpg)
 
 树莓咖啡的雏形。
 
-!["树莓咖啡"](https://static.wuyuying.com/coffee-roasting/coffee-pi-0912.jpg)
+!["树莓咖啡"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/coffee-roasting/coffee-pi-0912.jpg)
 
 哈哈，第一次把烘的豆带去公司做奶咖，味道可以的 👍
 
-!["燕麦奶咖"](https://static.wuyuying.com/coffee-roasting/make-coffee-0816.jpg)
+!["燕麦奶咖"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/coffee-roasting/make-coffee-0816.jpg)
 
 ---
 
@@ -37,9 +37,9 @@ date: 2020-08-16 19:25:18
 * With very dark brown roasts (Italian, dark French, Spanish, `heavy`: concluding internal bean temperature `465°F/240°C to 475°F/245°C`; between SCAA color tiles #35 and #25), the body continues to thin as more and more of the oils are evaporated by the roast, the bitterish side of the bittersweet equation becomes more dominant, and a slight charred taste may appear. Needless to say, acidy notes and varietal characteristics have long since been transformed into nuances of the dark-roast flavor. The bean is shiny with flavor oils driven to the surface.
 * The ultimate dark roast, almost black (`dark French`, Spanish; concluding internal bean temperature `475°F/245°C to 480°F/250°C`; SCAA color tile #25) is definitely a special taste. The body is even thinner, the bittersweetness is still more bitter and less sweet, and burned or charred notes dominate. At this roast all coffees, regardless of origin, tend to taste about the same. The surface of the bean is glossy with oil. This unusual roast is not an espresso roast, by the way; espresso is best brewed with one of the dark-but-not-black, fuller-bodied, sweeter roasts described earlier. Home roasters typically have an opportunity to sample this ultimate dark roast, since sooner or later we all produce a batch whether we plan to or not.
 
-!["roasting styles"](https://static.wuyuying.com/coffee-roasting/roast-styles.png)
+!["roasting styles"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/coffee-roasting/roast-styles.png)
 
-!["roasting styles flavor"](https://static.wuyuying.com/coffee-roasting/roast-style-flavor.png)
+!["roasting styles flavor"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/coffee-roasting/roast-style-flavor.png)
 
 ## Roasting Requirements
 

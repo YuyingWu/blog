@@ -9,7 +9,7 @@ tags: [总结]
 
 ## 关于迷茫
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/1.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/1.png)
 
 ### 我该不该……
 
@@ -45,7 +45,7 @@ tags: [总结]
 
 ## 关于我
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/2.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/2.png)
 我是伍玉莹，花名“姬无”，来自阿里巴巴 1688 体验技术。以上是我的履历，其实也很简单。
 
 - 实习：百度知道
@@ -55,13 +55,13 @@ tags: [总结]
 
 现在，在业务上主要负责 1688 的行业导购场景，技术上负责新研发（前端工程/Serverless/Web IDE）和数据度量（业务数据度量/研发效能度量）。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/3.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/3.png)
 
 上面这是阿里前端的 JOB MODEL，个人认为比较客观的，可以看到我的成长历程，基本也是这套模型的其中一个实例，哈哈。接下来，基本按照“每一个阶段中，我做了什么和有什么感悟”的套路，给大家分享我的故事。
 
 ## 初入职场
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/4.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/4.png)
 
 ### 我的故事（初入职场）
 
@@ -103,7 +103,7 @@ tags: [总结]
 
 ### 我的故事（独当一面）
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/5.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/5.png)
 
 刚加入阿里的时候，我们小分队对接的是 1688 的淘货源业务，1688 大家应该都知道噢，我们的目标是让天下没有难做的生意，让源头厂货更高效地在市场流通，而淘货源业务服务的客户是那一批来 1688 批发的淘宝卖家。
 
@@ -125,7 +125,7 @@ tags: [总结]
 2. 类似的场景，不同的运营同学、设计师负责，规范不一样，而开发出来的组件，没有复用性，基本是一次性的。缺乏模块沉淀，每次都是从零开始，开发效率当然快不起来~
 3. 如上一点所说，一个业务的一类组件（如商品表达、头部导航）表达类似的信息，但是有 6 套组件，每一套为什么长得不一样，对业务有什么价值，说不出个 123，这个问题让我们的日常维护非常头痛，假设要在商品的右上角加个大促标（如双 11 热卖），需要修改 6 个组件。这部分的人力也是可以省一下。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/6.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/6.png)
 
 #### 我要和团队一起做些什么
 
@@ -137,7 +137,7 @@ tags: [总结]
 
 如右下角的 4 个不同的场景，改造前的工作量，可能是 2 人日 \* 4，改造后，2 人日做完 4 个场景没问题。同时，收敛基础模块，维护成本也被大大降低。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/7.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/7.png)
 
 ### 不成熟的小建议（独当一面）
 
@@ -145,7 +145,7 @@ tags: [总结]
 
 下面是我梳理的一个完整的项目流程，有的时候，我们也会做一些项目管理的工作。项目管理嘛，其实就是谁在什么时候应该交付什么东西，中间有风险能否及时识别并且解决掉，保障项目如期甚至提前的高质量交付。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/8.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/8.png)
 
 是从视觉评审开始，接需求，就开始排期开发，项目上线之后，就算结束了呢？周而复始地接需求、做需求。
 
@@ -179,11 +179,11 @@ tags: [总结]
 
 不难看出，“场”遇到最大的挑战是如何提升场的匹配效率，如什么人该进什么场，进来后哪类型的人更希望看到怎样的商品，他们对什么信息更敏感……搞清楚，是什么更容易促成买家的点击和交易。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/9.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/9.png)
 
 回到我的业务场景，之前不是提到，天天在赶需求么？在以上的大背景下，我们来看看下图的需求梳理，业务方提的需求，不管是升级组件、做页面改版还是做一些跨团队合作的联营场景，真相只有一个 —— 提升场景的业务效能。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/10.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/10.png)
 
 场景业务效能的转化，是业务增长的关键，提供低成本的实验能力，支持业务更低成本的的探索、试错，用数据赋能驱动业务的增长。—— 这就是我的突破口。
 
@@ -191,7 +191,7 @@ tags: [总结]
 
 下图可以看出，传统的实验链路，成本是非常高的。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/11.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/11.png)
 我们来梳理下，需要人和时间的地方在哪里？
 
 - 分桶逻辑（随机实验、人群圈选实验）
@@ -206,7 +206,7 @@ tags: [总结]
 3. 实验和搭建平台打通，提供实验容器，运营同学可以通过搭积木的方式，自行搭配实验的组件和配置策略；
 4. 自动的实验数据任务，提供 T+1 的实验数据自动回流，无需人肉拉数据或申请研发资源。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/12.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/12.png)
 方案出来前后的实验成本对比，现在要在导购场景做个实验，简单太多了。于是，我们多了很多运营和产品同学自发完成的实验，这些数据不由实验方案直接产出，我们做的技术，除了是技术产出，更多的是给业务提供了一种新的视角，一种新的模式，可以更数据化更科学地去探索业务的增长。
 
 另外看左下角的这些实验的数据，正如本章开头说的，这些都是钱呀~ 在一家商业公司，做着会赚钱的技术，最让人兴奋不过了！
@@ -224,7 +224,7 @@ tags: [总结]
 
 另外一个问题，也是从独当一面到领域专家面试的时候，经常被问到的一个点，如何判断哪一件事情最该现在由你去做呢？如何评价你选的这个事情的投入产出比（ROI）呢？
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/13.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/13.png)
 
 - WHY：为什么要做？在独当一面的时候，其实我们就开始了解业务，为什么要做一件事情，相信都会有自己的角度和想法；
 - NOW：为什么是现在去做？不管是什么优化的点，去做了，肯定比不做好，但是要问一个问题，当前的业务/产品/团队最需要的是什么？
@@ -243,17 +243,17 @@ tags: [总结]
 
 万万没想到，今年年初疫情的到来，没带电脑或者新入职的同学，面临在家里没法跑代码，无法推进项目的问题，由于前期有一些云开发的业务建设，在这段时间针对更多的场景和用户紧急做了更多的补充，在上班的一周内推出了 1688 的云研发解决方案，解决了 SOHO 期间的燃眉之急，从数据来看，大家也开始接受这种研发模式，真香~ 也被认为是 1688 在去年具前瞻性的方向之一。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/14.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/14.png)
 
 那么到了 2020 年，这个事情有了进一步的升级，2.0 版本在路上~ 我们是个业务前端团队，Web IDE 不只是一个 Web Editor，更希望这是个业务云工作台，针对每一个业务研发场景，一站式地完成研发流程管理（变更&发布）、编码&调试、多角色协同、打通业务工具平台和工具，真正地成为业务研发模式的 Web IDE。
 
 下图画的其实是其中一种场景 —— 端云一体化。在一个应用里，一站式搞定本地 UI 的开发&预览、本地服务的开发&调试（结合 1688 的领域模型）、本地 UI+本地服务的调试，发布直接跟消费组件的搭建平台打通。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/15.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/15.png)
 
 然后呢，我手上还有另外一块事情，业务相关的，之前不是提到我在做 1688 的行业导购场景么？最重要的是场景的业务转化么，之前搞过 A/B，现在我们有更智能化的解决方案。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/16.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/16.png)
 
 举个例子，最近地摊经济很火嗷，我买了辆三轮车，准备去地摊，下了个阿里巴巴 APP，想找找货源，看看卖些什么好赚钱。这时候，我分别进入了两个场景，一个出的是左边的信息和样式，重点是价格，比零售价低很多，另外一个更直接，告诉我利润空间有多少。不同的人对信息偏好不太一样，我个人会更偏向利润，会选择在第二个场景下单，而你会更偏好价格，会选择在第一个场景下单。
 
@@ -262,7 +262,7 @@ tags: [总结]
 如果说，研发模式升级是解决生产时的研发效率问题，那么，智慧卖场解决的还是那个商业难题，交易成本中的搜寻成本，对的源头厂货在对的场景给到对的人，让天下没有难做的生意。
 嗯，这就是我现在在搞的两 part 事情，很有趣、也很有挑战，有兴趣的同学欢迎一起来玩 ：）
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/17.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/17.png)
 
 ### 还迷茫吗？
 
@@ -270,7 +270,7 @@ tags: [总结]
 
 从毕业到现在，经历了一些事一些人，我感觉过了很久很久了，其实啊，我还没有到 30，哈哈，感觉当时的自己，可可爱爱的~ 不过对于这个问题，现在的我已经有答案了。
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/18.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/18.png)
 现在的我，可以走技术路线，搞前端工程、云研发，打磨丝般顺滑的业务+研发体验，帮助一线开发者提效；  
 现在的我，可以走业务赋能路线，基于数据洞察更多商业的机会和可能性，写出一些会赚钱的代码；  
 现在的我，可以帮助团队的小同学们挖掘个人的特质，探索成长和成长的烦恼，我也一起成长；  
@@ -280,7 +280,7 @@ tags: [总结]
 
 除了工作，我还有生活，兴趣爱好也相当广泛，哈哈，最近偶尔有练拳、打鼓、旅旅行，去年考了个咖啡 SCA 中级感官的证书（证书水不水，不重要啦）……
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/19.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/19.png)
 
 港真，这些在我 22 岁的时候，我想都没想过，如果刚毕业就幻想自己 30 岁怎样怎样，然后听了别人说“你不该”“你不能”，选择放弃，可还行？只需要考虑“你想不想”，想，干就完了！
 
@@ -296,7 +296,7 @@ tags: [总结]
 
 Emm，有可能这是一本关于时间的书，就不多剧透了，感兴趣的同学看看就好 ：）
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/20.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/20.png)
 
 ## 最后，也是最重要的
 
@@ -321,7 +321,7 @@ Emm，有可能这是一本关于时间的书，就不多剧透了，感兴趣�
 - 中间：姬无的微信
 - 右边：1688 体验技术的 JD（非官方版，详情欢迎找我聊）
 
-![image.png](https://static.wuyuying.com/how--to-brave-winds-waves/21.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/how--to-brave-winds-waves/21.png)
 
 大概在一年前，类似的主题我在阿里内部有文章、线下沙龙分享过，这一年内，收到很多来自不同岗位、部门的同学的点赞、思考和迷茫，也给了我很多新的启发。我当时就在想，有机会分享给社区的同学们，也是一件很赞的事情，如果对分享的内容有什么想法，欢迎和我多多交流。
 

@@ -40,9 +40,9 @@ to be continued.
 
 Finally，视频出来了，钉钉会议还可以做录制，完美 👍
 
-!["update D750"](https://static.wuyuying.com/drumkit/update.jpg)
+!["update D750"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/drumkit/update.jpg)
 
-!["D750 Webcam"](https://static.wuyuying.com/drumkit/webcam.jpg)
+!["D750 Webcam"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/drumkit/webcam.jpg)
 
 ## Show Time
 

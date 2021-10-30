@@ -3,7 +3,7 @@ title: Gin Tonic 金汤力
 categories: [cocktail]
 tags: [cocktail]
 date: 2021-08-15 20:00:27
-cover: https://static.wuyuying.com/cocktail/gin-tonic.jpg
+cover: https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/cocktail/gin-tonic.jpg
 ---
 
 金酒 60ml，单糖浆 30ml，气泡水 90ml。

@@ -16,7 +16,7 @@ createDate: 2020-11-22 16:40:19
 - 商业到哪里去
 - 我们如何顺势而为
 
-![](https://static.wuyuying.com/business30/general.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/general.png)
 
 ## 商业是什么
 
@@ -30,7 +30,7 @@ createDate: 2020-11-22 16:40:19
 
 商业的本质，是交易。更先进的商业，就是更高效率的交易。
 
-![](https://static.wuyuying.com/business30/shangye-benzhi.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/shangye-benzhi.png)
 
 ### 为什么天下的生意总是难做的
 
@@ -45,7 +45,7 @@ createDate: 2020-11-22 16:40:19
 
 > 这个买卖的交易结构，是张三从李四手上，用5元的价格“买”到大米，然后用20元的价格“卖”给王五。张三作为“中间商”，赚了15元的差价。几乎什么都不用做，就能获得15元的差价。这份利益合法而且诱人。但是，这份差价，客观上减少了买家的购买意愿，减缓了商品的流通，抑制了生产者创造的热情，最终减少了整个社会的财富总量。
 
-![](https://static.wuyuying.com/business30/xiaoxi.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/xiaoxi.png)
 
 利用“构建”信息不对称赚钱，是一种重要的、短期获利办法；利用“打破”信息不对称赚钱，才是一种更重要的、长期获利办法。
 
@@ -53,7 +53,7 @@ createDate: 2020-11-22 16:40:19
 
 信用不传递，就是离我越远的人我越不信任。
 
-![](https://static.wuyuying.com/business30/xinren.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/xinren.png)
 
 ### 交易成本
 
@@ -153,7 +153,7 @@ createDate: 2020-11-22 16:40:19
 是的。但所有这些的背后，是连接，越来越进步，越来越高效的连接。
 高效的连接，必然短路低效的连接，从而推动交易网络的结构性改变，带来伟大的机会。
 
-![image.png](https://static.wuyuying.com/business30/xiulu.png)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/xiulu.png)
 
 连接改变商业世界的方式有两个：
 
@@ -172,13 +172,13 @@ createDate: 2020-11-22 16:40:19
 
 网络密度为0
 
-![](https://static.wuyuying.com/business30/yuanshishehui.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/yuanshishehui.png)
 
 #### 小农经济
 
 网络密度 = 7 / 136 = 5.1%
 
-![](https://static.wuyuying.com/business30/xiaonongshehui.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/xiaonongshehui.png)
 
 #### 线段型商业文明
 
@@ -190,9 +190,9 @@ createDate: 2020-11-22 16:40:19
 
 目前还是有很多行业的商业模式处于线段型，每一段的断开都会带来新的机会。
 
-![](https://static.wuyuying.com/business30/xianxingwenming.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/xianxingwenming.png)
 
-![](https://static.wuyuying.com/business30/silk.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/silk.png)
 
 如何克服信息不对称？
 
@@ -216,14 +216,14 @@ createDate: 2020-11-22 16:40:19
 
 一些交易节点因为天然的地理优势、政策优势、技术优势，成为了“超级节点”
 
-![](https://static.wuyuying.com/business30/zhongxinxing.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/zhongxinxing.png)
 
 如何克服信息不对称？
 
 沃尔玛 和 京东，中心化的卖货
 淘宝和薇雅，平台，连接买卖家
 
-![](https://static.wuyuying.com/business30/zhongxin-model.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/zhongxin-model.png)
 
 如何克服信用不传递？
 
@@ -236,7 +236,7 @@ createDate: 2020-11-22 16:40:19
 网络密度增加，带来了超级节点；网络密度的进一步增加，开始消灭超级节点。
 这就像以前家家都没有电视，你家有，你就成了街坊邻居的超级节点。后来每家都有电视了，大家开始回家看电视，超级节点被消灭。
 
-![](https://static.wuyuying.com/business30/quzhongxin.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/quzhongxin.png)
 
 线段型商业克服“信用不传递”的方法是“信用中介”，中心型商业是“信用中心”，去中心型商业是“信用科技”。
 
@@ -257,9 +257,9 @@ createDate: 2020-11-22 16:40:19
 
 这个“玻璃上的商业社会”，可能会有三个特征：1）商人的最终归宿，是不再需要商人；2）商品的定倍率，无限接近于1；3）可以不断接近，永远无法到达。
 
-![](https://static.wuyuying.com/business30/quanlianjie.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/quanlianjie.png)
 
-![](https://static.wuyuying.com/business30/wangluomidu.jpg)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/wangluomidu.jpg)
 
 ## 交易效率 & 生产效率
 
@@ -272,7 +272,7 @@ createDate: 2020-11-22 16:40:19
 - 20世纪50年代，第三次工业革命开始了。这次革命被称为“信息时代”。可再生能源 & 计算资源。
 - 第四次工业革命？马老师说，未来30年，数据将取代石油，成为最强大能源。因为能源对商业的最大价值，是提高人类的“生产效率”。而未来提高人类生产效率的最大动力，是“大数据”。
 
-![](https://static.wuyuying.com/business30/geming.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/geming.png)
 
 ## 我们如何顺势而为
 
@@ -286,7 +286,7 @@ createDate: 2020-11-22 16:40:19
 - 什么是工资？短暂的供需失衡带来了红利，也必然带来竞争。竞争导致供需重回平衡。这时，你只能赚到“社会平均利润”，也就是“工资”。你以为你在创业，其实你只是在为这个社会打工。
 - 什么是利润？利润，来自于没有竞争。只有牢牢守住自己的生态位，让竞争对手望而却步，才能享受真正的利润。
 
-![](https://static.wuyuying.com/business30/geming.png)
+![](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/business30/geming.png)
 
 ### 如何持续赚取利润 —— 护城河
 

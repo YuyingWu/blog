@@ -6,7 +6,7 @@ date: 2021-06-13 22:26:14
 ---
 被译名耽误的启蒙好书~ 听起来还是有点骇人听闻，太过理想化，还是实质人间真实？以下为书中观点，仅供参考。
 
-![cover.jpeg](https://static.wuyuying.com/fastlane-cover.jpeg)
+![cover.jpeg](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/fastlane-cover.jpeg)
 
 > 与其努力成功，不如努力成为有价值的人。 —— 阿尔伯特·爱因斯坦
 ​
@@ -22,7 +22,7 @@ date: 2021-06-13 22:26:14
 ## 1 慢车道
 
 ### 1.1 慢车道的路标
-![fastlane-flag](https://static.wuyuying.com/fastlane-flag.png)
+![fastlane-flag](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/fastlane-flag.png)
 ### 1.2 关于工作8小时&周末
 
 慢车道的-60%收益率：星期五晚上之所以热闹非凡，是因为人们在庆祝他们的交易收益：用5天的工作束缚换取2天的自由。星期一到星期五的工作是为星期六和星期日的自由买单，而星期五晚上则意味着两天自由的到来。因为星期一到星期五被出卖给了别人，所以“终于熬到周末”的想法才会存在。

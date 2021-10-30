@@ -10,19 +10,19 @@ createDate: 2020-07-22 00:08:18
 
 今天做学习委员，给大家讲一下NumPy，现学现卖，传送门 >> [NumPy](https://wuyuying.com/numpy/)
 
-!["NumPy讲堂"](https://static.wuyuying.com/data-science/0730.JPG)
+!["NumPy讲堂"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/data-science/0730.JPG)
 
 ## 07.23
 
 今天代码课，Python 入门，一小时内把变量、基础类型、数组&变换、函数和 package 的概念直接过掉，略快……中间还有写代码的时间，期间投屏直播了一会写代码，上一次直播写代码还是来面试阿里的时候 Orz
 
-!["coding class"](https://static.wuyuying.com/data-science/0723-data-science.jpg)
+!["coding class"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/data-science/0723-data-science.jpg)
 
 ## 07.21
 
 团队开办了机器学习的课，今天第一次开课，邀请了资深算法专家给我们开导论的课，未来大概 2 个月都要培养“机器学习”思维，感觉要恶补的知识很多，先从 python 开始。
 
-!["算法导论"](https://static.wuyuying.com/data-science/0721-data-science.jpg)
+!["算法导论"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/data-science/0721-data-science.jpg)
 
 Notes of Python:
 

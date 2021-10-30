@@ -119,7 +119,7 @@ class App extends Component {
       wx.onMenuShareTimeline({
         title: 'Keep', // 分享标题
         link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-        imgUrl: 'https://static.wuyuying.com/avatar.jpeg', // 分享图标
+        imgUrl: 'https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/avatar.jpeg', // 分享图标
         success: function () {
           // 用户点击了分享后执行的回调函数
           alert('朋友圈成功');
@@ -130,7 +130,7 @@ class App extends Component {
         title: 'Keep', // 分享标题
         desc: 'Keep', // 分享描述
         link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-        imgUrl: 'https://static.wuyuying.com/avatar.jpeg', // 分享图标
+        imgUrl: 'https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/avatar.jpeg', // 分享图标
         // type: '', // 分享类型,music、video或link，不填默认为link
         // dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         success: function () {
@@ -143,7 +143,7 @@ class App extends Component {
       //   title: 'Keep', // 分享标题
       //   desc: 'Keep', // 分享描述
       //   link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      //   imgUrl: 'https://static.wuyuying.com/avatar.jpeg', // 分享图标
+      //   imgUrl: 'https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/avatar.jpeg', // 分享图标
       //   success: function () {
       //     // 设置成功
       //     alert('好友成功')
@@ -153,7 +153,7 @@ class App extends Component {
       // wx.updateTimelineShareData({
       //   title: 'Keep', // 分享标题
       //   link: 'https://wuyuying.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      //   imgUrl: 'https://static.wuyuying.com/avatar.jpeg', // 分享图标
+      //   imgUrl: 'https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/avatar.jpeg', // 分享图标
       //   success: function () {
       //     // 设置成功
       //     alert('朋友圈成功')
@@ -185,7 +185,7 @@ class App extends Component {
         <header className={classes.headerContainer}>
           <Link to="/cocktail" className={classes.headerLink}>
             <Container maxWidth="md" className={classes.header}>
-              <img className={classes.logo} src="https://static.wuyuying.com/cocktail-logo.png" />
+              <img className={classes.logo} src="https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/cocktail-logo.png" />
               <h1 className={classes.headerTitle}>Home Bar <span className={classes.highlightFontColor}>Cocktail</span></h1>
             </Container>
           </Link>

@@ -44,7 +44,7 @@ tags: [life]
 
 > 没有储存能量的激素——胰岛素，也就没有脂肪堆积的现象，”他写道，“胰岛素将糖分分流至脂肪，这让你的脂肪细胞长大。胰岛素越多，脂肪越多。 —— 《渺茫的希望》
 
-!["食物GI示例"](https://static.wuyuying.com/GI-food-table.png)
+!["食物GI示例"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/GI-food-table.png)
 
 ### 2. 压力
 
@@ -119,20 +119,20 @@ tags: [life]
 
 #### 第一周
 
-!["地中海计划 第一周"](https://static.wuyuying.com/GI-1.png)
+!["地中海计划 第一周"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/GI-1.png)
 
 #### 第二周
 
-!["地中海计划 第二周"](https://static.wuyuying.com/GI-2.png)
+!["地中海计划 第二周"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/GI-2.png)
 
 #### 第三周
 
-!["地中海计划 第三周"](https://static.wuyuying.com/GI-3.png)
+!["地中海计划 第三周"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/GI-3.png)
 
 #### 第四周
 
-!["地中海计划 第四周"](https://static.wuyuying.com/GI-4.png)
+!["地中海计划 第四周"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/GI-4.png)
 
 ## 五、读书脑图
 
-!["轻断食：戒糖篇 脉络脑图"](https://static.wuyuying.com/mindnode-GI.png)
+!["轻断食：戒糖篇 脉络脑图"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/mindnode-GI.png)

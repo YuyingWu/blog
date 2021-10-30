@@ -91,7 +91,7 @@ export default function RecipeReviewCard({
       <CardHeader
         avatar={
           <div aria-label="recipe" className={classes.avatar}>
-            <Avatar alt="Yuying Wu" src="https://static.wuyuying.com/avatar.jpeg" />
+            <Avatar alt="Yuying Wu" src="https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/avatar.jpeg" />
           </div>
         }
         action={null}

@@ -16,10 +16,10 @@ createDate: 2021-01-23 22:10:14
 
 [《The Millionaire Fastlane》>> 传送门](https://wuyuying.com/millionaire-fastlane/)
 
-![The Millionaire Fastlane](https://static.wuyuying.com/fastlane-cover.jpeg)
+![The Millionaire Fastlane](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/fastlane-cover.jpeg)
 ## 《复盘网飞》马克·伦道夫
 
-![netflix](https://static.wuyuying.com/reading/netflix.jpg)
+![netflix](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/reading/netflix.jpg)
 > 他们：永远不会成功。  
 > 我们：无人知晓一切。
 
@@ -84,7 +84,7 @@ Netflix上线后的49个月，2002.5，上市了。
 
 ## 《一生的旅程》 罗伯特·艾格 
 
-!["一生的旅程"](https://static.wuyuying.com/reading-2021/disney.jpg)
+!["一生的旅程"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/reading-2021/disney.jpg)
 
 印象最深刻的是，Robert Iger 的职业生涯履历，有很多且跨界幅度很大的变化，尤其是平时不看剧，有一天要去接管娱乐部门，一天看N个剧本。
 
@@ -110,7 +110,7 @@ from 百科 <a href="https://baike.baidu.com/item/%E7%BD%97%E4%BC%AF%E7%89%B9%C2
 
 ## 《我心归处是敦煌》 樊锦诗
 
-!["我心归处是敦煌"](https://static.wuyuying.com/reading/fanjingshi.jpg)
+!["我心归处是敦煌"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/reading/fanjingshi.jpg)
 
 > “相识未名湖，相爱珞珈山，相守莫高窟。”
 

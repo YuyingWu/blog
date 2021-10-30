@@ -7,7 +7,7 @@ module.exports = {
     copyright: `&copy;2014-${new Date().getFullYear()} 京ICP备16019960号`,
     siteUrl: `https://wuyuying.com`,
     aboutUrl: `/about`,
-    avatar: 'https://static.wuyuying.com/avatar.jpeg',
+    avatar: 'https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/avatar.jpeg',
     social: [
       {
         name: 'rss',

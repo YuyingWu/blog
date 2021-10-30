@@ -8,7 +8,7 @@ createDate: 2019-12-05 17:55:19
 
 想像他们一样无忧无虑地畅聊技术、聊成长、聊生活吗？加入1688分销体验技术！
 
-!["凯伟的三周年"](https://static.wuyuying.com/career/hezhao.jpg)
+!["凯伟的三周年"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/career/hezhao.jpg)
 
 ## 业务与团队介绍
 
@@ -73,26 +73,26 @@ createDate: 2019-12-05 17:55:19
 
 2021年，我们团队outing去了大西北，青海湖小环线~ 出游详情可见 >> [《2021 青甘自驾游的团队outing》](https://wuyuying.com/2021-qinghaihu/)
 
-!["青海湖小环线"](https://static.wuyuying.com/career/Snapseed.jpg)
+!["青海湖小环线"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/career/Snapseed.jpg)
 
 分销创业细目组的风采
 
-!["分销项目组"](https://static.wuyuying.com/career/work.jpg)
+!["分销项目组"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/career/work.jpg)
 
 团队福利，有一个很喜欢请大家吃鸡的姬无
 
-!["鸡翅"](https://static.wuyuying.com/career/chicken-wing.jpg)
+!["鸡翅"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/career/chicken-wing.jpg)
 
 今年的CBU年会，1688就是牛！
 
-!["团队风采"](https://static.wuyuying.com/career/1688.jpg)
+!["团队风采"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/career/1688.jpg)
 
 ### 2020
 
 怎样可以像他们一样，无忧无虑之余，参加Geekathon，挑战更高要求的技术和业务方向？
 
-!["Geekathon"](https://static.wuyuying.com/career/geekathon.jpg)
+!["Geekathon"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/career/geekathon.jpg)
 
 2020.10.31，西塘汉服节，我们去玩的照片~ 团队颜值超高 😁
 
-!["2020西塘汉服节"](https://static.wuyuying.com/xitang-1031.jpg)
+!["2020西塘汉服节"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/xitang-1031.jpg)

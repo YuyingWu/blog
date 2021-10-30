@@ -56,6 +56,6 @@ tags: [career]
 
 > 2020年这段艰难的疫情时间，大家都在宅不给国家添乱，不妨喝杯茶、思考下人生～
 
-!["mind node"](https://static.wuyuying.com/the-long-view.jpg)
+!["mind node"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/the-long-view.jpg)
 
 <p style="text-align: right;">写于2020年春节假期，卷成一团自我隔离在杭州滨江区。</p>
