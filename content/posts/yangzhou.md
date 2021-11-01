@@ -4,7 +4,7 @@ date: 2021-05-01 19:42:09
 categories: [travel]
 tags: []
 ---
-![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/yangzhou/DSC_3544.jpg)
+![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/yangzhou/DSC_3544.jpeg)
 
 ![image.png](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/yangzhou/DSC_3553.jpg)
 
