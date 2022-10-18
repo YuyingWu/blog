@@ -10,20 +10,12 @@ module.exports = {
     avatar: 'https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/avatar.jpeg',
     social: [
       {
-        name: 'rss',
+        name: 'RSS',
         url: 'https://wuyuying.com/rss.xml',
       },
       {
-        name: 'github',
+        name: 'Github',
         url: 'https://github.com/YuyingWu',
-      },
-      {
-        name: 'douban',
-        url: 'https://www.douban.com/people/wuyuying1128_/',
-      },
-      {
-        name: 'zhihu',
-        url: 'https://www.zhihu.com/people/yuying_wu',
       },
     ],
     nav: [

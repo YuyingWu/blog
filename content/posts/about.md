@@ -13,14 +13,6 @@ date: 2019-11-20 13:51:18
 
 17年，加入阿里，开启第二人格，姬无。加入了CBU体验技术，来到国内内贸最大的1688平台搞批发，目前在营销&工程团队，A/B Testing、B类行业专业化探索做业务增长，也做一点Serverless、Web IDE、研发效能工程的建设。
 
-可以在以下的地方找到我哟～
-
-* 我的网站：http://www.wuyuying.com/
-* 知乎：https://www.zhihu.com/people/yuying_wu
-* Segment Fault：https://segmentfault.com/u/wuyuying
-* 掘金：https://juejin.im/user/589d64492f301e0069bcdf24
-* Twitter：https://mobile.twitter.com/wuyuying1128
-
 ## License
 
 !["CC BY-NC-ND"](https://wyy-static.oss-cn-guangzhou.aliyuncs.com/blog/CC-BY-NC-ND.jpeg)
