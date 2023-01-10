@@ -5,6 +5,7 @@ import PostFooter from "gatsby-theme-chaton/src/components/post-footer"
 import Layout from "gatsby-theme-chaton/src/components/layout"
 import SEO from "gatsby-theme-chaton/src/components/seo"
 import Tags from 'gatsby-theme-chaton/src/components/tags'
+import Comment from '../../components/comment';
 
 class Post extends Component {
   render() {
@@ -20,6 +21,9 @@ class Post extends Component {
       next,
     } = this.props;
     let tags = post.tags || [];
+
+    // some posts should not include the comment widget.
+    const shouldDisplayComment = post.slug.indexOf('resume') === -1;
 
     return (
       <Layout location={location} title={title}>
@@ -44,6 +48,8 @@ class Post extends Component {
           <Tags tags={tags} />
 
           <MDXRenderer>{post.body}</MDXRenderer>
+
+          <Comment slug={post.slug} visible={shouldDisplayComment} />
         </main>
 
         <PostFooter {...{ previous, next }} />

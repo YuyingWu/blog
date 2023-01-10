@@ -4,7 +4,7 @@ module.exports = {
     title: `Yuying Wu`,
     author: `Yuying Wu`,
     description: `个人博客，文字、代码、照片，记录工作和生活`,
-    copyright: `&copy;2014-${new Date().getFullYear()} 京ICP备16019960号`,
+    copyright: `&copy;2014-${new Date().getFullYear()}`,
     siteUrl: `https://wuyuying.com`,
     aboutUrl: `/about`,
     avatar: 'https://wyy-static.oss-cn-guangzhou.aliyuncs.com/xx/avatar.jpeg',
@@ -43,6 +43,17 @@ module.exports = {
   },
   flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
+    {
+      resolve: `gatsby-plugin-valine`,
+      options: {
+        appId: `TnIhwy7mhDOYzPGzQYOO1Ngj-gzGzoHsz`,
+        appKey: `uxHtOYVZuFHeXoWEdl69wjqb`,
+        avatar: `hide`,
+        visitor: true,
+        placeholder: '留下你的评论吧',
+        meta: ['nick', 'mail']
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {

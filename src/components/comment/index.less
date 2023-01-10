@@ -1,0 +1,17 @@
+@primaryColor: var(--theme-ui-colors-primary);
+.wgt-comment {
+  margin-top: 1em;
+  border-top: 1px solid #00000033;
+  .vpower, .vctrl, .vicon {
+    display: none!important;
+  }
+  .veditor {
+    min-height: 3em!important;
+  }
+  .vat, .vcontent, .v[data-class=v] p, .v[data-class=v] .vinput, .v[data-class=v] .vbtn {
+    color: @primaryColor!important;
+  }
+  .v[data-class=v] .vwrap .vheader .vinput:focus {
+    border-color: @primaryColor!important;
+  }
+}
