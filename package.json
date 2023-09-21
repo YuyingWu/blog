@@ -15,7 +15,6 @@
     "gatsby": "^2.32.13",
     "gatsby-plugin-valine": "^1.0.2",
     "gatsby-theme-chaton": "^0.0.15",
-    "html-react-parser": "^4.2.2",
     "less": "^3.11.1",
     "moment": "^2.29.4",
     "qs": "^6.11.0",
