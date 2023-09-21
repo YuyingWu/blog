@@ -1,0 +1,31 @@
+a{
+  text-decoration: none;
+  color: #333;
+}
+img {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 980px;
+}
+.Typist .Cursor {
+  display: inline-block;
+  &--blinking {
+    opacity: 1;
+    animation: blink 1s linear infinite;
+    @keyframes blink {
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+    }
+  }
+}
+.wgt-footer{
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #333;
+  padding: 10px 0;
+}

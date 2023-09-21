@@ -15,12 +15,16 @@
     "gatsby": "^2.32.13",
     "gatsby-plugin-valine": "^1.0.2",
     "gatsby-theme-chaton": "^0.0.15",
+    "html-react-parser": "^4.2.2",
     "less": "^3.11.1",
     "moment": "^2.29.4",
     "qs": "^6.11.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-typist": "^2.0.5",
+    "typography": "^0.16.24",
+    "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
