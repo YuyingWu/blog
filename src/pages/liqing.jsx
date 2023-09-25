@@ -73,7 +73,7 @@ class Home extends PureComponent {
 
     const randomIndex = index === -1 ? Math.floor(Math.random() * list.length) : index;
 
-    console.log(list[randomIndex].content)
+    // console.log(list[randomIndex].content)
 
     this.setState({
       content: list[randomIndex].content,
@@ -117,6 +117,7 @@ class Home extends PureComponent {
           maxWidth: rhythm(24),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
+        className="page-liqing"
       >
         {/* { !isLoaded ? (
           <Typist onTypingDone={this.handlePreText}>
