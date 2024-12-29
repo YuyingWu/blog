@@ -16,6 +16,7 @@
     "gatsby-plugin-valine": "^1.0.2",
     "gatsby-theme-chaton": "^0.0.15",
     "less": "^3.11.1",
+    "lightgallery": "^2.8.2",
     "moment": "^2.29.4",
     "qs": "^6.11.0",
     "react": "^16.11.0",
