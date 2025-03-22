@@ -23,33 +23,35 @@ class Post extends Component {
     let tags = post.tags || [];
 
     // some posts should not include the comment widget.
-    const shouldDisplayComment = post.slug.indexOf('resume') === -1;
+    const isNotResume = post.slug.indexOf('resume') === -1;
 
     return (
       <Layout location={location} title={title}>
         <SEO title={post.title} description={post.excerpt} />
 
         <main>
-          <Styled.h1 css={css({
-            fontSize: 3,
-            color: `primary`,
-            mb: 4,
-          })}>{post.title}</Styled.h1>
-          <Styled.p
-            css={css({
-              fontSize: 1,
-              mt: -3,
-              mb: 3,
-            })}
-          >
-            {post.date}
-          </Styled.p>
+          {isNotResume ? <>
+            <Styled.h1 css={css({
+              fontSize: 3,
+              color: `primary`,
+              mb: 4,
+            })}>{post.title}</Styled.h1>
+            <Styled.p
+              css={css({
+                fontSize: 1,
+                mt: -3,
+                mb: 3,
+              })}
+            >
+              {post.date}
+            </Styled.p>
 
-          <Tags tags={tags} />
+            <Tags tags={tags} />
+          </> : null}
 
           <MDXRenderer>{post.body}</MDXRenderer>
 
-          <Comment slug={post.slug} visible={shouldDisplayComment} />
+          <Comment slug={post.slug} visible={isNotResume} />
         </main>
 
         <PostFooter {...{ previous, next }} />
